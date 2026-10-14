@@ -25,7 +25,7 @@ export default function VDSPricingSection() {
   const availableCPUs = currentLocation?.availableCpus || []
   const currentPlans = config.plans[selectedCPU] || config.plans[config.planTypes[0].id]
   const planKey = `${selectedLocation}_${selectedCPU}`
-  const currentCpuInfo = vdsCpuInfo[planKey] || vdsCpuInfo[selectedCPU] || vdsCpuInfo["india_xeon-vds"] || vdsCpuInfo["xeon-vds"]
+  const currentCpuInfo = vdsCpuInfo[planKey] || (selectedCPU === "xeon-vds" ? vdsCpuInfo["xeon-vds"] : undefined)
 
   const handleCPUSelection = (cpuId: string) => {
     setSelectedCPU(cpuId)

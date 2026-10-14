@@ -21,7 +21,7 @@ export default function VPSPricingSection() {
   const availableCPUs = currentLocation?.availableCpus || []
   const planKey = `${selectedLocation}_${selectedCPU}`
   const currentPlans = config.plans[planKey] || config.plans[selectedCPU] || config.plans[config.planTypes[0].id] || []
-  const currentCpuInfo = vpsCpuInfo[planKey] || vpsCpuInfo[selectedCPU] || vpsCpuInfo["india_xeon-standard"]
+  const currentCpuInfo = vpsCpuInfo[planKey] || (selectedCPU === "xeon-standard" ? vpsCpuInfo["xeon-standard"] : undefined)
 
   const handleCPUSelection = (cpuId: string) => {
     setSelectedCPU(cpuId)
