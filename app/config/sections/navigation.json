@@ -32,6 +32,14 @@
       "hasDropdown": false
     },
     {
+      "name": "Pakistan",
+      "href": "https://pakistan.treemc.host/",
+      "icon": "Globe",
+      "badge": "PKR",
+      "external": true,
+      "hasDropdown": false
+    },
+    {
       "name": "Legal",
       "href": "/terms-of-services",
       "icon": "FileText",
@@ -69,11 +77,13 @@
     "icon": "Server"
   },
   "banner": {
-    "show": false,
-    "text": "",
+    "show": true,
+    "text": "🇵🇰 TreeMC Pakistan Portal Live — Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
     "couponCode": "",
+    "link": "https://pakistan.treemc.host/",
+    "buttonText": "Open Pakistan Portal ↗",
     "useThemeColor": false,
-    "backgroundColor": "bg-emerald-500",
-    "fallbackColor": "bg-emerald-500"
+    "backgroundColor": "bg-emerald-600",
+    "fallbackColor": "bg-emerald-600"
   }
 }

@@ -13,6 +13,8 @@ export interface DatacenterLocation {
     status: "active";
     lat: number;
     lng: number;
+    portalUrl?: string;
+    portalLabel?: string;
 }
 
 const locations: DatacenterLocation[] = [
@@ -65,6 +67,8 @@ const locations: DatacenterLocation[] = [
         status: "active",
         lat: 31.5204,
         lng: 74.3587,
+        portalUrl: "https://pakistan.treemc.host/",
+        portalLabel: "Portal ↗",
     },
     {
         name: "Germany (Frankfurt)",
@@ -127,9 +131,22 @@ const LocationItem = memo(({ location, index }: { location: DatacenterLocation, 
                 </div>
             </div>
 
-            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] sm:text-[11px] font-mono shrink-0 font-medium">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>{location.ping}</span>
+            <div className="flex items-center gap-1.5 shrink-0">
+                {location.portalUrl && (
+                    <a
+                        href={location.portalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-2 py-0.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-[10px] font-semibold transition-colors flex items-center gap-1 shadow-sm"
+                        title="Open Dedicated Pakistan Portal"
+                    >
+                        <span>{location.portalLabel || "Portal ↗"}</span>
+                    </a>
+                )}
+                <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] sm:text-[11px] font-mono shrink-0 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>{location.ping}</span>
+                </div>
             </div>
         </motion.div>
     );
@@ -257,6 +274,47 @@ export default function LocationsSection() {
                                 </div>
                             </div>
                         </div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 15 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="mt-5 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-emerald-500/15 via-emerald-500/5 to-transparent border border-emerald-500/30 hover:border-emerald-500/50 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-lg shadow-emerald-500/5"
+                        >
+                            <div className="flex items-center gap-3">
+                                <div className="relative w-9 h-9 rounded-full overflow-hidden border border-emerald-500/40 shrink-0">
+                                    <Image
+                                        src="/flags/pakistan.png"
+                                        alt="Pakistan flag"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-2">
+                                        <h4 className="text-gray-900 dark:text-white font-bold text-xs sm:text-sm">
+                                            TreeMC Pakistan Dedicated Portal
+                                        </h4>
+                                        <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
+                                            PKR (Rs)
+                                        </span>
+                                    </div>
+                                    <p className="text-gray-500 dark:text-gray-400 text-[11px] sm:text-xs">
+                                        Sub-14ms Lahore routing (Nayatel, StormFiber &amp; PTCL peering). Minecraft DDR5, KVM VPS &amp; Bare-Metal in PKR.
+                                    </p>
+                                </div>
+                            </div>
+                            <a
+                                href="https://pakistan.treemc.host/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="shrink-0 px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors shadow-md shadow-emerald-500/20"
+                            >
+                                <span>pakistan.treemc.host</span>
+                                <span className="text-sm">↗</span>
+                            </a>
+                        </motion.div>
 
                     </motion.div>
 

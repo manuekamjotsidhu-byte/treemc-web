@@ -183,8 +183,10 @@ const Navbar: React.FC = () => {
   );
 
   const handleCopyCode = useCallback(() => {
+    if (!config.banner.couponCode) return;
+    const code = config.banner.couponCode;
     if (typeof window !== 'undefined' && navigator.clipboard) {
-      navigator.clipboard.writeText(config.banner.couponCode)
+      navigator.clipboard.writeText(code)
         .then(() => {
           setConfettiConfig({
             recycle: false,
@@ -199,7 +201,7 @@ const Navbar: React.FC = () => {
         });
     } else {
       const textArea = document.createElement('textarea');
-      textArea.value = config.banner.couponCode;
+      textArea.value = code;
       document.body.appendChild(textArea);
       textArea.select();
       try {
@@ -315,6 +317,7 @@ const Navbar: React.FC = () => {
       case 'dedicated': return t('navbar.dedicated');
       case 'discordbot': return t('navbar.discord');
       case 'webhosting': return t('navbar.webhosting');
+      case 'pakistan': return 'Pakistan Portal';
       case 'legal': return t('navbar.legal');
       default: return itemName;
     }
@@ -322,9 +325,10 @@ const Navbar: React.FC = () => {
 
   const renderNavigationItem = useCallback((item: NavigationItem) => {
     const IconComponent = item.icon ? getIcon(item.icon) : null;
-    const isActive = item.hasDropdown
+    const isExternal = item.external || item.href.startsWith('http://') || item.href.startsWith('https://');
+    const isActive = !isExternal && (item.hasDropdown
       ? pathname.startsWith(item.href)
-      : pathname === item.href;
+      : pathname === item.href);
     const translatedName = getTranslatedNavName(item.name);
 
     if (item.hasDropdown) {
@@ -340,9 +344,36 @@ const Navbar: React.FC = () => {
           >
             {IconComponent && <IconComponent className="w-4 h-4" />}
             <span>{translatedName}</span>
+            {item.badge && (
+              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
+                {item.badge}
+              </span>
+            )}
           </Link>
           {renderDropdown(item)}
         </div>
+      );
+    }
+
+    if (isExternal) {
+      return (
+        <a
+          key={item.name}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-6 text-sm font-medium relative text-gray-700 dark:text-slate-200 hover:text-icon-text-primary dark:hover:text-icon-text-primary transition-colors flex items-center space-x-2 
+          after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-button-bg dark:after:bg-button-bg after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center
+          hover:hover-gradient"
+        >
+          {IconComponent && <IconComponent className="w-4 h-4 text-emerald-500" />}
+          <span>{translatedName}</span>
+          {item.badge && (
+            <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
+              {item.badge}
+            </span>
+          )}
+        </a>
       );
     }
 
@@ -358,6 +389,11 @@ const Navbar: React.FC = () => {
       >
         {IconComponent && <IconComponent className="w-4 h-4" />}
         <span>{translatedName}</span>
+        {item.badge && (
+          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
+            {item.badge}
+          </span>
+        )}
       </Link>
     );
   }, [pathname, renderDropdown, getTranslatedNavName]);
@@ -513,7 +549,33 @@ const Navbar: React.FC = () => {
       );
     }
 
-    const isActive = pathname === item.href;
+    const isExternal = item.external || item.href.startsWith('http://') || item.href.startsWith('https://');
+    const isActive = !isExternal && pathname === item.href;
+
+    if (isExternal) {
+      return (
+        <a
+          key={item.name}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-between w-full px-3 py-3 rounded-lg transition-colors mb-2 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+          onClick={closeMobileMenu}
+        >
+          <div className="flex items-center space-x-3">
+            {IconComponent && <IconComponent className="w-5 h-5 text-emerald-500" />}
+            <span className="font-medium">{translatedName}</span>
+            {item.badge && (
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
+                {item.badge}
+              </span>
+            )}
+          </div>
+          <ChevronRight className="w-4 h-4" />
+        </a>
+      );
+    }
+
     return (
       <Link
         key={item.name}
@@ -528,6 +590,11 @@ const Navbar: React.FC = () => {
         <div className="flex items-center space-x-3">
           {IconComponent && <IconComponent className="w-5 h-5" />}
           <span className="font-medium">{translatedName}</span>
+          {item.badge && (
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
+              {item.badge}
+            </span>
+          )}
         </div>
         <ChevronRight className="w-4 h-4" />
       </Link>
@@ -659,7 +726,7 @@ const Navbar: React.FC = () => {
 
       {showBanner && config.banner.show && (
         <div
-          className={`relative text-white text-sm py-3 px-4 transition-colors duration-300 ${!config.banner.useThemeColor ? config.banner.backgroundColor : ''
+          className={`relative text-white text-sm py-2.5 px-4 transition-colors duration-300 ${!config.banner.useThemeColor ? config.banner.backgroundColor : ''
             }`}
           style={{
             backgroundColor: config.banner.useThemeColor
@@ -670,19 +737,31 @@ const Navbar: React.FC = () => {
           <div className="max-w-7xl mx-auto px-2 sm:px-4">
             <div className="flex items-center justify-between">
               <div className="flex-1 flex items-center justify-center space-x-2 sm:space-x-3">
-                <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 icon-text-primary rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="icon-text-primary text-xs font-bold">%</span>
+                <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 text-white font-bold text-xs">
+                  <span>🇵🇰</span>
                 </div>
-                <span className="text-xs sm:text-sm md:text-base text-white font-medium">{config.banner.text}</span>
-                <button
-                  onClick={handleCopyCode}
-                  className="bg-white/20 hover:bg-white/30 px-1.5 sm:px-2 md:px-3 py-1 rounded text-xs font-bold transition-colors cursor-pointer whitespace-nowrap flex-shrink-0 text-white border border-white/30 hover:border-white/50"
-                >
-                  {config.banner.couponCode}
-                </button>
+                <span className="text-xs sm:text-sm text-white font-medium">{config.banner.text}</span>
+                {config.banner.link && (
+                  <a
+                    href={config.banner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-emerald-800 hover:bg-white/90 px-2 sm:px-3 py-1 rounded text-xs font-bold transition-all cursor-pointer whitespace-nowrap flex-shrink-0 shadow-sm flex items-center gap-1"
+                  >
+                    <span>{config.banner.buttonText || "Open Portal ↗"}</span>
+                  </a>
+                )}
+                {config.banner.couponCode && (
+                  <button
+                    onClick={handleCopyCode}
+                    className="bg-white/20 hover:bg-white/30 px-1.5 sm:px-2 md:px-3 py-1 rounded text-xs font-bold transition-colors cursor-pointer whitespace-nowrap flex-shrink-0 text-white border border-white/30 hover:border-white/50"
+                  >
+                    {config.banner.couponCode}
+                  </button>
+                )}
               </div>
               <button
-                className="text-white hover:text-white/90 transition-colors flex-shrink-0"
+                className="text-white hover:text-white/90 transition-colors flex-shrink-0 ml-2"
                 onClick={() => setShowBanner(false)}
                 aria-label="Close banner"
               >

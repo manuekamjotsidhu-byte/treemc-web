@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Gamepad2, ExternalLink, Activity } from "lucide-react"
+import { Mail, Gamepad2, ExternalLink, Activity, Globe } from "lucide-react"
 import { FaDiscord } from "react-icons/fa6"
 import DiscordBanner from "./DiscordBanner"
 import { useLanguage } from "../contexts/LanguageContext"
@@ -17,6 +17,7 @@ export default function Footer() {
     { name: "Dedicated Servers", href: "/dedicated" },
     { name: "Discord Bot Hosting", href: "/discord" },
     { name: "Web Hosting", href: "/webhosting" },
+    { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemc.host/", external: true },
   ]
 
   const legalLinks = [
@@ -30,6 +31,7 @@ export default function Footer() {
     { icon: FaDiscord, label: "Discord Community", value: "discord.gg/MJFPbjAdJY", href: "https://discord.gg/MJFPbjAdJY" },
     { icon: Gamepad2, label: "Pterodactyl Panel", value: "panel.treemc.host", href: "https://panel.treemc.host" },
     { icon: Activity, label: "Network Status", value: "status.treemc.host", href: "https://status.treemc.host" },
+    { icon: Globe, label: "Pakistan Portal", value: "pakistan.treemc.host", href: "https://pakistan.treemc.host/" },
   ]
 
   return (
@@ -99,13 +101,25 @@ export default function Footer() {
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-600 dark:text-gray-400 hover:text-icon-text-primary dark:hover:text-icon-text-primary transition-colors duration-300 text-sm flex items-center group"
-                    >
-                      <span>{link.name}</span>
-                      <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors duration-300 text-sm flex items-center group font-medium"
+                      >
+                        <span>{link.name}</span>
+                        <ExternalLink className="w-3 h-3 ml-1 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-gray-600 dark:text-gray-400 hover:text-icon-text-primary dark:hover:text-icon-text-primary transition-colors duration-300 text-sm flex items-center group"
+                      >
+                        <span>{link.name}</span>
+                        <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

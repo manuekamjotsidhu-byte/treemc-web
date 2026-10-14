@@ -9,6 +9,8 @@ export interface NavigationItem {
   name: string;
   href: string;
   icon?: string;
+  badge?: string;
+  external?: boolean;
   hasDropdown?: boolean;
   dropdownType?: 'games' | 'legal' | 'custom';
   dropdownItems?: DropdownItem[];
@@ -29,7 +31,9 @@ export interface ClientSpace {
 export interface Banner {
   show: boolean;
   text: string;
-  couponCode: string;
+  couponCode?: string;
+  buttonText?: string;
+  link?: string;
   useThemeColor?: boolean;
   backgroundColor: string;
   fallbackColor: string;
