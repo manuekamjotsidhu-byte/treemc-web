@@ -14,7 +14,7 @@ export default function Footer() {
   const quickLinks = [
     { name: "Minecraft Hosting", href: "/games" },
     { name: "Cloud VPS", href: "/vps" },
-    { name: "Dedicated Servers", href: "/dedicated" },
+    { name: "VDS Hosting (India)", href: "/dedicated" },
     { name: "Discord Bot Hosting", href: "/discord" },
     { name: "Web Hosting", href: "/webhosting" },
     { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemc.host/", external: true },

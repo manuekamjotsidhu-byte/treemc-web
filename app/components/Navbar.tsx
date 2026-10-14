@@ -314,7 +314,8 @@ const Navbar: React.FC = () => {
     switch (navKey) {
       case 'games': return t('navbar.games');
       case 'cloud': return t('navbar.cloud');
-      case 'dedicated': return t('navbar.dedicated');
+      case 'vds': return 'VDS';
+      case 'dedicated': return 'VDS';
       case 'discordbot': return t('navbar.discord');
       case 'webhosting': return t('navbar.webhosting');
       case 'pakistan': return 'Pakistan Portal';

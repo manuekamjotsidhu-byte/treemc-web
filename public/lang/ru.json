@@ -2,7 +2,7 @@
   "navbar": {
     "games": "Игры",
     "cloud": "Облако",
-    "dedicated": "Выделенные",
+    "dedicated": "VDS",
     "discord": "Discord Бот",
     "webhosting": "Веб-хостинг",
     "legal": "Правовая информация",
@@ -10,7 +10,8 @@
     "termsOfService": "Условия обслуживания",
     "privacyPolicy": "Политика конфиденциальности",
     "termsDescription": "Наше соглашение об обслуживании и условия",
-    "privacyDescription": "Как мы защищаем вашу конфиденциальность"
+    "privacyDescription": "Как мы защищаем вашу конфиденциальность",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "Заказать сейчас",
@@ -37,9 +38,9 @@
     "step3": "3. Выбрать план"
   },
   "dedicated": {
-    "title": "Решения выделенных серверов",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "Выделенные серверы bare metal с корпоративным оборудованием, полным контролем и максимальной производительностью для требовательных приложений.",
-    "badge": "Выделенные серверы",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "Тип процессора",
     "location": "Местоположение",
     "choosePlan": "Выбрать план",

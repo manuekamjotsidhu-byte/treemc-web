@@ -2,7 +2,7 @@
   "navbar": {
     "games": "الألعاب",
     "cloud": "السحابة",
-    "dedicated": "مخصص",
+    "dedicated": "VDS",
     "discord": "بوت ديسكورد",
     "webhosting": "استضافة الويب",
     "legal": "قانوني",
@@ -10,7 +10,8 @@
     "termsOfService": "شروط الخدمة",
     "privacyPolicy": "سياسة الخصوصية",
     "termsDescription": "اتفاقية الخدمة وشروطنا",
-    "privacyDescription": "كيف نحمي خصوصيتك"
+    "privacyDescription": "كيف نحمي خصوصيتك",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "اطلب الآن",
@@ -37,9 +38,9 @@
     "step3": "3. اختر الخطة"
   },
   "dedicated": {
-    "title": "حلول الخادم المخصص",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "خوادم مخصصة معدنية عارية مع أجهزة على مستوى المؤسسات، تحكم كامل، وأداء أقصى للتطبيقات المتطلبة.",
-    "badge": "خوادم مخصصة",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "نوع المعالج",
     "location": "الموقع",
     "choosePlan": "اختر الخطة",

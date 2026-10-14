@@ -112,7 +112,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
 
 export const vdsCpuInfo: Record<string, CpuInfo> = {
   "xeon-vds": {
-    note: 'Our Intel Xeon VDS plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
+    note: 'Our India Intel Xeon VDS plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
     models: [
       "Intel® Xeon® E5-2673 v4 @ 2.30 GHz",
       "Intel® Xeon® E5-2682 v4 @ 2.50 GHz",
@@ -121,9 +121,10 @@ export const vdsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "epyc-vds": {
-    note: "Our AMD EPYC VDS instances deliver dedicated physical cores without virtualization overcommit.",
+    note: "Our India AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
     models: [
-      "AMD EPYC Milan",
+      "AMD EPYC 7F72 @ 3.20 GHz",
+      "AMD EPYC 7K62 @ 2.60 GHz",
     ],
   },
   "india_xeon-vds": {
@@ -136,28 +137,10 @@ export const vdsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_epyc-vds": {
-    note: "Our India AMD EPYC VDS instances deliver dedicated bare-metal performance with DDR4 ECC memory and enterprise NVMe storage.",
+    note: "Our India AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",
-    ],
-  },
-  "germany_xeon-vds": {
-    note: "Our Germany Intel Xeon Gold VDS instances deliver dedicated enterprise compute in Frankfurt am Main based on current stock.",
-    models: [
-      "Intel® Xeon® Gold 6150 @ 2.70 GHz",
-    ],
-  },
-  "germany_epyc-vds": {
-    note: "Our Germany AMD EPYC VDS instances feature dedicated Zen 3 cores routed directly via DE-CIX Frankfurt.",
-    models: [
-      "AMD EPYC Milan",
-    ],
-  },
-  "singapore_epyc-vds": {
-    note: "Our Singapore AMD EPYC VDS instances operate inside Equinix SG1 with dedicated cores based on current stock.",
-    models: [
-      "AMD EPYC Milan",
     ],
   },
 };

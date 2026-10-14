@@ -3,13 +3,13 @@
     {
       "id": "epyc-vds",
       "name": "AMD EPYC VDS",
-      "displayName": "AMD EPYC Dedicated VDS",
+      "displayName": "AMD EPYC VDS",
       "image": "/cpu/epyc.png"
     },
     {
       "id": "xeon-vds",
       "name": "Intel Xeon VDS",
-      "displayName": "Intel Xeon Dedicated VDS",
+      "displayName": "Intel Xeon VDS",
       "image": "/cpu/intel.png"
     }
   ],
@@ -23,27 +23,6 @@
       "availableCpus": [
         "epyc-vds",
         "xeon-vds"
-      ]
-    },
-    {
-      "id": "germany",
-      "name": "Germany (Frankfurt)",
-      "flag": "/flags/germany.png",
-      "displayName": "Germany",
-      "cpu": "AMD EPYC / Intel Xeon",
-      "availableCpus": [
-        "epyc-vds",
-        "xeon-vds"
-      ]
-    },
-    {
-      "id": "singapore",
-      "name": "Singapore",
-      "flag": "/flags/singapore.png",
-      "displayName": "Singapore",
-      "cpu": "AMD EPYC",
-      "availableCpus": [
-        "epyc-vds"
       ]
     }
   ],

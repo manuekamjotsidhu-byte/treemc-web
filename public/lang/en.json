@@ -2,7 +2,8 @@
   "navbar": {
     "games": "Games",
     "cloud": "Cloud",
-    "dedicated": "Dedicated",
+    "vds": "VDS",
+    "dedicated": "VDS",
     "discord": "Discord Bot",
     "webhosting": "WebHosting",
     "legal": "Legal",
@@ -37,9 +38,9 @@
     "step3": "3. Choose Plan"
   },
   "dedicated": {
-    "title": "Dedicated Server Solutions",
-    "description": "Bare metal dedicated servers with enterprise-grade hardware, full control, and maximum performance for demanding applications.",
-    "badge": "Dedicated Servers",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
+    "description": "High-performance Virtual Dedicated Servers (VDS) with dedicated CPU cores, DDR4 ECC RAM, unmetered bandwidth, and enterprise NVMe storage in India.",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "CPU Type",
     "location": "Location",
     "choosePlan": "Choose Plan",
@@ -226,7 +227,7 @@
     "title": "Choose your Game Server",
     "description": "Select from our wide range of optimized game servers. Each server is configured for maximum performance and comes with DDoS protection.",
     "step1": "1. Plan Type",
-    "step2": "2. Location", 
+    "step2": "2. Location",
     "step3": "3. Select Software",
     "step4": "4. Choose Plan",
     "orderNow": "Order Now",

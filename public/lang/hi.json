@@ -2,7 +2,7 @@
   "navbar": {
     "games": "गेम्स",
     "cloud": "क्लाउड",
-    "dedicated": "डेडिकेटेड",
+    "dedicated": "VDS",
     "discord": "डिस्कॉर्ड बॉट",
     "webhosting": "वेब होस्टिंग",
     "legal": "कानूनी",
@@ -10,7 +10,8 @@
     "termsOfService": "सेवा की शर्तें",
     "privacyPolicy": "गोपनीयता नीति",
     "termsDescription": "हमारा सेवा समझौता और शर्तें",
-    "privacyDescription": "हम आपकी गोपनीयता की सुरक्षा कैसे करते हैं"
+    "privacyDescription": "हम आपकी गोपनीयता की सुरक्षा कैसे करते हैं",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "अभी ऑर्डर करें",
@@ -37,9 +38,9 @@
     "step3": "3. प्लान चुनें"
   },
   "dedicated": {
-    "title": "डेडिकेटेड सर्वर समाधान",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "एंटरप्राइज़-ग्रेड हार्डवेयर, पूर्ण नियंत्रण और मांग वाले एप्लिकेशन के लिए अधिकतम प्रदर्शन के साथ बेयर मेटल डेडिकेटेड सर्वर।",
-    "badge": "डेडिकेटेड सर्वर",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "CPU प्रकार",
     "location": "स्थान",
     "choosePlan": "प्लान चुनें",

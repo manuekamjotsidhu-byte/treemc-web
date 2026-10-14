@@ -2,7 +2,7 @@
   "navbar": {
     "games": "Spiele",
     "cloud": "Cloud",
-    "dedicated": "Dedicated",
+    "dedicated": "VDS",
     "discord": "Discord Bot",
     "webhosting": "Webhosting",
     "legal": "Rechtliches",
@@ -10,7 +10,8 @@
     "termsOfService": "Nutzungsbedingungen",
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsDescription": "Unsere Servicevereinbarung und Bedingungen",
-    "privacyDescription": "Wie wir Ihre Privatsphäre schützen"
+    "privacyDescription": "Wie wir Ihre Privatsphäre schützen",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "Jetzt Bestellen",
@@ -37,9 +38,9 @@
     "step3": "3. Plan Wählen"
   },
   "dedicated": {
-    "title": "Dedicated Server Lösungen",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "Bare-Metal-Dedicated-Server mit Enterprise-Hardware, voller Kontrolle und maximaler Leistung für anspruchsvolle Anwendungen.",
-    "badge": "Dedicated Server",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "CPU-Typ",
     "location": "Standort",
     "choosePlan": "Plan Wählen",

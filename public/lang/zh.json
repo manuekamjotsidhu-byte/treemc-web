@@ -2,7 +2,7 @@
   "navbar": {
     "games": "游戏",
     "cloud": "云服务",
-    "dedicated": "独立服务器",
+    "dedicated": "VDS",
     "discord": "Discord机器人",
     "webhosting": "网站托管",
     "legal": "法律条款",
@@ -10,7 +10,8 @@
     "termsOfService": "服务条款",
     "privacyPolicy": "隐私政策",
     "termsDescription": "我们的服务协议和条款",
-    "privacyDescription": "我们如何保护您的隐私"
+    "privacyDescription": "我们如何保护您的隐私",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "立即订购",
@@ -37,9 +38,9 @@
     "step3": "3. 选择方案"
   },
   "dedicated": {
-    "title": "独立服务器解决方案",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "企业级硬件的裸机独立服务器，具有完全控制权和最大性能，适用于高要求应用程序。",
-    "badge": "独立服务器",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "CPU类型",
     "location": "位置",
     "choosePlan": "选择方案",

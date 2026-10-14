@@ -2,7 +2,7 @@
   "navbar": {
     "games": "Oyunlar",
     "cloud": "Bulut",
-    "dedicated": "Özel",
+    "dedicated": "VDS",
     "discord": "Discord Bot",
     "webhosting": "Web Hosting",
     "legal": "Yasal",
@@ -10,7 +10,8 @@
     "termsOfService": "Hizmet Şartları",
     "privacyPolicy": "Gizlilik Politikası",
     "termsDescription": "Hizmet sözleşmemiz ve şartlarımız",
-    "privacyDescription": "Gizliliğinizi nasıl koruduğumuz"
+    "privacyDescription": "Gizliliğinizi nasıl koruduğumuz",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "Şimdi Sipariş Ver",
@@ -37,9 +38,9 @@
     "step3": "3. Plan Seç"
   },
   "dedicated": {
-    "title": "Özel Sunucu Çözümleri",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "Kurumsal düzeyde donanım, tam kontrol ve zorlu uygulamalar için maksimum performans sunan bare metal özel sunucular.",
-    "badge": "Özel Sunucular",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "CPU Türü",
     "location": "Konum",
     "choosePlan": "Plan Seç",

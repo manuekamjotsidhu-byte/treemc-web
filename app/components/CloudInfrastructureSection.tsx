@@ -178,7 +178,7 @@ export default function CloudInfrastructureSection() {
                       : "text-gray-400 hover:text-white"
                   }`}
                 >
-                  Dedicated VDS (Full Bare-Metal Cores)
+                  Virtual Dedicated Server (VDS)
                 </button>
               </div>
             </div>

@@ -2,7 +2,7 @@
   "navbar": {
     "games": "ゲーム",
     "cloud": "クラウド",
-    "dedicated": "専用サーバー",
+    "dedicated": "VDS",
     "discord": "Discordボット",
     "webhosting": "ウェブホスティング",
     "legal": "法的事項",
@@ -10,7 +10,8 @@
     "termsOfService": "利用規約",
     "privacyPolicy": "プライバシーポリシー",
     "termsDescription": "当社のサービス契約と条件",
-    "privacyDescription": "お客様のプライバシーを保護する方法"
+    "privacyDescription": "お客様のプライバシーを保護する方法",
+    "vds": "VDS"
   },
   "common": {
     "orderNow": "今すぐ注文",
@@ -37,9 +38,9 @@
     "step3": "3. プランを選択"
   },
   "dedicated": {
-    "title": "専用サーバーソリューション",
+    "title": "Virtual Dedicated Server (VDS) Solutions",
     "description": "エンタープライズグレードのハードウェア、完全な制御、要求の厳しいアプリケーションのための最大パフォーマンスを備えたベアメタル専用サーバー。",
-    "badge": "専用サーバー",
+    "badge": "Virtual Dedicated Servers (VDS)",
     "cpuType": "CPUタイプ",
     "location": "場所",
     "choosePlan": "プランを選択",
