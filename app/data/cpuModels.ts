@@ -45,7 +45,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
   "germany_epyc-milan": {
     note: "Our Germany EPYC nodes are connected directly to DE-CIX Frankfurt with enterprise hardware options.",
     models: [
-      "AMD EPYC Milan",
+      "AMD EPYC",
     ],
   },
 
@@ -53,7 +53,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
   "singapore_epyc-milan": {
     note: "Our Singapore nodes operate inside Equinix SG1, delivering sub-25ms regional routing across Southeast Asia.",
     models: [
-      "AMD EPYC Milan",
+      "AMD EPYC",
     ],
   },
 
@@ -61,7 +61,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
   "usa_epyc-milan": {
     note: "Our United States nodes are hosted in Ashburn / Data Alley with low-latency North American routing.",
     models: [
-      "AMD EPYC Milan",
+      "AMD EPYC",
     ],
   },
 
@@ -69,7 +69,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
   "canada_epyc-milan": {
     note: "Our Canada nodes operate from the BHS Beauharnois complex with enterprise DDoS protection.",
     models: [
-      "AMD EPYC Milan",
+      "AMD EPYC",
     ],
   },
 
@@ -93,7 +93,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
   "epyc-milan": {
     note: "Our AMD EPYC nodes offer dedicated enterprise cores with DDR4 ECC memory and fast NVMe storage.",
     models: [
-      "AMD EPYC Milan",
+      "AMD EPYC",
     ],
   },
   "xeon-gold": {
