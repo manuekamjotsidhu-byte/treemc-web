@@ -1,0 +1,56 @@
+{
+  "loading": {
+    "enableLoadingScreen": false,
+    "loadingDuration": 1000
+  },
+  "currency": {
+    "apiKey": "e912bbb7db10a10466ec18f0",
+    "baseCurrency": "INR",
+    "defaultCurrency": "INR",
+    "supportedCurrencies": [
+      { "code": "INR", "symbol": "₹", "name": "Indian Rupee" },
+      { "code": "PKR", "symbol": "Rs", "name": "Pakistani Rupee" },
+      { "code": "USD", "symbol": "$", "name": "US Dollar" }
+    ]
+  },
+  "themeSwitcher": {
+    "show": true,
+    "position": "bottom-left",
+    "defaultColor": "green",
+    "availableColors": [
+      {
+        "name": "green",
+        "value": "rgba(34, 197, 94, 1)",
+        "label": "Emerald"
+      },
+      {
+        "name": "blue",
+        "value": "rgba(37, 99, 235, 1)",
+        "label": "Blue"
+      },
+      {
+        "name": "teal",
+        "value": "rgba(20, 184, 166, 1)",
+        "label": "Teal"
+      },
+      {
+        "name": "purple",
+        "value": "rgba(147, 51, 234, 1)",
+        "label": "Purple"
+      },
+      {
+        "name": "orange",
+        "value": "rgba(150, 93, 29, 1)",
+        "label": "Orange"
+      },
+      {
+        "name": "red",
+        "value": "rgba(239, 68, 68, 1)",
+        "label": "Red"
+      }
+    ]
+  },
+  "christmasTheme": {
+    "enabled": false
+  }
+}

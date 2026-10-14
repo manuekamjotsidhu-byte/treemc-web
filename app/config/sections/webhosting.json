@@ -1,0 +1,48 @@
+{
+  "planTypes": [
+    {
+      "id": "cpanel-web",
+      "name": "Web Hosting",
+      "displayName": "cPanel & Pterodactyl",
+      "image": "/icons/inteli7.png"
+    }
+  ],
+  "plans": {
+    "cpanel-web": [
+      {
+        "id": "starter-web",
+        "name": "Starter Web",
+        "badge": "Personal & Small Projects",
+        "cpu": "25% CPU",
+        "cpuDetail": "High Clock vCPU",
+        "ram": "4 GB",
+        "ramDetail": "RAM",
+        "storage": "5 GB",
+        "storageDetail": "Fast Disk",
+        "bandwidth": "Unmetered",
+        "bandwidthDetail": "Bandwidth",
+        "uptime": "Free SSL • Pterodactyl Panel",
+        "price": "100",
+        "period": "/mo",
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "pro-web",
+        "name": "Pro Web",
+        "badge": "Most Popular",
+        "cpu": "50% CPU",
+        "cpuDetail": "High Clock vCPU",
+        "ram": "6 GB",
+        "ramDetail": "RAM",
+        "storage": "10 GB",
+        "storageDetail": "Fast Disk",
+        "bandwidth": "Unmetered",
+        "bandwidthDetail": "Bandwidth",
+        "uptime": "Free SSL • Pterodactyl Panel",
+        "price": "200",
+        "period": "/mo",
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      }
+    ]
+  }
+}

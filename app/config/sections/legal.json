@@ -1,0 +1,181 @@
+{
+  "termsOfService": {
+    "title": "Terms of Service",
+    "lastUpdated": "October 2026",
+    "companyName": "TreeMC Host",
+    "websiteUrl": "https://treemc.host",
+    "contactEmail": "support@treemc.host",
+    "sections": [
+      {
+        "title": "1. Eligibility",
+        "content": "You must be at least 14 years old or the legal age in your jurisdiction. If acting on behalf of a business, you confirm you have authority to bind that entity. We may request identity verification at any time. Services may not be used in restricted jurisdictions."
+      },
+      {
+        "title": "2. Account Registration",
+        "content": "You must provide accurate, complete, and current information. False identities or misleading details are prohibited. Multiple accounts created to bypass limits may be terminated. We reserve the right to suspend accounts pending verification. You are responsible for maintaining account security."
+      },
+      {
+        "title": "3. Services Provided",
+        "content": "TreeMC Host, founded by Abdullah (Founder & CEO) and Ekamjot Singh (CEO & CTO), provides shared web hosting, Minecraft and game hosting, VPS hosting, dedicated servers and IP services, and related cloud infrastructure. All services are provided on an 'as-is' and 'as-available' basis."
+      },
+      {
+        "title": "4. Free Hosting Terms",
+        "content": "Free hosting is provided at our discretion. No uptime or backup guarantee applies. Resources may be limited or modified at any time. Accounts may be removed for inactivity. Free plans strictly prohibit crypto mining, file storage abuse, proxy/VPN services, pirated software, adult content, high CPU scripts, and automated bots. Accounts may be suspended without notice."
+      },
+      {
+        "title": "5. Paid Services",
+        "content": "All paid services are billed in advance. Service begins after confirmed payment. Resource limits must be respected. Pricing may change with prior notice. Paid services do not grant ownership of infrastructure."
+      },
+      {
+        "title": "6. VPS & Root Access Responsibility",
+        "content": "If your service includes root or administrative access: You are solely responsible for server security. You must maintain firewall and system updates. Misconfigured servers causing abuse may be suspended. We do not provide system administration unless purchased separately."
+      },
+      {
+        "title": "7. Payments & Billing",
+        "content": "All services are prepaid. Invoices must be paid before the due date. Unpaid invoices may result in suspension. Suspended services may incur reactivation fees. Taxes may apply. Chargebacks result in immediate suspension and permanent termination."
+      },
+      {
+        "title": "8. User Responsibility for Billing and Account Management",
+        "content": "You are solely responsible for managing and monitoring your account, including active services, renewal dates, unpaid invoices, and credit balance. You agree to log in regularly to review active services and outstanding invoices. TreeMC Host is not liable for suspension, termination, or data loss caused by failure to check or pay invoices on time. Data may be permanently deleted after suspension due to non-payment."
+      },
+      {
+        "title": "9. Refund Policy",
+        "content": "Refund requests must be made within 24 hours of first payment. VPS services are strictly non-refundable. No refunds for dedicated IPs, domains, setup fees, add-ons, or abuse-related suspensions. Refunds are issued to the original payment method only."
+      },
+      {
+        "title": "10. Resource Usage & Fair Use",
+        "content": "Excessive CPU, RAM, bandwidth, or disk I/O usage may result in throttling or suspension. Infinite loops or background abuse processes are prohibited. Public file-sharing platforms are not allowed without approval. Crypto mining is prohibited unless explicitly permitted."
+      },
+      {
+        "title": "11. Prohibited Activities",
+        "content": "Strictly prohibited: malware hosting, phishing, hacking tools, botnets, DDoS-for-hire services, spam campaigns, copyright infringement, terror-related content, carding, or fraud. Violations result in immediate termination and reporting to relevant authorities."
+      },
+      {
+        "title": "12. Abuse Complaints",
+        "content": "Abuse reports must be addressed within 24 hours. Failure to respond may result in suspension. Repeat violations lead to permanent termination."
+      },
+      {
+        "title": "13. Staff Harassment Policy",
+        "content": "Harassment, threats, insults, slurs, or abusive language toward TreeMC Host staff via tickets, chat, or Discord will result in immediate termination without refund. We maintain zero tolerance."
+      },
+      {
+        "title": "14. Data & Backups",
+        "content": "You are responsible for maintaining backups. We do not guarantee data restoration. We are not liable for data loss due to hardware failure, cyberattacks, or user error."
+      },
+      {
+        "title": "15. Service-Level Agreement (SLA)",
+        "content": "Paid plans target 99.9% monthly uptime. SLA credits must be requested within 7 days. Credits apply only to future invoices. Exclusions include scheduled maintenance, third-party outages, user misconfiguration, and force majeure events. Free plans are excluded from SLA."
+      },
+      {
+        "title": "16. Dedicated IP Policy",
+        "content": "IP addresses remain our property or that of upstream providers. IP misuse results in revocation without refund. You are responsible for maintaining IP reputation."
+      },
+      {
+        "title": "17. Affiliate Program",
+        "content": "Self-referrals and fraudulent referrals are prohibited. Commission may be reversed if the referred user refunds. We may terminate affiliate accounts at any time."
+      },
+      {
+        "title": "18. Reseller Policy",
+        "content": "VPS reselling requires written approval. Unauthorized reselling may result in termination."
+      },
+      {
+        "title": "19. Intellectual Property",
+        "content": "All TreeMC Host branding, software, and systems remain our property. Unauthorized reproduction is prohibited."
+      },
+      {
+        "title": "20. Limitation of Liability",
+        "content": "To the maximum extent permitted by law: We are not liable for indirect or consequential damages. Total liability is limited to the amount paid in the previous 30 days. We are not responsible for third-party failures."
+      },
+      {
+        "title": "21. Indemnification",
+        "content": "You agree to indemnify and hold TreeMC Host harmless from claims, damages, losses, and legal expenses arising from your use of our services."
+      },
+      {
+        "title": "22. Force Majeure",
+        "content": "We are not liable for delays or failures caused by events beyond our control, including natural disasters, war, power failures, government actions, or infrastructure outages."
+      },
+      {
+        "title": "23. Suspension & Termination",
+        "content": "We may suspend or terminate services without notice for Terms violations, non-payment, fraud, security threats, or legal compliance. No refunds are issued for accounts terminated due to violations."
+      },
+      {
+        "title": "24. Severability",
+        "content": "If any provision is deemed unenforceable, the remaining provisions remain valid and enforceable."
+      },
+      {
+        "title": "25. Entire Agreement",
+        "content": "These Terms, along with our Privacy Policy, Acceptable Use Policy, and Refund Policy, constitute the entire agreement between you and TreeMC Host."
+      }
+    ]
+  },
+  "refundPolicy": {
+    "title": "Refund Policy",
+    "lastUpdated": "October 2026",
+    "companyName": "TreeMC Host",
+    "websiteUrl": "https://treemc.host",
+    "contactEmail": "support@treemc.host",
+    "sections": [
+      {
+        "title": "1. General Refund Eligibility",
+        "content": "Refunds are only provided if there is a verified technical or service-related issue caused by our hosting infrastructure that prevents the service from functioning as intended and cannot be resolved by our technical team within a reasonable timeframe. Refunds will not be issued for customer misconfiguration, software compatibility issues, lack of technical knowledge, change of mind, or any issue outside our control. All refund requests are subject to review by our support team."
+      },
+      {
+        "title": "2. Non-Refundable Services",
+        "content": "The following services are strictly non-refundable: Dedicated IP addresses, domain registrations and renewals, setup fees, custom configurations, add-ons or extra resources, abuse-related suspensions, and services terminated for Terms violations. Due to the nature of instant provisioning and infrastructure allocation, VPS services cannot be refunded under any circumstances."
+      },
+      {
+        "title": "3. Refund Conditions",
+        "content": "Refunds may be denied if: The service has been used for abusive or illegal activity, resource abuse has been detected, a chargeback has been filed, the request is made after 24 hours, the account has been suspended for violation of policies, or the refund request lacks a valid and verifiable reason. Simply deciding you no longer wish to use the service after having already used it — for example, after 2 or more days of active use — does not constitute a valid reason for a refund."
+      },
+      {
+        "title": "4. Chargebacks & Payment Disputes",
+        "content": "Filing a chargeback or payment dispute without contacting support first will result in: Immediate suspension of services, termination of the account, and permanent ban from future purchases. We reserve the right to dispute fraudulent chargebacks with supporting evidence."
+      },
+      {
+        "title": "5. Refund Method",
+        "content": "Approved refunds will: Be issued to the original payment method, be processed within a reasonable timeframe, and exclude transaction fees where applicable. We are not responsible for delays caused by banks or payment processors."
+      },
+      {
+        "title": "6. Service Cancellation",
+        "content": "Services must be canceled through the client area before the renewal date. Failure to cancel does not automatically qualify you for a refund. Cancellation does not reverse previous charges."
+      },
+      {
+        "title": "7. SLA Credits vs Refunds",
+        "content": "If uptime falls below the guaranteed threshold (for eligible paid plans): Compensation will be issued as service credit only. SLA credits cannot be withdrawn as cash. SLA credits must be requested within 7 days of the outage. Free plans are not eligible for SLA compensation."
+      },
+      {
+        "title": "8. Fraud Prevention",
+        "content": "We reserve the right to request identity verification, delay service activation, cancel suspicious orders, and deny refunds for high-risk transactions. Fraudulent activity will result in permanent account termination."
+      },
+      {
+        "title": "9. Modifications to This Policy",
+        "content": "We reserve the right to update this Refund Policy at any time. Updated versions will be published on our official website at https://treemc.host."
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "October 2026",
+    "companyName": "TreeMC Host",
+    "websiteUrl": "https://treemc.host",
+    "contactEmail": "support@treemc.host",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "content": "We collect information you provide directly to us, such as when you create an account, purchase hosting services, or contact support via Discord. This includes your name, email, billing information, and ticket logs."
+      },
+      {
+        "title": "2. How We Use Information",
+        "content": "We use the information we collect to provision server resources, process transactions, prevent abuse and fraud, and communicate critical service notifications."
+      },
+      {
+        "title": "3. Data Security",
+        "content": "We employ industry-standard encryption, strict access controls, and DDoS filtering to protect customer information and host infrastructure against unauthorized access."
+      },
+      {
+        "title": "4. Contact Us",
+        "content": "If you have questions regarding this Privacy Policy or your data, please contact our support team at support@treemc.host or via Discord at https://discord.gg/MJFPbjAdJY."
+      }
+    ]
+  }
+}

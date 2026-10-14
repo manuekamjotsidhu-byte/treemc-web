@@ -1,0 +1,286 @@
+{
+  "planTypes": [
+    {
+      "id": "epyc-vds",
+      "name": "AMD EPYC VDS",
+      "displayName": "AMD EPYC Dedicated VDS",
+      "image": "/cpu/epyc.png"
+    },
+    {
+      "id": "xeon-vds",
+      "name": "Intel Xeon VDS",
+      "displayName": "Intel Xeon Dedicated VDS",
+      "image": "/cpu/intel.png"
+    }
+  ],
+  "locations": [
+    {
+      "id": "india",
+      "name": "India (Noida & Mumbai)",
+      "flag": "/flags/india.png",
+      "displayName": "India (Noida & Mumbai)",
+      "cpu": "AMD EPYC / Intel Xeon",
+      "availableCpus": [
+        "epyc-vds",
+        "xeon-vds"
+      ]
+    },
+    {
+      "id": "germany",
+      "name": "Germany (Frankfurt)",
+      "flag": "/flags/germany.png",
+      "displayName": "Germany",
+      "cpu": "AMD EPYC / Intel Xeon",
+      "availableCpus": [
+        "epyc-vds",
+        "xeon-vds"
+      ]
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "flag": "/flags/singapore.png",
+      "displayName": "Singapore",
+      "cpu": "AMD EPYC",
+      "availableCpus": [
+        "epyc-vds"
+      ]
+    }
+  ],
+  "plans": {
+    "epyc-vds": [
+      {
+        "id": "vds-epyc-l",
+        "name": "L Tier",
+        "badge": "Dedicated Cores",
+        "cpu": "6 Dedicated Cores",
+        "cpuDetail": "AMD EPYC 7F72 / 7K62",
+        "ram": "16 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "150 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "1500",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-epyc-xl",
+        "name": "XL Tier",
+        "badge": "High Compute",
+        "cpu": "6 Dedicated Cores",
+        "cpuDetail": "AMD EPYC 7F72 / 7K62",
+        "ram": "24 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "200 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "2399",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-epyc-xxl",
+        "name": "XXL Tier",
+        "badge": "Powerhouse",
+        "cpu": "8 Dedicated Cores",
+        "cpuDetail": "AMD EPYC 7F72 / 7K62",
+        "ram": "32 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "300 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "2999",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-epyc-2xl",
+        "name": "2XL Tier",
+        "badge": "Heavy Duty",
+        "cpu": "10 Dedicated Cores",
+        "cpuDetail": "AMD EPYC 7F72 / 7K62",
+        "ram": "48 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "350 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "3999",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-epyc-3xl",
+        "name": "3XL Tier",
+        "badge": "Maximum Specs",
+        "cpu": "12 Dedicated Cores",
+        "cpuDetail": "AMD EPYC 7F72 / 7K62",
+        "ram": "64 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "400 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "4999",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      }
+    ],
+    "xeon-vds": [
+      {
+        "id": "vds-xeon-l",
+        "name": "L Tier",
+        "badge": "Dedicated Cores",
+        "cpu": "6 Dedicated Cores",
+        "cpuDetail": "Intel Xeon Platinum / v4",
+        "ram": "16 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "150 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "1200",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-xeon-xl",
+        "name": "XL Tier",
+        "badge": "High Compute",
+        "cpu": "6 Dedicated Cores",
+        "cpuDetail": "Intel Xeon Platinum / v4",
+        "ram": "24 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "200 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "2000",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-xeon-xxl",
+        "name": "XXL Tier",
+        "badge": "Powerhouse",
+        "cpu": "8 Dedicated Cores",
+        "cpuDetail": "Intel Xeon Platinum / v4",
+        "ram": "32 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "300 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "2500",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-xeon-2xl",
+        "name": "2XL Tier",
+        "badge": "Heavy Duty",
+        "cpu": "10 Dedicated Cores",
+        "cpuDetail": "Intel Xeon Platinum / v4",
+        "ram": "48 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "350 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "3800",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "vds-xeon-3xl",
+        "name": "3XL Tier",
+        "badge": "Maximum Specs",
+        "cpu": "12 Dedicated Cores",
+        "cpuDetail": "Intel Xeon Platinum / v4",
+        "ram": "64 GB",
+        "ramDetail": "DDR4 ECC RAM",
+        "storage": "400 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1 Gbps Premium",
+        "bandwidthDetail": "Unmetered",
+        "price": "4500",
+        "period": "/mo",
+        "features": [
+          "Dedicated CPU Cores",
+          "Full Root Access",
+          "1Gbps Port",
+          "DDoS Mitigation",
+          "VNC Console"
+        ],
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      }
+    ]
+  }
+}

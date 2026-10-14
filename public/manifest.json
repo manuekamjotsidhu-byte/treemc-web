@@ -1,0 +1,42 @@
+{
+  "name": "TreeMC Host - High Performance Game & Cloud Infrastructure",
+  "short_name": "TreeMC Host",
+  "description": "Enterprise Minecraft server hosting, KVM Cloud VPS, and dedicated VDS powered by Intel Xeon and AMD EPYC DDR5.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090e",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["games", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/treemc-logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Minecraft Hosting",
+      "short_name": "Minecraft",
+      "description": "Browse Minecraft server plans",
+      "url": "/#minecraft-plans"
+    },
+    {
+      "name": "Cloud VPS",
+      "short_name": "VPS",
+      "description": "KVM Cloud VPS and Dedicated VDS",
+      "url": "/#cloud-plans"
+    },
+    {
+      "name": "Game Panel",
+      "short_name": "Panel",
+      "description": "Manage servers on panel.treemc.host",
+      "url": "https://panel.treemc.host"
+    }
+  ]
+}

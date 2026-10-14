@@ -1,0 +1,65 @@
+{
+  "planTypes": [
+    {
+      "id": "standard",
+      "name": "Standard Nodes",
+      "displayName": "Bot Hosting",
+      "image": "/icons/nodejs.png"
+    }
+  ],
+  "plans": {
+    "standard": [
+      {
+        "id": "bot-1",
+        "name": "BOT 1",
+        "badge": "Starter",
+        "cpu": "0.5 Core",
+        "cpuDetail": "High Frequency Core",
+        "ram": "1 GB",
+        "ramDetail": "DDR4 RAM",
+        "storage": "5 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "Unmetered",
+        "bandwidthDetail": "Bandwidth",
+        "uptime": "Pterodactyl Panel • 24/7 Support",
+        "price": "80",
+        "period": "/mo",
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "bot-2",
+        "name": "BOT 2",
+        "badge": "Most Popular",
+        "cpu": "1 Core",
+        "cpuDetail": "High Frequency Core",
+        "ram": "3 GB",
+        "ramDetail": "DDR4 RAM",
+        "storage": "10 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "Unmetered",
+        "bandwidthDetail": "Bandwidth",
+        "uptime": "Pterodactyl Panel • 24/7 Support",
+        "price": "120",
+        "period": "/mo",
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      },
+      {
+        "id": "bot-3",
+        "name": "BOT 3",
+        "badge": "Pro",
+        "cpu": "1.5 Core",
+        "cpuDetail": "High Frequency Core",
+        "ram": "4 GB",
+        "ramDetail": "DDR4 RAM",
+        "storage": "20 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "Unmetered",
+        "bandwidthDetail": "Bandwidth",
+        "uptime": "Pterodactyl Panel • 24/7 Support",
+        "price": "250",
+        "period": "/mo",
+        "orderLink": "https://discord.gg/MJFPbjAdJY"
+      }
+    ]
+  }
+}
