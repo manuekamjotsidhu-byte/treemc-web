@@ -33,7 +33,7 @@ Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, and cust
 3. **Cloud Infrastructure Selector (VPS & VDS)**:
    - Zero-pagination real-time filter.
    - Region Selection: India (Noida/Delhi/Mumbai), Pakistan (Lahore), Singapore, Germany, USA, Canada.
-   - Real-time CPU notices per country (e.g. India Xeon Platinum 8275CL / E-2388G, Pakistan AMD EPYC 7763, etc.).
+   - Real-time CPU notices per country (e.g. India Xeon Platinum 8168 / E5-2673 v4, Pakistan AMD Ryzen 5, etc.).
    - Switch between **KVM Cloud VPS** and **Dedicated Bare-Metal VDS**.
 
 4. **Global Low-Ping Edge Nodes**:

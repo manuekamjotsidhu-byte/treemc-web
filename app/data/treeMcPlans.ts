@@ -314,11 +314,10 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
       {
         id: "amd-epyc",
         name: "AMD EPYC - Premium",
-        badge: "7F72 / 7K62 High-Freq",
+        badge: "Milan Series",
         image: "/cpu/epyc.png",
         cpuModels: [
-          "AMD EPYC 7F72 @ 3.20 GHz",
-          "AMD EPYC 7K62 @ 2.60 GHz",
+          "AMD EPYC Milan",
         ],
         vpsPlans: [
           { id: "in-epyc-xs", tier: "XS", priceMo: 449, cores: "2 vCore", ram: "6GB", ramType: "DDR4 ECC", nvme: "50GB NVMe" },
@@ -372,7 +371,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD EPYC - Premium",
         badge: "Milan Series",
         image: "/cpu/epyc.png",
-        cpuModels: ["AMD EPYC Milan Series 7003"],
+        cpuModels: ["AMD EPYC Milan"],
         vpsPlans: [
           { id: "sg-epyc-xs", tier: "XS", priceMo: 1399, cores: "4 vCore", ram: "6GB", ramType: "DDR4 ECC", nvme: "100GB NVMe" },
           { id: "sg-epyc-s", tier: "S", priceMo: 2149, cores: "6 vCore", ram: "16GB", ramType: "DDR4 ECC", nvme: "200GB NVMe" },
@@ -429,7 +428,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD EPYC - Premium",
         badge: "Milan Series",
         image: "/cpu/epyc.png",
-        cpuModels: ["AMD EPYC Milan Series"],
+        cpuModels: ["AMD EPYC Milan"],
         vpsPlans: [
           { id: "de-epyc-s", tier: "S", priceMo: 689, cores: "4 vCore", ram: "6GB", ramType: "DDR4 ECC", nvme: "100GB NVMe" },
           { id: "de-epyc-m", tier: "M", priceMo: 1319, cores: "6 vCore", ram: "16GB", ramType: "DDR4 ECC", nvme: "200GB NVMe", popular: true },
@@ -454,7 +453,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD EPYC - Premium",
         badge: "Milan Series",
         image: "/cpu/epyc.png",
-        cpuModels: ["AMD EPYC Milan Series Enterprise"],
+        cpuModels: ["AMD EPYC Milan"],
         vpsPlans: [
           { id: "us-epyc-s", tier: "S", priceMo: 999, cores: "4 vCore", ram: "6GB", ramType: "DDR4 ECC", nvme: "100GB NVMe" },
           { id: "us-epyc-m", tier: "M", priceMo: 1669, cores: "6 vCore", ram: "16GB", ramType: "DDR4 ECC", nvme: "200GB NVMe", popular: true },
@@ -479,7 +478,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD EPYC - Premium",
         badge: "Milan Series",
         image: "/cpu/epyc.png",
-        cpuModels: ["AMD EPYC Milan Series Enterprise"],
+        cpuModels: ["AMD EPYC Milan"],
         vpsPlans: [
           { id: "ca-epyc-s", tier: "S", priceMo: 889, cores: "4 vCore", ram: "6GB", ramType: "DDR4 ECC", nvme: "100GB NVMe" },
           { id: "ca-epyc-m", tier: "M", priceMo: 1669, cores: "6 vCore", ram: "16GB", ramType: "DDR4 ECC", nvme: "200GB NVMe", popular: true },
