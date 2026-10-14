@@ -77,7 +77,7 @@
     "icon": "Server"
   },
   "banner": {
-    "show": true,
+    "show": false,
     "text": "🇵🇰 TreeMC Pakistan Portal Live — Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
     "couponCode": "",
     "link": "https://pakistan.treemc.host/",
