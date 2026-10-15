@@ -15,10 +15,10 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_ryzen-ddr5": {
-    note: "Our India (Noida / Delhi) AMD Ryzen plans feature high-performance processors engineered for intensive workloads.",
+    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) and Ryzen 9 5900X (Mumbai) engineered for maximum single-thread clock speeds.",
     models: [
-      "AMD Ryzen™ 9 9900X (12 Cores / 24 Threads)",
-      "AMD Ryzen™ 9 5900X (12 Cores / 24 Threads)",
+      "AMD Ryzen™ 9 9950X (Delhi)",
+      "AMD Ryzen™ 9 5900X (Mumbai)",
     ],
   },
   "india_epyc-milan": {
@@ -84,10 +84,10 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "ryzen-ddr5": {
-    note: "Our AMD Ryzen plans feature high-performance processors engineered for intensive workloads.",
+    note: "Our AMD Ryzen plans feature high-performance processors: Ryzen 9 9950X (Delhi) and Ryzen 9 5900X (Mumbai).",
     models: [
-      "AMD Ryzen™ 9 9900X (12 Cores / 24 Threads)",
-      "AMD Ryzen™ 9 5900X (12 Cores / 24 Threads)",
+      "AMD Ryzen™ 9 9950X (Delhi)",
+      "AMD Ryzen™ 9 5900X (Mumbai)",
     ],
   },
   "epyc-milan": {

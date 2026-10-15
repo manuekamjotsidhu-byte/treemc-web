@@ -280,7 +280,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
     id: "india",
     name: "India",
     flag: "/flags/india.png",
-    sublocations: ["Noida", "Delhi"],
+    sublocations: ["Noida", "Delhi", "Mumbai"],
     vdsSublocations: ["Noida", "Delhi"],
     pingEstimate: "8ms",
     lat: 28.6139,
@@ -351,10 +351,10 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD Ryzen™ - Premium",
         badge: "Zen 4 / DDR5 Speed",
         image: "/cpu/ryzen9.png",
-        sublocations: ["Noida", "Delhi"],
+        sublocations: ["Delhi", "Mumbai"],
         cpuModels: [
-          "AMD Ryzen™ 9 9900X (Ultra Performance)",
-          "AMD Ryzen™ 9 5900X (OVH DDoS Protected)",
+          "AMD Ryzen™ 9 9950X (Delhi - Ultra Performance)",
+          "AMD Ryzen™ 9 5900X (Mumbai - DDoS Protected)",
         ],
         vpsPlans: [
           { id: "in-ryzen-xs", tier: "XS", priceMo: 699, cores: "1 vCore", ram: "4GB", ramType: "DDR5 ECC", nvme: "50GB NVMe" },

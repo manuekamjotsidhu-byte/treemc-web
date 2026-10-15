@@ -29,9 +29,13 @@ export default function VPSPricingSection() {
       return loc.cpuDisplayNames[cpuId]
     }
     if (loc.id === "india") {
-      return (cpuId === "xeon-standard" || cpuId.includes("xeon") || cpuId.includes("intel"))
-        ? "India (Noida)"
-        : "India (Noida & Delhi)"
+      if (cpuId === "xeon-standard" || cpuId.includes("xeon") || cpuId.includes("intel")) {
+        return "India (Noida)"
+      }
+      if (cpuId === "ryzen-ddr5" || cpuId.includes("ryzen")) {
+        return "India (Delhi & Mumbai)"
+      }
+      return "India (Noida & Delhi)"
     }
     return loc.displayName || loc.name || ""
   }
