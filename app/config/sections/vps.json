@@ -65,7 +65,7 @@
     },
     {
       "id": "usa",
-      "name": "United States (Ashburn)",
+      "name": "United States (Washington DC, Los Angeles, San Francisco)",
       "flag": "/flags/usa.png",
       "displayName": "USA",
       "availableCpus": [
@@ -74,7 +74,7 @@
     },
     {
       "id": "canada",
-      "name": "Canada (Montreal)",
+      "name": "Canada (Washington DC, Los Angeles, San Francisco)",
       "flag": "/flags/canada.png",
       "displayName": "Canada",
       "availableCpus": [
@@ -883,7 +883,7 @@
       {
         "id": "us-epyc-s",
         "name": "S Plan",
-        "badge": "US East Hub",
+        "badge": "DC / LA / SF",
         "image": "/cpu/epyc.png",
         "cpu": "4 vCore",
         "cpuDetail": "AMD EPYC",

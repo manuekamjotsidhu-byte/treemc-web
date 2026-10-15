@@ -444,10 +444,10 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
     id: "usa",
     name: "USA",
     flag: "/flags/usa.png",
-    sublocations: ["Ashburn, VA", "Chicago, IL"],
+    sublocations: ["Washington D.C.", "Los Angeles", "San Francisco"],
     pingEstimate: "160ms",
-    lat: 39.0438,
-    lng: -77.4874,
+    lat: 38.9072,
+    lng: -77.0369,
     processors: [
       {
         id: "amd-epyc",
@@ -469,10 +469,10 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
     id: "canada",
     name: "Canada",
     flag: "/flags/canada.png",
-    sublocations: ["Montreal, QC"],
-    pingEstimate: "175ms",
-    lat: 45.5017,
-    lng: -73.5673,
+    sublocations: ["Washington D.C.", "Los Angeles", "San Francisco"],
+    pingEstimate: "165ms",
+    lat: 45.4215,
+    lng: -75.6972,
     processors: [
       {
         id: "amd-epyc",

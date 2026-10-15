@@ -59,7 +59,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
 
   // USA
   "usa_epyc-milan": {
-    note: "Our United States nodes are hosted in Ashburn / Data Alley with low-latency North American routing.",
+    note: "Our United States nodes are hosted across Washington D.C., Los Angeles, and San Francisco with high-speed low-latency North American routing.",
     models: [
       "AMD EPYC",
     ],
@@ -67,7 +67,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
 
   // Canada
   "canada_epyc-milan": {
-    note: "Our Canada nodes operate from the BHS Beauharnois complex with enterprise DDoS protection.",
+    note: "Our Canada nodes operate across Washington D.C., Los Angeles, and San Francisco with enterprise DDoS protection and low-latency routing.",
     models: [
       "AMD EPYC",
     ],
