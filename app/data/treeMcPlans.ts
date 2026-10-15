@@ -48,6 +48,7 @@ export interface LocationData {
   name: string;
   flag: string;
   sublocations: string[];
+  vdsSublocations?: string[];
   pingEstimate: string;
   lat: number;
   lng: number;
@@ -278,6 +279,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
     name: "India",
     flag: "/flags/india.png",
     sublocations: ["Noida", "Delhi", "Mumbai"],
+    vdsSublocations: ["Noida", "Delhi"],
     pingEstimate: "8ms",
     lat: 28.6139,
     lng: 77.2090,

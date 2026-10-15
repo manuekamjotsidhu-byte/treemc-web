@@ -56,6 +56,11 @@ export default function CloudInfrastructureSection() {
     currentLocation.processors.find((p) => p.id === selectedProcessorId) ||
     currentLocation.processors[0];
 
+  const currentSublocations =
+    mode === "vds" && currentLocation.vdsSublocations
+      ? currentLocation.vdsSublocations
+      : currentLocation.sublocations;
+
   const hasVdsOption = Boolean(currentProcessor?.vdsPlans && currentProcessor.vdsPlans.length > 0);
   const activePlans: VPSPlan[] =
     mode === "vds" && hasVdsOption
@@ -84,9 +89,9 @@ export default function CloudInfrastructureSection() {
           <div className="mb-8">
             <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3.5 flex items-center justify-between">
               <span>SELECT LOCATION</span>
-              {currentLocation.sublocations && currentLocation.sublocations.length > 0 && (
+              {currentSublocations && currentSublocations.length > 0 && (
                 <span className="text-[11px] text-emerald-400 normal-case font-medium">
-                  Nodes: {currentLocation.sublocations.join(" • ")}
+                  Nodes: {currentSublocations.join(" • ")}
                 </span>
               )}
             </div>
