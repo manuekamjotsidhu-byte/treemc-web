@@ -23,6 +23,19 @@ export default function VPSPricingSection() {
   const currentPlans = config.plans[planKey] || config.plans[selectedCPU] || config.plans[config.planTypes[0].id] || []
   const currentCpuInfo = vpsCpuInfo[planKey] || vpsCpuInfo[selectedCPU]
 
+  const getDisplayLocation = (loc: any, cpuId: string) => {
+    if (!loc) return ""
+    if (loc.cpuDisplayNames && loc.cpuDisplayNames[cpuId]) {
+      return loc.cpuDisplayNames[cpuId]
+    }
+    if (loc.id === "india") {
+      return (cpuId === "xeon-standard" || cpuId.includes("xeon") || cpuId.includes("intel"))
+        ? "India (Noida)"
+        : "India (Noida & Delhi)"
+    }
+    return loc.displayName || loc.name || ""
+  }
+
   const handleCPUSelection = (cpuId: string) => {
     setSelectedCPU(cpuId)
     const currentLoc = config.locations.find(loc => loc.id === selectedLocation)
@@ -129,7 +142,7 @@ export default function VPSPricingSection() {
                           height={24}
                           className="object-cover rounded-full"
                         />
-                        <span className="text-sm font-medium">{location.displayName}</span>
+                        <span className="text-sm font-medium">{getDisplayLocation(location, selectedCPU)}</span>
                       </button>
                     )
                   })}

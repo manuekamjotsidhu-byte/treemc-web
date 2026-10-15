@@ -34,14 +34,19 @@
   "locations": [
     {
       "id": "india",
-      "name": "India (Noida / Delhi / Mumbai)",
+      "name": "India (Noida & Delhi)",
       "flag": "/flags/india.png",
-      "displayName": "India (Noida & Mumbai)",
+      "displayName": "India (Noida & Delhi)",
       "availableCpus": [
         "ryzen-ddr5",
         "epyc-milan",
         "xeon-standard"
-      ]
+      ],
+      "cpuDisplayNames": {
+        "xeon-standard": "India (Noida)",
+        "epyc-milan": "India (Noida & Delhi)",
+        "ryzen-ddr5": "India (Noida & Delhi)"
+      }
     },
     {
       "id": "germany",

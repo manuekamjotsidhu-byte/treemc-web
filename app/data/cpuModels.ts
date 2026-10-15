@@ -6,7 +6,7 @@ export interface CpuInfo {
 export const vpsCpuInfo: Record<string, CpuInfo> = {
   // India
   "india_xeon-standard": {
-    note: 'Our India Intel Xeon plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
+    note: 'Our India (Noida) Intel Xeon plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
     models: [
       "Intel® Xeon® E5-2673 v4 @ 2.30 GHz",
       "Intel® Xeon® E5-2682 v4 @ 2.50 GHz",
@@ -15,14 +15,14 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_ryzen-ddr5": {
-    note: "Our India AMD Ryzen plans feature high-performance processors engineered for intensive workloads.",
+    note: "Our India (Noida / Delhi) AMD Ryzen plans feature high-performance processors engineered for intensive workloads.",
     models: [
       "AMD Ryzen™ 9 9900X (12 Cores / 24 Threads)",
       "AMD Ryzen™ 9 5900X (12 Cores / 24 Threads)",
     ],
   },
   "india_epyc-milan": {
-    note: "Our India AMD EPYC nodes offer dedicated enterprise cores with DDR4 ECC memory and fast NVMe storage.",
+    note: "Our India (Noida / Delhi) AMD EPYC nodes offer dedicated enterprise cores with DDR4 ECC memory and fast NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",
@@ -112,7 +112,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
 
 export const vdsCpuInfo: Record<string, CpuInfo> = {
   "xeon-vds": {
-    note: 'Our India Intel Xeon VDS plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
+    note: 'Our India (Noida) Intel Xeon VDS plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
     models: [
       "Intel® Xeon® E5-2673 v4 @ 2.30 GHz",
       "Intel® Xeon® E5-2682 v4 @ 2.50 GHz",
@@ -121,14 +121,14 @@ export const vdsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "epyc-vds": {
-    note: "Our India AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
+    note: "Our India (Noida / Delhi) AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",
     ],
   },
   "india_xeon-vds": {
-    note: 'Our India Intel Xeon VDS plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
+    note: 'Our India (Noida) Intel Xeon VDS plans come with 4 CPU options. You can choose any available option based on current stock by clicking on the "Order Now" button.',
     models: [
       "Intel® Xeon® E5-2673 v4 @ 2.30 GHz",
       "Intel® Xeon® E5-2682 v4 @ 2.50 GHz",
@@ -137,7 +137,7 @@ export const vdsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_epyc-vds": {
-    note: "Our India AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
+    note: "Our India (Noida / Delhi) AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",

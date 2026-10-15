@@ -38,6 +38,8 @@ export interface ProcessorCategory {
   name: string;
   badge: string;
   image: string;
+  sublocations?: string[];
+  vdsSublocations?: string[];
   cpuModels: string[];
   vpsPlans?: VPSPlan[];
   vdsPlans?: VPSPlan[];
@@ -278,7 +280,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
     id: "india",
     name: "India",
     flag: "/flags/india.png",
-    sublocations: ["Noida", "Delhi", "Mumbai"],
+    sublocations: ["Noida", "Delhi"],
     vdsSublocations: ["Noida", "Delhi"],
     pingEstimate: "8ms",
     lat: 28.6139,
@@ -289,6 +291,8 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "Intel - Standard",
         badge: "Xeon / Platinum",
         image: "/cpu/intel.png",
+        sublocations: ["Noida"],
+        vdsSublocations: ["Noida"],
         cpuModels: [
           "Intel® Xeon® E5-2673 v4 @ 2.30 GHz",
           "Intel® Xeon® E5-2682 v4 @ 2.50 GHz",
@@ -318,6 +322,8 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD EPYC - Premium",
         badge: "AMD EPYC",
         image: "/cpu/epyc.png",
+        sublocations: ["Noida", "Delhi"],
+        vdsSublocations: ["Noida", "Delhi"],
         cpuModels: [
           "AMD EPYC 7F72 @ 3.20 GHz",
           "AMD EPYC 7K62 @ 2.60 GHz",
@@ -345,6 +351,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD Ryzen™ - Premium",
         badge: "Zen 4 / DDR5 Speed",
         image: "/cpu/ryzen9.png",
+        sublocations: ["Noida", "Delhi"],
         cpuModels: [
           "AMD Ryzen™ 9 9900X (Ultra Performance)",
           "AMD Ryzen™ 9 5900X (OVH DDoS Protected)",

@@ -52,6 +52,14 @@ export default function GameServerList() {
     }
   }, [selectedGame, selectedLocation, selectedPlanType, router])
 
+  const getDisplayLocation = (loc: any, planType: string) => {
+    if (!loc) return ""
+    if (loc.id === "india") {
+      return planType === "budget" ? "India (Noida)" : "India (Noida / Delhi)"
+    }
+    return loc.name || ""
+  }
+
   const currentGame = config.games.find((g: Game) => g.id === selectedGame)
   const currentLocation = config.locations.find((loc) => loc.id === selectedLocation)
   const availablePlanTypes = currentLocation?.availablePlanTypes || []
@@ -199,7 +207,7 @@ export default function GameServerList() {
                           height={24}
                           className="rounded-full object-cover"
                         />
-                        <span className="text-sm font-medium">{location.name}</span>
+                        <span className="text-sm font-medium">{getDisplayLocation(location, selectedPlanType)}</span>
                       </button>
                     )
                   })}

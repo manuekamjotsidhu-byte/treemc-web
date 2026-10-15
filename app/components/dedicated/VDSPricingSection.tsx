@@ -23,6 +23,19 @@ export default function VDSPricingSection() {
 
   const currentLocation = config.locations.find(loc => loc.id === selectedLocation)
   const availableCPUs = currentLocation?.availableCpus || []
+  const getDisplayLocation = (loc: any, cpuId: string) => {
+    if (!loc) return ""
+    if (loc.cpuDisplayNames && loc.cpuDisplayNames[cpuId]) {
+      return loc.cpuDisplayNames[cpuId]
+    }
+    if (loc.id === "india") {
+      return (cpuId === "xeon-vds" || cpuId.includes("xeon") || cpuId.includes("intel"))
+        ? "India (Noida)"
+        : "India (Noida & Delhi)"
+    }
+    return loc.displayName || loc.name || ""
+  }
+
   const currentPlans = config.plans[selectedCPU] || config.plans[config.planTypes[0].id]
   const planKey = `${selectedLocation}_${selectedCPU}`
   const currentCpuInfo = vdsCpuInfo[planKey] || vdsCpuInfo[selectedCPU]
@@ -166,7 +179,7 @@ export default function VDSPricingSection() {
                           height={32}
                           className="rounded-full object-cover"
                         />
-                        <span className="text-sm font-medium">{location.displayName}</span>
+                        <span className="text-sm font-medium">{getDisplayLocation(location, selectedCPU)}</span>
                       </button>
                     )
                   })}
@@ -251,7 +264,7 @@ export default function VDSPricingSection() {
                       <div>
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white">{plan.name}</h3>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
-                          {config.locations.find((loc) => loc.id === selectedLocation)?.displayName}
+                          {getDisplayLocation(config.locations.find((loc) => loc.id === selectedLocation), selectedCPU)}
                         </p>
                       </div>
                     </div>

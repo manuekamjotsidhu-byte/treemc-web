@@ -28,6 +28,7 @@ export interface VPSLocation {
   name: string
   flag: string
   displayName: string
+  cpuDisplayNames?: Record<string, string>
   availableCpus: string[]
 }
 

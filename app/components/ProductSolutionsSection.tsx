@@ -58,7 +58,7 @@ const solutions = [
     description:
       "High-performance Virtual Dedicated Servers hosted in India with 100% dedicated CPU slices, DDR4 ECC memory, and NVMe storage.",
     specs: [
-      "AMD EPYC & Intel Xeon (India Noida/Delhi)",
+      "AMD EPYC (Noida/Delhi) & Intel Xeon (Noida)",
       "Up to 12 Dedicated CPU Cores",
       "Up to 64GB DDR4 ECC RAM",
       "1Gbps Unmetered Port + DDoS Protection",

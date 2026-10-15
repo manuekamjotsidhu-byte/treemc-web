@@ -23,7 +23,11 @@
       "availableCpus": [
         "epyc-vds",
         "xeon-vds"
-      ]
+      ],
+      "cpuDisplayNames": {
+        "xeon-vds": "India (Noida)",
+        "epyc-vds": "India (Noida & Delhi)"
+      }
     }
   ],
   "plans": {

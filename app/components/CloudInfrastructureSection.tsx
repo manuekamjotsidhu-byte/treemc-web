@@ -57,9 +57,9 @@ export default function CloudInfrastructureSection() {
     currentLocation.processors[0];
 
   const currentSublocations =
-    mode === "vds" && currentLocation.vdsSublocations
-      ? currentLocation.vdsSublocations
-      : currentLocation.sublocations;
+    (mode === "vds"
+      ? (currentProcessor?.vdsSublocations || currentProcessor?.sublocations || currentLocation.vdsSublocations || currentLocation.sublocations)
+      : (currentProcessor?.sublocations || currentLocation.sublocations)) || [];
 
   const hasVdsOption = Boolean(currentProcessor?.vdsPlans && currentProcessor.vdsPlans.length > 0);
   const activePlans: VPSPlan[] =

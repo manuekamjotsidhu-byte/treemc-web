@@ -28,6 +28,7 @@ export interface Location {
   name: string
   flag: string
   displayName: string
+  cpuDisplayNames?: Record<string, string>
   cpu: string
   availableCpus: string[]
 }

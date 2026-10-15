@@ -19,7 +19,7 @@
   "locations": [
     {
       "id": "india",
-      "name": "India (Noida / Delhi / Mumbai)",
+      "name": "India (Noida / Delhi)",
       "flag": "/flags/india.png",
       "availablePlanTypes": [
         "budget",
