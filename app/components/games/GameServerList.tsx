@@ -318,7 +318,7 @@ export default function GameServerList() {
                           </span>
                           <span className="text-sm font-medium text-gray-500 dark:text-gray-400">/mo</span>
                         </div>
-                        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Instant Pterodactyl Provisioning</p>
+                        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Instant High-Performance Panel Provisioning</p>
                       </div>
 
                       <div className="space-y-2.5 mb-6">
@@ -351,7 +351,7 @@ export default function GameServerList() {
                             <Shield className="w-4 h-4 icon-primary" />
                             <span>DDoS Shield</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.ddos || "5 GB Always-On"}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white">{plan.ddos || "1 Tbps Always-On"}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
@@ -367,7 +367,7 @@ export default function GameServerList() {
                             <Server className="w-4 h-4 icon-primary" />
                             <span>Panel</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">Pterodactyl 1.x</span>
+                          <span className="font-semibold text-gray-900 dark:text-white">High Performance Panel</span>
                         </div>
                       </div>
                     </div>

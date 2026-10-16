@@ -52,7 +52,7 @@
       "icon": "/icons/minecraft-icon.webp",
       "banner": "/banners/minecraft-banners.webp",
       "featured": true,
-      "startingAt": "\u20b9149/mo",
+      "startingAt": "\u20b9249/mo",
       "primaryColor": "#4CAF50",
       "plans": {
         "budget": [
@@ -65,8 +65,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -78,8 +78,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 249,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 449,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -91,8 +91,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 399,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -104,8 +104,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 549,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 849,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -117,8 +117,8 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 849,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -130,8 +130,8 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 1149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -145,8 +145,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 279,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 399,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -158,8 +158,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -171,8 +171,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 749,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 999,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -184,8 +184,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1299,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -197,8 +197,8 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -210,8 +210,8 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 2499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -225,8 +225,8 @@
             "cpu": "150% AMD Ryzen 5",
             "storage": "20 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 179,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -238,8 +238,8 @@
             "cpu": "250% AMD Ryzen 5",
             "storage": "35 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -251,8 +251,8 @@
             "cpu": "350% AMD Ryzen 5",
             "storage": "50 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -264,8 +264,8 @@
             "cpu": "450% AMD Ryzen 5",
             "storage": "65 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -277,8 +277,8 @@
             "cpu": "600% AMD Ryzen 5",
             "storage": "90 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -290,7 +290,7 @@
             "cpu": "750% AMD Ryzen 5",
             "storage": "120 GB NVMe SSD",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -305,8 +305,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -318,8 +318,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 249,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 449,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -331,8 +331,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 399,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -344,8 +344,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 549,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 849,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -357,8 +357,8 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 849,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -370,8 +370,8 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 1149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -385,8 +385,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 279,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 399,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -398,8 +398,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -411,8 +411,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 749,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 999,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -424,8 +424,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1299,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -437,8 +437,8 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -450,8 +450,8 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 2499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -465,8 +465,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 169,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -478,8 +478,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 289,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -491,8 +491,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 469,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -504,8 +504,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -517,7 +517,7 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1009,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
@@ -530,7 +530,7 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1378,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -545,8 +545,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 469,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -558,8 +558,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 589,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 799,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -571,8 +571,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 889,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1149,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -584,8 +584,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1189,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -597,7 +597,7 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1798,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
@@ -610,7 +610,7 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 2398,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -625,8 +625,8 @@
             "cpu": "150% AMD Ryzen 5",
             "storage": "20 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 179,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -638,8 +638,8 @@
             "cpu": "250% AMD Ryzen 5",
             "storage": "35 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -651,8 +651,8 @@
             "cpu": "350% AMD Ryzen 5",
             "storage": "50 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -664,8 +664,8 @@
             "cpu": "450% AMD Ryzen 5",
             "storage": "65 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -677,8 +677,8 @@
             "cpu": "600% AMD Ryzen 5",
             "storage": "90 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -690,7 +690,7 @@
             "cpu": "750% AMD Ryzen 5",
             "storage": "120 GB NVMe SSD",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -704,7 +704,7 @@
       "icon": "/icons/rust-icon.webp",
       "banner": "/banners/rust-banner-2.webp",
       "featured": false,
-      "startingAt": "\u20b9149/mo",
+      "startingAt": "\u20b9249/mo",
       "primaryColor": "#CE422B",
       "plans": {
         "budget": [
@@ -717,8 +717,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -730,8 +730,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 249,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 449,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -743,8 +743,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 399,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -756,8 +756,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 549,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 849,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -769,8 +769,8 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 849,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -782,8 +782,8 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 1149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -797,8 +797,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 279,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 399,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -810,8 +810,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -823,8 +823,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 749,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 999,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -836,8 +836,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1299,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -849,8 +849,8 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -862,8 +862,8 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 2499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -877,8 +877,8 @@
             "cpu": "150% AMD Ryzen 5",
             "storage": "20 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 179,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -890,8 +890,8 @@
             "cpu": "250% AMD Ryzen 5",
             "storage": "35 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -903,8 +903,8 @@
             "cpu": "350% AMD Ryzen 5",
             "storage": "50 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -916,8 +916,8 @@
             "cpu": "450% AMD Ryzen 5",
             "storage": "65 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -929,8 +929,8 @@
             "cpu": "600% AMD Ryzen 5",
             "storage": "90 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -942,7 +942,7 @@
             "cpu": "750% AMD Ryzen 5",
             "storage": "120 GB NVMe SSD",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -957,8 +957,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -970,8 +970,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 249,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 449,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -983,8 +983,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 399,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -996,8 +996,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 549,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 849,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1009,8 +1009,8 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 849,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1022,8 +1022,8 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 1149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -1037,8 +1037,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 279,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 399,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1050,8 +1050,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1063,8 +1063,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 749,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 999,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1076,8 +1076,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1299,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1089,8 +1089,8 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1102,8 +1102,8 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 2499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -1117,8 +1117,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 169,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1130,8 +1130,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 289,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1143,8 +1143,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 469,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1156,8 +1156,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1169,7 +1169,7 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1009,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
@@ -1182,7 +1182,7 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1378,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -1197,8 +1197,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 469,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1210,8 +1210,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 589,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 799,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1223,8 +1223,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 889,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1149,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1236,8 +1236,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1189,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1249,7 +1249,7 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1798,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
@@ -1262,7 +1262,7 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 2398,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -1277,8 +1277,8 @@
             "cpu": "150% AMD Ryzen 5",
             "storage": "20 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 179,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1290,8 +1290,8 @@
             "cpu": "250% AMD Ryzen 5",
             "storage": "35 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1303,8 +1303,8 @@
             "cpu": "350% AMD Ryzen 5",
             "storage": "50 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1316,8 +1316,8 @@
             "cpu": "450% AMD Ryzen 5",
             "storage": "65 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1329,8 +1329,8 @@
             "cpu": "600% AMD Ryzen 5",
             "storage": "90 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1342,7 +1342,7 @@
             "cpu": "750% AMD Ryzen 5",
             "storage": "120 GB NVMe SSD",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -1356,7 +1356,7 @@
       "icon": "/icons/cs2-icon.webp",
       "banner": "/banners/cs2-banner.webp",
       "featured": false,
-      "startingAt": "\u20b9149/mo",
+      "startingAt": "\u20b9249/mo",
       "primaryColor": "#DE9B35",
       "plans": {
         "budget": [
@@ -1369,8 +1369,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1382,8 +1382,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 249,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 449,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1395,8 +1395,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 399,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1408,8 +1408,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 549,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 849,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1421,8 +1421,8 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 849,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1434,8 +1434,8 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 1149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -1449,8 +1449,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 279,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 399,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1462,8 +1462,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1475,8 +1475,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 749,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 999,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1488,8 +1488,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1299,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1501,8 +1501,8 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1514,8 +1514,8 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 2499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -1529,8 +1529,8 @@
             "cpu": "150% AMD Ryzen 5",
             "storage": "20 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 179,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1542,8 +1542,8 @@
             "cpu": "250% AMD Ryzen 5",
             "storage": "35 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1555,8 +1555,8 @@
             "cpu": "350% AMD Ryzen 5",
             "storage": "50 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1568,8 +1568,8 @@
             "cpu": "450% AMD Ryzen 5",
             "storage": "65 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1581,8 +1581,8 @@
             "cpu": "600% AMD Ryzen 5",
             "storage": "90 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1594,7 +1594,7 @@
             "cpu": "750% AMD Ryzen 5",
             "storage": "120 GB NVMe SSD",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -1609,8 +1609,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1622,8 +1622,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 249,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 449,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1635,8 +1635,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 399,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1648,8 +1648,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 549,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 849,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1661,8 +1661,8 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 849,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1249,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1674,8 +1674,8 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 1149,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1649,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -1689,8 +1689,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 279,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 399,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1702,8 +1702,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1715,8 +1715,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 749,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 999,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1728,8 +1728,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1299,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1741,8 +1741,8 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1754,8 +1754,8 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 2499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
         ],
@@ -1769,8 +1769,8 @@
             "cpu": "100% Intel Xeon",
             "storage": "15 GB NVMe SSD",
             "backups": "1 Automated Backup",
-            "ddos": "5 GB Always-On Shield",
-            "price": 169,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1782,8 +1782,8 @@
             "cpu": "200% Intel Xeon",
             "storage": "30 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 289,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1795,8 +1795,8 @@
             "cpu": "300% Intel Xeon",
             "storage": "45 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 469,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1808,8 +1808,8 @@
             "cpu": "400% Intel Xeon",
             "storage": "60 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1821,7 +1821,7 @@
             "cpu": "550% Intel Xeon",
             "storage": "80 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1009,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
@@ -1834,7 +1834,7 @@
             "cpu": "700% Intel Xeon",
             "storage": "100 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1378,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -1849,8 +1849,8 @@
             "cpu": "150% AMD EPYC",
             "storage": "20 GB Gen4 NVMe",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 469,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1862,8 +1862,8 @@
             "cpu": "250% AMD EPYC",
             "storage": "40 GB Gen4 NVMe",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 589,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 799,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1875,8 +1875,8 @@
             "cpu": "350% AMD EPYC",
             "storage": "55 GB Gen4 NVMe",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 889,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1149,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1888,8 +1888,8 @@
             "cpu": "450% AMD EPYC",
             "storage": "70 GB Gen4 NVMe",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
-            "price": 1189,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1499,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1901,7 +1901,7 @@
             "cpu": "600% AMD EPYC",
             "storage": "100 GB Gen4 NVMe",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1798,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
@@ -1914,7 +1914,7 @@
             "cpu": "800% AMD EPYC",
             "storage": "130 GB Gen4 NVMe",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Advanced L3/L4/L7",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 2398,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }
@@ -1929,8 +1929,8 @@
             "cpu": "150% AMD Ryzen 5",
             "storage": "20 GB NVMe SSD",
             "backups": "2 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 179,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 269,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1942,8 +1942,8 @@
             "cpu": "250% AMD Ryzen 5",
             "storage": "35 GB NVMe SSD",
             "backups": "3 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 329,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 479,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1955,8 +1955,8 @@
             "cpu": "350% AMD Ryzen 5",
             "storage": "50 GB NVMe SSD",
             "backups": "4 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 499,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 699,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1968,8 +1968,8 @@
             "cpu": "450% AMD Ryzen 5",
             "storage": "65 GB NVMe SSD",
             "backups": "5 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 649,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 899,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1981,8 +1981,8 @@
             "cpu": "600% AMD Ryzen 5",
             "storage": "90 GB NVMe SSD",
             "backups": "6 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
-            "price": 999,
+            "ddos": "1 Tbps Always-On Shield",
+            "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           },
           {
@@ -1994,7 +1994,7 @@
             "cpu": "750% AMD Ryzen 5",
             "storage": "120 GB NVMe SSD",
             "backups": "8 Automated Backups",
-            "ddos": "5 GB Always-On Shield",
+            "ddos": "1 Tbps Always-On Shield",
             "price": 1349,
             "orderLink": "https://discord.gg/MJFPbjAdJY"
           }

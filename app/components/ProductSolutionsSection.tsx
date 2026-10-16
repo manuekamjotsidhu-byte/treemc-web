@@ -27,7 +27,7 @@ const solutions = [
       "4GB to 32GB High-Speed RAM",
       "AMD EPYC 9654 DDR5 / Intel Xeon",
       "Enterprise Gen4 NVMe RAID-10",
-      "Instant Pterodactyl Setup (<60s)",
+      "Instant High-Performance Panel Setup (<60s)",
     ],
     ctaText: "View Minecraft Plans",
     href: "/games",
