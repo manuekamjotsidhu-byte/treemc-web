@@ -18,6 +18,7 @@ export default function Footer() {
     { name: "Windows RDP (India)", href: "/rdp" },
     { name: "Discord Bot Hosting", href: "/discord" },
     { name: "Web Hosting", href: "/webhosting" },
+    { name: "DDoS Protection", href: "/ddos-protection" },
     { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemc.host/", external: true },
   ]
 

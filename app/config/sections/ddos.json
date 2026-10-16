@@ -1,0 +1,282 @@
+{
+  "header": {
+    "badge": "Always-On Security",
+    "title": "Enterprise-Grade",
+    "titleHighlight": "DDoS Protection",
+    "subtitle": "Powered by OVHcloud and Cloudflare Magic Transit. Keep your gaming and cloud infrastructure online against the largest and most complex volumetric and application-layer attacks."
+  },
+  "threatOverview": {
+    "title": "Understanding the Threat",
+    "description": "A Denial of Service (DoS) attack is a malicious attempt to affect the availability of a targeted system, such as a website or application, to legitimate end users. Typically, attackers generate large volumes of packets or requests ultimately overwhelming the target system. In the case of a Distributed Denial of Service (DDoS) attack, the attacker uses multiple compromised or controlled sources to generate the attack.",
+    "layers": [
+      {
+        "title": "Infrastructure Layer Attacks",
+        "description": "Attacks on Layers 3 and 4 are typically categorized as Infrastructure layer attacks. These are the most common type of DDoS attack and include vectors like SYN Floods and other reflection attacks like UDP floods.",
+        "targets": "Network equipment, core routers, host servers, and overall bandwidth capacity.",
+        "badge": "Layer 3 & 4 (Network & Transport)"
+      },
+      {
+        "title": "Application Layer Attacks",
+        "description": "Attacks on Layers 6 and 7 are categorized as Application layer attacks. These attacks include the well-known HTTP floods, but also DNS query floods, and are less common but far more sophisticated.",
+        "targets": "Specific application functions, web servers, backend database engines, and REST/WebSocket APIs.",
+        "badge": "Layer 6 & 7 (Presentation & Application)"
+      }
+    ]
+  },
+  "osiModel": {
+    "title": "Network Architecture",
+    "subtitle": "Open Systems Interconnection (OSI) Model & Attack Vectors",
+    "layers": [
+      {
+        "layer": 7,
+        "name": "Application",
+        "data": "Data",
+        "description": "Network process directly to user-facing applications",
+        "vectorExample": "HTTP floods, HTTPS bypasses, DNS query floods",
+        "isCommonAttackVector": true
+      },
+      {
+        "layer": 6,
+        "name": "Presentation",
+        "data": "Data",
+        "description": "Data representation, encryption/decryption, syntax conversion",
+        "vectorExample": "SSL/TLS handshake floods, cipher exhaustion",
+        "isCommonAttackVector": true
+      },
+      {
+        "layer": 5,
+        "name": "Session",
+        "data": "Data",
+        "description": "Interhost communication, session management and RPC",
+        "vectorExample": "Session hijacking, token exhaustion",
+        "isCommonAttackVector": false
+      },
+      {
+        "layer": 4,
+        "name": "Transport",
+        "data": "Segments",
+        "description": "End-to-end connections, transmission reliability and flow control",
+        "vectorExample": "TCP SYN floods, ACK floods, RST floods",
+        "isCommonAttackVector": true
+      },
+      {
+        "layer": 3,
+        "name": "Network",
+        "data": "Packets",
+        "description": "Path determination, IP routing and logical addressing",
+        "vectorExample": "UDP reflection attacks (NTP, DNS, SSDP, Memcached), ICMP floods",
+        "isCommonAttackVector": true
+      },
+      {
+        "layer": 2,
+        "name": "Data Link",
+        "data": "Frames",
+        "description": "Physical addressing, MAC frame transfers and error correction",
+        "vectorExample": "ARP spoofing, MAC flooding",
+        "isCommonAttackVector": false
+      },
+      {
+        "layer": 1,
+        "name": "Physical",
+        "data": "Bits",
+        "description": "Physical media, optics, copper cables and binary transmission",
+        "vectorExample": "Physical fiber cuts, transceiver overload",
+        "isCommonAttackVector": false
+      }
+    ]
+  },
+  "coreInfrastructure": {
+    "title": "Core Infrastructure",
+    "subtitle": "Powered by OVHcloud's Terabit Backbone Network",
+    "features": [
+      {
+        "title": "17 Tbit/s Mitigation Capacity",
+        "description": "We rely on an ultra-wide network backbone capable of absorbing over 17 Tbit/s of malicious traffic, ensuring even the largest volumetric attacks are scrubbed before reaching your server.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": "Edge-Level Filtering",
+        "description": "Malicious traffic is mitigated at edge datacenters nearest to the attacking botnets, preventing bandwidth congestion on transit routes and your specific node.",
+        "icon": "Network"
+      },
+      {
+        "title": "Always Included",
+        "description": "We do not believe in upcharging for security. Enterprise-grade L3/L4 filtering is built into every TreeMC server by default at zero additional cost.",
+        "icon": "CheckCircle2"
+      },
+      {
+        "title": "Uncapped Protection",
+        "description": "Whether an attack lasts 5 minutes or 5 hours, your server remains defended with no artificial throughput caps or mitigation quotas.",
+        "icon": "Zap"
+      }
+    ]
+  },
+  "hybridProtection": {
+    "title": "Hybrid Protection",
+    "subtitle": "Advanced Layer 7 Protection & Cloudflare Magic Transit",
+    "features": [
+      {
+        "title": "Advanced Layer 7 Protection",
+        "description": "By integrating Cloudflare Magic Transit directly into our BGP routing, we provide a secondary, intelligent filtering layer specializing in stopping complex application-layer attacks without adding latency.",
+        "icon": "Cpu"
+      },
+      {
+        "title": "Web & API Protection",
+        "description": "We shield your control panels, APIs, web stores, and client portals from HTTP/HTTPS floods, ensuring your administrative tools remain accessible during high-intensity assaults.",
+        "icon": "Lock"
+      },
+      {
+        "title": "TCP/UDP Acceleration",
+        "description": "Using Cloudflare Spectrum routing, legitimate player and gamer traffic is securely proxied and accelerated, reducing ping jitter while masking your server's true origin IP.",
+        "icon": "Gauge"
+      },
+      {
+        "title": "Hybrid Network Defense",
+        "description": "Magic Transit works in tandem with our edge scrubbing network to intelligently inspect and filter out sophisticated Layer 7 attacks that traditional firewalls might miss.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Zero-Delay Mitigation",
+        "description": "Because our protection is inline and always-on, attacks are mitigated instantly without requiring manual traffic re-routing or dropping your IP address into blackholes.",
+        "icon": "Activity"
+      },
+      {
+        "title": "Transparent Analytics",
+        "description": "All mitigation events and traffic anomalies are tracked and visible within your TreeMC dashboard, giving you clear insights into blocked threats and real-time network health.",
+        "icon": "BarChart3"
+      }
+    ]
+  },
+  "protectionCategories": {
+    "title": "Protection Tiers",
+    "subtitle": "Tailored DDoS Defense Categories for Every Workload",
+    "categories": [
+      {
+        "id": "standard",
+        "name": "Standard DDoS Protection",
+        "tagline": "Essential network-level defense for general-purpose workloads",
+        "badge": "Standard Tier",
+        "description": "Designed to provide essential network-level protection against common DDoS attacks while maintaining the overall stability of our network.",
+        "availableOn": [
+          "Intel Infrastructure \u2014 India",
+          "AMD EPYC Infrastructure \u2014 Singapore",
+          "AMD EPYC Infrastructure \u2014 Germany",
+          "AMD EPYC Infrastructure \u2014 USA",
+          "AMD EPYC Infrastructure \u2014 Canada"
+        ],
+        "howItWorks": "When an attack is detected against your VPS IP address, our network protection systems work to mitigate malicious traffic and protect the surrounding infrastructure. However, during larger or more disruptive attacks, the affected IP address may be temporarily null-routed to preserve overall network stability. In most such cases, the null-route may remain active for approximately 2\u20135 minutes, although the actual duration can vary depending on the attack size, attack type, traffic pattern, and current network conditions.",
+        "mitigationNotice": "Standard Protection does not guarantee uninterrupted connectivity. Temporary null-routing may be applied when necessary.",
+        "bestSuitedFor": "Standard protection is suitable for general-purpose VPS workloads, websites, applications, development environments, and services that require basic DDoS protection without advanced mitigation requirements."
+      },
+      {
+        "id": "premium",
+        "name": "Premium DDoS Protection",
+        "tagline": "High-capacity multi-upstream mitigation built for high-risk targets",
+        "badge": "Enterprise Tier",
+        "description": "Intended for customers running workloads that require a higher level of DDoS resilience and more advanced attack mitigation.",
+        "availableOn": [
+          "AMD EPYC Infrastructure \u2014 India",
+          "Ryzen 9 9950X Infrastructure \u2014 India",
+          "Ryzen 9 5900X Infrastructure \u2014 India",
+          "Intel Gold Infrastructure \u2014 Germany",
+          "Ryzen 9 5900X Infrastructure \u2014 Germany"
+        ],
+        "advancedMitigation": [
+          "Cloudflare Magic Transit L7 Filtering",
+          "OVH DDoS Protection / Shield",
+          "Kernel-Bypass XDP-based Firewall & Traffic Filtering",
+          "AS203446 DDoS Protection Network",
+          "Additional upstream BGP scrubbing & network-level mitigation mechanisms"
+        ],
+        "bestSuitedFor": "Premium DDoS Protection is better suited for workloads that are more likely to become DDoS targets or where improved attack resilience is critical. This includes high-traffic websites, competitive game servers, APIs, public-facing applications, SaaS platforms, gaming communities, and other network-intensive services."
+      }
+    ]
+  },
+  "comparisonMatrix": {
+    "title": "Standard vs Premium Comparison",
+    "subtitle": "Direct side-by-side feature matrix of our protection tiers",
+    "rows": [
+      {
+        "feature": "Basic DDoS Mitigation",
+        "standard": "Included",
+        "premium": "Included",
+        "standardStatus": "yes",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "Automated Network Protection",
+        "standard": "Always Active",
+        "premium": "Always Active",
+        "standardStatus": "yes",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "Advanced Traffic Filtering",
+        "standard": "Limited",
+        "premium": "Full Layer 7 Coverage",
+        "standardStatus": "limited",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "High-Capacity Mitigation Network",
+        "standard": "\u2014",
+        "premium": "17+ Tbit/s Scrubbing",
+        "standardStatus": "none",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "Premium Upstream Protection",
+        "standard": "\u2014",
+        "premium": "Magic Transit / OVH Shield",
+        "standardStatus": "none",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "Temporary Null-Route During Attacks",
+        "standard": "Possible (2\u20135 min)",
+        "premium": "Possible in exceptional cases only",
+        "standardStatus": "warning",
+        "premiumStatus": "limited"
+      },
+      {
+        "feature": "Recommended for General VPS Usage",
+        "standard": "Highly Recommended",
+        "premium": "Supported",
+        "standardStatus": "yes",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "Recommended for DDoS-Sensitive Workloads",
+        "standard": "\u2014",
+        "premium": "Highly Recommended",
+        "standardStatus": "none",
+        "premiumStatus": "yes"
+      },
+      {
+        "feature": "100% DDoS Protection Guarantee",
+        "standard": "No",
+        "premium": "No",
+        "standardStatus": "no",
+        "premiumStatus": "no"
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Which Protection Should You Choose?",
+    "standardRecommendation": "Choose Standard DDoS Protection if you need reliable VPS infrastructure with essential protection against common network attacks and can tolerate the possibility of short temporary null-routes during attacks.",
+    "premiumRecommendation": "Choose Premium DDoS Protection if your service is frequently targeted, is more sensitive to downtime, or requires access to higher-capacity mitigation and advanced filtering technologies."
+  },
+  "policy": {
+    "title": "Our DDoS Protection Policy",
+    "content": [
+      "We provide high-capacity DDoS protection, but we do not claim or guarantee 100% protection against every DDoS attack.",
+      "DDoS attacks continuously evolve and can vary significantly in size, duration, protocol, source distribution, and attack method. No network can reasonably guarantee that every possible attack will be mitigated without any service impact.",
+      "During exceptionally large, sophisticated, or unusual attacks, additional mitigation measures \u2014 including filtering, rate limiting, routing changes, or temporary null-routing \u2014 may still be required to protect the network.",
+      "Our objective is to provide the highest practical level of protection available on the selected infrastructure while maintaining network stability and service availability."
+    ]
+  },
+  "disclaimer": {
+    "title": "Important Service Disclaimer",
+    "content": "DDoS protection capabilities can vary depending on attack type, attack size, protocol, destination, upstream provider, and infrastructure location. TreeMC Host does not guarantee complete mitigation of every attack or zero downtime during DDoS events. Protective measures (including filtering, rate limiting, and temporary null-routing) may be applied when necessary to maintain the overall security and stability of our network."
+  }
+}

@@ -73,6 +73,13 @@
           "external": true
         },
         {
+          "name": "DDoS Protection",
+          "href": "/ddos-protection",
+          "description": "Enterprise 17+ Tbit/s multi-layer defense with OVH & Magic Transit",
+          "badge": "17 Tbit/s",
+          "icon": "ShieldAlert"
+        },
+        {
           "name": "Network Status",
           "href": "https://status.treemc.host",
           "description": "Live infrastructure uptime monitoring and 99.9% SLA telemetry",
