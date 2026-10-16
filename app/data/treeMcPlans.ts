@@ -598,11 +598,11 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
           { id: "in-xeon-3xl", tier: "3XL", priceMo: 2499, cores: "12 vCore", ram: "64GB", ramType: "DDR4 ECC", nvme: "400GB NVMe" },
         ],
         vdsPlans: [
-          { id: "in-xeon-vds-l", tier: "L", priceMo: 1200, cores: "6 Dedicated Cores", isDedicated: true, ram: "16GB", ramType: "DDR4 ECC", nvme: "150GB NVMe" },
-          { id: "in-xeon-vds-xl", tier: "XL", priceMo: 2000, cores: "6 Dedicated Cores", isDedicated: true, ram: "24GB", ramType: "DDR4 ECC", nvme: "200GB NVMe" },
-          { id: "in-xeon-vds-xxl", tier: "XXL", priceMo: 2500, cores: "8 Dedicated Cores", isDedicated: true, ram: "32GB", ramType: "DDR4 ECC", nvme: "300GB NVMe", popular: true },
-          { id: "in-xeon-vds-2xl", tier: "2XL", priceMo: 3800, cores: "10 Dedicated Cores", isDedicated: true, ram: "48GB", ramType: "DDR4 ECC", nvme: "350GB NVMe" },
-          { id: "in-xeon-vds-3xl", tier: "3XL", priceMo: 4500, cores: "12 Dedicated Cores", isDedicated: true, ram: "64GB", ramType: "DDR4 ECC", nvme: "400GB NVMe" },
+          { id: "in-xeon-vds-l", tier: "L", priceMo: 1699, cores: "6 Dedicated Cores", isDedicated: true, ram: "16GB", ramType: "DDR4 ECC", nvme: "150GB NVMe" },
+          { id: "in-xeon-vds-xl", tier: "XL", priceMo: 2499, cores: "6 Dedicated Cores", isDedicated: true, ram: "24GB", ramType: "DDR4 ECC", nvme: "200GB NVMe" },
+          { id: "in-xeon-vds-xxl", tier: "XXL", priceMo: 3199, cores: "8 Dedicated Cores", isDedicated: true, ram: "32GB", ramType: "DDR4 ECC", nvme: "300GB NVMe", popular: true },
+          { id: "in-xeon-vds-2xl", tier: "2XL", priceMo: 4499, cores: "10 Dedicated Cores", isDedicated: true, ram: "48GB", ramType: "DDR4 ECC", nvme: "350GB NVMe" },
+          { id: "in-xeon-vds-3xl", tier: "3XL", priceMo: 5499, cores: "12 Dedicated Cores", isDedicated: true, ram: "64GB", ramType: "DDR4 ECC", nvme: "400GB NVMe" },
         ],
       },
       {
@@ -627,11 +627,11 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
           { id: "in-epyc-3xl", tier: "3XL", priceMo: 2999, cores: "12 vCore", ram: "64GB", ramType: "DDR4 ECC", nvme: "400GB NVMe" },
         ],
         vdsPlans: [
-          { id: "in-epyc-vds-l", tier: "L", priceMo: 1500, cores: "6 Dedicated Cores", isDedicated: true, ram: "16GB", ramType: "DDR4 ECC", nvme: "150GB NVMe" },
-          { id: "in-epyc-vds-xl", tier: "XL", priceMo: 2399, cores: "6 Dedicated Cores", isDedicated: true, ram: "24GB", ramType: "DDR4 ECC", nvme: "200GB NVMe" },
-          { id: "in-epyc-vds-xxl", tier: "XXL", priceMo: 2999, cores: "8 Dedicated Cores", isDedicated: true, ram: "32GB", ramType: "DDR4 ECC", nvme: "300GB NVMe", popular: true },
-          { id: "in-epyc-vds-2xl", tier: "2XL", priceMo: 3999, cores: "10 Dedicated Cores", isDedicated: true, ram: "48GB", ramType: "DDR4 ECC", nvme: "350GB NVMe" },
-          { id: "in-epyc-vds-3xl", tier: "3XL", priceMo: 4999, cores: "12 Dedicated Cores", isDedicated: true, ram: "64GB", ramType: "DDR4 ECC", nvme: "400GB NVMe" },
+          { id: "in-epyc-vds-l", tier: "L", priceMo: 1999, cores: "6 Dedicated Cores", isDedicated: true, ram: "16GB", ramType: "DDR4 ECC", nvme: "150GB NVMe" },
+          { id: "in-epyc-vds-xl", tier: "XL", priceMo: 2899, cores: "6 Dedicated Cores", isDedicated: true, ram: "24GB", ramType: "DDR4 ECC", nvme: "200GB NVMe" },
+          { id: "in-epyc-vds-xxl", tier: "XXL", priceMo: 3699, cores: "8 Dedicated Cores", isDedicated: true, ram: "32GB", ramType: "DDR4 ECC", nvme: "300GB NVMe", popular: true },
+          { id: "in-epyc-vds-2xl", tier: "2XL", priceMo: 4899, cores: "10 Dedicated Cores", isDedicated: true, ram: "48GB", ramType: "DDR4 ECC", nvme: "350GB NVMe" },
+          { id: "in-epyc-vds-3xl", tier: "3XL", priceMo: 5999, cores: "12 Dedicated Cores", isDedicated: true, ram: "64GB", ramType: "DDR4 ECC", nvme: "400GB NVMe" },
         ],
       },
       {

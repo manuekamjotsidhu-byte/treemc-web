@@ -91,7 +91,7 @@ const services: ServiceConfig[] = [
     ram: "Up to 64 GB DDR4 ECC",
     storage: "Up to 400 GB NVMe SSD",
     ddos: "Advanced DDoS Mitigation",
-    basePrice: 1200,
+    basePrice: 1699,
     link: "/dedicated",
     locations: [
       { name: "Noida & Delhi", flag: "/flags/india.png" }

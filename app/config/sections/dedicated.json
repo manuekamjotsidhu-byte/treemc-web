@@ -44,7 +44,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "1500",
+        "price": "1999",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -67,7 +67,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "2399",
+        "price": "2899",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -90,7 +90,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "2999",
+        "price": "3699",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -113,7 +113,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "3999",
+        "price": "4899",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -136,7 +136,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "4999",
+        "price": "5999",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -161,7 +161,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "1200",
+        "price": "1699",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -184,7 +184,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "2000",
+        "price": "2499",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -207,7 +207,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "2500",
+        "price": "3199",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -230,7 +230,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "3800",
+        "price": "4499",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",
@@ -253,7 +253,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 Gbps Premium",
         "bandwidthDetail": "Unmetered",
-        "price": "4500",
+        "price": "5499",
         "period": "/mo",
         "features": [
           "Dedicated CPU Cores",

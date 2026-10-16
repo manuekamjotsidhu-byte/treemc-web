@@ -45,7 +45,7 @@
         "titleKey": "pricingPlans.dedicatedServers.title",
         "image": "/dedicated.webp",
         "descriptionKey": "pricingPlans.dedicatedServers.description",
-        "basePrice": 1200,
+        "basePrice": 1699,
         "featuresKeys": [
           "pricingPlans.dedicatedServers.features.bareMetalPerformance",
           "pricingPlans.dedicatedServers.features.customHardware",

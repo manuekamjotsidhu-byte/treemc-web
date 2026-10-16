@@ -76,7 +76,7 @@ const services: ShowcaseService[] = [
     badge: "India Cluster",
     image: "/showcase/3d/vds-hosting.jpg",
     specs: "100% Dedicated Cores • Noida & Delhi Nodes",
-    basePrice: 1200,
+    basePrice: 1699,
     href: "/dedicated",
     icon: Cpu,
     color: "indigo"
