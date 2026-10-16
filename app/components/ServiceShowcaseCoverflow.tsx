@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, useCallback, useRef } from "react"
+import { useCurrency } from "./ui/CurrencySelector"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
@@ -25,7 +26,7 @@ export interface ShowcaseService {
   badge: string
   image: string
   specs: string
-  price: string
+  basePrice: number
   href: string
   icon: React.ElementType
   color: string
@@ -39,7 +40,7 @@ const services: ShowcaseService[] = [
     badge: "Flagship Tier",
     image: "/showcase/3d/game-hosting.jpg",
     specs: "AMD EPYC DDR5 / Intel Xeon • 1 Gbps Shield",
-    price: "From ₹99/mo",
+    basePrice: 99,
     href: "/games",
     icon: Server,
     color: "emerald"
@@ -50,8 +51,8 @@ const services: ShowcaseService[] = [
     subtitle: "Dedicated Windows Server Remote Desktop",
     badge: "Noida Datacenter",
     image: "/showcase/3d/rdp-server.jpg",
-    specs: "Full Admin Access • NVMe SSD • Advance DDoS",
-    price: "From ₹548/mo",
+    specs: "Full Admin Access • NVMe SSD • Advanced DDoS Mitigation",
+    basePrice: 548,
     href: "/rdp",
     icon: Monitor,
     color: "blue"
@@ -63,7 +64,7 @@ const services: ShowcaseService[] = [
     badge: "Global Edge",
     image: "/showcase/3d/cloud-vps.jpg",
     specs: "India, Germany, SG, US, CA • NVMe • IPv4",
-    price: "From ₹449/mo",
+    basePrice: 399,
     href: "/vps",
     icon: Cloud,
     color: "cyan"
@@ -75,7 +76,7 @@ const services: ShowcaseService[] = [
     badge: "India Cluster",
     image: "/showcase/3d/vds-hosting.jpg",
     specs: "100% Dedicated Cores • Noida & Delhi Nodes",
-    price: "From ₹849/mo",
+    basePrice: 1200,
     href: "/dedicated",
     icon: Cpu,
     color: "indigo"
@@ -87,7 +88,7 @@ const services: ShowcaseService[] = [
     badge: "Free SSL Included",
     image: "/showcase/3d/web-hosting.jpg",
     specs: "cPanel Panel • Fast Disk • Unmetered Port",
-    price: "From ₹100/mo",
+    basePrice: 100,
     href: "/webhosting",
     icon: Globe,
     color: "orange"
@@ -99,7 +100,7 @@ const services: ShowcaseService[] = [
     badge: "Instant Git Deploy",
     image: "/showcase/3d/bot-hosting.jpg",
     specs: "NodeJS, Python, Java, Rust • Zero Crash Lag",
-    price: "From ₹80/mo",
+    basePrice: 80,
     href: "/discord",
     icon: Bot,
     color: "purple"
@@ -107,6 +108,7 @@ const services: ShowcaseService[] = [
 ]
 
 export default function ServiceShowcaseCoverflow() {
+  const { convertPrice } = useCurrency()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
   const touchStartX = useRef<number | null>(null)
@@ -334,7 +336,7 @@ export default function ServiceShowcaseCoverflow() {
                       </p>
                       <div className="flex items-center justify-center gap-2 pt-1">
                         <span className="text-xs font-bold text-emerald-400">
-                          {service.price}
+                          From {convertPrice(service.basePrice.toString())}/mo
                         </span>
                         <span className="text-gray-600 text-[10px]">•</span>
                         <span className="text-[11px] font-semibold text-gray-300 inline-flex items-center gap-1 hover:text-emerald-400 transition-colors">

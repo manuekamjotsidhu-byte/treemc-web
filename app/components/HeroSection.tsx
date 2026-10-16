@@ -82,6 +82,22 @@ const services: ServiceConfig[] = [
     ]
   },
   {
+    id: "vds",
+    label: "Dedicated VDS",
+    icon: Cpu,
+    badge: "100% Dedicated Slices",
+    image: "/showcase/3d/vds-hosting.jpg",
+    cpu: "AMD EPYC™ & Intel® Xeon®",
+    ram: "Up to 64 GB DDR4 ECC",
+    storage: "Up to 400 GB NVMe SSD",
+    ddos: "Advanced DDoS Mitigation",
+    basePrice: 1200,
+    link: "/dedicated",
+    locations: [
+      { name: "Noida & Delhi", flag: "/flags/india.png" }
+    ]
+  },
+  {
     id: "rdp",
     label: "Windows RDP",
     icon: Monitor,

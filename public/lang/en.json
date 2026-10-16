@@ -202,7 +202,7 @@
       }
     },
     "dedicatedServers": {
-      "title": "Dedicated Servers",
+      "title": "Dedicated VDS",
       "description": "Enterprise-grade dedicated hardware for maximum performance",
       "buttonText": "Get a Quote",
       "features": {
