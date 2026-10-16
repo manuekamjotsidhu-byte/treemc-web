@@ -8,13 +8,25 @@
     "baseCurrency": "INR",
     "defaultCurrency": "INR",
     "supportedCurrencies": [
-      { "code": "INR", "symbol": "₹", "name": "Indian Rupee" },
-      { "code": "PKR", "symbol": "Rs", "name": "Pakistani Rupee" },
-      { "code": "USD", "symbol": "$", "name": "US Dollar" }
+      {
+        "code": "INR",
+        "symbol": "\u20b9",
+        "name": "Indian Rupee"
+      },
+      {
+        "code": "PKR",
+        "symbol": "Rs",
+        "name": "Pakistani Rupee"
+      },
+      {
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar"
+      }
     ]
   },
   "themeSwitcher": {
-    "show": true,
+    "show": false,
     "position": "bottom-left",
     "defaultColor": "green",
     "availableColors": [
