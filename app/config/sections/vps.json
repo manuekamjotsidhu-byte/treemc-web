@@ -27,7 +27,7 @@
     {
       "id": "ryzen-5900x",
       "name": "AMD Ryzen 9 5900X",
-      "displayName": "AMD Ryzen 9 5900X (OVH DDoS)",
+      "displayName": "AMD Ryzen 9 5900X",
       "image": "/cpu/ryzen9.png"
     }
   ],
@@ -610,7 +610,7 @@
       {
         "id": "de-r9-xs",
         "name": "XS Plan",
-        "badge": "OVH Protected",
+        "badge": "Entry Tier",
         "image": "/cpu/ryzen9.png",
         "cpu": "2 vCore",
         "cpuDetail": "Ryzen 9 5900X",
@@ -1580,7 +1580,7 @@
       {
         "id": "de-r9-xs",
         "name": "XS Plan",
-        "badge": "OVH Protected",
+        "badge": "Entry Tier",
         "image": "/cpu/ryzen9.png",
         "cpu": "2 vCore",
         "cpuDetail": "Ryzen 9 5900X",
