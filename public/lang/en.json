@@ -1,18 +1,21 @@
 {
   "navbar": {
-    "games": "Games",
+    "games": "Game Hosting",
     "cloud": "Cloud",
     "vds": "VDS",
     "dedicated": "VDS",
     "discord": "Discord Bot",
     "webhosting": "WebHosting",
     "legal": "Legal",
-    "clientSpace": "CLIENT SPACE",
+    "clientSpace": "Client Area",
     "termsOfService": "Terms of Service",
     "privacyPolicy": "Privacy Policy",
     "termsDescription": "Our service agreement and terms",
     "privacyDescription": "How we protect your privacy",
-    "rdp": "RDP"
+    "rdp": "RDP",
+    "gameHosting": "Game Hosting",
+    "hostingServices": "Hosting Services",
+    "important": "Important"
   },
   "common": {
     "orderNow": "Order Now",

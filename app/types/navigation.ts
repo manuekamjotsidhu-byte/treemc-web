@@ -3,6 +3,8 @@ export interface DropdownItem {
   href: string;
   description?: string;
   icon?: string;
+  badge?: string;
+  external?: boolean;
 }
 
 export interface NavigationItem {
@@ -12,7 +14,7 @@ export interface NavigationItem {
   badge?: string;
   external?: boolean;
   hasDropdown?: boolean;
-  dropdownType?: 'games' | 'legal' | 'custom';
+  dropdownType?: "games" | "legal" | "custom" | "services" | "important" | string;
   dropdownItems?: DropdownItem[];
 }
 

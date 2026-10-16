@@ -1,54 +1,90 @@
 {
   "mainNavigation": [
     {
-      "name": "Games",
+      "name": "Game Hosting",
       "href": "/games",
       "icon": "Gamepad2",
       "hasDropdown": true,
       "dropdownType": "games"
     },
     {
-      "name": "Cloud",
+      "name": "Hosting Services",
       "href": "/vps",
-      "icon": "Cloud",
-      "hasDropdown": false
-    },
-    {
-      "name": "VDS",
-      "href": "/dedicated",
       "icon": "Server",
-      "hasDropdown": false
+      "hasDropdown": true,
+      "dropdownType": "services",
+      "dropdownItems": [
+        {
+          "name": "Cloud VPS",
+          "href": "/vps",
+          "description": "High-frequency KVM VPS with NVMe in India, Germany, SG & US",
+          "badge": "KVM",
+          "icon": "Cloud"
+        },
+        {
+          "name": "Virtual Dedicated (VDS)",
+          "href": "/dedicated",
+          "description": "100% dedicated CPU slices with DDR4 ECC in Noida & Delhi",
+          "badge": "India",
+          "icon": "Cpu"
+        },
+        {
+          "name": "Windows Server RDP",
+          "href": "/rdp",
+          "description": "Enterprise Windows RDP with Advance DDoS Shield in Noida",
+          "badge": "Windows",
+          "icon": "Monitor"
+        },
+        {
+          "name": "Discord Bot Hosting",
+          "href": "/discord",
+          "description": "Always-on 24/7 runtimes for NodeJS, Python, Java & Go",
+          "badge": "24/7",
+          "icon": "Bot"
+        },
+        {
+          "name": "Web Hosting",
+          "href": "/webhosting",
+          "description": "Fast cPanel web hosting with free SSL & 99.9% uptime",
+          "badge": "cPanel",
+          "icon": "GrServerCluster"
+        }
+      ]
     },
     {
-      "name": "RDP",
-      "href": "/rdp",
-      "icon": "Monitor",
-      "hasDropdown": false
-    },
-    {
-      "name": "Discord Bot",
-      "href": "/discord",
-      "icon": "FaDiscord",
-      "hasDropdown": false
-    },
-    {
-      "name": "WebHosting",
-      "href": "/webhosting",
-      "icon": "GrServerCluster",
-      "hasDropdown": false
-    },
-    {
-      "name": "Pakistan",
+      "name": "Important",
       "href": "https://pakistan.treemc.host/",
       "icon": "Globe",
-      "badge": "PKR",
-      "external": true,
-      "hasDropdown": false
+      "hasDropdown": true,
+      "dropdownType": "important",
+      "dropdownItems": [
+        {
+          "name": "Pakistan Portal",
+          "href": "https://pakistan.treemc.host/",
+          "description": "Sub-15ms Lahore Minecraft, KVM VPS & Bare-Metal in PKR",
+          "badge": "PKR",
+          "external": true
+        },
+        {
+          "name": "Discord Community",
+          "href": "https://discord.gg/MJFPbjAdJY",
+          "description": "24/7 active gaming & developer community with instant support",
+          "badge": "Support",
+          "external": true
+        },
+        {
+          "name": "Network Status",
+          "href": "https://status.treemc.host",
+          "description": "Live infrastructure uptime monitoring and 99.9% SLA telemetry",
+          "badge": "99.9% SLA",
+          "external": true
+        }
+      ]
     },
     {
       "name": "Legal",
       "href": "/terms-of-services",
-      "icon": "FileText",
+      "icon": "Shield",
       "hasDropdown": true,
       "dropdownType": "legal",
       "dropdownItems": [
@@ -78,9 +114,9 @@
     }
   ],
   "clientSpace": {
-    "name": "GAME PANEL",
+    "name": "Client Area",
     "href": "https://panel.treemc.host",
-    "icon": "Server"
+    "icon": "LogIn"
   },
   "banner": {
     "show": false,

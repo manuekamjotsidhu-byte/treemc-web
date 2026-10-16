@@ -26,6 +26,11 @@ import {
   Shield,
   Check,
   Monitor,
+  ChevronDown,
+  LogIn,
+  ExternalLink,
+  Bot,
+  Cpu,
 } from 'lucide-react';
 import { FaDiscord } from "react-icons/fa6";
 import { GrServerCluster } from "react-icons/gr";
@@ -58,6 +63,11 @@ const iconMap: { [key: string]: React.ElementType } = {
   FaDiscord,
   GrServerCluster,
   Monitor,
+  ChevronDown,
+  LogIn,
+  ExternalLink,
+  Bot,
+  Cpu,
 };
 
 const getIcon = (iconName: string) => iconMap[iconName];
@@ -273,33 +283,67 @@ const Navbar: React.FC = () => {
       );
     }
 
-    if (item.dropdownType === 'legal' && item.dropdownItems) {
+    if (item.dropdownItems && item.dropdownItems.length > 0) {
+      const isWide = item.dropdownType === "services";
       return (
-        <div className="absolute rounded-b-xl top-full left-0  w-[280px] bg-white dark:bg-black/90 border-t-2 border-top-nav -mt-[2px]  shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-10 p-4">
-          <div className="space-y-2">
+        <div className={`absolute top-full left-0 ${isWide ? "w-[360px] sm:w-[420px]" : "w-[300px] sm:w-[350px]"} bg-white/95 dark:bg-[#0c0e17]/95 backdrop-blur-xl border border-gray-200/80 dark:border-white/10 shadow-2xl rounded-2xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 p-2 sm:p-2.5 -mt-[2px]`}>
+          <div className="space-y-1">
             {item.dropdownItems.map((dropdownItem) => {
-              const translatedName = dropdownItem.name === 'Terms of Service' ? t('navbar.termsOfService') :
-                dropdownItem.name === 'Privacy Policy' ? t('navbar.privacyPolicy') :
-                  dropdownItem.name;
-              const translatedDesc = dropdownItem.name === 'Terms of Service' ? t('navbar.termsDescription') :
-                dropdownItem.name === 'Privacy Policy' ? t('navbar.privacyDescription') :
-                  dropdownItem.description;
+              const ItemIcon = dropdownItem.icon ? getIcon(dropdownItem.icon) : null;
+              const isItemExternal = dropdownItem.external || dropdownItem.href.startsWith("http://") || dropdownItem.href.startsWith("https://");
+
+              const itemContent = (
+                <div className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-gray-100/90 dark:hover:bg-white/[0.06] transition-all duration-150 group/item cursor-pointer">
+                  {ItemIcon && (
+                    <div className="p-2 rounded-lg bg-gray-100 dark:bg-white/[0.05] border border-gray-200/60 dark:border-white/[0.08] text-emerald-500 shrink-0 mt-0.5 group-hover/item:text-emerald-400 group-hover/item:border-emerald-500/30 transition-colors">
+                      <ItemIcon className="w-4 h-4" />
+                    </div>
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between gap-1 mb-0.5">
+                      <h4 className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white group-hover/item:text-emerald-500 dark:group-hover/item:text-emerald-400 transition-colors truncate">
+                        {dropdownItem.name}
+                      </h4>
+                      {dropdownItem.badge && (
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 shrink-0">
+                          {dropdownItem.badge}
+                        </span>
+                      )}
+                      {isItemExternal && (
+                        <ExternalLink className="w-3 h-3 text-gray-400 group-hover/item:text-emerald-400 shrink-0 ml-1 opacity-70" />
+                      )}
+                    </div>
+                    {dropdownItem.description && (
+                      <p className="text-[11px] text-gray-500 dark:text-gray-400 line-clamp-1 leading-snug">
+                        {dropdownItem.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+
+              if (isItemExternal) {
+                return (
+                  <a
+                    key={dropdownItem.name}
+                    href={dropdownItem.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    {itemContent}
+                  </a>
+                );
+              }
 
               return (
                 <Link
                   key={dropdownItem.name}
                   href={dropdownItem.href}
-                  className="block p-3 rounded-lg hover:border-secondary border-primary border hover:hover-gradient transition-colors"
+                  className="block"
                   prefetch={true}
                 >
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
-                    {translatedName}
-                  </h3>
-                  {translatedDesc && (
-                    <p className="text-xs text-gray-600 dark:text-gray-300">
-                      {translatedDesc}
-                    </p>
-                  )}
+                  {itemContent}
                 </Link>
               );
             })}
@@ -312,16 +356,20 @@ const Navbar: React.FC = () => {
   }, [filteredGames]);
 
   const getTranslatedNavName = useCallback((itemName: string) => {
-    const navKey = itemName.toLowerCase().replace(/\s+/g, '');
+    const navKey = itemName.toLowerCase().replace(/\s+/g, "");
     switch (navKey) {
-      case 'games': return t('navbar.games');
-      case 'cloud': return t('navbar.cloud');
-      case 'vds': return 'VDS';
-      case 'dedicated': return 'VDS';
-      case 'discordbot': return t('navbar.discord');
-      case 'webhosting': return t('navbar.webhosting');
-      case 'pakistan': return 'Pakistan Portal';
-      case 'legal': return t('navbar.legal');
+      case "games":
+      case "gamehosting": return t("navbar.gameHosting") || "Game Hosting";
+      case "hostingservices": return t("navbar.hostingServices") || "Hosting Services";
+      case "important": return t("navbar.important") || "Important";
+      case "legal": return t("navbar.legal") || "Legal";
+      case "cloud": return t("navbar.cloud") || "Cloud";
+      case "vds": return "VDS";
+      case "dedicated": return "VDS";
+      case "rdp": return "Windows RDP";
+      case "discordbot": return t("navbar.discord") || "Discord Bot";
+      case "webhosting": return t("navbar.webhosting") || "WebHosting";
+      case "pakistan": return "Pakistan Portal";
       default: return itemName;
     }
   }, [t]);
@@ -339,14 +387,14 @@ const Navbar: React.FC = () => {
         <div key={item.name} className="relative group">
           <Link
             href={item.href}
-            className={`px-4 py-6 text-xs font-medium relative text-gray-700 dark:text-slate-200 hover:text-icon-text-primary dark:hover:text-icon-text-primary transition-colors flex items-center space-x-2 
-            after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-button-bg dark:after:bg-button-bg after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center
-            hover:hover-gradient
-            ${isActive ? 'text-icon-text-primary dark:text-icon-text-primary after:scale-x-100 hover-gradient' : ''}`}
+            className={`px-3.5 py-6 text-xs sm:text-sm font-semibold relative text-gray-700 dark:text-slate-200 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center space-x-1.5 
+            after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-emerald-500 dark:after:bg-emerald-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center
+            ${isActive ? 'text-emerald-500 dark:text-emerald-400 after:scale-x-100' : ''}`}
             prefetch={true}
           >
             {IconComponent && <IconComponent className="w-4 h-4" />}
             <span>{translatedName}</span>
+            <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 group-hover:opacity-100 transition-all duration-200" />
             {item.badge && (
               <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
                 {item.badge}
@@ -484,7 +532,7 @@ const Navbar: React.FC = () => {
       );
     }
 
-    if (item.hasDropdown && item.dropdownType === 'legal' && item.dropdownItems) {
+    if (item.hasDropdown && item.dropdownItems && item.dropdownItems.length > 0) {
       const isActive = pathname === item.href;
       const isDropdownOpen = mobileDropdownStates[item.name] || false;
 
@@ -529,19 +577,48 @@ const Navbar: React.FC = () => {
                 className="mt-2 ml-6 space-y-1 overflow-hidden"
               >
                 {item.dropdownItems.map((dropdownItem: any) => {
-                  const translatedName = dropdownItem.name === 'Terms of Service' ? t('navbar.termsOfService') :
-                    dropdownItem.name === 'Privacy Policy' ? t('navbar.privacyPolicy') :
-                      dropdownItem.name;
+                  const ItemIcon = dropdownItem.icon ? getIcon(dropdownItem.icon) : null;
+                  const isItemExternal = dropdownItem.external || dropdownItem.href.startsWith("http://") || dropdownItem.href.startsWith("https://");
+
+                  const mobileContent = (
+                    <div className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 text-gray-700 dark:text-gray-300 transition-colors">
+                      <div className="flex items-center space-x-2.5 min-w-0">
+                        {ItemIcon && <ItemIcon className="w-4 h-4 text-emerald-500 shrink-0" />}
+                        <span className="text-sm font-medium truncate">{dropdownItem.name}</span>
+                      </div>
+                      <div className="flex items-center space-x-1.5 shrink-0 ml-2">
+                        {dropdownItem.badge && (
+                          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                            {dropdownItem.badge}
+                          </span>
+                        )}
+                        {isItemExternal && <ExternalLink className="w-3 h-3 text-gray-400 opacity-60" />}
+                      </div>
+                    </div>
+                  );
+
+                  if (isItemExternal) {
+                    return (
+                      <a
+                        key={dropdownItem.name}
+                        href={dropdownItem.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeMobileMenu}
+                      >
+                        {mobileContent}
+                      </a>
+                    );
+                  }
 
                   return (
                     <Link
                       key={dropdownItem.name}
                       href={dropdownItem.href}
-                      className="block px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-icon-text-primary hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-md transition-colors"
                       onClick={closeMobileMenu}
                       prefetch={true}
                     >
-                      {translatedName}
+                      {mobileContent}
                     </Link>
                   );
                 })}
@@ -835,11 +912,13 @@ const Navbar: React.FC = () => {
               <div className="relative">
                 <Link
                   href={config.clientSpace.href}
-                  className="hidden sm:flex items-center space-x-2 button-primary text-button-primary border border-transparent px-3 sm:px-4 py-2 rounded-lg orbitron-font text-xs sm:text-sm font-medium transition-all duration-300 hover:bg-[var(--hover-gradient)] hover:text-[var(--icon-text-primary)] hover:border-[var(--border-secondary)]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:flex items-center space-x-2 button-primary text-button-primary border border-transparent px-3 sm:px-4 py-2 rounded-lg orbitron-font text-xs sm:text-sm font-semibold transition-all duration-300 hover:bg-[var(--hover-gradient)] hover:text-[var(--icon-text-primary)] hover:border-[var(--border-secondary)] shadow-sm hover:shadow-md active:scale-95"
                   prefetch={true}
                 >
                   {config.clientSpace.icon && getIcon(config.clientSpace.icon) && React.createElement(getIcon(config.clientSpace.icon), { className: "w-4 h-4" })}
-                  <span>{t('navbar.clientSpace')}</span>
+                  <span>{t('navbar.clientSpace') || "Client Area"}</span>
                 </Link>
                 {uiConfig.christmasTheme.enabled && (
                   <>
@@ -1006,12 +1085,14 @@ const Navbar: React.FC = () => {
                   >
                     <Link
                       href={config.clientSpace.href}
-                      className="flex items-center justify-center space-x-2 button-primary text-button-primary border border-transparent px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 w-full shadow-sm hover:shadow-md hover:bg-[var(--hover-gradient)] hover:text-[var(--icon-text-primary)] hover:border-[var(--border-secondary)]"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center space-x-2 button-primary text-button-primary border border-transparent px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-300 w-full shadow-sm hover:shadow-md hover:bg-[var(--hover-gradient)] hover:text-[var(--icon-text-primary)] hover:border-[var(--border-secondary)]"
                       onClick={closeMobileMenu}
                       prefetch={true}
                     >
                       {config.clientSpace.icon && getIcon(config.clientSpace.icon) && React.createElement(getIcon(config.clientSpace.icon), { className: "w-4 h-4" })}
-                      <span>{t('navbar.clientSpace')}</span>
+                      <span>{t('navbar.clientSpace') || "Client Area"}</span>
                     </Link>
                     {uiConfig.christmasTheme.enabled && (
                       <>
