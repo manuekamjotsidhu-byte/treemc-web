@@ -351,7 +351,7 @@ export default function GameServerList() {
                             <Shield className="w-4 h-4 icon-primary" />
                             <span>DDoS Shield</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.ddos || "1 Tbps Always-On"}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white">{plan.ddos || "1 Gbps Always-On"}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">

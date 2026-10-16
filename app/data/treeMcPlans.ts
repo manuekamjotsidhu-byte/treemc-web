@@ -73,7 +73,7 @@ export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
     cpu: "100%",
     nvme: "15 GB",
     backups: 1,
-    ddos: "1 Tbps Layer 3/4",
+    ddos: "1 Gbps Layer 3/4",
   },
   {
     id: "grove",
@@ -86,7 +86,7 @@ export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
     cpu: "200%",
     nvme: "30 GB",
     backups: 2,
-    ddos: "1 Tbps Layer 3/4",
+    ddos: "1 Gbps Layer 3/4",
     popular: true,
   },
   {
@@ -100,7 +100,7 @@ export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
     cpu: "300%",
     nvme: "45 GB",
     backups: 3,
-    ddos: "1 Tbps Layer 3/4",
+    ddos: "1 Gbps Layer 3/4",
   },
   {
     id: "canopy",
@@ -113,7 +113,7 @@ export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
     cpu: "400%",
     nvme: "60 GB",
     backups: 4,
-    ddos: "1 Tbps Layer 3/4",
+    ddos: "1 Gbps Layer 3/4",
   },
   {
     id: "redwood",
@@ -126,7 +126,7 @@ export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
     cpu: "550%",
     nvme: "80 GB",
     backups: 5,
-    ddos: "1 Tbps Layer 3/4",
+    ddos: "1 Gbps Layer 3/4",
   },
   {
     id: "titan-oak",
@@ -139,7 +139,7 @@ export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
     cpu: "700%",
     nvme: "100 GB",
     backups: 6,
-    ddos: "1 Tbps Layer 3/4",
+    ddos: "1 Gbps Layer 3/4",
   },
 ];
 
@@ -155,7 +155,7 @@ export const MINECRAFT_PERFORMANCE_PLANS: MinecraftPlan[] = [
     cpu: "150% vCPU",
     nvme: "20 GB Gen4",
     backups: 2,
-    ddos: "1 Tbps Advanced L3/L4/L7",
+    ddos: "1 Gbps Advanced L3/L4/L7",
   },
   {
     id: "surge",
@@ -168,7 +168,7 @@ export const MINECRAFT_PERFORMANCE_PLANS: MinecraftPlan[] = [
     cpu: "250% vCPU",
     nvme: "40 GB Gen4",
     backups: 3,
-    ddos: "1 Tbps Advanced L3/L4/L7",
+    ddos: "1 Gbps Advanced L3/L4/L7",
     bestValue: true,
   },
   {
@@ -182,7 +182,7 @@ export const MINECRAFT_PERFORMANCE_PLANS: MinecraftPlan[] = [
     cpu: "350% vCPU",
     nvme: "55 GB Gen4",
     backups: 4,
-    ddos: "1 Tbps Advanced L3/L4/L7",
+    ddos: "1 Gbps Advanced L3/L4/L7",
   },
   {
     id: "blaze",
@@ -195,7 +195,7 @@ export const MINECRAFT_PERFORMANCE_PLANS: MinecraftPlan[] = [
     cpu: "450% vCPU",
     nvme: "70 GB Gen4",
     backups: 5,
-    ddos: "1 Tbps Advanced L3/L4/L7",
+    ddos: "1 Gbps Advanced L3/L4/L7",
     popular: true,
   },
   {
@@ -209,7 +209,7 @@ export const MINECRAFT_PERFORMANCE_PLANS: MinecraftPlan[] = [
     cpu: "600% vCPU",
     nvme: "100 GB Gen4",
     backups: 6,
-    ddos: "1 Tbps Advanced L3/L4/L7",
+    ddos: "1 Gbps Advanced L3/L4/L7",
   },
   {
     id: "titan",
@@ -222,7 +222,7 @@ export const MINECRAFT_PERFORMANCE_PLANS: MinecraftPlan[] = [
     cpu: "800% vCPU",
     nvme: "130 GB Gen4",
     backups: 8,
-    ddos: "1 Tbps Advanced L3/L4/L7",
+    ddos: "1 Gbps Advanced L3/L4/L7",
     flagship: true,
   },
 ];
@@ -255,8 +255,8 @@ export const COMPARISON_TABLE: ComparisonRow[] = [
   },
   {
     feature: "DDoS Mitigation Protection",
-    budget: "1 Tbps Layer 3/4 Shield",
-    performance: "1 Tbps Advanced L3/L4/L7 Mitigation",
+    budget: "1 Gbps Layer 3/4 Shield",
+    performance: "1 Gbps Advanced L3/L4/L7 Mitigation",
   },
   {
     feature: "Control Panel Interface",
