@@ -272,7 +272,7 @@ export default function VDSPricingSection() {
                         {plan.name}
                       </h3>
                       <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">
-                        {getDisplayLocation(config.locations.find((loc) => loc.id === selectedLocation), selectedCPU)}
+                        {plan.cpuDetail ? `${plan.cpuDetail} • ` : ""}{getDisplayLocation(config.locations.find((loc) => loc.id === selectedLocation), selectedCPU)}
                       </p>
                     </div>
 
@@ -293,8 +293,8 @@ export default function VDSPricingSection() {
                           <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                           <span>Processor</span>
                         </span>
-                        <span className="font-semibold text-gray-900 dark:text-white text-right truncate">
-                          {plan.cpuDetail ? `${plan.cpuDetail} (${plan.cpu})` : plan.cpu}
+                        <span className="font-semibold text-gray-900 dark:text-white text-right">
+                          {plan.cpu}
                         </span>
                       </div>
 

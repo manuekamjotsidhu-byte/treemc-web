@@ -136,7 +136,7 @@ export default function RdpPricingSection() {
                     {plan.name}
                   </h3>
                   <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">
-                    Windows Server RDP • Noida, IN
+                    Intel Xeon • Windows Server RDP
                   </p>
                 </div>
 
@@ -157,8 +157,8 @@ export default function RdpPricingSection() {
                       <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Processor</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white text-right truncate">
-                      {plan.cpuDetail} ({plan.cpu})
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
+                      {plan.cpu}
                     </span>
                   </div>
 

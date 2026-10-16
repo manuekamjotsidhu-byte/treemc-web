@@ -281,8 +281,8 @@ export default function VPSPricingSection() {
                       <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Processor</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white text-right truncate">
-                      {plan.cpuDetail ? `${plan.cpuDetail} (${plan.cpu})` : plan.cpu}
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
+                      {plan.cpu}
                     </span>
                   </div>
 
