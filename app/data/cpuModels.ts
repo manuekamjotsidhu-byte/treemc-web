@@ -15,10 +15,10 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_ryzen-ddr5": {
-    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) and Ryzen 9 5900X (Mumbai) engineered for maximum single-thread clock speeds.",
+    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) with Cloudflare Magic Transit DDoS protection (engineered for performance users) and Ryzen 9 5900X (Mumbai) with OVHcloud Anti-DDoS protection (engineered for DDoS protection users), delivering maximum single-thread clock speeds.",
     models: [
-      "AMD Ryzen™ 9 9950X (Delhi)",
-      "AMD Ryzen™ 9 5900X (Mumbai)",
+      "AMD Ryzen™ 9 9950X (Delhi) — Cloudflare Magic Transit (Performance Users)",
+      "AMD Ryzen™ 9 5900X (Mumbai) — OVHcloud Anti-DDoS (DDoS Protection Users)",
     ],
   },
   "india_epyc-milan": {
@@ -84,10 +84,10 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "ryzen-ddr5": {
-    note: "Our AMD Ryzen plans feature high-performance processors: Ryzen 9 9950X (Delhi) and Ryzen 9 5900X (Mumbai).",
+    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) with Cloudflare Magic Transit DDoS protection (engineered for performance users) and Ryzen 9 5900X (Mumbai) with OVHcloud Anti-DDoS protection (engineered for DDoS protection users), delivering maximum single-thread clock speeds.",
     models: [
-      "AMD Ryzen™ 9 9950X (Delhi)",
-      "AMD Ryzen™ 9 5900X (Mumbai)",
+      "AMD Ryzen™ 9 9950X (Delhi) — Cloudflare Magic Transit (Performance Users)",
+      "AMD Ryzen™ 9 5900X (Mumbai) — OVHcloud Anti-DDoS (DDoS Protection Users)",
     ],
   },
   "epyc-milan": {
