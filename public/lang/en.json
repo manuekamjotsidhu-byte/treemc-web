@@ -11,7 +11,8 @@
     "termsOfService": "Terms of Service",
     "privacyPolicy": "Privacy Policy",
     "termsDescription": "Our service agreement and terms",
-    "privacyDescription": "How we protect your privacy"
+    "privacyDescription": "How we protect your privacy",
+    "rdp": "RDP"
   },
   "common": {
     "orderNow": "Order Now",
@@ -58,7 +59,7 @@
     "lowLatency": "Low Latency",
     "lowLatencyDesc": "Optimized network infrastructure for minimal lag and delay",
     "advancedSecurity": "Advanced Security",
-    "advancedSecurityDesc": "Our system is protected by advanced, multi-layered security protocols designed to detect, isolate, and neutralize threats in real time — ensuring your data remains safe around the clock",
+    "advancedSecurityDesc": "Our system is protected by advanced, multi-layered security protocols designed to detect, isolate, and neutralize threats in real time \u2014 ensuring your data remains safe around the clock",
     "autoRecovery": "Auto Recovery",
     "autoRecoveryDesc": "Automatic server recovery and backup systems",
     "fullControl": "Full Control",

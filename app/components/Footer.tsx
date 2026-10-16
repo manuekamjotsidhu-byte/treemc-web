@@ -15,6 +15,7 @@ export default function Footer() {
     { name: "Minecraft Hosting", href: "/games" },
     { name: "Cloud VPS", href: "/vps" },
     { name: "VDS Hosting (India)", href: "/dedicated" },
+    { name: "Windows RDP (India)", href: "/rdp" },
     { name: "Discord Bot Hosting", href: "/discord" },
     { name: "Web Hosting", href: "/webhosting" },
     { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemc.host/", external: true },

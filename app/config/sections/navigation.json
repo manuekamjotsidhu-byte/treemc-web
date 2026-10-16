@@ -20,6 +20,12 @@
       "hasDropdown": false
     },
     {
+      "name": "RDP",
+      "href": "/rdp",
+      "icon": "Monitor",
+      "hasDropdown": false
+    },
+    {
       "name": "Discord Bot",
       "href": "/discord",
       "icon": "FaDiscord",
@@ -78,10 +84,10 @@
   },
   "banner": {
     "show": false,
-    "text": "🇵🇰 TreeMC Pakistan Portal Live — Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
+    "text": "\ud83c\uddf5\ud83c\uddf0 TreeMC Pakistan Portal Live \u2014 Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
     "couponCode": "",
     "link": "https://pakistan.treemc.host/",
-    "buttonText": "Open Pakistan Portal ↗",
+    "buttonText": "Open Pakistan Portal \u2197",
     "useThemeColor": false,
     "backgroundColor": "bg-emerald-600",
     "fallbackColor": "bg-emerald-600"

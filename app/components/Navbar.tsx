@@ -25,6 +25,7 @@ import {
   FileText,
   Shield,
   Check,
+  Monitor,
 } from 'lucide-react';
 import { FaDiscord } from "react-icons/fa6";
 import { GrServerCluster } from "react-icons/gr";
@@ -56,6 +57,7 @@ const iconMap: { [key: string]: React.ElementType } = {
   Sun,
   FaDiscord,
   GrServerCluster,
+  Monitor,
 };
 
 const getIcon = (iconName: string) => iconMap[iconName];

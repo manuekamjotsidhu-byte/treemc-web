@@ -14,6 +14,7 @@ import {
   Globe2,
   HardDrive,
   Layers,
+  Monitor,
 } from "lucide-react";
 
 const solutions = [
@@ -69,6 +70,23 @@ const solutions = [
     featured: false,
   },
   {
+    title: "Windows Server RDP Hosting",
+    badge: "India Noida Cluster",
+    badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/30",
+    description:
+      "Enterprise Remote Desktop servers in Noida, India with full Administrator access, low-latency domestic routing, and Advance DDoS Mitigation.",
+    specs: [
+      "8GB to 64GB DDR4 ECC RAM",
+      "Intel Xeon (4 to 16 vCores)",
+      "80GB to 400GB Enterprise NVMe SSD",
+      "Unmetered 1 Gbps + Advance DDoS Shield",
+    ],
+    ctaText: "View India RDP Plans",
+    href: "/rdp",
+    icon: Monitor,
+    featured: false,
+  },
+  {
     title: "Discord Bot Hosting",
     badge: "Developer Tier",
     badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/30",
@@ -103,7 +121,7 @@ export default function ProductSolutionsSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {solutions.map((item, index) => {
           const Icon = item.icon;
           return (
