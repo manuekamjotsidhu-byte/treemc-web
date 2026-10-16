@@ -148,44 +148,44 @@ export default function WebHostingPricingSection() {
 
                   {/* Standardized Specification Pill Rows */}
                   <div className="space-y-2.5 mb-6">
-                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                      <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                      <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                         <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                         <span>vCPU Allocation</span>
                       </span>
-                      <span className="font-bold text-gray-900 dark:text-white">{plan.cpu}</span>
+                      <span className="font-bold text-gray-900 dark:text-white text-right">{plan.cpu}</span>
                     </div>
 
-                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                      <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                      <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                         <MemoryStick className="w-4 h-4 text-cyan-500 shrink-0" />
                         <span>RAM Memory</span>
                       </span>
-                      <span className="font-bold text-gray-900 dark:text-white">{plan.ram}</span>
+                      <span className="font-bold text-gray-900 dark:text-white text-right">{plan.ram}</span>
                     </div>
 
-                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                      <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                      <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                         <HardDrive className="w-4 h-4 text-indigo-500 shrink-0" />
                         <span>NVMe Storage</span>
                       </span>
-                      <span className="font-bold text-gray-900 dark:text-white">{plan.storage}</span>
+                      <span className="font-bold text-gray-900 dark:text-white text-right">{plan.storage}</span>
                     </div>
 
-                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                      <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                      <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                         <Wifi className="w-4 h-4 text-emerald-500 shrink-0" />
                         <span>Bandwidth</span>
                       </span>
-                      <span className="font-bold text-gray-900 dark:text-white">{plan.bandwidth}</span>
+                      <span className="font-bold text-gray-900 dark:text-white text-right">{plan.bandwidth}</span>
                     </div>
 
-                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                      <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                      <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                         <HeartPulse className="w-4 h-4 text-rose-500 shrink-0" />
                         <span>Network SLA</span>
                       </span>
-                      <span className="font-bold text-emerald-600 dark:text-emerald-400">{plan.uptime}</span>
+                      <span className="font-bold text-emerald-600 dark:text-emerald-400 text-right">{plan.uptime}</span>
                     </div>
                   </div>
                 </div>

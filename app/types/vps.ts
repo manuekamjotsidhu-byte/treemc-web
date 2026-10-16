@@ -11,6 +11,7 @@ export interface VPSPlan {
   storageDetail: string
   bandwidth?: string
   bandwidthDetail?: string
+  ddos?: string
   price: string
   period: string
   orderLink: string

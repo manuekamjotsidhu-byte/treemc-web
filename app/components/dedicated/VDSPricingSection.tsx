@@ -288,42 +288,42 @@ export default function VDSPricingSection() {
 
                     {/* Specification Rows (Exact same unified layout as VPS and RDP) */}
                     <div className="space-y-2.5 mb-6">
-                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                        <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                           <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                           <span>vCPU</span>
                         </span>
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                        <span className="font-semibold text-gray-900 dark:text-white text-right">
                           {plan.cpu}{plan.cpuDetail ? ` (${plan.cpuDetail})` : ''}
                         </span>
                       </div>
 
-                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                        <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                           <MemoryStick className="w-4 h-4 text-cyan-500 shrink-0" />
                           <span>RAM</span>
                         </span>
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                        <span className="font-semibold text-gray-900 dark:text-white text-right">
                           {plan.ram}{plan.ramDetail ? ` (${plan.ramDetail})` : ''}
                         </span>
                       </div>
 
-                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                        <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                           <HardDrive className="w-4 h-4 text-indigo-500 shrink-0" />
                           <span>Storage</span>
                         </span>
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                        <span className="font-semibold text-gray-900 dark:text-white text-right">
                           {plan.storage}{plan.storageDetail ? ` (${plan.storageDetail})` : ''}
                         </span>
                       </div>
 
-                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                        <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                           <Wifi className="w-4 h-4 text-emerald-500 shrink-0" />
                           <span>Bandwidth</span>
                         </span>
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                        <span className="font-semibold text-gray-900 dark:text-white text-right">
                           {plan.bandwidth}{plan.bandwidthDetail ? ` (${plan.bandwidthDetail})` : ''}
                         </span>
                       </div>

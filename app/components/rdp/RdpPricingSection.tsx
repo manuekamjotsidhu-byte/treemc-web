@@ -150,54 +150,54 @@ export default function RdpPricingSection() {
                   </div>
                 </div>
 
-                {/* Specification Rows (Exact same unified layout as VPS) */}
-                <div className="space-y-2.5 mb-6">
-                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                {/* Specification Rows */}
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                       <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Processor</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">
+                    <span className="font-semibold text-gray-900 dark:text-white text-right truncate">
                       {plan.cpuDetail} ({plan.cpu})
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                       <MemoryStick className="w-4 h-4 text-cyan-500 shrink-0" />
                       <span>Memory</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
                       {plan.ram} {plan.ramDetail}
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                       <HardDrive className="w-4 h-4 text-indigo-500 shrink-0" />
-                      <span>NVMe Storage</span>
+                      <span>Storage</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
                       {plan.storage} {plan.storageDetail}
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                       <Wifi className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Bandwidth</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
                       {plan.bandwidth} ({plan.bandwidthDetail})
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                       <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Protection</span>
                     </span>
-                    <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                    <span className="font-semibold text-emerald-600 dark:text-emerald-400 text-right">
                       {plan.ddos}
                     </span>
                   </div>

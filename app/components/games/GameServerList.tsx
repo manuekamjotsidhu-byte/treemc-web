@@ -325,51 +325,51 @@ export default function GameServerList() {
 
                       <div className="space-y-2.5 mb-6">
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                             <MemoryStick className="w-4 h-4 icon-primary" />
                             <span>RAM</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.ram}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.ram}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                             <Cpu className="w-4 h-4 icon-primary" />
                             <span>CPU Power</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.cpu}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.cpu}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                             <HardDrive className="w-4 h-4 icon-primary" />
                             <span>NVMe Storage</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.storage}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.storage}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                             <Shield className="w-4 h-4 icon-primary" />
                             <span>DDoS Shield</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.ddos || "1 Gbps Always-On"}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.ddos || "1 Gbps Always-On"}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                             <Server className="w-4 h-4 icon-primary" />
                             <span>Backups</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">{plan.backups || "Automated Backups"}</span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.backups || "Automated Backups"}</span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                             <Server className="w-4 h-4 icon-primary" />
                             <span>Panel</span>
                           </span>
-                          <span className="font-semibold text-gray-900 dark:text-white">High Performance Panel</span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right">High Performance Panel</span>
                         </div>
                       </div>
                     </div>

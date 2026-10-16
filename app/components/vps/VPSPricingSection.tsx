@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Server, Cpu, MemoryStick, HardDrive, ChevronRight, Info } from "lucide-react"
+import { Server, Cpu, MemoryStick, HardDrive, ChevronRight, Info , ShieldCheck, Wifi} from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import vpsConfig from "../../config/sections/vps.json"
@@ -275,37 +275,55 @@ export default function VPSPricingSection() {
                   </div>
                 </div>
 
-                <div className="space-y-2.5 mb-6">
-                  <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                      <Cpu className="w-4 h-4 icon-primary" />
-                      <span>vCPU</span>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                      <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span>Processor</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">{plan.cpu}</span>
+                    <span className="font-semibold text-gray-900 dark:text-white text-right truncate">
+                      {plan.cpuDetail ? `${plan.cpuDetail} (${plan.cpu})` : plan.cpu}
+                    </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                      <MemoryStick className="w-4 h-4 icon-primary" />
-                      <span>RAM</span>
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                      <MemoryStick className="w-4 h-4 text-cyan-500 shrink-0" />
+                      <span>Memory</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">{plan.ram}</span>
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
+                      {plan.ram} {plan.ramDetail || "DDR4 ECC"}
+                    </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                      <HardDrive className="w-4 h-4 icon-primary" />
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                      <HardDrive className="w-4 h-4 text-indigo-500 shrink-0" />
                       <span>Storage</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">{plan.storage}</span>
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
+                      {plan.storage} {plan.storageDetail || "NVMe SSD"}
+                    </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                    <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                      <Server className="w-4 h-4 icon-primary" />
-                      <span>Port</span>
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                      <Wifi className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span>Bandwidth</span>
                     </span>
-                    <span className="font-semibold text-gray-900 dark:text-white">{plan.bandwidth || "1 Gbps Port"}</span>
+                    <span className="font-semibold text-gray-900 dark:text-white text-right">
+                      {plan.bandwidth || "Unmetered (1 Gbps)"}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                    <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                      <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span>Protection</span>
+                    </span>
+                    <span className="font-semibold text-emerald-600 dark:text-emerald-400 text-right">
+                      {plan.ddos || "Advanced DDoS"}
+                    </span>
                   </div>
                 </div>
               </div>
