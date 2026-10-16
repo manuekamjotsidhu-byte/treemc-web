@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Server, Cpu, MemoryStick, HardDrive, Wifi, Check, Info } from "lucide-react"
+import { Server, Cpu, MemoryStick, HardDrive, Wifi, Check, Info, ChevronRight } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import dediConfig from "../../config/sections/dedicated.json"
@@ -234,100 +234,130 @@ export default function VDSPricingSection() {
           className="mt-4"
         >
           {currentPlans && currentPlans.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {currentPlans.map((plan, index) => (
                 <motion.div
                   key={plan.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  className="relative bg-white dark:bg-gray-950/20 backdrop-blur-xl rounded-md overflow-hidden border border-secondary hover:border-secondary dark:hover:border-secondary transition-all duration-300"
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="relative flex flex-col justify-between bg-white/80 dark:bg-[#0e111a]/90 backdrop-blur-xl border border-gray-200 dark:border-white/[0.08] hover:border-emerald-500/50 dark:hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group"
                 >
-                  {plan.badge && (
-                    <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 text-xs font-medium text-white button-primary rounded-md">
-                        {plan.badge}
-                      </span>
+                  <div>
+                    {/* Top Meta Row: Icon/Flag on left, Badge on right (Zero overlap guaranteed) */}
+                    <div className="flex items-center justify-between gap-3 mb-4">
+                      <div className="relative w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/[0.05] border border-gray-200 dark:border-white/10 flex items-center justify-center p-1.5 shrink-0 overflow-hidden">
+                        <Image
+                          src={
+                            config.locations.find((loc) => loc.id === selectedLocation)?.flag || config.locations[0].flag
+                          }
+                          alt="Location"
+                          width={32}
+                          height={32}
+                          className="rounded-lg object-cover"
+                        />
+                      </div>
+                      {plan.badge ? (
+                        <span className="px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shadow-sm shrink-0">
+                          {plan.badge}
+                        </span>
+                      ) : (
+                        <span className="w-2 h-2" />
+                      )}
                     </div>
-                  )}
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-6">
-                      <Image
-                        src={
-                          config.locations.find((loc) => loc.id === selectedLocation)?.flag || config.locations[0].flag
-                        }
-                        alt={`${config.locations.find((loc) => loc.id === selectedLocation)?.name || "Location"}`}
-                        width={48}
-                        height={48}
-                        className="rounded-lg"
-                      />
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">{plan.name}</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
-                          {getDisplayLocation(config.locations.find((loc) => loc.id === selectedLocation), selectedCPU)}
-                        </p>
-                      </div>
+
+                    {/* Plan Name & Subtitle on their own line */}
+                    <div className="mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white orbitron-font leading-snug">
+                        {plan.name}
+                      </h3>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">
+                        {getDisplayLocation(config.locations.find((loc) => loc.id === selectedLocation), selectedCPU)}
+                      </p>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
-                          <Cpu className="w-4 h-4 icon-primary" />
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{plan.cpuDetail}</span>
-                        </div>
-                        <span className="text-lg font-medium text-gray-900 dark:text-white">{plan.cpu}</span>
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
-                          <MemoryStick className="w-4 h-4 icon-primary" />
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{plan.ramDetail}</span>
-                        </div>
-                        <span className="text-lg font-medium text-gray-900 dark:text-white">{plan.ram}</span>
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
-                          <HardDrive className="w-4 h-4 icon-primary" />
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{plan.storageDetail}</span>
-                        </div>
-                        <span className="text-lg font-medium text-gray-900 dark:text-white">{plan.storage}</span>
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
-                          <Wifi className="w-4 h-4 icon-primary" />
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{plan.bandwidthDetail}</span>
-                        </div>
-                        <span className="text-lg font-medium text-gray-900 dark:text-white">{plan.bandwidth}</span>
-                      </div>
-                    </div>
-                    <div className="space-y-2 mb-6">
-                      {plan.features.map((feature, i) => (
-                        <div key={i} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 icon-primary" />
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-6">
-                      <div className="flex items-baseline justify-center mb-4">
-                        <span className="text-3xl font-bold text-gray-900 dark:text-white">
+
+                    {/* Price Block: Right below title, big green font */}
+                    <div className="mb-6 pb-4 border-b border-gray-200/50 dark:border-gray-800/60">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-3xl font-extrabold orbitron-font text-emerald-500 dark:text-emerald-400">
                           {convertPrice(plan.price)}
                         </span>
-                        <span className="ml-1 text-gray-500 dark:text-gray-400">{plan.period}</span>
+                        <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{plan.period}</span>
                       </div>
-                      <a
-                        href={plan.orderLink}
-                        className="orbitron-font w-full button-primary text-button-primary px-6 py-3 rounded-lg font-medium transition-colors duration-300 flex items-center justify-center gap-2 border border-transparent hover:bg-[var(--hover-gradient)] hover:text-[var(--icon-text-primary)] hover:border-[var(--border-secondary)]"
-                      >
-                        {t('common.orderNow')}
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
                     </div>
+
+                    {/* Specification Rows (Exact same unified layout as VPS and RDP) */}
+                    <div className="space-y-2.5 mb-6">
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
+                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>vCPU</span>
+                        </span>
+                        <span className="font-semibold text-gray-900 dark:text-white">
+                          {plan.cpu}{plan.cpuDetail ? ` (${plan.cpuDetail})` : ''}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
+                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <MemoryStick className="w-4 h-4 text-cyan-500 shrink-0" />
+                          <span>RAM</span>
+                        </span>
+                        <span className="font-semibold text-gray-900 dark:text-white">
+                          {plan.ram}{plan.ramDetail ? ` (${plan.ramDetail})` : ''}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
+                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <HardDrive className="w-4 h-4 text-indigo-500 shrink-0" />
+                          <span>Storage</span>
+                        </span>
+                        <span className="font-semibold text-gray-900 dark:text-white">
+                          {plan.storage}{plan.storageDetail ? ` (${plan.storageDetail})` : ''}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
+                        <span className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                          <Wifi className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>Bandwidth</span>
+                        </span>
+                        <span className="font-semibold text-gray-900 dark:text-white">
+                          {plan.bandwidth}{plan.bandwidthDetail ? ` (${plan.bandwidthDetail})` : ''}
+                        </span>
+                      </div>
+
+                      {plan.features && plan.features.length > 0 && (
+                        <div className="pt-2 border-t border-gray-100 dark:border-white/[0.06] space-y-1.5">
+                          {plan.features.map((feature, i) => (
+                            <div key={i} className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+                              <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                              <span>{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Action Button */}
+                  <div className="pt-2">
+                    <a
+                      href={plan.orderLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3.5 px-6 rounded-xl font-bold button-primary text-button-primary shadow-lg shadow-emerald-950/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group/btn"
+                    >
+                      <span>{t('common.orderNow')}</span>
+                      <ChevronRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    </a>
                   </div>
                 </motion.div>
               ))}
             </div>
-          ) : (
+          )
+          : (
             <div className="flex flex-col items-center justify-center py-16 px-4">
               <div className="text-center">
                 <div className="w-24 h-24 mx-auto mb-6  rounded-full flex items-center justify-center">

@@ -238,19 +238,12 @@ export default function VPSPricingSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="relative flex flex-col justify-between bg-white dark:bg-[#11131c]/70 backdrop-blur-xl border border-secondary hover:border-primary/60 dark:hover:border-primary/60 rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group"
+              className="relative flex flex-col justify-between bg-white/80 dark:bg-[#0e111a]/90 backdrop-blur-xl border border-gray-200 dark:border-white/[0.08] hover:border-emerald-500/50 dark:hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group"
             >
-              {plan.badge && (
-                <div className="absolute top-4 right-4">
-                  <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-primary/10 border border-primary/30 text-primary backdrop-blur-md">
-                    {plan.badge}
-                  </span>
-                </div>
-              )}
-
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="relative w-11 h-11 rounded-xl bg-gray-100 dark:bg-gray-800/40 border border-secondary flex items-center justify-center p-2 flex-shrink-0">
+                {/* Top Meta Row: Icon on left, Badge on right (Zero overlap guaranteed) */}
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <div className="relative w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/[0.05] border border-gray-200 dark:border-white/10 flex items-center justify-center p-2 shrink-0">
                     <Image
                       src={plan.image || "/placeholder.svg"}
                       alt="CPU"
@@ -258,10 +251,19 @@ export default function VPSPricingSection() {
                       className="object-contain p-1"
                     />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white orbitron-font">{plan.name}</h3>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{plan.cpuDetail}</p>
-                  </div>
+                  {plan.badge ? (
+                    <span className="px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shadow-sm shrink-0">
+                      {plan.badge}
+                    </span>
+                  ) : (
+                    <span className="w-2 h-2" />
+                  )}
+                </div>
+
+                {/* Plan Name & Subtitle on their own line */}
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white orbitron-font leading-snug">{plan.name}</h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">{plan.cpuDetail}</p>
                 </div>
 
                 <div className="mb-6 pb-4 border-b border-gray-200/50 dark:border-gray-800/60">
