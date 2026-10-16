@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Server, Cpu, MemoryStick, HardDrive, Wifi, Check, Info, ChevronRight } from "lucide-react"
+import { Server, Cpu, MemoryStick, HardDrive, Wifi, Check, Info, ChevronRight, ShieldCheck } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 import dediConfig from "../../config/sections/dedicated.json"
@@ -287,24 +287,24 @@ export default function VDSPricingSection() {
                     </div>
 
                     {/* Specification Rows (Exact same unified layout as VPS and RDP) */}
-                    <div className="space-y-2.5 mb-6">
+                    <div className="space-y-2 mb-6">
                       <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
                         <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                           <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
-                          <span>vCPU</span>
+                          <span>Processor</span>
                         </span>
-                        <span className="font-semibold text-gray-900 dark:text-white text-right">
-                          {plan.cpu}{plan.cpuDetail ? ` (${plan.cpuDetail})` : ''}
+                        <span className="font-semibold text-gray-900 dark:text-white text-right truncate">
+                          {plan.cpuDetail ? `${plan.cpuDetail} (${plan.cpu})` : plan.cpu}
                         </span>
                       </div>
 
                       <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
                         <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
                           <MemoryStick className="w-4 h-4 text-cyan-500 shrink-0" />
-                          <span>RAM</span>
+                          <span>Memory</span>
                         </span>
                         <span className="font-semibold text-gray-900 dark:text-white text-right">
-                          {plan.ram}{plan.ramDetail ? ` (${plan.ramDetail})` : ''}
+                          {plan.ram} {plan.ramDetail || "DDR4 ECC"}
                         </span>
                       </div>
 
@@ -314,7 +314,7 @@ export default function VDSPricingSection() {
                           <span>Storage</span>
                         </span>
                         <span className="font-semibold text-gray-900 dark:text-white text-right">
-                          {plan.storage}{plan.storageDetail ? ` (${plan.storageDetail})` : ''}
+                          {plan.storage} {plan.storageDetail || "NVMe SSD"}
                         </span>
                       </div>
 
@@ -324,20 +324,19 @@ export default function VDSPricingSection() {
                           <span>Bandwidth</span>
                         </span>
                         <span className="font-semibold text-gray-900 dark:text-white text-right">
-                          {plan.bandwidth}{plan.bandwidthDetail ? ` (${plan.bandwidthDetail})` : ''}
+                          {plan.bandwidth} {plan.bandwidthDetail ? `(${plan.bandwidthDetail})` : ''}
                         </span>
                       </div>
 
-                      {plan.features && plan.features.length > 0 && (
-                        <div className="pt-2 border-t border-gray-100 dark:border-white/[0.06] space-y-1.5">
-                          {plan.features.map((feature, i) => (
-                            <div key={i} className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
-                              <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                              <span>{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      <div className="flex items-center justify-between text-xs sm:text-sm py-2 px-3 rounded-xl bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] gap-2">
+                        <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                          <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>Protection</span>
+                        </span>
+                        <span className="font-semibold text-emerald-600 dark:text-emerald-400 text-right">
+                          Advanced DDoS Mitigation
+                        </span>
+                      </div>
                     </div>
                   </div>
 

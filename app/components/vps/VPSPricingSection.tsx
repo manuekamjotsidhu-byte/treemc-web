@@ -268,7 +268,7 @@ export default function VPSPricingSection() {
 
                 <div className="mb-6 pb-4 border-b border-gray-200/50 dark:border-gray-800/60">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-extrabold orbitron-font icon-text-primary">
+                    <span className="text-3xl font-extrabold orbitron-font text-emerald-500 dark:text-emerald-400">
                       {convertPrice(plan.price)}
                     </span>
                     <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{plan.period}</span>
@@ -328,13 +328,18 @@ export default function VPSPricingSection() {
                 </div>
               </div>
 
-              <a
-                href={plan.orderLink}
-                className="orbitron-font w-full button-primary text-button-primary py-3 px-4 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2 border border-transparent shadow-md hover:shadow-lg hover:scale-[1.02] no-underline"
-              >
-                <span>{t('common.orderNow')}</span>
-                <ChevronRight className="w-4 h-4" />
-              </a>
+              {/* Action Button */}
+              <div className="pt-2">
+                <a
+                  href={plan.orderLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 px-6 rounded-xl font-bold button-primary text-button-primary shadow-lg shadow-emerald-950/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group/btn"
+                >
+                  <span>{t('common.orderNow')}</span>
+                  <ChevronRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </a>
+              </div>
             </motion.div>
           ))}
         </motion.div>
