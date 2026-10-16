@@ -23,6 +23,8 @@ export default function Footer() {
 
   const legalLinks = [
     { name: "Terms of Service", href: "/terms-of-services" },
+    { name: "Acceptable Use Policy", href: "/acceptable-use-policy" },
+    { name: "Uptime SLA Guarantee", href: "/sla" },
     { name: "Refund Policy", href: "/refund-policy" },
     { name: "Privacy Policy", href: "/privacy-policy" },
   ]

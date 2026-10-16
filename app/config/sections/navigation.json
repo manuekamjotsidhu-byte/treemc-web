@@ -91,17 +91,27 @@
         {
           "name": "Terms of Service",
           "href": "/terms-of-services",
-          "description": "Our service agreement and terms"
+          "description": "Our service agreement, customer rights and terms of service"
+        },
+        {
+          "name": "Acceptable Use Policy",
+          "href": "/acceptable-use-policy",
+          "description": "Rules governing permitted usage across Web, Games, VPS, VDS & IPs"
+        },
+        {
+          "name": "Uptime SLA Policy",
+          "href": "/sla",
+          "description": "95% Uptime SLA commitment, qualifying incidents and credit schedule"
         },
         {
           "name": "Refund Policy",
           "href": "/refund-policy",
-          "description": "Our refund conditions and eligibility"
+          "description": "Our transparent refund conditions, chargeback rules and eligibility"
         },
         {
           "name": "Privacy Policy",
           "href": "/privacy-policy",
-          "description": "How we protect your privacy"
+          "description": "How we collect, store, secure and handle your personal data"
         }
       ]
     }

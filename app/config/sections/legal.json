@@ -108,16 +108,151 @@
       }
     ]
   },
+  "acceptableUsePolicy": {
+    "title": "Acceptable Use Policy",
+    "lastUpdated": "October 2026",
+    "companyName": "TreeMC Host",
+    "websiteUrl": "https://treemc.host",
+    "contactEmail": "support@treemc.host",
+    "intro": "This Acceptable Use Policy (\"AUP\") governs the use of all services provided by TreeMC Host (\"Company\", \"we\", \"our\", \"us\"). This policy applies to all customers using web hosting, game hosting, VPS, VDS, dedicated servers, dedicated IPs, network services, and colocation services. Violation of this policy may result in immediate suspension or permanent termination without refund.",
+    "sections": [
+      {
+        "title": "1. General Principles",
+        "content": "You agree to use TreeMC Host services lawfully, responsibly, without harming infrastructure, network stability, or other users, and in compliance with our Terms of Service. You are fully responsible for all content and activities under your account."
+      },
+      {
+        "title": "2. Prohibited Content (All Services)",
+        "content": "The following content is strictly prohibited: Malware, ransomware, spyware, trojans; Phishing pages or fake login portals; Carding operations or financial fraud tools; Copyright-infringing material; Pirated software, cracked scripts, warez; Terror-related or extremist content; Child exploitation material (reported immediately to authorities); Deepfake scam content; Identity theft tools; Illegal gambling operations (where prohibited by law)."
+      },
+      {
+        "title": "3. Web Hosting Abuse",
+        "content": "For shared and reseller web hosting, you may NOT: Host large file storage platforms unrelated to websites; Run crypto mining scripts; Use hosting for public download mirrors; Operate torrent trackers or seedboxes; Run automated bots causing high CPU load; Abuse PHP mail functions; Send bulk unsolicited emails. Excessive CPU, RAM, or disk I/O usage may result in throttling or suspension."
+      },
+      {
+        "title": "4. Game Hosting Abuse",
+        "content": "For game servers (e.g., Minecraft and others), you may NOT: Use crash clients or exploit tools; Run DDoS tools from game servers; Host modified servers that distribute pirated assets; Overload node resources intentionally; Coordinate attacks against other servers. Mass alt-account farming and bot-based abuse are strictly prohibited."
+      },
+      {
+        "title": "5. VPS / VDS Hosting Abuse",
+        "content": "With root or administrative access, you are fully responsible for server security, firewall configuration, system updates, and installed software. You may NOT use VPS/VDS for: Botnets, DDoS-for-hire services, spam relays, crypto mining farms (unless explicitly allowed), proxy networks for abuse, brute-force attack tools, or mass scanning external networks. Misconfigured servers affecting network stability may be suspended immediately."
+      },
+      {
+        "title": "6. Dedicated Server Policy",
+        "content": "Dedicated servers must not be used for high-volume spam operations, network flooding, unauthorized penetration testing, hosting illegal marketplaces, blackhat SEO networks, or IP reputation abuse. Customers are responsible for securing dedicated hardware. Repeated abuse may result in immediate termination."
+      },
+      {
+        "title": "7. Dedicated IP Usage Policy",
+        "content": "Dedicated IPs must NOT be used for email spam campaigns, blackhat SEO, botnets, open proxies, public VPN abuse, or reputation manipulation. IPs remain the property of TreeMC Host or upstream providers. IP reputation damage may result in IP revocation without refund."
+      },
+      {
+        "title": "8. Network Abuse & Security",
+        "content": "Strictly prohibited: DDoS attacks, running stressers or booters, port scanning external networks, BGP hijacking attempts, packet sniffing without authorization, ARP spoofing, and exploiting network vulnerabilities. We monitor network traffic continuously for abuse prevention."
+      },
+      {
+        "title": "9. Colocation Policy",
+        "content": "For colocation customers: You must NOT install illegal hardware, connect unauthorized networking equipment, tamper with shared infrastructure, bypass data center security procedures, or interfere with cooling or power systems. Physical access is strictly controlled. All colocated equipment must comply with datacenter regulations."
+      },
+      {
+        "title": "10. Resource Abuse & Fair Usage",
+        "content": "We enforce fair usage to protect infrastructure: Excessive CPU usage, constant 100% load, continuous high I/O operations, or network saturation may result in throttling, temporary suspension, or permanent termination."
+      },
+      {
+        "title": "11. Abuse Complaints",
+        "content": "Abuse notices must be addressed within 24 hours. Failure to respond may result in suspension. Repeat violations may lead to permanent termination. Investigation fees may apply for severe cases."
+      },
+      {
+        "title": "12. Email & Spam Policy",
+        "content": "Strictly prohibited: Sending unsolicited bulk emails, purchased email lists, email spoofing, and SMTP relay abuse. IP blacklisting due to spam may result in permanent service removal."
+      },
+      {
+        "title": "13. Security Violations",
+        "content": "We may immediately suspend services for active malware detection, network compromise, zero-day exploit distribution, or large-scale scanning activity. No prior notice may be provided in critical security cases."
+      },
+      {
+        "title": "14. Zero Tolerance Violations",
+        "content": "Immediate termination without refund applies to: Child exploitation content, terror-related content, active fraud operations, large-scale network attacks, and staff harassment."
+      },
+      {
+        "title": "15. Enforcement Rights",
+        "content": "TreeMC Host reserves the right to suspend services without notice, remove harmful content, restrict bandwidth, revoke IP addresses, terminate accounts permanently, and report illegal activity to authorities. We cooperate fully with law enforcement agencies."
+      },
+      {
+        "title": "16. Customer Responsibility",
+        "content": "You are responsible for securing your services, monitoring your applications, preventing abuse from your users, keeping your software updated, and maintaining backups. TreeMC Host is not responsible for abuse originating from your misconfigured systems."
+      },
+      {
+        "title": "17. Policy Updates",
+        "content": "We may update this AUP at any time. Continued use of services constitutes acceptance of the revised policy."
+      }
+    ]
+  },
+  "slaPolicy": {
+    "title": "Service Level Agreement (SLA)",
+    "lastUpdated": "October 2026",
+    "companyName": "TreeMC Host",
+    "websiteUrl": "https://treemc.host",
+    "contactEmail": "support@treemc.host",
+    "intro": "We guarantee a 95% uptime SLA across our services. A minimum of 2 hours of continuous downtime is required before SLA credits can be issued.",
+    "downtimeTable": [
+      {
+        "period": "5 Hours of Downtime",
+        "credit": "1 Day Service Extension"
+      },
+      {
+        "period": "6 Hours of Downtime",
+        "credit": "2 Days Service Extension"
+      },
+      {
+        "period": "7 Hours of Downtime",
+        "credit": "4 Days Service Extension"
+      },
+      {
+        "period": "8 Hours of Downtime",
+        "credit": "5 Days Service Extension"
+      },
+      {
+        "period": "9 Hours of Downtime",
+        "credit": "6 Days Service Extension"
+      },
+      {
+        "period": "10+ Hours of Downtime",
+        "credit": "2 Weeks Service Extension"
+      }
+    ],
+    "sections": [
+      {
+        "title": "1. Uptime Guarantee (95% SLA)",
+        "content": "We guarantee a 95% uptime SLA across our services. A minimum of 2 hours of continuous downtime is required before SLA credits can be issued. Eligible downtime credit tiers: 5 hours (1 day extension), 6 hours (2 days extension), 7 hours (4 days extension), 8 hours (5 days extension), 9 hours (6 days extension), 10+ hours (2 weeks extension)."
+      },
+      {
+        "title": "2. SLA Credit Requests",
+        "content": "SLA credits are provided upon request through a support ticket. Customers must submit an SLA claim ticket within 72 hours of a qualifying incident to be eligible for compensation. Qualifying Incidents include network outages, power outages, datacenter failures, host node hardware failures, or infrastructure-level disruptions. Non-eligible issues include packet loss, bandwidth limitations, customer misconfiguration, single VPS failure, performance variations, scheduled maintenance, or DDoS attacks."
+      },
+      {
+        "title": "3. Eligibility Requirements",
+        "content": "To claim SLA credits: The account must be active and in good standing; No chargeback or payment dispute must have been filed; A support ticket must be created within 24 hours of the qualifying incident; The affected service must still be active; SLA credits can only be claimed once per incident."
+      },
+      {
+        "title": "4. Incident Handling",
+        "content": "Multiple outages may be considered a single incident if they share the same root cause (e.g. if a host node experiences an SSD failure, temporarily recovers, and goes offline again due to the same hardware issue). We reserve the right to review each claim and determine qualification."
+      },
+      {
+        "title": "5. Policy Changes",
+        "content": "We may update this SLA policy from time to time. Customers are responsible for reviewing the latest version on our website. Significant changes will be announced via official communication channels."
+      }
+    ]
+  },
   "refundPolicy": {
     "title": "Refund Policy",
     "lastUpdated": "October 2026",
     "companyName": "TreeMC Host",
     "websiteUrl": "https://treemc.host",
     "contactEmail": "support@treemc.host",
+    "intro": "This Refund Policy outlines the conditions under which refunds may or may not be issued for services purchased from TreeMC Host (\"Company\", \"we\", \"our\", \"us\"). By purchasing any service, you agree to this policy.",
     "sections": [
       {
         "title": "1. General Refund Eligibility",
-        "content": "Refunds are only provided if there is a verified technical or service-related issue caused by our hosting infrastructure that prevents the service from functioning as intended and cannot be resolved by our technical team within a reasonable timeframe. Refunds will not be issued for customer misconfiguration, software compatibility issues, lack of technical knowledge, change of mind, or any issue outside our control. All refund requests are subject to review by our support team."
+        "content": "Refunds are only provided if there is a verified technical or service-related issue caused by our hosting infrastructure that prevents the service from functioning as intended and cannot be resolved by our technical team within a reasonable timeframe. Refunds will not be issued for customer misconfiguration, software compatibility issues, lack of technical knowledge, change of mind, or any issue outside our control. All refund requests are subject to review by our support team. The final decision regarding eligibility rests with our billing department after investigating the reported issue."
       },
       {
         "title": "2. Non-Refundable Services",
@@ -125,7 +260,7 @@
       },
       {
         "title": "3. Refund Conditions",
-        "content": "Refunds may be denied if: The service has been used for abusive or illegal activity, resource abuse has been detected, a chargeback has been filed, the request is made after 24 hours, the account has been suspended for violation of policies, or the refund request lacks a valid and verifiable reason. Simply deciding you no longer wish to use the service after having already used it — for example, after 2 or more days of active use — does not constitute a valid reason for a refund."
+        "content": "Refunds may be denied if: The service has been used for abusive or illegal activity; Resource abuse has been detected; A chargeback has been filed; The request is made after 24 hours; The account has been suspended for violation of policies; The refund request lacks a valid and verifiable reason. Simply deciding you no longer wish to use the service after having already used it \u2014 for example, after 2 or more days of active use \u2014 does not constitute a valid reason for a refund. We reserve the right to investigate usage before approving any refund."
       },
       {
         "title": "4. Chargebacks & Payment Disputes",
@@ -149,7 +284,7 @@
       },
       {
         "title": "9. Modifications to This Policy",
-        "content": "We reserve the right to update this Refund Policy at any time. Updated versions will be published on our official website at https://treemc.host."
+        "content": "We reserve the right to update this Refund Policy at any time. Updated versions will be published on our website."
       }
     ]
   },
@@ -159,22 +294,83 @@
     "companyName": "TreeMC Host",
     "websiteUrl": "https://treemc.host",
     "contactEmail": "support@treemc.host",
+    "intro": "TreeMC Host (\"Company\", \"we\", \"our\", \"us\") is committed to protecting your privacy and handling your personal data in a transparent and secure manner. This Privacy Policy explains how we collect, use, store, disclose, and safeguard your information when you access our website (https://treemc.host), client portal, control panels, servers, APIs, and related services. By registering an account or using our services, you agree to the practices described in this Privacy Policy.",
     "sections": [
       {
-        "title": "1. Information We Collect",
-        "content": "We collect information you provide directly to us, such as when you create an account, purchase hosting services, or contact support via Discord. This includes your name, email, billing information, and ticket logs."
+        "title": "1. Scope of This Policy",
+        "content": "This Privacy Policy applies to visitors of our website, registered customers, users of free and paid hosting services, affiliates and partners, and individuals contacting us for support. This policy does not apply to third-party websites or services not owned or controlled by TreeMC Host."
       },
       {
-        "title": "2. How We Use Information",
-        "content": "We use the information we collect to provision server resources, process transactions, prevent abuse and fraud, and communicate critical service notifications."
+        "title": "2. Information We Collect",
+        "content": "We collect information necessary to provide secure, reliable hosting services: (2.1 Directly Provided) Full legal name, email address, phone number, billing address, company name (if applicable), government ID (if required for verification), payment details, support tickets, and Discord communications. (2.2 Automatically Collected) IP address, login timestamps, browser type and version, device type, OS, referring URLs, pages visited, bandwidth usage, and server access logs. (2.3 Service-Related) CPU, RAM, storage, network logs, abuse activity logs, and firewall alerts. We do not monitor private content unless required for abuse investigation or legal compliance."
       },
       {
-        "title": "3. Data Security",
-        "content": "We employ industry-standard encryption, strict access controls, and DDoS filtering to protect customer information and host infrastructure against unauthorized access."
+        "title": "3. Legal Basis for Processing",
+        "content": "We process personal data based on: Performance of a contract (providing hosting services), legal obligations (tax, fraud prevention, law enforcement requests), legitimate business interests (security, system stability, fraud detection), and your consent where required by law."
       },
       {
-        "title": "4. Contact Us",
-        "content": "If you have questions regarding this Privacy Policy or your data, please contact our support team at support@treemc.host or via Discord at https://discord.gg/MJFPbjAdJY."
+        "title": "4. How We Use Your Information",
+        "content": "We use your information to: Create and manage your account, process payments and invoices, deliver hosting services, provide technical support, detect and prevent fraud or abuse, enforce our Terms of Service, maintain infrastructure stability, send important service notifications, and improve platform performance. We do not sell, rent, or trade your personal information."
+      },
+      {
+        "title": "5. Payment Processing",
+        "content": "All payments are processed through trusted third-party providers such as Stripe and PayPal. TreeMC Host does not store complete credit card numbers on its servers. Payment providers handle sensitive financial information under their own privacy and security standards."
+      },
+      {
+        "title": "6. Data Retention Policy",
+        "content": "We retain data only as long as necessary: Active accounts retain data while services remain active; Inactive accounts may be deleted after extended inactivity; Billing records are retained as required by tax laws; Abuse and fraud records may be retained indefinitely for security purposes; Suspended accounts are retained to prevent repeat violations. After retention periods expire, data is securely deleted."
+      },
+      {
+        "title": "7. Data Sharing and Disclosure",
+        "content": "We may share limited data with payment processors, infrastructure providers, control panel vendors, legal authorities when required by law, and professional advisors. We only share information necessary for service delivery or legal compliance. We do not share personal data for advertising resale."
+      },
+      {
+        "title": "8. Law Enforcement Requests",
+        "content": "We may disclose information if required by court orders, government authorities, law enforcement investigations, or legal obligations under applicable law. We reserve the right to comply with valid legal requests."
+      },
+      {
+        "title": "9. Data Security Measures",
+        "content": "We implement industry-standard security practices including SSL/TLS encryption, firewalls, intrusion detection systems, access control restrictions, role-based staff permissions, security monitoring, and DDoS protection systems. Despite these measures, no system can guarantee absolute security."
+      },
+      {
+        "title": "10. User Responsibilities",
+        "content": "You are responsible for securing your login credentials, enabling strong passwords, maintaining backups of your hosted data, keeping your registered email active and monitored, and implementing security measures on VPS servers. TreeMC Host is not responsible for account compromise caused by weak passwords or user negligence."
+      },
+      {
+        "title": "11. Cookies and Tracking Technologies",
+        "content": "We use cookies to maintain login sessions, store user preferences, improve website performance, and analyze traffic patterns. You may disable cookies via browser settings; however, certain features may not function correctly."
+      },
+      {
+        "title": "12. International Data Transfers",
+        "content": "Your data may be stored or processed in data centers located outside your country of residence (including India, Germany, Singapore, US, and Canada). By using our services, you consent to such international transfers. We take reasonable steps to ensure data protection regardless of location."
+      },
+      {
+        "title": "13. Your Data Rights",
+        "content": "Depending on your jurisdiction, you may have the right to access, correct, delete, restrict processing, or request portability of your personal data. Requests must be submitted via the official support ticket system. We may verify identity before fulfilling requests."
+      },
+      {
+        "title": "14. Account Deletion",
+        "content": "If you request account deletion, active services will be terminated, hosted data may be permanently removed, billing records may be retained for legal compliance, and abuse records retained for security reasons. Deletion requests cannot reverse billing obligations."
+      },
+      {
+        "title": "15. Third-Party Services",
+        "content": "Our platform integrates third-party software such as billing systems, Pterodactyl Panel, Stripe, and PayPal. We are not responsible for the privacy practices of third-party platforms. Users should review their policies separately."
+      },
+      {
+        "title": "16. Children's Privacy",
+        "content": "Our services are not intended for individuals under 14 years of age. We do not knowingly collect personal data from minors. If we become aware of such collection, we will take appropriate steps to delete the data."
+      },
+      {
+        "title": "17. Business Transfers",
+        "content": "In the event of a merger, acquisition, restructuring, or asset sale, user data may be transferred as part of business operations. Any successor entity will be required to honor this Privacy Policy."
+      },
+      {
+        "title": "18. Limitation of Liability",
+        "content": "While we take reasonable measures to protect personal information, TreeMC Host is not liable for unauthorized access beyond our control, cyberattacks targeting user-managed servers, data loss caused by user misconfiguration, or third-party service failures."
+      },
+      {
+        "title": "19. Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy periodically to reflect operational, legal, or regulatory changes. The updated version will be published on our website with a revised \"Last Updated\" date. Continued use of services constitutes acceptance of the updated policy."
       }
     ]
   }
