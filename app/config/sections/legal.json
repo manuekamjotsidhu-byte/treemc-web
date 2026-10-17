@@ -196,7 +196,7 @@
     "downtimeTable": [
       {
         "period": "5 Hours of Downtime",
-        "credit": "1 Day Service Extension"
+        "credit": "1 Days Service Extension"
       },
       {
         "period": "6 Hours of Downtime",
@@ -219,26 +219,55 @@
         "credit": "2 Weeks Service Extension"
       }
     ],
+    "qualifyingIncidents": [
+      "Network outages",
+      "Power outages",
+      "Datacenter failures",
+      "Host node failures or issues",
+      "Infrastructure-level service disruptions"
+    ],
+    "notEligible": [
+      "Network packet loss",
+      "Network throughput limitations",
+      "Issues caused by customer configuration or actions",
+      "Failures affecting only an individual VPS",
+      "Performance-related issues",
+      "Scheduled maintenance",
+      "VPS cancellation or suspension",
+      "DDoS attacks"
+    ],
+    "eligibilityRequirements": [
+      "The account must be active and in good standing.",
+      "No chargeback or payment dispute must have been filed.",
+      "A support ticket must be created within 24 hours of the qualifying incident.",
+      "The affected service must still be active and not cancelled or suspended.",
+      "SLA credits can only be claimed once per incident."
+    ],
+    "incidentHandling": {
+      "overview": "Multiple outages may be considered a single incident if they share the same root cause.",
+      "example": "If a host node experiences an SSD failure, temporarily recovers, and then goes offline again due to the same hardware issue, it will be treated as one SLA incident and only one SLA claim will be eligible.",
+      "disclaimer": "We reserve the right to review each SLA claim and deny compensation where the incident does not qualify under this policy."
+    },
     "sections": [
       {
-        "title": "1. Uptime Guarantee (95% SLA)",
-        "content": "We guarantee a 95% uptime SLA across our services. A minimum of 2 hours of continuous downtime is required before SLA credits can be issued. Eligible downtime credit tiers: 5 hours (1 day extension), 6 hours (2 days extension), 7 hours (4 days extension), 8 hours (5 days extension), 9 hours (6 days extension), 10+ hours (2 weeks extension)."
+        "title": "1. Uptime Guarantee",
+        "content": "95% Uptime Guarantee\n\nWe guarantee a 95% uptime SLA across our services. A minimum of 2 hours of continuous downtime is required before SLA credits can be issued.\n\nEligible Downtime Credits:\n\u2022 5 Hours of Downtime: 1 Days Service Extension\n\u2022 6 Hours of Downtime: 2 Days Service Extension\n\u2022 7 Hours of Downtime: 4 Days Service Extension\n\u2022 8 Hours of Downtime: 5 Days Service Extension\n\u2022 9 Hours of Downtime: 6 Days Service Extension\n\u2022 10+ Hours of Downtime: 2 Weeks Service Extension"
       },
       {
         "title": "2. SLA Credit Requests",
-        "content": "SLA credits are provided upon request through a support ticket. Customers must submit an SLA claim ticket within 72 hours of a qualifying incident to be eligible for compensation. Qualifying Incidents include network outages, power outages, datacenter failures, host node hardware failures, or infrastructure-level disruptions. Non-eligible issues include packet loss, bandwidth limitations, customer misconfiguration, single VPS failure, performance variations, scheduled maintenance, or DDoS attacks."
+        "content": "SLA credits are provided upon request through a support ticket. Customers must submit an SLA claim ticket within 72 hours of a qualifying incident to be eligible for compensation.\n\nQualifying Incidents:\n\u2022 Network outages\n\u2022 Power outages\n\u2022 Datacenter failures\n\u2022 Host node failures or issues\n\u2022 Infrastructure-level service disruptions\n\nNot Eligible:\n\u2022 Network packet loss\n\u2022 Network throughput limitations\n\u2022 Issues caused by customer configuration or actions\n\u2022 Failures affecting only an individual VPS\n\u2022 Performance-related issues\n\u2022 Scheduled maintenance\n\u2022 VPS cancellation or suspension\n\u2022 DDoS attacks"
       },
       {
         "title": "3. Eligibility Requirements",
-        "content": "To claim SLA credits: The account must be active and in good standing; No chargeback or payment dispute must have been filed; A support ticket must be created within 24 hours of the qualifying incident; The affected service must still be active; SLA credits can only be claimed once per incident."
+        "content": "To claim SLA credits, customers must meet all of the following requirements:\n\n\u2022 The account must be active and in good standing.\n\u2022 No chargeback or payment dispute must have been filed.\n\u2022 A support ticket must be created within 24 hours of the qualifying incident.\n\u2022 The affected service must still be active and not cancelled or suspended.\n\u2022 SLA credits can only be claimed once per incident."
       },
       {
         "title": "4. Incident Handling",
-        "content": "Multiple outages may be considered a single incident if they share the same root cause (e.g. if a host node experiences an SSD failure, temporarily recovers, and goes offline again due to the same hardware issue). We reserve the right to review each claim and determine qualification."
+        "content": "Multiple outages may be considered a single incident if they share the same root cause.\n\nExample Incident:\nIf a host node experiences an SSD failure, temporarily recovers, and then goes offline again due to the same hardware issue, it will be treated as one SLA incident and only one SLA claim will be eligible.\n\nWe reserve the right to review each SLA claim and deny compensation where the incident does not qualify under this policy."
       },
       {
         "title": "5. Policy Changes",
-        "content": "We may update this SLA policy from time to time. Customers are responsible for reviewing the latest version on our website. Significant changes will be announced via official communication channels."
+        "content": "We may update this SLA policy from time to time. Customers are responsible for reviewing the latest version of this policy.\n\nFor significant changes, we may provide notification through official communication channels."
       }
     ]
   },

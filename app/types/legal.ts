@@ -8,6 +8,12 @@ export interface DowntimeCreditItem {
   credit: string;
 }
 
+export interface IncidentHandlingConfig {
+  overview: string;
+  example: string;
+  disclaimer: string;
+}
+
 export interface LegalPageConfig {
   title: string;
   lastUpdated: string;
@@ -16,6 +22,10 @@ export interface LegalPageConfig {
   contactEmail: string;
   intro?: string;
   downtimeTable?: DowntimeCreditItem[];
+  qualifyingIncidents?: string[];
+  notEligible?: string[];
+  eligibilityRequirements?: string[];
+  incidentHandling?: IncidentHandlingConfig;
   sections: LegalSection[];
 }
 
