@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Image from "next/image"
-import { Server, Shield, Cpu, HardDrive, MemoryStick, ChevronRight } from "lucide-react"
+import { Server, Shield, Cpu, HardDrive, MemoryStick, ChevronRight, Network } from "lucide-react"
 import gamesConfig from "../../config/sections/games.json"
 import type { GamesConfig, Game, GamePlan, GameLocation } from "../../types/games"
 import { CurrencySelector, useCurrency } from "../ui/CurrencySelector"
@@ -346,6 +346,16 @@ export default function GameServerList() {
                             <span>NVMe Storage</span>
                           </span>
                           <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.storage}</span>
+                        </div>
+
+                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
+                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
+                            <Network className="w-4 h-4 icon-primary" />
+                            <span>Allocations</span>
+                          </span>
+                          <span className="font-semibold text-gray-900 dark:text-white text-right text-xs sm:text-sm">
+                            {plan.allocations || "2 Allocations (1 Main + 1 Extra)"}
+                          </span>
                         </div>
 
                         <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">

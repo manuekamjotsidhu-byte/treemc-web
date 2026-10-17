@@ -6,6 +6,7 @@ export interface GamePlan {
   ram: string
   cpu: string
   storage: string
+  allocations?: string
   backups?: string
   ddos?: string
   price: number
