@@ -554,7 +554,7 @@ export const COMPARISON_TABLE: ComparisonRow[] = [
   {
     feature: "Processor Architecture",
     budget: "Intel Xeon High-Freq",
-    performance: "AMD EPYC (Zen 4)",
+    performance: "AMD EPYC",
   },
   {
     feature: "RAM Technology",
@@ -677,7 +677,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
       {
         id: "amd-ryzen",
         name: "AMD Ryzen™ - Premium",
-        badge: "Zen 4 / DDR5 Speed",
+        badge: "Ryzen 9 / DDR5 Speed",
         image: "/cpu/ryzen9.png",
         sublocations: ["Delhi", "Mumbai"],
         cpuModels: [

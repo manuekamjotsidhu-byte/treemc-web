@@ -276,7 +276,7 @@ export default function GameServerList() {
                 const cpuSubtitle = selectedPlanType === "budget"
                   ? "Intel Xeon High-Freq"
                   : selectedPlanType === "premium"
-                  ? "AMD EPYC (Zen 4)"
+                  ? "AMD EPYC"
                   : "AMD Ryzen 5 Peak Single-Thread"
 
                 return (
