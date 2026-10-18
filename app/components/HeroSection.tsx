@@ -28,6 +28,17 @@ const partners = [
   { name: "NeoProtect", src: "/advertisement/neoprotect.png" },
 ]
 
+interface ServiceLocation {
+  name: string
+  flag: string
+  cpu?: string
+  ram?: string
+  storage?: string
+  ddos?: string
+  basePrice?: number
+  link?: string
+}
+
 interface ServiceConfig {
   id: string
   label: string
@@ -40,7 +51,7 @@ interface ServiceConfig {
   ddos: string
   basePrice: number
   link: string
-  locations: { name: string; flag: string }[]
+  locations: ServiceLocation[]
 }
 
 const services: ServiceConfig[] = [
@@ -57,9 +68,46 @@ const services: ServiceConfig[] = [
     basePrice: 99,
     link: "/games",
     locations: [
-      { name: "India (Noida)", flag: "/flags/india.png" },
-      { name: "Germany", flag: "/flags/germany.png" },
-      { name: "Singapore", flag: "/flags/singapore.png" }
+      {
+        name: "India (Noida)",
+        flag: "/flags/india.png",
+        cpu: "Intel® Xeon® & AMD EPYC™",
+        ram: "DDR4 ECC / DDR5 High-Speed",
+        storage: "Gen4 NVMe SSDs",
+        ddos: "17+ Tbit/s Sub-15ms Protection",
+        basePrice: 99,
+        link: "/games?game=minecraft&location=india"
+      },
+      {
+        name: "Germany",
+        flag: "/flags/germany.png",
+        cpu: "Intel® Xeon® & AMD EPYC™",
+        ram: "DDR4 ECC / DDR5 High-Speed",
+        storage: "Enterprise Gen4 NVMe",
+        ddos: "Voxility & OVH 2+ Tbit/s Shield",
+        basePrice: 99,
+        link: "/games?game=minecraft&location=germany"
+      },
+      {
+        name: "Singapore",
+        flag: "/flags/singapore.png",
+        cpu: "AMD EPYC™ & Intel® Xeon®",
+        ram: "DDR4 ECC / DDR5 High-Speed",
+        storage: "Pure NVMe SSD Storage",
+        ddos: "Low-Latency Anycast Scrubbing",
+        basePrice: 99,
+        link: "/games?game=minecraft&location=singapore"
+      },
+      {
+        name: "Dubai (UAE)",
+        flag: "/flags/dubai.png",
+        cpu: "Intel® Xeon® & AMD EPYC™",
+        ram: "DDR4 ECC / DDR5 High-Speed",
+        storage: "Ultra Gen4 NVMe SSD",
+        ddos: "Middle East Sub-20ms DDoS Shield",
+        basePrice: 199,
+        link: "/games?game=minecraft&location=dubai"
+      }
     ]
   },
   {
@@ -75,10 +123,46 @@ const services: ServiceConfig[] = [
     basePrice: 399,
     link: "/vps",
     locations: [
-      { name: "India", flag: "/flags/india.png" },
-      { name: "Singapore", flag: "/flags/singapore.png" },
-      { name: "Germany", flag: "/flags/germany.png" },
-      { name: "USA", flag: "/flags/usa.png" }
+      {
+        name: "India",
+        flag: "/flags/india.png",
+        cpu: "Intel® Xeon® & AMD EPYC™",
+        ram: "High-Frequency DDR4 / DDR5 ECC",
+        storage: "Up to 400 GB Enterprise NVMe",
+        ddos: "17+ Tbit/s DDoS Scrubbing",
+        basePrice: 399,
+        link: "/vps?location=india"
+      },
+      {
+        name: "Singapore",
+        flag: "/flags/singapore.png",
+        cpu: "AMD EPYC™ Enterprise Cloud",
+        ram: "High-Frequency DDR4 ECC",
+        storage: "Up to 500 GB Pure NVMe SSD",
+        ddos: "Asia-Pacific Anycast Scrubbing",
+        basePrice: 1399,
+        link: "/vps?location=singapore"
+      },
+      {
+        name: "Germany",
+        flag: "/flags/germany.png",
+        cpu: "Intel® Xeon® & AMD EPYC™",
+        ram: "High-Frequency DDR4 ECC",
+        storage: "Up to 400 GB NVMe Storage",
+        ddos: "Voxility & OVH 2+ Tbit/s Shield",
+        basePrice: 449,
+        link: "/vps?location=germany"
+      },
+      {
+        name: "USA",
+        flag: "/flags/usa.png",
+        cpu: "AMD EPYC™ High-Performance Compute",
+        ram: "DDR4 ECC Server Memory",
+        storage: "Up to 500 GB Gen4 NVMe",
+        ddos: "North America Anycast 2+ Tbit/s",
+        basePrice: 999,
+        link: "/vps?location=usa"
+      }
     ]
   },
   {
@@ -94,7 +178,26 @@ const services: ServiceConfig[] = [
     basePrice: 1699,
     link: "/dedicated",
     locations: [
-      { name: "Noida & Delhi", flag: "/flags/india.png" }
+      {
+        name: "India (Noida - Intel)",
+        flag: "/flags/india.png",
+        cpu: "Intel® Xeon® (Up to 12 Dedicated)",
+        ram: "Up to 64 GB DDR4 ECC RAM",
+        storage: "Up to 400 GB NVMe SSD",
+        ddos: "Advanced DDoS Mitigation",
+        basePrice: 1699,
+        link: "/dedicated?cpu=xeon-vds"
+      },
+      {
+        name: "India (Delhi - AMD)",
+        flag: "/flags/india.png",
+        cpu: "AMD EPYC™ (Up to 12 Dedicated)",
+        ram: "Up to 64 GB DDR4 ECC RAM",
+        storage: "Up to 400 GB NVMe SSD",
+        ddos: "Advanced DDoS Mitigation",
+        basePrice: 1999,
+        link: "/dedicated?cpu=epyc-vds"
+      }
     ]
   },
   {
@@ -110,7 +213,16 @@ const services: ServiceConfig[] = [
     basePrice: 548,
     link: "/rdp",
     locations: [
-      { name: "Noida, India", flag: "/flags/india.png" }
+      {
+        name: "India (Noida)",
+        flag: "/flags/india.png",
+        cpu: "Intel® Xeon® (Up to 16 vCores)",
+        ram: "Up to 64 GB DDR4 ECC",
+        storage: "Up to 400 GB NVMe SSD",
+        ddos: "Advanced Multi-Layer Mitigation",
+        basePrice: 548,
+        link: "/rdp"
+      }
     ]
   },
   {
@@ -126,8 +238,26 @@ const services: ServiceConfig[] = [
     basePrice: 100,
     link: "/webhosting",
     locations: [
-      { name: "India", flag: "/flags/india.png" },
-      { name: "Germany", flag: "/flags/germany.png" }
+      {
+        name: "India",
+        flag: "/flags/india.png",
+        cpu: "Ultra-Fast Multi-Core vCPU",
+        ram: "DDR4 ECC Allocation",
+        storage: "Fast NVMe Web Storage (cPanel)",
+        ddos: "Layer 7 Web Shield",
+        basePrice: 100,
+        link: "/webhosting"
+      },
+      {
+        name: "Germany",
+        flag: "/flags/germany.png",
+        cpu: "High-Frequency Cloud vCPU",
+        ram: "DDR4 ECC Memory Pool",
+        storage: "Pure NVMe SSD Storage",
+        ddos: "European Edge DDoS Scrubbing",
+        basePrice: 100,
+        link: "/webhosting"
+      }
     ]
   }
 ]
@@ -137,7 +267,7 @@ export default function HeroSection() {
   const [selectedServiceId, setSelectedServiceId] = useState("minecraft")
 
   const currentService = services.find((s) => s.id === selectedServiceId) || services[0]
-  const [selectedLocation, setSelectedLocation] = useState(currentService.locations[0]?.name || "India")
+  const [selectedLocation, setSelectedLocation] = useState(currentService.locations[0]?.name || "India (Noida)")
 
   const handleServiceChange = (id: string) => {
     setSelectedServiceId(id)
@@ -147,9 +277,18 @@ export default function HeroSection() {
     }
   }
 
+  const activeLocation = currentService.locations.find((l) => l.name === selectedLocation) || currentService.locations[0]
+
+  const activeCpu = activeLocation?.cpu || currentService.cpu
+  const activeRam = activeLocation?.ram || currentService.ram
+  const activeStorage = activeLocation?.storage || currentService.storage
+  const activeDdos = activeLocation?.ddos || currentService.ddos
+  const activePrice = activeLocation?.basePrice ?? currentService.basePrice
+  const activeLink = activeLocation?.link || currentService.link
+
   return (
     <section className="relative pt-32 pb-16 overflow-hidden bg-gray-50 dark:bg-[#0a0b0f] transition-colors duration-300">
-      {/* Subtle Ambient Lighting (No oversized purple blobs) */}
+      {/* Subtle Ambient Lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] pointer-events-none overflow-hidden">
         <div className="absolute -top-32 left-1/4 w-[500px] h-[350px] bg-emerald-500/10 dark:bg-emerald-500/[0.07] rounded-full blur-[130px]" />
         <div className="absolute top-1/4 right-10 w-[400px] h-[300px] bg-cyan-500/10 dark:bg-cyan-500/[0.05] rounded-full blur-[120px]" />
@@ -239,14 +378,14 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center gap-1.5">
                 <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>24/7 Expert Support</span>
+                <span>Sub-15ms Low Latency</span>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Column: Real Interactive Server Configurator Card */}
+          {/* Right Column: Interactive Hardware Telemetry Card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5"
@@ -310,7 +449,15 @@ export default function HeroSection() {
                       <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Processor</span>
                     </span>
-                    <span className="font-bold text-gray-900 dark:text-white">{currentService.cpu}</span>
+                    <motion.span
+                      key={`cpu-${selectedServiceId}-${activeLocation?.name}`}
+                      initial={{ opacity: 0, x: 4 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="font-bold text-gray-900 dark:text-white text-right"
+                    >
+                      {activeCpu}
+                    </motion.span>
                   </div>
 
                   <div className="flex items-center justify-between py-2 px-3 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
@@ -318,7 +465,15 @@ export default function HeroSection() {
                       <Zap className="w-4 h-4 text-cyan-500 shrink-0" />
                       <span>Memory</span>
                     </span>
-                    <span className="font-bold text-gray-900 dark:text-white">{currentService.ram}</span>
+                    <motion.span
+                      key={`ram-${selectedServiceId}-${activeLocation?.name}`}
+                      initial={{ opacity: 0, x: 4 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="font-bold text-gray-900 dark:text-white text-right"
+                    >
+                      {activeRam}
+                    </motion.span>
                   </div>
 
                   <div className="flex items-center justify-between py-2 px-3 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
@@ -326,7 +481,15 @@ export default function HeroSection() {
                       <HardDrive className="w-4 h-4 text-indigo-500 shrink-0" />
                       <span>Storage</span>
                     </span>
-                    <span className="font-bold text-gray-900 dark:text-white">{currentService.storage}</span>
+                    <motion.span
+                      key={`storage-${selectedServiceId}-${activeLocation?.name}`}
+                      initial={{ opacity: 0, x: 4 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="font-bold text-gray-900 dark:text-white text-right"
+                    >
+                      {activeStorage}
+                    </motion.span>
                   </div>
 
                   <div className="flex items-center justify-between py-2 px-3 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06]">
@@ -334,31 +497,45 @@ export default function HeroSection() {
                       <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Mitigation</span>
                     </span>
-                    <span className="font-bold text-gray-900 dark:text-white">{currentService.ddos}</span>
+                    <motion.span
+                      key={`ddos-${selectedServiceId}-${activeLocation?.name}`}
+                      initial={{ opacity: 0, x: 4 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="font-bold text-gray-900 dark:text-white text-right"
+                    >
+                      {activeDdos}
+                    </motion.span>
                   </div>
                 </div>
 
                 {/* Location Selection Pills */}
                 <div>
-                  <label className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 block mb-2">
-                    Available Datacenters
-                  </label>
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                      Available Datacenters
+                    </label>
+                    <span className="text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+                      {activeLocation?.name}
+                    </span>
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {currentService.locations.map((loc) => {
-                      const isLocActive = selectedLocation === loc.name
+                      const isLocActive = activeLocation?.name === loc.name
                       return (
                         <button
                           key={loc.name}
                           onClick={() => setSelectedLocation(loc.name)}
                           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                             isLocActive
-                              ? "bg-emerald-500/15 border border-emerald-500/40 text-emerald-600 dark:text-emerald-400 font-bold"
-                              : "bg-gray-50 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                              ? "bg-emerald-500/15 border border-emerald-500/40 text-emerald-600 dark:text-emerald-400 font-bold shadow-sm ring-1 ring-emerald-500/30 scale-[1.02]"
+                              : "bg-gray-50 dark:bg-white/[0.03] border border-gray-200/60 dark:border-white/[0.06] text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-gray-300 dark:hover:border-white/20"
                           }`}
                         >
                           <Image
                             src={loc.flag}
-                            alt={loc.name}
+                            alt=""
+                            aria-hidden="true"
                             width={16}
                             height={12}
                             className="rounded-sm object-cover"
@@ -375,15 +552,21 @@ export default function HeroSection() {
                   <div>
                     <span className="text-[11px] text-gray-500 dark:text-gray-400 block">Starting at</span>
                     <div className="flex items-baseline gap-1">
-                      <span className="text-2xl font-black orbitron-font text-gray-900 dark:text-white">
-                        {convertPrice(currentService.basePrice.toString())}
-                      </span>
+                      <motion.span
+                        key={`price-${selectedServiceId}-${activeLocation?.name}`}
+                        initial={{ opacity: 0, y: -4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-2xl font-black orbitron-font text-gray-900 dark:text-white"
+                      >
+                        {convertPrice(activePrice.toString())}
+                      </motion.span>
                       <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">/month</span>
                     </div>
                   </div>
 
                   <Link
-                    href={currentService.link}
+                    href={activeLink}
                     className="px-6 py-2.5 rounded-xl button-primary text-button-primary font-bold text-xs sm:text-sm shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 group"
                   >
                     <span>Configure Server</span>
@@ -420,7 +603,6 @@ export default function HeroSection() {
             ))}
           </div>
         </motion.div>
-
       </div>
     </section>
   )
