@@ -19,7 +19,7 @@ export default function Footer() {
     { name: "Discord Bot Hosting", href: "/discord" },
     { name: "Web Hosting", href: "/webhosting" },
     { name: "DDoS Protection", href: "/ddos-protection" },
-    { name: "Pakistan Orders (PKR)", href: "https://discord.gg/MJFPbjAdJY", external: true },
+    { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemc.host/", external: true },
   ]
 
   const legalLinks = [
@@ -35,6 +35,7 @@ export default function Footer() {
     { icon: FaDiscord, label: "Discord Community", value: "discord.gg/MJFPbjAdJY", href: "https://discord.gg/MJFPbjAdJY" },
     { icon: Gamepad2, label: "Pterodactyl Panel", value: "panel.treemc.host", href: "https://panel.treemc.host" },
     { icon: Activity, label: "Network Status", value: "status.treemc.host", href: "https://status.treemc.host" },
+    { icon: Globe, label: "Pakistan Portal", value: "pakistan.treemc.host", href: "https://pakistan.treemc.host/" },
   ]
 
   return (

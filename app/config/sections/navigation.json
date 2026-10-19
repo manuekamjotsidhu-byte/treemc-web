@@ -53,14 +53,14 @@
     },
     {
       "name": "Important",
-      "href": "https://discord.gg/MJFPbjAdJY",
+      "href": "https://pakistan.treemc.host/",
       "icon": "Globe",
       "hasDropdown": true,
       "dropdownType": "important",
       "dropdownItems": [
         {
-          "name": "Pakistan Orders",
-          "href": "https://discord.gg/MJFPbjAdJY",
+          "name": "Pakistan Portal",
+          "href": "https://pakistan.treemc.host/",
           "description": "Sub-15ms Lahore Minecraft, KVM VPS & Bare-Metal in PKR",
           "badge": "PKR",
           "external": true
@@ -137,10 +137,10 @@
   },
   "banner": {
     "show": false,
-    "text": "\ud83c\uddf5\ud83c\uddf0 TreeMC Pakistan Services Live \u2014 Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
+    "text": "\ud83c\uddf5\ud83c\uddf0 TreeMC Pakistan Portal Live \u2014 Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
     "couponCode": "",
-    "link": "https://discord.gg/MJFPbjAdJY",
-    "buttonText": "Order on Discord \u2197",
+    "link": "https://pakistan.treemc.host/",
+    "buttonText": "Open Pakistan Portal \u2197",
     "useThemeColor": false,
     "backgroundColor": "bg-emerald-600",
     "fallbackColor": "bg-emerald-600"
