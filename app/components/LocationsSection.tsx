@@ -67,8 +67,8 @@ const locations: DatacenterLocation[] = [
         status: "active",
         lat: 31.5204,
         lng: 74.3587,
-        portalUrl: "https://pakistan.treemc.host/",
-        portalLabel: "Portal ↗",
+        portalUrl: "https://discord.gg/MJFPbjAdJY",
+        portalLabel: "Order on Discord ↗",
     },
     {
         name: "Germany (Frankfurt)",
@@ -138,7 +138,7 @@ const LocationItem = memo(({ location, index }: { location: DatacenterLocation, 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-2 py-0.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-[10px] font-semibold transition-colors flex items-center gap-1 shadow-sm"
-                        title="Open Dedicated Pakistan Portal"
+                        title="Order Pakistan Services on Discord"
                     >
                         <span>{location.portalLabel || "Portal ↗"}</span>
                     </a>
@@ -294,7 +294,7 @@ export default function LocationsSection() {
                                 <div>
                                     <div className="flex items-center gap-2">
                                         <h4 className="text-gray-900 dark:text-white font-bold text-xs sm:text-sm">
-                                            TreeMC Pakistan Dedicated Portal
+                                            TreeMC Pakistan Dedicated Services
                                         </h4>
                                         <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-bold border border-emerald-500/30">
                                             PKR (Rs)
@@ -306,12 +306,12 @@ export default function LocationsSection() {
                                 </div>
                             </div>
                             <a
-                                href="https://pakistan.treemc.host/"
+                                href="https://discord.gg/MJFPbjAdJY"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="shrink-0 px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors shadow-md shadow-emerald-500/20"
                             >
-                                <span>pakistan.treemc.host</span>
+                                <span>Order on Discord</span>
                                 <span className="text-sm">↗</span>
                             </a>
                         </motion.div>

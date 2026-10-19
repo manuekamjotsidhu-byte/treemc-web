@@ -371,7 +371,7 @@ const Navbar: React.FC = () => {
       case "rdp": return "Windows RDP";
       case "discordbot": return t("navbar.discord") || "Discord Bot";
       case "webhosting": return t("navbar.webhosting") || "WebHosting";
-      case "pakistan": return "Pakistan Portal";
+      case "pakistan": return "Pakistan Orders";
       default: return itemName;
     }
   }, [t]);
