@@ -9,7 +9,9 @@ import {
   Cpu,
   Archive,
   Plug,
-  HeartPulse
+  HeartPulse,
+  Terminal,
+  LayoutDashboard
 } from "lucide-react"
 import showcaseConfig from "@/app/config/sections/showcase.json"
 import { useLanguage } from '../contexts/LanguageContext';
@@ -30,7 +32,9 @@ const iconMap = {
   Cpu,
   Archive,
   Plug,
-  HeartPulse
+  HeartPulse,
+  Terminal,
+  LayoutDashboard
 }
 
 export default function PanelShowcase() {
