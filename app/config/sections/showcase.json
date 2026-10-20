@@ -14,9 +14,9 @@
     "cards": [
       {
         "id": 1,
-        "icon": "Zap",
-        "title": "Shell Access",
-        "description": "Manage your server directly via our own custom made Shell system. no need for any third party tools!",
+        "icon": "Terminal",
+        "title": "Live Console",
+        "description": "Monitor your server in real-time with our live console. View logs, warnings, and errors with a single click \u2014 plus instant share log for quick support.",
         "imageDark": "/showcase/dark/shell.png",
         "imageLight": "/showcase/light/shell.png"
       },
@@ -24,7 +24,7 @@
         "id": 2,
         "icon": "Plug",
         "title": "Plugin Manager",
-        "description": "Our developers worked hard to bring you the best experience when hosting ur minecraft server. install plugins in a single click.",
+        "description": "Install and manage plugins in one click. Browse Modrinth, SpigotMC & CurseForge directly from your panel \u2014 no FTP or manual uploads needed.",
         "imageDark": "/showcase/dark/plugin.png",
         "imageLight": "/showcase/light/plugin.png"
       },
@@ -32,15 +32,15 @@
         "id": 3,
         "icon": "Archive",
         "title": "Mod Manager",
-        "description": "Our developers worked hard to bring you the best experience when hosting ur minecraft server. install mods in a single click.",
+        "description": "Seamlessly install and update mods from Modrinth and CurseForge. Filter by loader and version \u2014 everything managed from one clean interface.",
         "imageDark": "/showcase/dark/mod.png",
         "imageLight": "/showcase/light/mod.png"
       },
       {
         "id": 4,
-        "icon": "HeartPulse",
-        "title": "Analytics",
-        "description": "View ur server analytic in 1 minute, giving you detailed logs and charts.",
+        "icon": "LayoutDashboard",
+        "title": "Server Overview",
+        "description": "Get a full snapshot of your server at a glance \u2014 CPU, Memory, Disk, Network, uptime, status, node, and hostname all in one dashboard.",
         "imageDark": "/showcase/dark/analytics.png",
         "imageLight": "/showcase/light/analytics.png"
       }
