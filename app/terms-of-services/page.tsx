@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Scroll, FileText } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -21,8 +21,9 @@ export default function TermsPage() {
     setActiveSection(sectionId);
   };
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
       const sections = legalConfig.termsOfService.sections.map(section => ({
         id: section.title,
         element: document.getElementById(section.title)
@@ -39,8 +40,19 @@ export default function TermsPage() {
       if (current) {
         setActiveSection(current.id);
       }
-    });
-  }
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScroll);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-[#0a0b0f] transition-colors duration-300">
