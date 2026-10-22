@@ -62,7 +62,7 @@ const services: ServiceConfig[] = [
     badge: "Popular Game",
     image: "/banners/minecraft-banners.webp",
     cpu: "AMD Ryzen™ 9 9950X / 5900X",
-    ram: "DDR4 / DDR5 ECC",
+    ram: "2 GB - 32 GB Scalable",
     storage: "Gen4 NVMe SSDs",
     ddos: "17+ Tbit/s Protection",
     basePrice: 99,
@@ -72,7 +72,7 @@ const services: ServiceConfig[] = [
         name: "India (Noida)",
         flag: "/flags/india.png",
         cpu: "Intel® Xeon® & AMD EPYC™",
-        ram: "DDR4 ECC / DDR5 High-Speed",
+        ram: "High-Frequency Dedicated",
         storage: "Gen4 NVMe SSDs",
         ddos: "17+ Tbit/s Sub-15ms Protection",
         basePrice: 99,
@@ -82,7 +82,7 @@ const services: ServiceConfig[] = [
         name: "Germany",
         flag: "/flags/germany.png",
         cpu: "Intel® Xeon® & AMD EPYC™",
-        ram: "DDR4 ECC / DDR5 High-Speed",
+        ram: "High-Frequency Dedicated",
         storage: "Enterprise Gen4 NVMe",
         ddos: "Voxility & OVH 2+ Tbit/s Shield",
         basePrice: 99,
@@ -92,7 +92,7 @@ const services: ServiceConfig[] = [
         name: "Singapore",
         flag: "/flags/singapore.png",
         cpu: "AMD EPYC™ & Intel® Xeon®",
-        ram: "DDR4 ECC / DDR5 High-Speed",
+        ram: "High-Frequency Dedicated",
         storage: "Pure NVMe SSD Storage",
         ddos: "Low-Latency Anycast Scrubbing",
         basePrice: 99,
@@ -102,7 +102,7 @@ const services: ServiceConfig[] = [
         name: "Dubai (UAE)",
         flag: "/flags/dubai.png",
         cpu: "Intel® Xeon® & AMD EPYC™",
-        ram: "DDR4 ECC / DDR5 High-Speed",
+        ram: "High-Frequency Dedicated",
         storage: "Ultra Gen4 NVMe SSD",
         ddos: "Middle East Sub-20ms DDoS Shield",
         basePrice: 199,
@@ -306,8 +306,8 @@ export default function HeroSection() {
               transition={{ duration: 0.4 }}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold tracking-wide mb-6"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span>All Systems Operational • 99.9% Uptime SLA</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Enterprise Game & Cloud Infrastructure</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -374,7 +374,7 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center gap-1.5">
                 <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>99.9% Uptime SLA</span>
+                <span>Enterprise Gen4 NVMe</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Check className="w-4 h-4 text-emerald-500 shrink-0" />

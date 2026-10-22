@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Image from "next/image"
-import { Server, Shield, Cpu, HardDrive, MemoryStick, ChevronRight, Network } from "lucide-react"
+import { Server, Shield, Cpu, HardDrive, MemoryStick, ChevronRight, Network, Archive, Database, Sliders, ShieldCheck, ArrowRight } from "lucide-react"
 import gamesConfig from "../../config/sections/games.json"
 import type { GamesConfig, Game, GamePlan, GameLocation } from "../../types/games"
 import { CurrencySelector, useCurrency } from "../ui/CurrencySelector"
@@ -14,6 +14,29 @@ import { useLanguage } from "../../contexts/LanguageContext"
 import uiConfig from "../../config/sections/ui.json"
 
 const config = gamesConfig as GamesConfig
+
+const getPlanBlockImage = (plan: GamePlan, gameId: string) => {
+  if (gameId !== "minecraft") {
+    return "/placeholder.svg"
+  }
+  const ramNum = parseInt(plan.ram) || 2
+  const name = (plan.name || "").toLowerCase()
+  if (name.includes("gravel") || ramNum <= 2) return "/blocks/gravel.png"
+  if (name.includes("andesite") || ramNum === 3) return "/blocks/andesite.png"
+  if (name.includes("cobble") || ramNum === 4) return "/blocks/cobblestone.png"
+  if (name.includes("stone") || ramNum === 5) return "/blocks/stone.png"
+  if (name.includes("deepslate") || ramNum === 6) return "/blocks/deepslate.png"
+  if (name.includes("dirt") || ramNum === 7) return "/blocks/dirt.png"
+  if (name.includes("iron") || ramNum === 8) return "/blocks/iron.png"
+  if (name.includes("copper") || ramNum === 9) return "/blocks/gold.png"
+  if (name.includes("gold") || ramNum === 10) return "/blocks/gold.png"
+  if (name.includes("emerald") || ramNum === 12) return "/blocks/emerald.png"
+  if (name.includes("diamond") || ramNum <= 18) return "/blocks/diamond.png"
+  if (name.includes("netherite") || ramNum <= 24) return "/blocks/netherite.png"
+  if (name.includes("obsidian") || ramNum <= 28) return "/blocks/obsidian.png"
+  return "/blocks/bedrock.png"
+}
+
 
 export default function GameServerList() {
   const router = useRouter()
@@ -265,133 +288,148 @@ export default function GameServerList() {
           const plansToDisplay = (currentGame?.plans && (currentGame.plans[planKey] || currentGame.plans[selectedPlanType])) || []
 
           return (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {plansToDisplay.map((plan: GamePlan, index: number) => {
-                const cpuImage = selectedPlanType === "budget"
-                  ? "/cpu/intel.png"
-                  : selectedPlanType === "premium"
-                  ? "/cpu/epyc.png"
-                  : "/cpu/ryzen5.png"
+                const blockImage = currentGame.id === "minecraft" 
+                  ? getPlanBlockImage(plan, currentGame.id)
+                  : (currentGame.icon || "/icons/minecraft-icon.webp")
 
-                const cpuSubtitle = selectedPlanType === "budget"
-                  ? "Intel Xeon High-Freq"
-                  : selectedPlanType === "premium"
-                  ? "AMD EPYC"
-                  : "AMD Ryzen 5 Peak Single-Thread"
+                const cleanRam = (plan.ram || "")
+                  .replace(/\s*(DDR[45]|ECC|High-Frequency|DDR4 ECC).*/i, "")
+                  .trim()
+
+                const ramNum = parseInt(cleanRam) || 2
+
+                const cpuText = plan.cpu?.includes("%")
+                  ? plan.cpu.split(" ")[0] + " CPU"
+                  : `${Math.min(100 + (ramNum - 2) * 20, 300)}% CPU`
+
+                const storageText = (plan.storage || `${Math.max(12, ramNum * 6)} GB NVMe`)
+                  .replace(/SSD/i, "")
+                  .replace(/Gen4/i, "")
+                  .replace(/NVMe NVMe/i, "NVMe")
+                  .trim()
+
+                const backupsText = plan.backups
+                  ? plan.backups.replace(/Automated/i, "").trim()
+                  : ramNum >= 4 ? "2 Backups" : "1 Backup"
+
+                const portsText = ramNum >= 4 ? "2 Ports" : "1 Port"
+                const dbCount = ramNum >= 6 ? 4 : (ramNum >= 3 ? 2 : 1)
+                const databasesText = `${dbCount} Database${dbCount > 1 ? "s" : ""}`
+                const isPopular = plan.badge || ramNum === 4
 
                 return (
                   <motion.div
                     key={plan.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="relative flex flex-col justify-between bg-white/80 dark:bg-[#0e111a]/90 backdrop-blur-xl border border-gray-200 dark:border-white/[0.08] hover:border-emerald-500/50 dark:hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group"
+                    transition={{ duration: 0.4, delay: index * 0.04 }}
+                    className={`relative flex flex-col justify-between bg-white/90 dark:bg-[#0c0e14]/95 backdrop-blur-xl rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-950/20 hover:-translate-y-1.5 group ${
+                      isPopular
+                        ? "border-2 border-emerald-500/60 ring-1 ring-emerald-500/30 shadow-lg shadow-emerald-950/20"
+                        : "border border-gray-200/80 dark:border-white/[0.08] hover:border-emerald-500/50"
+                    }`}
                   >
                     <div>
-                      {/* Top Meta Row: Icon on left, Badge on right (Zero overlap guaranteed) */}
-                      <div className="flex items-center justify-between gap-3 mb-4">
-                        <div className="relative w-11 h-11 rounded-xl bg-gray-100 dark:bg-white/[0.05] border border-gray-200 dark:border-white/10 flex items-center justify-center p-2 shrink-0">
-                          <Image
-                            src={cpuImage}
-                            alt="CPU"
-                            fill
-                            className="object-contain p-1"
-                          />
-                        </div>
-                        {plan.badge ? (
-                          <span className="px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 shadow-sm shrink-0">
+                      {/* Popular Badge */}
+                      {plan.badge ? (
+                        <div className="absolute top-4 right-4 z-10">
+                          <span className="px-2.5 py-0.5 text-[10px] font-extrabold tracking-wider uppercase rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-600 dark:text-emerald-400">
                             {plan.badge}
                           </span>
-                        ) : (
-                          <span className="w-2 h-2" />
-                        )}
+                        </div>
+                      ) : isPopular ? (
+                        <div className="absolute top-4 right-4 z-10">
+                          <span className="px-2.5 py-0.5 text-[10px] font-extrabold tracking-wider uppercase rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-600 dark:text-emerald-400">
+                            POPULAR
+                          </span>
+                        </div>
+                      ) : null}
+
+                      {/* Header: 3D Block Image + Name + Subtitle */}
+                      <div className="flex items-center gap-3.5 mb-5">
+                        <div className="relative w-12 h-12 shrink-0 drop-shadow-md">
+                          <Image
+                            src={blockImage}
+                            alt={plan.name}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                        <div className="min-w-0 pr-6">
+                          <h3 className="text-xl font-bold text-gray-900 dark:text-white orbitron-font leading-tight truncate">
+                            {plan.name}
+                          </h3>
+                          <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">
+                            {currentGame.name} Server
+                          </p>
+                        </div>
                       </div>
 
-                      {/* Plan Name & Subtitle on their own line */}
-                      <div className="mb-4">
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white orbitron-font leading-snug">{plan.name}</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">{cpuSubtitle}</p>
-                      </div>
-
-                      <div className="mb-6 pb-4 border-b border-gray-200/50 dark:border-gray-800/60">
+                      {/* Price Row */}
+                      <div className="mb-6">
                         <div className="flex items-baseline gap-1">
-                          <span className="text-3xl font-extrabold orbitron-font icon-text-primary">
+                          <span className="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight orbitron-font">
                             {convertPrice(String(plan.price))}
                           </span>
-                          <span className="text-sm font-medium text-gray-500 dark:text-gray-400">/mo</span>
+                          <span className="text-sm font-medium text-gray-500 dark:text-gray-400">/month</span>
                         </div>
-                        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Instant High-Performance Panel Provisioning</p>
                       </div>
 
-                      <div className="space-y-2.5 mb-6">
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <MemoryStick className="w-4 h-4 icon-primary" />
-                            <span>RAM</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.ram}</span>
+                      {/* 2x2 Specs Grid with Green Icons (Matching Screenshot) */}
+                      <div className="grid grid-cols-2 gap-y-3.5 gap-x-2 mb-6">
+                        <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
+                          <Cpu className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span className="truncate">{cpuText}</span>
                         </div>
-
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <Cpu className="w-4 h-4 icon-primary" />
-                            <span>CPU Power</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.cpu}</span>
+                        <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
+                          <MemoryStick className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span className="truncate">{cleanRam}</span>
                         </div>
-
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <HardDrive className="w-4 h-4 icon-primary" />
-                            <span>NVMe Storage</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.storage}</span>
+                        <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
+                          <HardDrive className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span className="truncate">{storageText}</span>
                         </div>
-
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <Network className="w-4 h-4 icon-primary" />
-                            <span>Allocations</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right text-xs sm:text-sm">
-                            {plan.allocations || "2 Allocations (1 Main + 1 Extra)"}
-                          </span>
+                        <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
+                          <Archive className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span className="truncate">{backupsText}</span>
                         </div>
+                      </div>
 
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <Shield className="w-4 h-4 icon-primary" />
-                            <span>DDoS Shield</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.ddos || "1 Gbps Always-On"}</span>
+                      {/* Horizontal Divider */}
+                      <div className="border-t border-gray-100 dark:border-white/[0.08] mb-6" />
+
+                      {/* Included Features List with Green Icons */}
+                      <div className="space-y-3 mb-8 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                        <div className="flex items-center gap-2.5">
+                          <Network className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>{portsText}</span>
                         </div>
-
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <Server className="w-4 h-4 icon-primary" />
-                            <span>Backups</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right">{plan.backups || "Automated Backups"}</span>
+                        <div className="flex items-center gap-2.5">
+                          <Database className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>{databasesText}</span>
                         </div>
-
-                        <div className="flex items-center justify-between text-sm py-2 px-3 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-secondary">
-                          <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 shrink-0">
-                            <Server className="w-4 h-4 icon-primary" />
-                            <span>Panel</span>
-                          </span>
-                          <span className="font-semibold text-gray-900 dark:text-white text-right">High Performance Panel</span>
+                        <div className="flex items-center gap-2.5">
+                          <Sliders className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>Premium Game Panel</span>
+                        </div>
+                        <div className="flex items-center gap-2.5">
+                          <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span>Advanced DDoS Protection</span>
                         </div>
                       </div>
                     </div>
 
+                    {/* Full-Width Solid Green CTA Button */}
                     <a
-                      href={plan.orderLink}
+                      href={plan.orderLink || "https://discord.gg/MJFPbjAdJY"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="orbitron-font w-full button-primary text-button-primary py-3 px-4 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2 border border-transparent shadow-md hover:shadow-lg hover:scale-[1.02] no-underline"
+                      className="w-full py-3.5 px-4 rounded-xl font-black text-xs sm:text-sm tracking-wider uppercase text-center transition-all duration-200 bg-emerald-500 hover:bg-emerald-400 text-gray-950 shadow-lg shadow-emerald-500/25 active:scale-95 flex items-center justify-center gap-2 group/btn no-underline"
                     >
-                      <span>{t('gameServerList.orderNow')}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span>ORDER NOW</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </a>
                   </motion.div>
                 )

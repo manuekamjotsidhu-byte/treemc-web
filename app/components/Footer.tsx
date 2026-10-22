@@ -198,7 +198,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-6 text-xs text-emerald-500 font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block mr-1.5" />
-                All Systems Operational (99.9% SLA)
+                All Systems Operational • Live Telemetry
               </div>
             </div>
           </motion.div>

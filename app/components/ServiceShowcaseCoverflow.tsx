@@ -39,7 +39,7 @@ const services: ShowcaseService[] = [
     subtitle: "Minecraft & High-Tick Game Servers",
     badge: "Flagship Tier",
     image: "/showcase/3d/game-hosting.jpg",
-    specs: "AMD EPYC DDR5 / Intel Xeon • 1 Gbps Shield",
+    specs: "AMD EPYC & Intel Xeon • High-Frequency • 1 Gbps Shield",
     basePrice: 99,
     href: "/games",
     icon: Server,
