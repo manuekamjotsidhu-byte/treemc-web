@@ -314,9 +314,20 @@ export default function GameServerList() {
                   ? plan.backups.replace(/Automated/i, "").trim()
                   : ramNum >= 4 ? "2 Backups" : "1 Backup"
 
-                const portsText = ramNum >= 4 ? "2 Ports" : "1 Port"
-                const dbCount = ramNum >= 6 ? 4 : (ramNum >= 3 ? 2 : 1)
-                const databasesText = `${dbCount} Database${dbCount > 1 ? "s" : ""}`
+                const portsText = plan.allocations
+                  ? plan.allocations.replace(/allocations/i, "Ports")
+                  : (
+                      ramNum <= 3 ? "2 Ports (1 Main + 1 Extra)" :
+                      ramNum <= 6 ? "3 Ports (1 Main + 2 Extra)" :
+                      ramNum <= 10 ? "4 Ports (1 Main + 3 Extra)" :
+                      ramNum <= 16 ? "5 Ports (1 Main + 4 Extra)" :
+                      ramNum <= 22 ? "6 Ports (1 Main + 5 Extra)" :
+                      ramNum === 24 ? "7 Ports (1 Main + 6 Extra)" :
+                      "8 Ports (1 Main + 7 Extra)"
+                    )
+
+                const dbCount = ramNum >= 18 ? "Unlimited" : ramNum >= 9 ? 5 : ramNum >= 5 ? 3 : ramNum >= 3 ? 2 : 1
+                const databasesText = typeof dbCount === "number" ? `${dbCount} Database${dbCount > 1 ? "s" : ""}` : "Unlimited Databases" 
                 const isPopular = plan.badge || ramNum === 4
 
                 return (

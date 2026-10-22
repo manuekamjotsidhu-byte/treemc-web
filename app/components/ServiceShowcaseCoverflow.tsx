@@ -153,22 +153,28 @@ export default function ServiceShowcaseCoverflow() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-emerald-500/10 dark:bg-emerald-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
+      {/* Clean subtle section divider */}
+      <div className="border-t border-gray-200/80 dark:border-white/[0.06] mb-12" />
 
-      {/* Header section matching user screenshot */}
+      {/* Section Header with Anti-Slop Eyebrow and Crisp CTA */}
       <div className="text-center max-w-3xl mx-auto mb-10">
-        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mb-5 max-w-xl mx-auto leading-relaxed">
-          Powering gaming communities &amp; high-concurrency workloads. Backed by enterprise AMD &amp; Intel hardware and unmatched DDoS protection.
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <span>Infrastructure Fleet</span>
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white orbitron-font tracking-tight mb-3">
+          Specialized Server Solutions
+        </h2>
+        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mb-6 max-w-xl mx-auto leading-relaxed">
+          High-performance game hosting, cloud VPS, dedicated bare metal, and managed runtimes engineered for tick-rate stability.
         </p>
 
-        {/* Primary Order Server CTA button matching screenshot */}
+        {/* Clean, Non-Slop Primary CTA */}
         <Link
           href={activeService.href}
-          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-extrabold text-sm orbitron-font text-gray-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 hover:from-emerald-300 hover:to-teal-200 transition-all duration-300 shadow-[0_0_35px_rgba(16,185,129,0.45)] hover:shadow-[0_0_50px_rgba(16,185,129,0.7)] hover:scale-105 active:scale-95"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs sm:text-sm tracking-wider uppercase text-gray-950 bg-emerald-500 hover:bg-emerald-400 active:scale-[0.98] transition-all shadow-sm"
         >
-          <span>ORDER A SERVER</span>
-          <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+          <span>ORDER {activeService.title.toUpperCase()}</span>
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
 
@@ -279,8 +285,8 @@ export default function ServiceShowcaseCoverflow() {
                 }}
                 className={`absolute w-full h-full rounded-2xl cursor-pointer overflow-hidden transition-all duration-300 ${
                   isActive
-                    ? "frosted-glass-active shadow-[0_25px_60px_-10px_rgba(16,185,129,0.35)] ring-1 ring-emerald-500/40"
-                    : "frosted-glass-card hover:opacity-90"
+                    ? "bg-[#111420] border-2 border-emerald-500/80 shadow-2xl shadow-black/40"
+                    : "bg-[#0c0e14]/90 border border-white/[0.08] hover:border-white/20 hover:opacity-90"
                 }`}
               >
                 {/* Specular sheen on top edge */}
