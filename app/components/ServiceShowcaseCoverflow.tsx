@@ -75,7 +75,7 @@ const services: ShowcaseService[] = [
     subtitle: "Virtual Dedicated Servers with 100% Slices",
     badge: "India Cluster",
     image: "/showcase/3d/vds-hosting.jpg",
-    specs: "100% Dedicated Cores • Noida & Delhi Nodes",
+    specs: "100% Dedicated vCores • Noida & Delhi Nodes",
     basePrice: 1699,
     href: "/dedicated",
     icon: Cpu,

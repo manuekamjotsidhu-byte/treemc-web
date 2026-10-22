@@ -186,7 +186,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     subtitle: "Cloud Instance",
     price: 399,
     blockImage: "/cpu/intel.png",
-    cpu: "2 vCPU Cores",
+    cpu: "2 vCores",
     ram: "4 GB",
     storage: "50 GB NVMe",
     backups: "Automated",
@@ -203,7 +203,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     badge: "POPULAR",
     price: 749,
     blockImage: "/cpu/epyc.png",
-    cpu: "4 vCPU Cores",
+    cpu: "4 vCores",
     ram: "8 GB",
     storage: "100 GB NVMe",
     backups: "Automated",
@@ -220,7 +220,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     badge: "RECOMMENDED",
     price: 1399,
     blockImage: "/cpu/ryzen7.png",
-    cpu: "6 vCPU Cores",
+    cpu: "6 vCores",
     ram: "16 GB",
     storage: "200 GB NVMe",
     backups: "Daily Snapshots",
@@ -236,7 +236,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     subtitle: "Enterprise Bare Metal",
     price: 2499,
     blockImage: "/cpu/epyc-silver.png",
-    cpu: "8 Dedicated Cores",
+    cpu: "8 Dedicated vCores",
     ram: "32 GB",
     storage: "400 GB NVMe",
     backups: "Disaster Recovery",
@@ -482,7 +482,7 @@ export default function PricingSection() {
             <h4 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white orbitron-font">
               {activeTab === "minecraft"
                 ? "Looking for custom locations or enterprise modpacks?"
-                : "Need high-core dedicated bare metal or custom private networks?"}
+                : "Need high-performance dedicated bare metal or custom private networks?"}
             </h4>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
               {activeTab === "minecraft"

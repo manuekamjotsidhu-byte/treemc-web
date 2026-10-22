@@ -22,7 +22,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_epyc-milan": {
-    note: "Our India (Noida / Delhi) AMD EPYC nodes offer dedicated enterprise cores with DDR4 ECC memory and fast NVMe storage.",
+    note: "Our India (Noida / Delhi) AMD EPYC nodes offer dedicated enterprise vCores with DDR4 ECC memory and fast NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",
@@ -91,7 +91,7 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "epyc-milan": {
-    note: "Our AMD EPYC nodes offer dedicated enterprise cores with DDR4 ECC memory and fast NVMe storage.",
+    note: "Our AMD EPYC nodes offer dedicated enterprise vCores with DDR4 ECC memory and fast NVMe storage.",
     models: [
       "AMD EPYC",
     ],
@@ -121,7 +121,7 @@ export const vdsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "epyc-vds": {
-    note: "Our India (Noida / Delhi) AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
+    note: "Our India (Noida / Delhi) AMD EPYC VDS instances deliver dedicated CPU vCores with DDR4 ECC memory and enterprise NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",
@@ -137,7 +137,7 @@ export const vdsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_epyc-vds": {
-    note: "Our India (Noida / Delhi) AMD EPYC VDS instances deliver dedicated CPU cores with DDR4 ECC memory and enterprise NVMe storage.",
+    note: "Our India (Noida / Delhi) AMD EPYC VDS instances deliver dedicated CPU vCores with DDR4 ECC memory and enterprise NVMe storage.",
     models: [
       "AMD EPYC 7F72 @ 3.20 GHz",
       "AMD EPYC 7K62 @ 2.60 GHz",
