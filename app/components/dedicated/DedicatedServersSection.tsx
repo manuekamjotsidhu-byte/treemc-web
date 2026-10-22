@@ -78,7 +78,7 @@ const dedicatedPlans = [
       "Quad U.2 Enterprise Storage Array",
       "Dual 10G SFP+ Uplink Peering",
       "Dedicated Hardware Firewall Option",
-      "SLA 99.99% Hardware Replacement Guarantee",
+      "Enterprise Rapid Hardware Replacement Guarantee",
     ],
   },
 ];

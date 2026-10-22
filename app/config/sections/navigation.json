@@ -45,7 +45,7 @@
         {
           "name": "Web Hosting",
           "href": "/webhosting",
-          "description": "Fast cPanel web hosting with free SSL & 99.9% uptime",
+          "description": "Fast cPanel web hosting with free SSL & high availability",
           "badge": "cPanel",
           "icon": "GrServerCluster"
         }
@@ -82,8 +82,8 @@
         {
           "name": "Network Status",
           "href": "https://status.treemc.host",
-          "description": "Live infrastructure uptime monitoring and 99.9% SLA telemetry",
-          "badge": "99.9% SLA",
+          "description": "Live infrastructure uptime monitoring and network telemetry",
+          "badge": "Live Status",
           "external": true
         }
       ]

@@ -50,7 +50,7 @@ export default function WebHostingPricingSection() {
                 </span>
               </h2>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
-                Ultra-fast cPanel NVMe web hosting with free SSL, automated daily backups, and 99.9% uptime guarantee.
+                Ultra-fast cPanel NVMe web hosting with free SSL, automated daily backups, and enterprise high-availability guarantee.
               </p>
             </div>
             <CurrencySelector

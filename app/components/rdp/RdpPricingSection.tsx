@@ -96,7 +96,7 @@ export default function RdpPricingSection() {
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-emerald-500 shrink-0" />
             <span>
-              <strong>Included with all plans:</strong> Full Administrator Access, Advance DDoS Mitigation, Low-Latency Indian Peering &amp; 99.9% Network Uptime.
+              <strong>Included with all plans:</strong> Full Administrator Access, Advance DDoS Mitigation, Low-Latency Indian Peering &amp; Enterprise High-Availability Network.
             </span>
           </div>
           <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold">
