@@ -7,18 +7,13 @@ import Image from "next/image"
 import {
   ArrowRight,
   Server,
-  Shield,
   Check,
   Copy,
   CheckCheck,
-  Terminal,
-  Network,
-  FolderTree,
-  RotateCw,
-  Square,
-  Play,
-  FileCode,
-  HardDrive
+  Terminal as TerminalIcon,
+  Cpu,
+  Zap,
+  Globe
 } from "lucide-react"
 
 const partners = [
@@ -32,24 +27,64 @@ const partners = [
 
 export default function HeroSection() {
   const [copied, setCopied] = useState(false)
-  const [activeTab, setActiveTab] = useState<"console" | "allocations" | "files">("console")
-  const [serverState, setServerState] = useState<"running" | "restarting">("running")
+  const [activeTab, setActiveTab] = useState<"minecraft" | "vps" | "latency">("minecraft")
 
-  const copyIp = () => {
-    navigator.clipboard.writeText("node-in-01.treemc.host:25565")
+  const terminalTabs = {
+    minecraft: {
+      file: "deploy-minecraft.sh",
+      command: "treemc deploy --game=minecraft --ram=8G --loc=india",
+      lines: [
+        { type: "info", text: "Connecting to TreeMC Edge Mesh [Noida Datacenter]..." },
+        { type: "step", text: "[1/4] Allocating AMD Ryzen™ 9 9950X dedicated slice...", status: "DONE" },
+        { type: "step", text: "[2/4] Binding 1 Dedicated IPv4 + 4 Port Allocations...", status: "DONE" },
+        { type: "step", text: "[3/4] Mounting 60 GB Enterprise Gen4 NVMe (7,000 MB/s)...", status: "DONE" },
+        { type: "step", text: "[4/4] Activating 17+ Tbit/s BGP DDoS Scrubbing Shield...", status: "DONE" },
+        { type: "success", text: "✔ Paper 1.21.1 server running at play.treemc.host:25565" },
+        { type: "link", text: "✔ Pterodactyl Panel: https://panel.treemc.host" },
+      ]
+    },
+    vps: {
+      file: "deploy-vps.sh",
+      command: "treemc vps create --plan=pro --vcpu=6 --ram=16G",
+      lines: [
+        { type: "info", text: "Spawning enterprise KVM instance on AMD EPYC™ node..." },
+        { type: "step", text: "[1/4] Provisioning 6 Dedicated vCores (Zero Throttling)...", status: "DONE" },
+        { type: "step", text: "[2/4] Allocating 150 GB NVMe Gen4 Storage Pool...", status: "DONE" },
+        { type: "step", text: "[3/4] Static Dedicated IPv4 + /64 IPv6 Subnet routed...", status: "DONE" },
+        { type: "step", text: "[4/4] Full Root, SSH & Daily Automated Snapshots...", status: "DONE" },
+        { type: "success", text: "✔ Cloud VPS active: root@194.26.18.42 (SSH ready)" },
+        { type: "link", text: "✔ Virtualizor/KVM Portal: https://vps.treemc.host" },
+      ]
+    },
+    latency: {
+      file: "edge-status.sh",
+      command: "treemc ping --all-regions",
+      lines: [
+        { type: "info", text: "Probing BGP Anycast scrubbing edge clusters..." },
+        { type: "ping", host: "India (Noida DC)", time: "< 6ms", status: "OPTIMAL" },
+        { type: "ping", host: "India (Delhi DC)", time: "< 8ms", status: "OPTIMAL" },
+        { type: "ping", host: "Germany (Frankfurt)", time: "< 24ms", status: "OPTIMAL" },
+        { type: "ping", host: "Singapore (SG)", time: "< 28ms", status: "OPTIMAL" },
+        { type: "success", text: "✔ All edge routes operational with unmetered 1 Gbps uplink" },
+        { type: "link", text: "✔ Realtime telemetry: https://status.treemc.host" },
+      ]
+    }
+  }
+
+  const currentTerminal = terminalTabs[activeTab]
+
+  const copyTerminalOutput = () => {
+    const text = [
+      `$ ${currentTerminal.command}`,
+      ...currentTerminal.lines.map(l => "host" in l ? `${l.host}: ${l.time} [${l.status}]` : l.text)
+    ].join("\n")
+    navigator.clipboard.writeText(text)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const handleRestart = () => {
-    if (serverState === "running") {
-      setServerState("restarting")
-      setTimeout(() => setServerState("running"), 1400)
-    }
-  }
-
   return (
-    <section className="relative pt-24 sm:pt-28 pb-14 overflow-hidden bg-[#0a0c10] text-[#f0f6fc] border-b border-[#21262d]">
+    <section className="relative pt-20 sm:pt-24 pb-14 overflow-hidden bg-[#0a0c10] text-[#f0f6fc] border-b border-[#21262d]">
       {/* Subtle obsidian ambient mesh */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(88,166,255,0.06),rgba(10,12,16,0))] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_30%,rgba(35,134,54,0.04),transparent_50%)] pointer-events-none" />
@@ -60,24 +95,11 @@ export default function HeroSection() {
           {/* Left Column: Authoritative Stark Proposition */}
           <div className="lg:col-span-6 text-left">
             
-            {/* Stark Node Status Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[4px] bg-[#12161f] border border-[#21262d] text-xs font-mono text-[#8b949e] mb-6 shadow-sm"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#238636] shadow-[0_0_6px_#2ea043] animate-pulse" />
-              <span className="text-[#c9d1d9]">WINGS DAEMON v1.11 READY</span>
-              <span className="text-[#30363d]">•</span>
-              <span className="text-[#58a6ff]">SUB-15MS EDGE MESH</span>
-            </motion.div>
-
             {/* Authoritative Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: 0.05 }}
+              transition={{ duration: 0.35 }}
               className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12] mb-5 font-sans"
             >
               Unmetered Minecraft &amp; High-Frequency Cloud Nodes
@@ -87,7 +109,7 @@ export default function HeroSection() {
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: 0.1 }}
+              transition={{ duration: 0.35, delay: 0.08 }}
               className="text-sm sm:text-base text-[#8b949e] leading-relaxed mb-8 max-w-xl"
             >
               Deploy enterprise Minecraft servers and unthrottled KVM cloud instances in seconds. Powered by AMD Ryzen™ 9 9950X and AMD EPYC™ hardware with authentic 2-to-8 port allocations, Gen4 NVMe storage, and automated 17+ Tbit/s DDoS mitigation.
@@ -97,7 +119,7 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: 0.15 }}
+              transition={{ duration: 0.35, delay: 0.14 }}
               className="flex flex-wrap items-center gap-3 mb-10"
             >
               <Link
@@ -121,7 +143,7 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.35, delay: 0.2 }}
+              transition={{ duration: 0.35, delay: 0.18 }}
               className="grid grid-cols-2 gap-2.5 max-w-lg pt-6 border-t border-[#21262d]"
             >
               <div className="flex items-center gap-2 px-3 py-2 rounded-[4px] bg-[#12161f]/80 border border-[#21262d] text-xs">
@@ -143,247 +165,166 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Column: Authentic Stark Pterodactyl Server Inspector & Console */}
+          {/* Right Column: Clean Modern Cloud Terminal (like ateex.cloud) */}
           <div className="lg:col-span-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.15 }}
-              className="w-full bg-[#12161f] border border-[#21262d] rounded-md shadow-2xl overflow-hidden font-sans text-left"
+              transition={{ duration: 0.4, delay: 0.12 }}
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-xl shadow-2xl overflow-hidden font-mono text-left"
             >
-              {/* Stark Header (.sv-head) */}
-              <div className="bg-[#161b22] border-b border-[#21262d] px-4 py-3 flex items-center justify-between">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <span className={`w-2.5 h-2.5 rounded-full ${serverState === "running" ? "bg-[#238636] shadow-[0_0_8px_#2ea043] animate-pulse" : "bg-[#d29922] animate-spin"}`} />
-                  <span className="font-semibold text-xs sm:text-sm text-[#f0f6fc] truncate">smp-production-01</span>
-                  <span className="font-mono text-[11px] text-[#8b949e] bg-[#0d1117] px-2 py-0.5 rounded border border-[#21262d] shrink-0">
-                    node-in-01 • 7f2a9c4b
-                  </span>
-                </div>
-
+              {/* macOS Style Window Chrome */}
+              <div className="bg-[#161b22] px-4 py-3 border-b border-[#21262d] flex items-center justify-between select-none">
+                {/* Traffic light dots */}
                 <div className="flex items-center gap-2">
-                  <span className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wider font-mono ${
-                    serverState === "running"
-                      ? "bg-[#238636]/20 border border-[#238636]/40 text-[#2ea043]"
-                      : "bg-[#d29922]/20 border border-[#d29922]/40 text-[#f0883e]"
-                  }`}>
-                    {serverState === "running" ? "RUNNING" : "RESTARTING"}
-                  </span>
-                  
-                  {/* Stark Action Controls */}
-                  <button
-                    onClick={handleRestart}
-                    title="Restart Node"
-                    className="w-7 h-7 rounded-[4px] bg-[#12161f] hover:bg-[#21262d] border border-[#30363d] text-[#c9d1d9] hover:text-white flex items-center justify-center transition-colors"
-                  >
-                    <RotateCw className="w-3.5 h-3.5" />
-                  </button>
-                  <button
-                    onClick={() => {}}
-                    title="Stop Node"
-                    className="w-7 h-7 rounded-[4px] bg-[#12161f] hover:bg-[#da3633]/20 border border-[#30363d] hover:border-[#da3633] text-[#c9d1d9] hover:text-[#f85149] flex items-center justify-center transition-colors"
-                  >
-                    <Square className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Stark Metric Readout Bars */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-[#21262d]">
-                <div className="bg-[#12161f] p-3">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#8b949e] mb-1">CPU Load</div>
-                  <div className="text-xs font-mono font-bold text-[#f0f6fc] mb-1.5">14.8% <span className="text-[10px] font-normal text-[#8b949e]">/ 400%</span></div>
-                  <div className="w-full h-1 bg-[#21262d] rounded-full overflow-hidden">
-                    <div className="w-[14.8%] h-full bg-[#58a6ff] rounded-full" />
-                  </div>
-                </div>
-
-                <div className="bg-[#12161f] p-3">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#8b949e] mb-1">Memory</div>
-                  <div className="text-xs font-mono font-bold text-[#f0f6fc] mb-1.5">4.12 <span className="text-[10px] font-normal text-[#8b949e]">/ 8.00 GB</span></div>
-                  <div className="w-full h-1 bg-[#21262d] rounded-full overflow-hidden">
-                    <div className="w-[51.5%] h-full bg-[#2ea043] rounded-full" />
-                  </div>
-                </div>
-
-                <div className="bg-[#12161f] p-3">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#8b949e] mb-1">Gen4 NVMe</div>
-                  <div className="text-xs font-mono font-bold text-[#f0f6fc] mb-1.5">16.2 <span className="text-[10px] font-normal text-[#8b949e]">/ 60.0 GB</span></div>
-                  <div className="w-full h-1 bg-[#21262d] rounded-full overflow-hidden">
-                    <div className="w-[27%] h-full bg-[#d29922] rounded-full" />
-                  </div>
-                </div>
-
-                <div className="bg-[#12161f] p-3">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#8b949e] mb-1">Bandwidth</div>
-                  <div className="text-xs font-mono font-bold text-[#f0f6fc] mb-1.5">↑ 3.2 <span className="text-[10px] font-normal text-[#8b949e]">MB/s</span></div>
-                  <div className="text-[10px] font-mono text-[#8b949e]">1 Gbps Unmetered</div>
-                </div>
-              </div>
-
-              {/* Direct Allocation Address & Copy Bar */}
-              <div className="bg-[#0d1117] px-4 py-2.5 border-b border-[#21262d] flex items-center justify-between text-xs font-mono">
-                <div className="flex items-center gap-2 truncate text-[#c9d1d9]">
-                  <span className="text-[#8b949e]">ADDR:</span>
-                  <span className="text-[#58a6ff] select-all">node-in-01.treemc.host:25565</span>
-                  <span className="hidden sm:inline text-[10px] text-[#8b949e] bg-[#161b22] px-1.5 py-0.5 rounded border border-[#21262d]">
-                    +3 Extra Ports
+                  <span className="w-3 h-3 rounded-full bg-[#ff5f56] inline-block" />
+                  <span className="w-3 h-3 rounded-full bg-[#ffbd2e] inline-block" />
+                  <span className="w-3 h-3 rounded-full bg-[#27c93f] inline-block" />
+                  <span className="ml-2 text-xs font-mono text-[#8b949e] hidden sm:inline">
+                    treemc@cloud:~ ({currentTerminal.file})
                   </span>
                 </div>
-                <button
-                  onClick={copyIp}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#161b22] hover:bg-[#21262d] border border-[#30363d] text-[11px] text-[#c9d1d9] hover:text-white transition-colors shrink-0"
-                >
-                  {copied ? (
-                    <>
+
+                {/* Tab selector and Copy button */}
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center bg-[#0d1117] p-0.5 rounded border border-[#21262d] text-[11px]">
+                    <button
+                      onClick={() => setActiveTab("minecraft")}
+                      className={`px-2 py-0.5 rounded transition-colors ${
+                        activeTab === "minecraft"
+                          ? "bg-[#21262d] text-white font-semibold"
+                          : "text-[#8b949e] hover:text-[#c9d1d9]"
+                      }`}
+                    >
+                      Game
+                    </button>
+                    <button
+                      onClick={() => setActiveTab("vps")}
+                      className={`px-2 py-0.5 rounded transition-colors ${
+                        activeTab === "vps"
+                          ? "bg-[#21262d] text-white font-semibold"
+                          : "text-[#8b949e] hover:text-[#c9d1d9]"
+                      }`}
+                    >
+                      VPS
+                    </button>
+                    <button
+                      onClick={() => setActiveTab("latency")}
+                      className={`px-2 py-0.5 rounded transition-colors ${
+                        activeTab === "latency"
+                          ? "bg-[#21262d] text-white font-semibold"
+                          : "text-[#8b949e] hover:text-[#c9d1d9]"
+                      }`}
+                    >
+                      Ping
+                    </button>
+                  </div>
+
+                  <button
+                    onClick={copyTerminalOutput}
+                    title="Copy Terminal Output"
+                    className="p-1.5 rounded bg-[#161b22] hover:bg-[#21262d] border border-[#30363d] text-[#8b949e] hover:text-white transition-colors"
+                  >
+                    {copied ? (
                       <CheckCheck className="w-3.5 h-3.5 text-[#2ea043]" />
-                      <span className="text-[#2ea043]">COPIED</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5 text-[#8b949e]" />
-                      <span>COPY IP</span>
-                    </>
-                  )}
-                </button>
+                    ) : (
+                      <Copy className="w-3.5 h-3.5" />
+                    )}
+                  </button>
+                </div>
               </div>
 
-              {/* Interactive Stark Tabs */}
-              <div className="bg-[#161b22] border-b border-[#21262d] px-3 flex items-center gap-1 text-xs font-mono">
-                <button
-                  onClick={() => setActiveTab("console")}
-                  className={`px-3 py-2 border-b-2 font-medium flex items-center gap-1.5 transition-colors ${
-                    activeTab === "console"
-                      ? "border-[#58a6ff] text-[#58a6ff]"
-                      : "border-transparent text-[#8b949e] hover:text-[#c9d1d9]"
-                  }`}
-                >
-                  <Terminal className="w-3.5 h-3.5" />
-                  <span>Console</span>
-                </button>
-                <button
-                  onClick={() => setActiveTab("allocations")}
-                  className={`px-3 py-2 border-b-2 font-medium flex items-center gap-1.5 transition-colors ${
-                    activeTab === "allocations"
-                      ? "border-[#58a6ff] text-[#58a6ff]"
-                      : "border-transparent text-[#8b949e] hover:text-[#c9d1d9]"
-                  }`}
-                >
-                  <Network className="w-3.5 h-3.5" />
-                  <span>Allocations (4)</span>
-                </button>
-                <button
-                  onClick={() => setActiveTab("files")}
-                  className={`px-3 py-2 border-b-2 font-medium flex items-center gap-1.5 transition-colors ${
-                    activeTab === "files"
-                      ? "border-[#58a6ff] text-[#58a6ff]"
-                      : "border-transparent text-[#8b949e] hover:text-[#c9d1d9]"
-                  }`}
-                >
-                  <FolderTree className="w-3.5 h-3.5" />
-                  <span>Files</span>
-                </button>
-              </div>
-
-              {/* Tab Content Display */}
-              <div className="bg-[#0a0c10] p-3 sm:p-3.5 font-mono text-[11px] leading-relaxed select-none h-40 overflow-y-auto">
+              {/* Terminal Body */}
+              <div className="p-4 sm:p-5 text-xs sm:text-[13px] leading-relaxed text-[#c9d1d9] h-[270px] overflow-y-auto font-mono">
                 <AnimatePresence mode="wait">
-                  {activeTab === "console" && (
-                    <motion.div
-                      key="console"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.15 }}
-                      className="space-y-1 text-[#c9d1d9]"
-                    >
-                      <div className="text-[#8b949e]">[TreeMC Wings] Daemon v1.11.8 connected to Node India-Noida (Direct Fibre)</div>
-                      <div className="text-[#8b949e]">[TreeMC Shield] BGP Anycast DDoS mitigation active (17+ Tbit/s threshold)</div>
-                      <div className="text-[#58a6ff]">[Paper/Purpur] Starting minecraft server version 1.21.1</div>
-                      <div className="text-[#8b949e]">[Paper/Purpur] Loading world: &quot;world&quot; (Default), &quot;world_nether&quot;, &quot;world_the_end&quot;</div>
-                      <div className="text-[#8b949e]">[Paper/Purpur] Preparing start region for dimension minecraft:overworld</div>
-                      <div className="text-[#2ea043]">[TreeMC Allocation] Listening on 0.0.0.0:25565 [Primary] + 3 secondary ports</div>
-                      <div className="text-[#f0f6fc] font-semibold">[Server thread/INFO]: Done (1.842s)! For help, type &quot;help&quot;</div>
-                    </motion.div>
-                  )}
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                    className="space-y-1.5"
+                  >
+                    {/* Prompt and command */}
+                    <div className="flex items-center gap-2 text-white font-semibold">
+                      <span className="text-[#2ea043]">treemc@node-01</span>
+                      <span className="text-[#8b949e]">:</span>
+                      <span className="text-[#58a6ff]">~</span>
+                      <span className="text-[#8b949e]">$</span>
+                      <span className="text-[#f0f6fc]">{currentTerminal.command}</span>
+                    </div>
 
-                  {activeTab === "allocations" && (
-                    <motion.div
-                      key="allocations"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.15 }}
-                      className="space-y-1.5"
-                    >
-                      <div className="flex items-center justify-between p-1.5 rounded bg-[#12161f] border border-[#21262d]">
-                        <span className="text-[#58a6ff] font-bold">25565</span>
-                        <span className="text-[#8b949e]">TCP/UDP</span>
-                        <span className="text-[#2ea043] font-semibold">PRIMARY (GAME)</span>
-                      </div>
-                      <div className="flex items-center justify-between p-1.5 rounded bg-[#12161f] border border-[#21262d]">
-                        <span className="text-[#c9d1d9] font-bold">19132</span>
-                        <span className="text-[#8b949e]">UDP</span>
-                        <span className="text-[#8b949e]">GEYSER BEDROCK</span>
-                      </div>
-                      <div className="flex items-center justify-between p-1.5 rounded bg-[#12161f] border border-[#21262d]">
-                        <span className="text-[#c9d1d9] font-bold">8123</span>
-                        <span className="text-[#8b949e]">TCP</span>
-                        <span className="text-[#8b949e]">DYNMAP / BLUEMAP</span>
-                      </div>
-                      <div className="flex items-center justify-between p-1.5 rounded bg-[#12161f] border border-[#21262d]">
-                        <span className="text-[#c9d1d9] font-bold">24454</span>
-                        <span className="text-[#8b949e]">UDP</span>
-                        <span className="text-[#8b949e]">VOICE CHAT PROXIMITY</span>
-                      </div>
-                    </motion.div>
-                  )}
+                    {/* Output lines */}
+                    {currentTerminal.lines.map((line, idx) => {
+                      if ("host" in line) {
+                        return (
+                          <div key={idx} className="flex items-center justify-between text-xs py-0.5 border-b border-[#21262d]/50">
+                            <span className="text-[#8b949e]">{line.host}</span>
+                            <span className="text-[#58a6ff] font-bold">{line.time}</span>
+                            <span className="text-[#2ea043] font-semibold text-[11px] bg-[#238636]/15 px-1.5 py-0.2 rounded border border-[#238636]/30">
+                              {line.status}
+                            </span>
+                          </div>
+                        )
+                      }
 
-                  {activeTab === "files" && (
-                    <motion.div
-                      key="files"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.15 }}
-                      className="space-y-1 text-[#c9d1d9]"
-                    >
-                      <div className="flex items-center justify-between p-1 rounded hover:bg-[#161b22]">
-                        <span className="text-[#58a6ff]">📁 plugins/</span>
-                        <span className="text-[#8b949e]">24 items</span>
-                      </div>
-                      <div className="flex items-center justify-between p-1 rounded hover:bg-[#161b22]">
-                        <span className="text-[#58a6ff]">📁 world/</span>
-                        <span className="text-[#8b949e]">1.4 GB</span>
-                      </div>
-                      <div className="flex items-center justify-between p-1 rounded hover:bg-[#161b22]">
-                        <span className="text-[#c9d1d9]">📄 server.properties</span>
-                        <span className="text-[#8b949e]">1.2 KB</span>
-                      </div>
-                      <div className="flex items-center justify-between p-1 rounded hover:bg-[#161b22]">
-                        <span className="text-[#c9d1d9]">📄 purpur.yml</span>
-                        <span className="text-[#8b949e]">8.4 KB</span>
-                      </div>
-                    </motion.div>
-                  )}
+                      if (line.type === "info") {
+                        return (
+                          <div key={idx} className="text-[#8b949e] text-xs">
+                            {line.text}
+                          </div>
+                        )
+                      }
+
+                      if (line.type === "step") {
+                        return (
+                          <div key={idx} className="flex items-center justify-between text-xs">
+                            <span className="text-[#c9d1d9]">{line.text}</span>
+                            <span className="text-[#2ea043] font-semibold text-[11px] shrink-0 ml-2">
+                              {line.status}
+                            </span>
+                          </div>
+                        )
+                      }
+
+                      if (line.type === "success") {
+                        return (
+                          <div key={idx} className="text-[#2ea043] font-semibold pt-1">
+                            {line.text}
+                          </div>
+                        )
+                      }
+
+                      if (line.type === "link") {
+                        return (
+                          <div key={idx} className="text-[#58a6ff]">
+                            {line.text}
+                          </div>
+                        )
+                      }
+
+                      return null
+                    })}
+
+                    {/* Blinking cursor line */}
+                    <div className="flex items-center gap-2 pt-2 text-[#8b949e]">
+                      <span className="text-[#2ea043]">treemc@node-01</span>
+                      <span>:</span>
+                      <span className="text-[#58a6ff]">~</span>
+                      <span>$</span>
+                      <span className="w-2 h-4 bg-[#58a6ff] inline-block animate-pulse" />
+                    </div>
+                  </motion.div>
                 </AnimatePresence>
               </div>
 
-              {/* Console Input Footer */}
-              <div className="bg-[#0d1117] border-t border-[#21262d] px-3 py-2 flex items-center gap-2">
-                <span className="text-[#58a6ff] font-mono text-xs font-bold">$</span>
-                <input
-                  type="text"
-                  readOnly
-                  value="send command to server console..."
-                  className="bg-transparent text-xs text-[#8b949e] font-mono outline-none flex-1 select-none pointer-events-none"
-                />
-                <button
-                  type="button"
-                  className="px-2.5 py-0.5 rounded-[3px] bg-[#161b22] border border-[#30363d] text-[10px] font-mono text-[#c9d1d9]"
-                >
-                  RUN
-                </button>
+              {/* Terminal Footer Info Bar */}
+              <div className="bg-[#161b22] px-4 py-2 border-t border-[#21262d] flex items-center justify-between text-[11px] text-[#8b949e] select-none font-mono">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2ea043]" />
+                  <span>NVMe Gen4 • 1 Gbps Unmetered</span>
+                </div>
+                <div>AMD Ryzen™ 9 9950X / AMD EPYC™</div>
               </div>
             </motion.div>
           </div>
@@ -393,7 +334,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.25 }}
+          transition={{ duration: 0.4, delay: 0.22 }}
           className="mt-14 pt-8 border-t border-[#21262d]"
         >
           <div className="text-center text-[10px] font-mono uppercase tracking-widest text-[#8b949e] mb-5">
