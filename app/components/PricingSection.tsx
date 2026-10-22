@@ -187,9 +187,9 @@ const cloudVpsLandingPlans: PlanItem[] = [
     price: 399,
     blockImage: "/cpu/intel.png",
     cpu: "2 vCores",
-    ram: "4 GB",
+    ram: "6 GB",
     storage: "50 GB NVMe",
-    backups: "Automated",
+    backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
     databases: "Unlimited DBs",
     panel: "Full Root & SSH",
@@ -204,9 +204,9 @@ const cloudVpsLandingPlans: PlanItem[] = [
     price: 749,
     blockImage: "/cpu/epyc.png",
     cpu: "4 vCores",
-    ram: "8 GB",
+    ram: "12 GB",
     storage: "100 GB NVMe",
-    backups: "Automated",
+    backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
     databases: "Unlimited DBs",
     panel: "Full Root & SSH",
@@ -216,14 +216,14 @@ const cloudVpsLandingPlans: PlanItem[] = [
   {
     id: "vps-pro",
     name: "VPS Pro",
-    subtitle: "Extreme Performance",
+    subtitle: "High-Performance Cloud",
     badge: "RECOMMENDED",
-    price: 1399,
-    blockImage: "/cpu/ryzen7.png",
+    price: 999,
+    blockImage: "/cpu/epyc.png",
     cpu: "6 vCores",
     ram: "16 GB",
-    storage: "200 GB NVMe",
-    backups: "Daily Snapshots",
+    storage: "150 GB NVMe",
+    backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
     databases: "Unlimited DBs",
     panel: "Full Root & SSH",
@@ -231,19 +231,20 @@ const cloudVpsLandingPlans: PlanItem[] = [
     link: "/vps"
   },
   {
-    id: "vps-enterprise",
-    name: "Dedicated Node",
-    subtitle: "Enterprise Bare Metal",
-    price: 2499,
-    blockImage: "/cpu/epyc-silver.png",
-    cpu: "8 Dedicated vCores",
-    ram: "32 GB",
-    storage: "400 GB NVMe",
-    backups: "Disaster Recovery",
-    ports: "2 Dedicated IPv4",
+    id: "vds-slice",
+    name: "VDS Slice",
+    subtitle: "Virtual Dedicated Server",
+    badge: "DEDICATED",
+    price: 1699,
+    blockImage: "/cpu/ryzen7.png",
+    cpu: "6 Dedicated vCores",
+    ram: "16 GB",
+    storage: "150 GB NVMe",
+    backups: "Daily Snapshots",
+    ports: "1 Dedicated IPv4 + IPv6",
     databases: "Unlimited DBs",
-    panel: "IPMI & KVM Access",
-    ddos: "Custom BGP Scrubbing",
+    panel: "Full Root & KVM Access",
+    ddos: "17+ Tbit/s Protection",
     link: "/dedicated"
   }
 ]
@@ -306,7 +307,7 @@ export default function PricingSection() {
                 }`}
               >
                 <Server className="w-4 h-4" />
-                <span>Cloud VPS</span>
+                <span>Cloud VPS &amp; VDS</span>
               </button>
             </div>
 
@@ -482,12 +483,12 @@ export default function PricingSection() {
             <h4 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white orbitron-font">
               {activeTab === "minecraft"
                 ? "Looking for custom locations or enterprise modpacks?"
-                : "Need high-performance dedicated bare metal or custom private networks?"}
+                : "Need dedicated hardware slices or high-memory VDS clusters?"}
             </h4>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
               {activeTab === "minecraft"
                 ? "All 17 Minecraft plans feature scaled port allocations from 2 up to 8 ports with instant panel provisioning."
-                : "Deploy multi-socket AMD EPYC & Intel Xeon hypervisors with direct 10 Gbps uplinks."}
+                : "Deploy high-clock AMD EPYC & Intel Xeon VDS instances with 100% dedicated vCores."}
             </p>
           </div>
 
@@ -495,7 +496,7 @@ export default function PricingSection() {
             href={activeTab === "minecraft" ? "/games" : "/vps"}
             className="px-6 py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-950 font-bold text-xs sm:text-sm hover:bg-emerald-500 dark:hover:bg-emerald-400 transition-colors shrink-0 flex items-center gap-2"
           >
-            <span>{activeTab === "minecraft" ? "View Full Plans Catalog" : "Explore All Cloud VPS Plans"}</span>
+            <span>{activeTab === "minecraft" ? "View Full Plans Catalog" : "Explore All VPS &amp; VDS Plans"}</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

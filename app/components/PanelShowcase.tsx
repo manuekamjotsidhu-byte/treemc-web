@@ -176,30 +176,32 @@ export default function PanelShowcase() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="relative flex h-full"
           >
-            <div className="relative w-full bg-white dark:bg-white/2 backdrop-blur-sm border border-gray-200 dark:border-white/5 rounded-md overflow-hidden flex flex-col h-full">
-              <div className="flex-1   pb-0">
-                <div className="relative w-full h-full min-h-[200px] sm:min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden">
+            <div className="relative w-full bg-white dark:bg-[#111420] border border-gray-200 dark:border-white/[0.08] rounded-xl overflow-hidden flex flex-col justify-between h-full shadow-lg">
+              {/* Scaled Preview: Aspect-ratio framed with object-contain to display 100% of panel screenshots */}
+              <div className="p-3 sm:p-6 pb-2 flex-1 flex items-center justify-center bg-gray-100/60 dark:bg-black/40">
+                <div className="relative w-full aspect-[1024/441] rounded-lg overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md bg-gray-950">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activeCard}
-                      initial={{ opacity: 0, scale: 1.1 }}
+                      initial={{ opacity: 0, scale: 0.98 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.5 }}
-                      className="absolute inset-0"
+                      exit={{ opacity: 0, scale: 0.98 }}
+                      transition={{ duration: 0.25 }}
+                      className="absolute inset-0 w-full h-full"
                     >
                       <div className="hidden dark:block w-full h-full">
                         <Image
                           src={showcaseCards[activeCard].imageDark}
                           alt={showcaseCards[activeCard].title}
                           fill
-                          className="object-cover object-top"
-                          quality={85}
+                          className="object-contain"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 650px"
+                          quality={95}
                           priority={activeCard === 0}
                         />
                       </div>
@@ -208,9 +210,9 @@ export default function PanelShowcase() {
                           src={showcaseCards[activeCard].imageLight}
                           alt={showcaseCards[activeCard].title}
                           fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                          className="object-cover object-top"
-                          quality={85}
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 650px"
+                          className="object-contain"
+                          quality={95}
                           priority={activeCard === 0}
                         />
                       </div>
@@ -219,17 +221,18 @@ export default function PanelShowcase() {
                 </div>
               </div>
 
-              <div className="p-3 sm:p-6">
+              {/* Bottom Card Title and Description */}
+              <div className="p-5 sm:p-6 border-t border-gray-100 dark:border-white/[0.06] bg-white dark:bg-[#111420]">
                 <motion.div
                   key={activeCard}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <h3 className="text-gray-900 dark:text-white text-lg sm:text-xl font-semibold mb-2">
+                  <h3 className="text-gray-900 dark:text-white text-lg sm:text-xl font-bold mb-1.5 orbitron-font">
                     {showcaseCards[activeCard].title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
+                  <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm leading-relaxed">
                     {showcaseCards[activeCard].description}
                   </p>
                 </motion.div>
