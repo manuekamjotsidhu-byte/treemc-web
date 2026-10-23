@@ -58,7 +58,7 @@ export interface LocationData {
   processors: ProcessorCategory[];
 }
 
-export const DISCORD_PURCHASE_URL = "https://discord.gg/MJFPbjAdJY";
+export const DISCORD_PURCHASE_URL = "https://discord.gg/wbH8ZVAsYg";
 export const GAME_PANEL_URL = "https://panel.treemc.host";
 export const STATUS_PAGE_URL = "https://status.treemc.host";
 

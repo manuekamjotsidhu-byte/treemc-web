@@ -585,7 +585,7 @@ export default function DdosProtectionPage() {
                 Cloud VPS
               </Link>
               <a
-                href="https://discord.gg/MJFPbjAdJY"
+                href="https://discord.gg/wbH8ZVAsYg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all"

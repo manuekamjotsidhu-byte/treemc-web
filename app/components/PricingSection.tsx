@@ -54,7 +54,7 @@ const minecraftStarterPlans: PlanItem[] = [
     databases: "1 Database",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   },
   {
     id: "mc-andesite",
@@ -70,7 +70,7 @@ const minecraftStarterPlans: PlanItem[] = [
     databases: "2 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   },
   {
     id: "mc-cobblestone",
@@ -87,7 +87,7 @@ const minecraftStarterPlans: PlanItem[] = [
     databases: "2 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   },
   {
     id: "mc-stone",
@@ -104,7 +104,7 @@ const minecraftStarterPlans: PlanItem[] = [
     databases: "3 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   }
 ]
 
@@ -124,7 +124,7 @@ const minecraftPerformancePlans: PlanItem[] = [
     databases: "3 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   },
   {
     id: "mc-gold",
@@ -141,7 +141,7 @@ const minecraftPerformancePlans: PlanItem[] = [
     databases: "4 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   },
   {
     id: "mc-diamond",
@@ -158,7 +158,7 @@ const minecraftPerformancePlans: PlanItem[] = [
     databases: "5 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   },
   {
     id: "mc-netherite",
@@ -175,7 +175,7 @@ const minecraftPerformancePlans: PlanItem[] = [
     databases: "Unlimited Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
-    link: "https://discord.gg/MJFPbjAdJY"
+    link: "https://discord.gg/wbH8ZVAsYg"
   }
 ]
 

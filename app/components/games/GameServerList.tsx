@@ -434,7 +434,7 @@ export default function GameServerList() {
 
                     {/* Full-Width Solid Green CTA Button */}
                     <a
-                      href={plan.orderLink || "https://discord.gg/MJFPbjAdJY"}
+                      href={plan.orderLink || "https://discord.gg/wbH8ZVAsYg"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3.5 px-4 rounded-xl font-black text-xs sm:text-sm tracking-wider uppercase text-center transition-all duration-200 bg-emerald-500 hover:bg-emerald-400 text-gray-950 shadow-lg shadow-emerald-500/25 active:scale-95 flex items-center justify-center gap-2 group/btn no-underline"

@@ -13,7 +13,7 @@ Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, and cust
 | **Official Domain** | `https://treemc.host` | Primary Web Portal |
 | **Game Panel** | `https://panel.treemc.host` | Pterodactyl-Powered Control Panel |
 | **System Status** | `https://status.treemc.host` | Real-time Global Node Status |
-| **Discord Community & Orders** | `https://discord.gg/MJFPbjAdJY` | Ticket Support, Custom Deployments & Billing |
+| **Discord Community & Orders** | `https://discord.gg/wbH8ZVAsYg` | Ticket Support, Custom Deployments & Billing |
 
 ---
 
@@ -40,7 +40,7 @@ Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, and cust
    - Interactive 3D globe and node list highlighting regional transit tiers, sub-15ms regional routing, and live status telemetry.
 
 5. **Direct Discord Integration**:
-   - All purchase and deployment buttons route directly to `https://discord.gg/MJFPbjAdJY` ticket system.
+   - All purchase and deployment buttons route directly to `https://discord.gg/wbH8ZVAsYg` ticket system.
 
 ---
 
@@ -127,7 +127,7 @@ sudo certbot --nginx -d treemc.host -d www.treemc.host
 │   │   ├── CloudInfrastructureSection.tsx # Country & CPU selector for VPS/VDS (no pagination)
 │   │   ├── LocationsSection.tsx         # Global edge datacenter points with copyable test IPs
 │   │   ├── PanelShowcase.tsx            # Interactive game panel preview (panel.treemc.host)
-│   │   ├── DiscordBanner.tsx            # Discord community card (discord.gg/MJFPbjAdJY)
+│   │   ├── DiscordBanner.tsx            # Discord community card (discord.gg/wbH8ZVAsYg)
 │   │   └── Footer.tsx                   # Clean branded footer with legal & status links
 │   ├── data/
 │   │   └── treeMcPlans.ts               # Plans, pricing, nodes, and hardware specifications

@@ -32,7 +32,7 @@ export default function Footer() {
 
   const contactInfo = [
     { icon: Mail, label: "Email Support", value: "support@treemc.host", href: "mailto:support@treemc.host" },
-    { icon: FaDiscord, label: "Discord Community", value: "discord.gg/MJFPbjAdJY", href: "https://discord.gg/MJFPbjAdJY" },
+    { icon: FaDiscord, label: "Discord Community", value: "discord.gg/wbH8ZVAsYg", href: "https://discord.gg/wbH8ZVAsYg" },
     { icon: Gamepad2, label: "Pterodactyl Panel", value: "panel.treemc.host", href: "https://panel.treemc.host" },
     { icon: Activity, label: "Network Status", value: "status.treemc.host", href: "https://status.treemc.host" },
     { icon: Globe, label: "Pakistan Portal", value: "pakistan.treemc.host", href: "https://pakistan.treemc.host/" },

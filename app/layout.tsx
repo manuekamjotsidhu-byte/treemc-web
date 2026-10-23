@@ -160,14 +160,14 @@ export default function RootLayout({
               "serviceType": ["Minecraft Server Hosting", "Discord Bot Hosting", "Web Hosting", "Pterodactyl Panel"],
               "areaServed": "Worldwide",
               "sameAs": [
-                "https://discord.gg/MJFPbjAdJY"
+                "https://discord.gg/wbH8ZVAsYg"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
                 "availableLanguage": "English",
                 "serviceType": "Technical Support",
-                "url": "https://discord.gg/MJFPbjAdJY"
+                "url": "https://discord.gg/wbH8ZVAsYg"
               },
               "termsOfService": "https://treemc.host/terms-of-services",
               "refundPolicy": "https://treemc.host/refund-policy"
