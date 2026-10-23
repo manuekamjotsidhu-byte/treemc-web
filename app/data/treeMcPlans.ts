@@ -682,7 +682,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         sublocations: ["Delhi", "Mumbai"],
         cpuModels: [
           "AMD Ryzen™ 9 9950X (Delhi - Ultra Performance)",
-          "AMD Ryzen™ 9 5900X (Mumbai - DDoS Protected)",
+          "AMD Ryzen™ 9 5900X (Mumbai - 17+ Tbit/s OVH Anti-DDoS VAC)",
         ],
         vpsPlans: [
           { id: "in-ryzen-xs", tier: "XS", priceMo: 699, cores: "1 vCore", ram: "4GB", ramType: "DDR5 ECC", nvme: "50GB NVMe" },
@@ -751,7 +751,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD Ryzen™ - Premium",
         badge: "Ryzen 9 5900X",
         image: "/cpu/ryzen9.png",
-        cpuModels: ["AMD Ryzen™ 9 5900X"],
+        cpuModels: ["AMD Ryzen™ 9 5900X (Frankfurt - 17+ Tbit/s OVH Anti-DDoS VAC)"],
         vpsPlans: [
           { id: "de-ryzen-xs", tier: "XS", priceMo: 879, cores: "2 vCores", ram: "6GB", ramType: "DDR4 ECC", nvme: "50GB NVMe" },
           { id: "de-ryzen-s", tier: "S", priceMo: 1099, cores: "2 vCores", ram: "8GB", ramType: "DDR4 ECC", nvme: "50GB NVMe" },

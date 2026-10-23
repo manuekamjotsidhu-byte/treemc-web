@@ -15,10 +15,10 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "india_ryzen-ddr5": {
-    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) with Cloudflare Magic Transit DDoS protection (engineered for performance users) and Ryzen 9 5900X (Mumbai) with OVHcloud Anti-DDoS protection (engineered for DDoS protection users), delivering maximum single-thread clock speeds.",
+    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) with Cloudflare Magic Transit DDoS protection (engineered for performance users) and Ryzen 9 5900X (Mumbai) with OVHcloud Anti-DDoS VAC (17+ Tbit/s mitigation capacity, engineered for DDoS protection users), delivering maximum single-thread clock speeds.",
     models: [
       "AMD Ryzen™ 9 9950X (Delhi) — Cloudflare Magic Transit (Performance Users)",
-      "AMD Ryzen™ 9 5900X (Mumbai) — OVHcloud Anti-DDoS (DDoS Protection Users)",
+      "AMD Ryzen™ 9 5900X (Mumbai) — OVHcloud 17+ Tbit/s Anti-DDoS VAC (DDoS Protection Users)",
     ],
   },
   "india_epyc-milan": {
@@ -37,9 +37,9 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "germany_ryzen-5900x": {
-    note: "Our Germany AMD Ryzen nodes deliver high-performance compute engineered for gaming and demanding workloads.",
+    note: "Our Germany AMD Ryzen nodes deliver high-performance compute with OVHcloud Anti-DDoS VAC (17+ Tbit/s mitigation capacity).",
     models: [
-      "AMD Ryzen™ 9 5900X",
+      "AMD Ryzen™ 9 5900X — OVHcloud 17+ Tbit/s Anti-DDoS VAC",
     ],
   },
   "germany_epyc-milan": {
@@ -84,10 +84,10 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "ryzen-ddr5": {
-    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) with Cloudflare Magic Transit DDoS protection (engineered for performance users) and Ryzen 9 5900X (Mumbai) with OVHcloud Anti-DDoS protection (engineered for DDoS protection users), delivering maximum single-thread clock speeds.",
+    note: "Our India AMD Ryzen plans feature Ryzen 9 9950X (Delhi) with Cloudflare Magic Transit DDoS protection (engineered for performance users) and Ryzen 9 5900X (Mumbai) with OVHcloud Anti-DDoS VAC (17+ Tbit/s mitigation capacity, engineered for DDoS protection users), delivering maximum single-thread clock speeds.",
     models: [
       "AMD Ryzen™ 9 9950X (Delhi) — Cloudflare Magic Transit (Performance Users)",
-      "AMD Ryzen™ 9 5900X (Mumbai) — OVHcloud Anti-DDoS (DDoS Protection Users)",
+      "AMD Ryzen™ 9 5900X (Mumbai) — OVHcloud 17+ Tbit/s Anti-DDoS VAC (DDoS Protection Users)",
     ],
   },
   "epyc-milan": {
@@ -103,9 +103,9 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "ryzen-5900x": {
-    note: "Our Germany AMD Ryzen nodes deliver high-performance compute engineered for gaming and demanding workloads.",
+    note: "Our Germany AMD Ryzen nodes deliver high-performance compute with OVHcloud Anti-DDoS VAC (17+ Tbit/s mitigation capacity).",
     models: [
-      "AMD Ryzen™ 9 5900X",
+      "AMD Ryzen™ 9 5900X — OVHcloud 17+ Tbit/s Anti-DDoS VAC",
     ],
   },
 };
