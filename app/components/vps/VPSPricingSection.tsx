@@ -322,7 +322,7 @@ export default function VPSPricingSection() {
                       <span>Protection</span>
                     </span>
                     <span className="font-semibold text-emerald-600 dark:text-emerald-400 text-right">
-                      {plan.ddos || "Advanced DDoS"}
+                      {plan.ddos || (selectedCPU === "ryzen-5900x" ? "17+ Tbit/s OVH VAC" : "Always-On DDoS Shield")}
                     </span>
                   </div>
                 </div>

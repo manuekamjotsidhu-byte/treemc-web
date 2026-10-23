@@ -51,7 +51,7 @@ export default function HeroSection() {
           transition={{ duration: 0.35, delay: 0.1 }}
           className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          Deploy unmetered, low-latency Minecraft servers and high-frequency cloud instances in seconds. Powered by AMD Ryzen™ 9 9950X, AMD EPYC™, and Intel® Xeon® processors with dedicated port allocations and automated 17+ Tbit/s DDoS mitigation.
+          Deploy unmetered, low-latency Minecraft servers and high-frequency cloud instances in seconds. Powered by AMD Ryzen™ 9 9950X, AMD EPYC™, and Intel® Xeon® processors with dedicated port allocations and automated enterprise DDoS mitigation.
         </motion.p>
 
         {/* Action Buttons */}

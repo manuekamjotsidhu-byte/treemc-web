@@ -31,10 +31,11 @@ interface PlanItem {
   cpu: string
   ram: string // strictly without RAM type
   storage: string
-  backups: string
+  backups?: string
+  bandwidth?: string
   ports: string
   databases?: string
-  bandwidth?: string
+  virtualization?: string
   panel: string
   ddos: string
   link: string
@@ -191,11 +192,11 @@ const cloudVpsLandingPlans: PlanItem[] = [
     cpu: "2 vCores",
     ram: "6 GB",
     storage: "50 GB NVMe",
-    backups: "Automated Backups",
+    bandwidth: "1 Gbps Uplink",
     ports: "1 Dedicated IPv4",
-    bandwidth: "1 Gbps Unmetered",
+    virtualization: "KVM Cloud Instance",
     panel: "Full Root & SSH",
-    ddos: "17+ Tbit/s Protection",
+    ddos: "Always-On DDoS Shield",
     link: "/vps"
   },
   {
@@ -208,11 +209,11 @@ const cloudVpsLandingPlans: PlanItem[] = [
     cpu: "4 vCores",
     ram: "12 GB",
     storage: "100 GB NVMe",
-    backups: "Automated Backups",
+    bandwidth: "1 Gbps Uplink",
     ports: "1 Dedicated IPv4",
-    bandwidth: "1 Gbps Unmetered",
+    virtualization: "High-Frequency KVM",
     panel: "Full Root & SSH",
-    ddos: "17+ Tbit/s Protection",
+    ddos: "Always-On DDoS Shield",
     link: "/vps"
   },
   {
@@ -225,11 +226,11 @@ const cloudVpsLandingPlans: PlanItem[] = [
     cpu: "6 vCores",
     ram: "16 GB",
     storage: "150 GB NVMe",
-    backups: "Automated Backups",
+    bandwidth: "1 Gbps Uplink",
     ports: "1 Dedicated IPv4",
-    bandwidth: "1 Gbps Unmetered",
+    virtualization: "High-Performance KVM",
     panel: "Full Root & SSH",
-    ddos: "17+ Tbit/s Protection",
+    ddos: "Always-On DDoS Shield",
     link: "/vps"
   },
   {
@@ -242,11 +243,11 @@ const cloudVpsLandingPlans: PlanItem[] = [
     cpu: "6 Dedicated vCores",
     ram: "16 GB",
     storage: "150 GB NVMe",
-    backups: "Daily Snapshots",
+    bandwidth: "1 Gbps Uplink",
     ports: "1 Dedicated IPv4 + IPv6",
-    bandwidth: "1 Gbps Unmetered",
+    virtualization: "100% Dedicated Hardware",
     panel: "Full Root & KVM Access",
-    ddos: "17+ Tbit/s Protection",
+    ddos: "Always-On DDoS Shield",
     link: "/dedicated"
   }
 ]
@@ -431,10 +432,18 @@ export default function PricingSection() {
                       <HardDrive className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span className="truncate">{plan.storage}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
-                      <Archive className="w-4 h-4 text-emerald-500 shrink-0" />
-                      <span className="truncate">{plan.backups}</span>
-                    </div>
+                    {plan.backups && (
+                      <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
+                        <Archive className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <span className="truncate">{plan.backups}</span>
+                      </div>
+                    )}
+                    {plan.bandwidth && (
+                      <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200">
+                        <Globe className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <span className="truncate">{plan.bandwidth}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Included Features List with Green Icons */}
@@ -449,10 +458,10 @@ export default function PricingSection() {
                         <span>{plan.databases}</span>
                       </div>
                     )}
-                    {plan.bandwidth && (
+                    {plan.virtualization && (
                       <div className="flex items-center gap-2.5">
-                        <Globe className="w-4 h-4 text-emerald-500 shrink-0" />
-                        <span>{plan.bandwidth}</span>
+                        <Server className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <span>{plan.virtualization}</span>
                       </div>
                     )}
                     <div className="flex items-center gap-2.5">
