@@ -13,6 +13,7 @@ import {
   Database,
   Sliders,
   ShieldCheck,
+  Globe,
   ArrowRight,
   Gamepad2,
   Server,
@@ -32,7 +33,8 @@ interface PlanItem {
   storage: string
   backups: string
   ports: string
-  databases: string
+  databases?: string
+  bandwidth?: string
   panel: string
   ddos: string
   link: string
@@ -191,7 +193,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "50 GB NVMe",
     backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
-    databases: "2 Databases",
+    bandwidth: "1 Gbps Unmetered",
     panel: "Full Root & SSH",
     ddos: "17+ Tbit/s Protection",
     link: "/vps"
@@ -208,7 +210,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "100 GB NVMe",
     backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
-    databases: "4 Databases",
+    bandwidth: "1 Gbps Unmetered",
     panel: "Full Root & SSH",
     ddos: "17+ Tbit/s Protection",
     link: "/vps"
@@ -225,7 +227,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "150 GB NVMe",
     backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
-    databases: "6 Databases",
+    bandwidth: "1 Gbps Unmetered",
     panel: "Full Root & SSH",
     ddos: "17+ Tbit/s Protection",
     link: "/vps"
@@ -242,7 +244,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "150 GB NVMe",
     backups: "Daily Snapshots",
     ports: "1 Dedicated IPv4 + IPv6",
-    databases: "8 Databases",
+    bandwidth: "1 Gbps Unmetered",
     panel: "Full Root & KVM Access",
     ddos: "17+ Tbit/s Protection",
     link: "/dedicated"
@@ -441,10 +443,18 @@ export default function PricingSection() {
                       <Network className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span className="font-medium text-gray-900 dark:text-gray-200">{plan.ports}</span>
                     </div>
-                    <div className="flex items-center gap-2.5">
-                      <Database className="w-4 h-4 text-emerald-500 shrink-0" />
-                      <span>{plan.databases}</span>
-                    </div>
+                    {plan.databases && (
+                      <div className="flex items-center gap-2.5">
+                        <Database className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <span>{plan.databases}</span>
+                      </div>
+                    )}
+                    {plan.bandwidth && (
+                      <div className="flex items-center gap-2.5">
+                        <Globe className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <span>{plan.bandwidth}</span>
+                      </div>
+                    )}
                     <div className="flex items-center gap-2.5">
                       <Sliders className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>{plan.panel}</span>
