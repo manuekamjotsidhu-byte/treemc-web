@@ -326,8 +326,17 @@ export default function GameServerList() {
                       "8 Ports (1 Main + 7 Extra)"
                     )
 
-                const dbCount = ramNum >= 18 ? "Unlimited" : ramNum >= 9 ? 5 : ramNum >= 5 ? 3 : ramNum >= 3 ? 2 : 1
-                const databasesText = typeof dbCount === "number" ? `${dbCount} Database${dbCount > 1 ? "s" : ""}` : "Unlimited Databases" 
+                const dbCount = (
+                  ramNum <= 3 ? 1 :
+                  ramNum <= 5 ? 2 :
+                  ramNum <= 8 ? 3 :
+                  ramNum <= 12 ? 4 :
+                  ramNum <= 16 ? 5 :
+                  ramNum <= 22 ? 6 :
+                  ramNum <= 28 ? 7 :
+                  8
+                )
+                const databasesText = `${dbCount} Database${dbCount > 1 ? "s" : ""}`
                 const isPopular = plan.badge || ramNum === 4
 
                 return (

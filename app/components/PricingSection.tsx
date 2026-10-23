@@ -172,7 +172,7 @@ const minecraftPerformancePlans: PlanItem[] = [
     storage: "140 GB NVMe",
     backups: "6 Backups",
     ports: "8 Ports (1 Main + 7 Extra)",
-    databases: "Unlimited Databases",
+    databases: "6 Databases",
     panel: "Premium Game Panel",
     ddos: "1 Gbps DDoS Shield",
     link: "https://discord.gg/wbH8ZVAsYg"
@@ -191,7 +191,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "50 GB NVMe",
     backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
-    databases: "Unlimited DBs",
+    databases: "2 Databases",
     panel: "Full Root & SSH",
     ddos: "17+ Tbit/s Protection",
     link: "/vps"
@@ -208,7 +208,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "100 GB NVMe",
     backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
-    databases: "Unlimited DBs",
+    databases: "4 Databases",
     panel: "Full Root & SSH",
     ddos: "17+ Tbit/s Protection",
     link: "/vps"
@@ -225,7 +225,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "150 GB NVMe",
     backups: "Automated Backups",
     ports: "1 Dedicated IPv4",
-    databases: "Unlimited DBs",
+    databases: "6 Databases",
     panel: "Full Root & SSH",
     ddos: "17+ Tbit/s Protection",
     link: "/vps"
@@ -242,7 +242,7 @@ const cloudVpsLandingPlans: PlanItem[] = [
     storage: "150 GB NVMe",
     backups: "Daily Snapshots",
     ports: "1 Dedicated IPv4 + IPv6",
-    databases: "Unlimited DBs",
+    databases: "8 Databases",
     panel: "Full Root & KVM Access",
     ddos: "17+ Tbit/s Protection",
     link: "/dedicated"
