@@ -37,9 +37,9 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "germany_ryzen-5900x": {
-    note: "Our Germany AMD Ryzen nodes deliver high-performance compute with OVHcloud Anti-DDoS VAC (17+ Tbit/s mitigation capacity).",
+    note: "Our Germany AMD Ryzen nodes deliver high-performance compute engineered for gaming and demanding workloads.",
     models: [
-      "AMD Ryzen™ 9 5900X — OVHcloud 17+ Tbit/s Anti-DDoS VAC",
+      "AMD Ryzen™ 9 5900X",
     ],
   },
   "germany_epyc-milan": {
@@ -103,9 +103,9 @@ export const vpsCpuInfo: Record<string, CpuInfo> = {
     ],
   },
   "ryzen-5900x": {
-    note: "Our Germany AMD Ryzen nodes deliver high-performance compute with OVHcloud Anti-DDoS VAC (17+ Tbit/s mitigation capacity).",
+    note: "Our Germany AMD Ryzen nodes deliver high-performance compute engineered for gaming and demanding workloads.",
     models: [
-      "AMD Ryzen™ 9 5900X — OVHcloud 17+ Tbit/s Anti-DDoS VAC",
+      "AMD Ryzen™ 9 5900X",
     ],
   },
 };

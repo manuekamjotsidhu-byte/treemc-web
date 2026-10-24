@@ -322,7 +322,7 @@ export default function VPSPricingSection() {
                       <span>Protection</span>
                     </span>
                     <span className="font-semibold text-emerald-600 dark:text-emerald-400 text-right">
-                      {plan.ddos || (selectedCPU === "ryzen-5900x" ? "17+ Tbit/s OVH VAC" : (selectedCPU === "ryzen-ddr5" || selectedCPU.includes("ryzen")) ? "17+ Tbit/s OVH VAC / Magic Transit" : "Always-On DDoS Shield")}
+                      {plan.ddos || (selectedLocation === "germany" ? "Always-On DDoS Shield" : selectedCPU === "ryzen-5900x" ? "17+ Tbit/s OVH Anti-DDoS VAC" : (selectedCPU === "ryzen-ddr5" || selectedCPU.includes("ryzen")) ? "17+ Tbit/s OVH VAC / Magic Transit" : "Always-On DDoS Shield")}
                     </span>
                   </div>
                 </div>

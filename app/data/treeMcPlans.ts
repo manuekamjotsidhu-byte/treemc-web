@@ -751,7 +751,7 @@ export const GLOBAL_LOCATIONS_DATA: LocationData[] = [
         name: "AMD Ryzen™ - Premium",
         badge: "Ryzen 9 5900X",
         image: "/cpu/ryzen9.png",
-        cpuModels: ["AMD Ryzen™ 9 5900X (Frankfurt - 17+ Tbit/s OVH Anti-DDoS VAC)"],
+        cpuModels: ["AMD Ryzen™ 9 5900X (Frankfurt am Main)"],
         vpsPlans: [
           { id: "de-ryzen-xs", tier: "XS", priceMo: 879, cores: "2 vCores", ram: "6GB", ramType: "DDR4 ECC", nvme: "50GB NVMe" },
           { id: "de-ryzen-s", tier: "S", priceMo: 1099, cores: "2 vCores", ram: "8GB", ramType: "DDR4 ECC", nvme: "50GB NVMe" },
