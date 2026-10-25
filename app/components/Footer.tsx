@@ -19,7 +19,7 @@ export default function Footer() {
     { name: "Discord Bot Hosting", href: "/discord" },
     { name: "Web Hosting", href: "/webhosting" },
     { name: "DDoS Protection", href: "/ddos-protection" },
-    { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemc.host/", external: true },
+    { name: "Pakistan Portal (PKR)", href: "https://pakistan.treemchost.pro/", external: true },
   ]
 
   const legalLinks = [
@@ -31,11 +31,11 @@ export default function Footer() {
   ]
 
   const contactInfo = [
-    { icon: Mail, label: "Email Support", value: "support@treemc.host", href: "mailto:support@treemc.host" },
+    { icon: Mail, label: "Email Support", value: "support@treemchost.pro", href: "mailto:support@treemchost.pro" },
     { icon: FaDiscord, label: "Discord Community", value: "discord.gg/wbH8ZVAsYg", href: "https://discord.gg/wbH8ZVAsYg" },
-    { icon: Gamepad2, label: "Pterodactyl Panel", value: "panel.treemc.host", href: "https://panel.treemc.host" },
-    { icon: Activity, label: "Network Status", value: "status.treemc.host", href: "https://status.treemc.host" },
-    { icon: Globe, label: "Pakistan Portal", value: "pakistan.treemc.host", href: "https://pakistan.treemc.host/" },
+    { icon: Gamepad2, label: "Pterodactyl Panel", value: "panel.treemchost.pro", href: "https://panel.treemchost.pro" },
+    { icon: Activity, label: "Network Status", value: "status.treemchost.pro", href: "https://status.treemchost.pro" },
+    { icon: Globe, label: "Pakistan Portal", value: "pakistan.treemchost.pro", href: "https://pakistan.treemchost.pro/" },
   ]
 
   return (

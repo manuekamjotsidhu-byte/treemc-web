@@ -1,6 +1,6 @@
 # 🌲 TreeMC Host — Official Website
 
-High-Performance Game & Cloud Infrastructure Portal for **TreeMC Host** ([treemc.host](https://treemc.host)).
+High-Performance Game & Cloud Infrastructure Portal for **TreeMC Host** ([treemchost.pro](https://treemchost.pro)).
 
 Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, and custom Framer Motion interactive components.
 
@@ -10,9 +10,9 @@ Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, and cust
 
 | Service | Address | Description |
 |---|---|---|
-| **Official Domain** | `https://treemc.host` | Primary Web Portal |
-| **Game Panel** | `https://panel.treemc.host` | Pterodactyl-Powered Control Panel |
-| **System Status** | `https://status.treemc.host` | Real-time Global Node Status |
+| **Official Domain** | `https://treemchost.pro` | Primary Web Portal |
+| **Game Panel** | `https://panel.treemchost.pro` | Pterodactyl-Powered Control Panel |
+| **System Status** | `https://status.treemchost.pro` | Real-time Global Node Status |
 | **Discord Community & Orders** | `https://discord.gg/wbH8ZVAsYg` | Ticket Support, Custom Deployments & Billing |
 
 ---
@@ -85,11 +85,11 @@ pm2 save
 pm2 startup
 ```
 
-### 2. Nginx Reverse Proxy Setup (`/etc/nginx/sites-available/treemc.host`)
+### 2. Nginx Reverse Proxy Setup (`/etc/nginx/sites-available/treemchost.pro`)
 ```nginx
 server {
     listen 80;
-    server_name treemc.host www.treemc.host;
+    server_name treemchost.pro www.treemchost.pro;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -107,10 +107,10 @@ server {
 
 Enable and obtain SSL with Certbot:
 ```bash
-sudo ln -s /etc/nginx/sites-available/treemc.host /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/treemchost.pro /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
-sudo certbot --nginx -d treemc.host -d www.treemc.host
+sudo certbot --nginx -d treemchost.pro -d www.treemchost.pro
 ```
 
 ---
@@ -126,12 +126,12 @@ sudo certbot --nginx -d treemc.host -d www.treemc.host
 │   │   ├── PricingSection.tsx           # Budget & Performance plans with comparison matrix
 │   │   ├── CloudInfrastructureSection.tsx # Country & CPU selector for VPS/VDS (no pagination)
 │   │   ├── LocationsSection.tsx         # Global edge datacenter points with copyable test IPs
-│   │   ├── PanelShowcase.tsx            # Interactive game panel preview (panel.treemc.host)
+│   │   ├── PanelShowcase.tsx            # Interactive game panel preview (panel.treemchost.pro)
 │   │   ├── DiscordBanner.tsx            # Discord community card (discord.gg/wbH8ZVAsYg)
 │   │   └── Footer.tsx                   # Clean branded footer with legal & status links
 │   ├── data/
 │   │   └── treeMcPlans.ts               # Plans, pricing, nodes, and hardware specifications
-│   ├── layout.tsx                       # Root layout with OpenGraph, favicon, SEO for treemc.host
+│   ├── layout.tsx                       # Root layout with OpenGraph, favicon, SEO for treemchost.pro
 │   └── page.tsx                         # Main landing page
 └── public/
     ├── treemc-logo.png                  # Official Hexagonal Crystal Tree Logo
@@ -142,4 +142,4 @@ sudo certbot --nginx -d treemc.host -d www.treemc.host
 
 ---
 
-© 2026 TreeMC Host (`treemc.host`). All rights reserved.
+© 2026 TreeMC Host (`treemchost.pro`). All rights reserved.

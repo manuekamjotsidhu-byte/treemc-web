@@ -59,8 +59,8 @@ export interface LocationData {
 }
 
 export const DISCORD_PURCHASE_URL = "https://discord.gg/wbH8ZVAsYg";
-export const GAME_PANEL_URL = "https://panel.treemc.host";
-export const STATUS_PAGE_URL = "https://status.treemc.host";
+export const GAME_PANEL_URL = "https://panel.treemchost.pro";
+export const STATUS_PAGE_URL = "https://status.treemchost.pro";
 
 export const MINECRAFT_BUDGET_PLANS: MinecraftPlan[] = [
   {

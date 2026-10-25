@@ -69,8 +69,8 @@ export const metadata: Metadata = {
     "budget minecraft hosting"
   ],
   authors: [
-    { name: "Abdullah", url: "https://treemc.host" },
-    { name: "Ekamjot Singh", url: "https://treemc.host" },
+    { name: "Abdullah", url: "https://treemchost.pro" },
+    { name: "Ekamjot Singh", url: "https://treemchost.pro" },
     { name: "TreeMC Host Team" }
   ],
   creator: "Abdullah (Founder & CEO) & Ekamjot Singh (CEO & CTO)",
@@ -79,13 +79,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://treemc.host",
+    url: "https://treemchost.pro",
     siteName: "TreeMC Host",
     title: "TreeMC Host - High-Performance Game, Bot & Web Hosting",
     description: "Reliable, high-performance game hosting, discord bot hosting, and web hosting with enterprise DDoS protection and instant Pterodactyl panel provisioning.",
     images: [
       {
-        url: "https://treemc.host/treemc-banner.png",
+        url: "https://treemchost.pro/treemc-banner.png",
         width: 1200,
         height: 630,
         alt: "TreeMC Host - High-Performance Game, Bot & Web Hosting",
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TreeMC Host - High-Performance Game, Bot & Web Hosting",
     description: "Reliable, high-performance game hosting, discord bot hosting, and web hosting with enterprise DDoS protection and 24/7 support.",
-    images: ["https://treemc.host/treemc-banner.png"]
+    images: ["https://treemchost.pro/treemc-banner.png"]
   },
   robots: {
     index: true,
@@ -125,12 +125,12 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico"
   },
   alternates: {
-    canonical: "https://treemc.host"
+    canonical: "https://treemchost.pro"
   },
   other: {
-    "terms-of-service": "https://treemc.host/terms-of-services",
-    "refund-policy": "https://treemc.host/refund-policy",
-    "privacy-policy": "https://treemc.host/privacy-policy"
+    "terms-of-service": "https://treemchost.pro/terms-of-services",
+    "refund-policy": "https://treemchost.pro/refund-policy",
+    "privacy-policy": "https://treemchost.pro/privacy-policy"
   }
 };
 
@@ -154,8 +154,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "TreeMC Host",
-              "url": "https://treemc.host",
-              "logo": "https://treemc.host/treemc-logo.png",
+              "url": "https://treemchost.pro",
+              "logo": "https://treemchost.pro/treemc-logo.png",
               "description": "High-performance Minecraft, Discord Bot, Web Hosting and Cloud Infrastructure.",
               "serviceType": ["Minecraft Server Hosting", "Discord Bot Hosting", "Web Hosting", "Pterodactyl Panel"],
               "areaServed": "Worldwide",
@@ -169,8 +169,8 @@ export default function RootLayout({
                 "serviceType": "Technical Support",
                 "url": "https://discord.gg/wbH8ZVAsYg"
               },
-              "termsOfService": "https://treemc.host/terms-of-services",
-              "refundPolicy": "https://treemc.host/refund-policy"
+              "termsOfService": "https://treemchost.pro/terms-of-services",
+              "refundPolicy": "https://treemchost.pro/refund-policy"
             })
           }}
         />

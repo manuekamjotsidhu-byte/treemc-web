@@ -51,8 +51,8 @@
     {
       "name": "Game Panel",
       "short_name": "Panel",
-      "description": "Manage servers on panel.treemc.host",
-      "url": "https://panel.treemc.host"
+      "description": "Manage servers on panel.treemchost.pro",
+      "url": "https://panel.treemchost.pro"
     }
   ]
 }

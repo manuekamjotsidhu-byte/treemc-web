@@ -67,7 +67,7 @@ const locations: DatacenterLocation[] = [
         status: "active",
         lat: 31.5204,
         lng: 74.3587,
-        portalUrl: "https://pakistan.treemc.host/",
+        portalUrl: "https://pakistan.treemchost.pro/",
         portalLabel: "Portal ↗",
     },
     {
@@ -306,12 +306,12 @@ export default function LocationsSection() {
                                 </div>
                             </div>
                             <a
-                                href="https://pakistan.treemc.host/"
+                                href="https://pakistan.treemchost.pro/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="shrink-0 px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors shadow-md shadow-emerald-500/20"
                             >
-                                <span>pakistan.treemc.host</span>
+                                <span>pakistan.treemchost.pro</span>
                                 <span className="text-sm">↗</span>
                             </a>
                         </motion.div>

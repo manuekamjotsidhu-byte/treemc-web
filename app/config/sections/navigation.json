@@ -53,14 +53,14 @@
     },
     {
       "name": "Important",
-      "href": "https://pakistan.treemc.host/",
+      "href": "https://pakistan.treemchost.pro/",
       "icon": "Globe",
       "hasDropdown": true,
       "dropdownType": "important",
       "dropdownItems": [
         {
           "name": "Pakistan Portal",
-          "href": "https://pakistan.treemc.host/",
+          "href": "https://pakistan.treemchost.pro/",
           "description": "Sub-15ms Lahore Minecraft, KVM VPS & Bare-Metal in PKR",
           "badge": "PKR",
           "external": true
@@ -81,7 +81,7 @@
         },
         {
           "name": "Network Status",
-          "href": "https://status.treemc.host",
+          "href": "https://status.treemchost.pro",
           "description": "Live infrastructure uptime monitoring and network telemetry",
           "badge": "Live Status",
           "external": true
@@ -132,14 +132,14 @@
   ],
   "clientSpace": {
     "name": "Client Area",
-    "href": "https://panel.treemc.host",
+    "href": "https://panel.treemchost.pro",
     "icon": "LogIn"
   },
   "banner": {
     "show": false,
     "text": "\ud83c\uddf5\ud83c\uddf0 TreeMC Pakistan Portal Live \u2014 Sub-14ms Lahore Minecraft DDR5, KVM VPS & Bare-Metal in PKR",
     "couponCode": "",
-    "link": "https://pakistan.treemc.host/",
+    "link": "https://pakistan.treemchost.pro/",
     "buttonText": "Open Pakistan Portal \u2197",
     "useThemeColor": false,
     "backgroundColor": "bg-emerald-600",
