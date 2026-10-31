@@ -19,21 +19,46 @@ const getPlanBlockImage = (plan: GamePlan, gameId: string) => {
   if (gameId !== "minecraft") {
     return "/placeholder.svg"
   }
-  const ramNum = parseInt(plan.ram) || 2
   const name = (plan.name || "").toLowerCase()
-  if (name.includes("gravel") || ramNum <= 2) return "/blocks/gravel.png"
-  if (name.includes("andesite") || ramNum === 3) return "/blocks/andesite.png"
-  if (name.includes("cobble") || ramNum === 4) return "/blocks/cobblestone.png"
-  if (name.includes("stone") || ramNum === 5) return "/blocks/stone.png"
-  if (name.includes("deepslate") || ramNum === 6) return "/blocks/deepslate.png"
-  if (name.includes("dirt") || ramNum === 7) return "/blocks/dirt.png"
-  if (name.includes("iron") || ramNum === 8) return "/blocks/iron.png"
-  if (name.includes("copper") || ramNum === 9) return "/blocks/gold.png"
-  if (name.includes("gold") || ramNum === 10) return "/blocks/gold.png"
-  if (name.includes("emerald") || ramNum === 12) return "/blocks/emerald.png"
-  if (name.includes("diamond") || ramNum <= 18) return "/blocks/diamond.png"
-  if (name.includes("netherite") || ramNum <= 24) return "/blocks/netherite.png"
-  if (name.includes("obsidian") || ramNum <= 28) return "/blocks/obsidian.png"
+
+  // Match block strictly by plan name first
+  if (name.includes("bedrock")) return "/blocks/bedrock.png"
+  if (name.includes("obsidian")) return "/blocks/obsidian.png"
+  if (name.includes("netherite")) return "/blocks/netherite.png"
+  if (name.includes("amethyst")) return "/blocks/amethyst.png"
+  if (name.includes("redstone")) return "/blocks/redstone.png"
+  if (name.includes("lapis")) return "/blocks/lapis.png"
+  if (name.includes("diamond")) return "/blocks/diamond.png"
+  if (name.includes("emerald")) return "/blocks/emerald.png"
+  if (name.includes("gold")) return "/blocks/gold.png"
+  if (name.includes("copper")) return "/blocks/copper.png"
+  if (name.includes("iron")) return "/blocks/iron.png"
+  if (name.includes("dirt")) return "/blocks/dirt.png"
+  if (name.includes("deepslate")) return "/blocks/deepslate.png"
+  if (name.includes("cobble")) return "/blocks/cobblestone.png"
+  if (name.includes("stone")) return "/blocks/stone.png"
+  if (name.includes("andesite")) return "/blocks/andesite.png"
+  if (name.includes("gravel")) return "/blocks/gravel.png"
+  if (name.includes("grass")) return "/blocks/grass.png"
+
+  // Fallback strictly by RAM tier if name is not standard
+  const ramNum = parseInt(plan.ram) || 2
+  if (ramNum <= 2) return "/blocks/gravel.png"
+  if (ramNum === 3) return "/blocks/andesite.png"
+  if (ramNum === 4) return "/blocks/cobblestone.png"
+  if (ramNum === 5) return "/blocks/stone.png"
+  if (ramNum === 6) return "/blocks/deepslate.png"
+  if (ramNum === 7) return "/blocks/dirt.png"
+  if (ramNum === 8) return "/blocks/iron.png"
+  if (ramNum === 9) return "/blocks/copper.png"
+  if (ramNum === 10) return "/blocks/gold.png"
+  if (ramNum === 12) return "/blocks/emerald.png"
+  if (ramNum === 16) return "/blocks/diamond.png"
+  if (ramNum === 18) return "/blocks/lapis.png"
+  if (ramNum === 20) return "/blocks/redstone.png"
+  if (ramNum === 22) return "/blocks/amethyst.png"
+  if (ramNum === 24) return "/blocks/netherite.png"
+  if (ramNum <= 28) return "/blocks/obsidian.png"
   return "/blocks/bedrock.png"
 }
 
