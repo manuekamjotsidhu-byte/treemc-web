@@ -5,13 +5,36 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const costFile = path.join(rootDir, "app/data/plans.cost.json");
+const targetTsFile = path.join(rootDir, "app/data/vpsPlans.ts");
 
-if (!fs.existsSync(costFile)) {
-  console.error("Error: plans.cost.json not found at", costFile);
-  process.exit(1);
+let raw = null;
+
+if (process.env.PLANS_COST_JSON) {
+  try {
+    raw = JSON.parse(process.env.PLANS_COST_JSON);
+    console.log("ℹ️ Loaded plans configuration from PLANS_COST_JSON environment variable.");
+  } catch (err) {
+    console.error("Failed to parse PLANS_COST_JSON env var:", err);
+  }
 }
 
-const raw = JSON.parse(fs.readFileSync(costFile, "utf-8"));
+if (!raw && fs.existsSync(costFile)) {
+  try {
+    raw = JSON.parse(fs.readFileSync(costFile, "utf-8"));
+  } catch (err) {
+    console.error("Failed to read plans.cost.json:", err);
+  }
+}
+
+if (!raw) {
+  if (fs.existsSync(targetTsFile)) {
+    console.log("ℹ️ plans.cost.json not found in build environment (e.g. Vercel CI). Using committed app/data/vpsPlans.ts.");
+    process.exit(0);
+  } else {
+    console.error("❌ Error: Neither plans.cost.json nor app/data/vpsPlans.ts found.");
+    process.exit(1);
+  }
+}
 
 function calculateSellingPrice(cost, markup = 25) {
   const rawPrice = cost * (1 + markup / 100);
@@ -77,5 +100,5 @@ export function getPlanById(id: string): VPSPlan | undefined {
 }
 `;
 
-fs.writeFileSync(path.join(rootDir, "app/data/vpsPlans.ts"), tsContent);
+fs.writeFileSync(targetTsFile, tsContent);
 console.log("✓ Successfully generated app/data/vpsPlans.ts with", publicPlans.length, "plans");

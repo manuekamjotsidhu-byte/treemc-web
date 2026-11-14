@@ -6,13 +6,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const costFile = path.join(rootDir, "app/data/plans.cost.json");
 
-if (!fs.existsSync(costFile)) {
-  console.log("ℹ️ No plans.cost.json found, skipping leak check.");
-  process.exit(0);
+let raw = null;
+if (process.env.PLANS_COST_JSON) {
+  try {
+    raw = JSON.parse(process.env.PLANS_COST_JSON);
+  } catch {}
+} else if (fs.existsSync(costFile)) {
+  try {
+    raw = JSON.parse(fs.readFileSync(costFile, "utf-8"));
+  } catch {}
 }
 
-const raw = JSON.parse(fs.readFileSync(costFile, "utf-8"));
-const costPrices = raw.plans.map(p => p.costPrice.toString());
+const costPrices = raw && raw.plans ? raw.plans.map(p => p.costPrice.toString()) : [];
 
 const nextDir = path.join(rootDir, ".next");
 if (!fs.existsSync(nextDir)) {
@@ -32,7 +37,6 @@ function scanDirectory(dir) {
         scanDirectory(fullPath);
       }
     } else if (file.endsWith(".js") || file.endsWith(".html") || file.endsWith(".json") || file.endsWith(".map")) {
-      // Ignore 3rd-party node_modules SSR bundle sourcemap files where SVG bezier curves might coincidentally contain substring coordinates
       const isNodeModulesMap = file.includes("node_modules") && file.endsWith(".map");
       const content = fs.readFileSync(fullPath, "utf-8");
 
@@ -41,10 +45,9 @@ function scanDirectory(dir) {
         leaks.push({ file: path.relative(rootDir, fullPath), keyword: "costPrice" });
       }
 
-      // 2. Exact cost price numbers check
-      if (!isNodeModulesMap) {
+      // 2. Exact cost price numbers check (when available)
+      if (!isNodeModulesMap && costPrices.length > 0) {
         for (const cost of costPrices) {
-          // Check for token or exact number match
           const escaped = cost.replace(".", "\\.");
           const regex = new RegExp(`(^|[^0-9a-zA-Z_.])${escaped}([^0-9a-zA-Z_.]|$)`);
           if (regex.test(content)) {
