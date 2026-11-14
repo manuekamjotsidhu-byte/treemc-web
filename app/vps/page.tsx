@@ -1,23 +1,28 @@
 'use client'
-import FeaturesSection from "../components/FeaturesSection"
-import LocationsSection from "../components/LocationsSection"
-import VPSPricingSection from "../components/vps/VPSPricingSection"
-import OSSelectionSection from "../components/vps/OSSelectionSection"
-import FAQSection from "../components/FAQSection"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar";
-import PanelShowcase from "../components/PanelShowcase"
 
-export default function Home() {
+import Navbar from "../components/Navbar"
+import VPSHero from "../components/vps/VPSHero"
+import VPSTablePricing from "../components/vps/VPSTablePricing"
+import VPSComparison from "../components/vps/VPSComparison"
+import VPSTerminal from "../components/vps/VPSTerminal"
+import VPSOsSection from "../components/vps/VPSOsSection"
+import VPSOrderFlow from "../components/vps/VPSOrderFlow"
+import VPSFaqSection from "../components/vps/VPSFaqSection"
+import VPSSupportSection from "../components/vps/VPSSupportSection"
+import Footer from "../components/Footer"
+
+export default function VPSPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#0a0b0f] transition-colors duration-300">
+    <div className="min-h-screen bg-[#090a0d] text-gray-100 transition-colors duration-300">
       <Navbar />
-      <VPSPricingSection />
-      <OSSelectionSection />
-      <FeaturesSection />
-      <LocationsSection />
-      <FAQSection />
-      <PanelShowcase />
+      <VPSHero />
+      <VPSTablePricing />
+      <VPSComparison />
+      <VPSTerminal />
+      <VPSOsSection />
+      <VPSOrderFlow />
+      <VPSFaqSection />
+      <VPSSupportSection />
       <Footer />
     </div>
   )
