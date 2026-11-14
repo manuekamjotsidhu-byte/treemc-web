@@ -134,7 +134,7 @@ export default function FeaturesSection() {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-[#0a0b0f] relative py-8 sm:py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div id="features" className="bg-gray-50 dark:bg-[#0a0b0f] relative py-8 sm:py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-50/90 to-gray-50 dark:from-[#0a0b0f] dark:via-[#0a0b0f]/90 dark:to-[#0a0b0f] z-0" />
 
       <div className="absolute top-20 -left-32 w-64 h-64 blob-primary rounded-full blur-3xl z-[2]" />

@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import languageConfig from '../config/sections/language.json';
+import enTranslations from '../../public/lang/en.json';
 import type { LanguageConfig, Language } from '../types/language';
 
 const config = languageConfig as LanguageConfig;
@@ -46,10 +47,15 @@ const detectUserLanguage = (): Language => {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
-  const [translations, setTranslations] = useState<Translations>({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [translations, setTranslations] = useState<Translations>(enTranslations);
+  const [isLoading, setIsLoading] = useState(false);
 
   const loadTranslations = async (lang: Language) => {
+    if (lang === "en") {
+      setTranslations(enTranslations);
+      setIsLoading(false);
+      return;
+    }
     setIsLoading(true);
     try {
       const response = await fetch(`/lang/${lang}.json`);
@@ -60,22 +66,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       setTranslations(data);
     } catch (error) {
       console.error(`Failed to load translations for ${lang}:`, error);
-      
-      if (lang !== 'en') {
-        try {
-          const fallbackResponse = await fetch('/lang/en.json');
-          if (fallbackResponse.ok) {
-            const fallbackData = await fallbackResponse.json();
-            setTranslations(fallbackData);
-            console.warn(`Loaded English translations as fallback for ${lang}`);
-          }
-        } catch (fallbackError) {
-          console.error('Failed to load fallback translations:', fallbackError);
-          setTranslations({});
-        }
-      } else {
-        setTranslations({});
-      }
+      setTranslations(enTranslations);
+      console.warn(`Loaded English translations as fallback for ${lang}`);
     } finally {
       setIsLoading(false);
     }
@@ -178,11 +170,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         isLoading,
       }}
     >
-      {!isLoading && Object.keys(translations).length > 0 ? children : (
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-        </div>
-      )}
+      {children}
     </LanguageContext.Provider>
   );
 };

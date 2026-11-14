@@ -42,7 +42,7 @@ const dedicatedPlans = [
   {
     id: "DEDI-R9-02",
     name: "Ryzen 9 7950X Extreme",
-    badge: "Most Popular",
+    badge: "Recommended",
     badgeColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/30",
     cpu: "AMD Ryzen 9 7950X (16 Cores / 32 Threads @ 4.50 GHz Base)",
     ram: "128 GB DDR5 5200MHz ECC",

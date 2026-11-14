@@ -32,7 +32,7 @@
         "id": 3,
         "icon": "Archive",
         "title": "Mod Manager",
-        "description": "Seamlessly install and update mods from Modrinth and CurseForge. Filter by loader and version \u2014 everything managed from one clean interface.",
+        "description": "Directly install and update mods from Modrinth and CurseForge. Filter by loader and version — everything managed from one clean interface.",
         "imageDark": "/showcase/dark/mod.png",
         "imageLight": "/showcase/light/mod.png"
       },

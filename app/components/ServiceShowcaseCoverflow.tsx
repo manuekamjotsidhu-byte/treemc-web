@@ -64,7 +64,7 @@ const services: ShowcaseService[] = [
     badge: "Global Edge",
     image: "/showcase/3d/cloud-vps.jpg",
     specs: "India, Germany, SG, US, CA • NVMe • IPv4",
-    basePrice: 399,
+    basePrice: 359,
     href: "/vps",
     icon: Cloud,
     color: "cyan"

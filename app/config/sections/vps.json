@@ -385,7 +385,7 @@
       {
         "id": "in-xeon-l",
         "name": "L Plan",
-        "badge": "Most Popular",
+        "badge": "Recommended",
         "image": "/cpu/intel.png",
         "cpu": "6 vCore",
         "cpuDetail": "Intel Xeon Platinum / v4",
@@ -1355,7 +1355,7 @@
       {
         "id": "in-xeon-l",
         "name": "L Plan",
-        "badge": "Most Popular",
+        "badge": "Recommended",
         "image": "/cpu/intel.png",
         "cpu": "6 vCore",
         "cpuDetail": "Intel Xeon Platinum / v4",

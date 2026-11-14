@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "PORT=3000 next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prebuild": "node scripts/generate-plans.mjs",
+    "postbuild": "node scripts/verify-security.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.15",

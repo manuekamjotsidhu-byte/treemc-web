@@ -40,7 +40,7 @@ export default function FAQSection() {
   ]
 
   return (
-    <div className="bg-gray-50 dark:bg-[#0a0b0f] relative py-16 px-4 sm:px-6 lg:px-8">
+    <div id="faq" className="bg-gray-50 dark:bg-[#0a0b0f] relative py-16 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-50/90 to-gray-50 dark:from-[#0a0b0f] dark:via-[#0a0b0f]/90 dark:to-[#0a0b0f]" />
 
       <div className="absolute top-20 -left-32 w-64 h-64 blob-primary rounded-full blur-3xl" />
