@@ -1719,3 +1719,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   cursor: pointer;
 }
 .loc-dd-wrap select option { background: var(--surface, #111622); color: var(--ink, #fff); }
+
+.loc-dd-wrap { margin-bottom: 24px !important; position: relative; z-index: 2; }
+#vps-all-countries { margin-top: 8px; clear: both; }
+#vps-all-countries .toggle-wrap { margin-top: 0 !important; }
