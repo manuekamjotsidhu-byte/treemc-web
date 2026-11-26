@@ -62,15 +62,15 @@ export function ServicePreview({ kind }: { kind: "minecraft" | "vps" | "rdp" | "
     );
   }
   return (
-    <div className="flex h-36 w-full flex-col justify-between rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-50 to-slate-100 p-4 dark:from-slate-800 dark:to-slate-900">
+    <div className="flex h-36 w-full flex-col justify-between rounded-2xl border border-[var(--border)] bg-gradient-to-br from-slate-100 to-slate-200 p-4 dark:from-slate-800 dark:to-slate-900">
       <div className="flex items-center justify-between">
-        <span className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-2 py-1 text-[10px] font-bold text-white">
+        <span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-2.5 py-1 text-[10px] font-bold text-white dark:bg-white dark:text-slate-950">
           <Server className="h-3 w-3" /> Dedicated Slices
         </span>
         <img src="/cpu/intel.png" alt="Intel Xeon" className="h-7 w-7 rounded object-contain" />
       </div>
-      <div className="flex items-center gap-2 rounded-xl border border-indigo-500/15 bg-white/85 p-2.5 text-[10px] font-semibold text-slate-700 dark:bg-slate-950/70 dark:text-slate-200">
-        <Cpu className="h-3.5 w-3.5 text-indigo-600" /> 100% Dedicated Xeon Cores · Noida
+      <div className="flex items-center gap-2 rounded-xl border border-[var(--border)] bg-white/90 p-2.5 text-[10px] font-semibold text-slate-800 dark:bg-slate-950/80 dark:text-slate-200">
+        <Cpu className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 100% Dedicated Xeon Cores · Noida
       </div>
     </div>
   );
