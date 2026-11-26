@@ -184,44 +184,124 @@ if (blogSearch) {
   search();
 }
 
-/* TreeMC Currency Selector */
+/* TreeMC Currency Selector (Live FX + Full Page) */
 (function(){
-  const RATES = { INR: { sym: "₹", rate: 1 }, USD: { sym: "$", rate: 0.012 }, EUR: { sym: "€", rate: 0.011 } };
+  const SYMS = { INR: "₹", USD: "$", EUR: "€", GBP: "£", AED: "د.إ ", SGD: "S$", CAD: "C$", AUD: "A$" };
+  let RATES = { INR: 1, USD: 0.0118, EUR: 0.0112, GBP: 0.0094, AED: 0.0435, SGD: 0.0159, CAD: 0.0166, AUD: 0.0182 };
+  const origText = new WeakMap();
+
+  function loadCachedRates() {
+    try {
+      const raw = localStorage.getItem("treemc_fx_rates");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && parsed.rates) RATES = Object.assign({}, RATES, parsed.rates);
+        if (parsed && Date.now() - parsed.ts < 3600000) return true;
+      }
+    } catch (_) {}
+    return false;
+  }
+
+  async function fetchLiveRates() {
+    if (loadCachedRates()) return;
+    try {
+      const res = await fetch("https://open.er-api.com/v6/latest/INR");
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && data.result === "success" && data.rates) {
+        Object.keys(SYMS).forEach((k) => { if (data.rates[k]) RATES[k] = data.rates[k]; });
+        localStorage.setItem("treemc_fx_rates", JSON.stringify({ ts: Date.now(), rates: RATES }));
+        const code = localStorage.getItem("treemc_currency") || "INR";
+        if (code !== "INR") applyCurrency(code);
+      }
+    } catch (_) {}
+  }
+
+  function formatAmt(inr, code) {
+    const rate = RATES[code] || 1;
+    if (code === "INR") return Math.round(inr).toLocaleString("en-IN");
+    const v = inr * rate;
+    return v >= 100 ? v.toFixed(0) : v.toFixed(2);
+  }
+
   function applyCurrency(code) {
-    const cfg = RATES[code] || RATES.INR;
+    if (!SYMS[code]) code = "INR";
+    const sym = SYMS[code];
     localStorage.setItem("treemc_currency", code);
-    document.querySelectorAll(".price").forEach(el => {
+
+    document.querySelectorAll(".price").forEach((el) => {
       const curEl = el.querySelector(".cur");
       const amtEl = el.querySelector(".amt");
       if (!curEl || !amtEl) return;
       if (!amtEl.dataset.inr) {
         const raw = parseFloat(amtEl.textContent.replace(/[^0-9.]/g, ""));
-        if (!isNaN(raw)) amtEl.dataset.inr = raw;
+        if (!isNaN(raw)) amtEl.dataset.inr = String(raw);
       }
       const inr = parseFloat(amtEl.dataset.inr);
       if (isNaN(inr)) return;
-      curEl.textContent = cfg.sym;
-      if (code === "INR") {
-        amtEl.textContent = Math.round(inr).toLocaleString("en-IN");
-      } else {
-        amtEl.textContent = (inr * cfg.rate).toFixed(2);
-      }
+      curEl.textContent = sym;
+      amtEl.textContent = formatAmt(inr, code);
     });
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    let node;
+    while ((node = walker.nextNode())) {
+      const parent = node.parentElement;
+      if (!parent || parent.closest("#treemc-currency, script, style, .price")) continue;
+      if (!origText.has(node)) {
+        if (!node.nodeValue || !node.nodeValue.includes("₹")) continue;
+        origText.set(node, node.nodeValue);
+      }
+      const base = origText.get(node);
+      if (code === "INR") {
+        node.nodeValue = base;
+      } else {
+        node.nodeValue = base.replace(/₹\s*([0-9][0-9,]*(?:\.[0-9]+)?)/g, (_, num) => {
+          const inr = parseFloat(num.replace(/,/g, ""));
+          return isNaN(inr) ? _ : sym + formatAmt(inr, code);
+        });
+      }
+    }
   }
+
+  window.treemcApplyCurrency = () => applyCurrency(localStorage.getItem("treemc_currency") || "INR");
+
   function initCurrency() {
     const actions = document.querySelector(".nav-actions") || document.querySelector("header .actions") || document.querySelector("nav");
-    if (!actions || document.getElementById("treemc-currency")) return;
-    const sel = document.createElement("select");
-    sel.id = "treemc-currency";
-    sel.className = "currency-sel";
-    sel.setAttribute("aria-label", "Select currency");
-    sel.innerHTML = "<option value=\"INR\">₹ INR</option><option value=\"USD\">$ USD</option><option value=\"EUR\">€ EUR</option>";
-    const saved = localStorage.getItem("treemc_currency") || "INR";
-    sel.value = saved;
-    sel.addEventListener("change", () => applyCurrency(sel.value));
-    actions.prepend(sel);
-    if (saved !== "INR") applyCurrency(saved);
+    if (actions && !document.getElementById("treemc-currency")) {
+      const sel = document.createElement("select");
+      sel.id = "treemc-currency";
+      sel.className = "currency-sel";
+      sel.setAttribute("aria-label", "Select currency");
+      sel.innerHTML = Object.entries(SYMS).map(([k, s]) => `<option value="${k}">${s.trim()} ${k}</option>`).join("");
+      const saved = localStorage.getItem("treemc_currency") || "INR";
+      sel.value = SYMS[saved] ? saved : "INR";
+      sel.addEventListener("change", () => applyCurrency(sel.value));
+      actions.prepend(sel);
+      if (sel.value !== "INR") applyCurrency(sel.value);
+    }
+    fetchLiveRates();
   }
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".calc [data-calc] button")) {
+      setTimeout(() => {
+        const pEl = e.target.closest(".calc")?.querySelector("[data-out=\"price\"]");
+        if (pEl && pEl.textContent.includes("₹")) origText.delete(pEl.firstChild);
+        window.treemcApplyCurrency();
+      }, 0);
+    }
+  });
+  document.addEventListener("input", (e) => {
+    if (e.target.closest(".calc")) {
+      setTimeout(() => {
+        const pEl = e.target.closest(".calc")?.querySelector("[data-out=\"price\"]");
+        if (pEl && pEl.textContent.includes("₹")) origText.delete(pEl.firstChild);
+        window.treemcApplyCurrency();
+      }, 0);
+    }
+  });
+
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initCurrency);
   else initCurrency();
 })();
