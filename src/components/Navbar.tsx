@@ -36,10 +36,9 @@ export default function Navbar() {
   };
 
   const navLinkCls = (href: string) =>
-    `rounded-full px-3.5 py-1.5 text-sm font-medium transition ${
-      pathname === href
-        ? "bg-slate-900/5 text-[var(--ink)] font-semibold dark:bg-white/10"
-        : "text-[var(--muted)] hover:text-[var(--ink)]"
+    `rounded-full px-3.5 py-1.5 text-sm font-medium transition ${pathname === href
+      ? "bg-slate-900/5 text-[var(--ink)] font-semibold dark:bg-white/10"
+      : "text-[var(--muted)] hover:text-[var(--ink)]"
     }`;
 
   return (
@@ -47,8 +46,8 @@ export default function Navbar() {
       <header className="mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/95 px-4 py-2 shadow-lg shadow-slate-900/5 backdrop-blur-xl">
         <Link href="/" className="flex items-center gap-2 shrink-0 pl-1">
           <img src="/treemc-icon.png" alt="TreeMC" className="h-7 w-7 rounded-lg object-contain" />
-          <span className="text-base font-bold tracking-tight">
-            Tree<span className="text-emerald-600 dark:text-emerald-400">MC</span>
+          <span className="text-base font-extrabold tracking-tight">
+            <span>Tree</span><span className="text-blue-600 dark:text-blue-400">MC</span>
           </span>
         </Link>
 
@@ -69,7 +68,7 @@ export default function Navbar() {
             </button>
 
             {ddOpen && (
-              <div className="absolute left-0 top-full pt-2 w-72">
+              <div className="absolute left-0 top-full pt-2 w-72 animate-[fadeDown_0.16s_ease-out]">
                 <div className="card-clean rounded-2xl p-2 shadow-xl">
                   {SERVICE_ITEMS.map((item) => {
                     const Icon = item.icon;
