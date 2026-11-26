@@ -30,13 +30,20 @@ export default function Navbar() {
   const [mobServices, setMobServices] = useState(true);
   const [mobPolicies, setMobPolicies] = useState(false);
   const [activeDd, setActiveDd] = useState<"services" | "policies" | null>(null);
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    // Read synchronously on client to avoid icon flicker
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("treemc_theme");
+      if (stored) return stored === "dark";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const isDark = localStorage.getItem("treemc_theme") === "dark";
-    setDark(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
+    // Sync classList with current state (the pre-paint script already set it, this is a safety net)
+    document.documentElement.classList.toggle("dark", dark);
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

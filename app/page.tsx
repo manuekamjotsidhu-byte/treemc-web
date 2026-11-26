@@ -42,7 +42,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Bright Sky-Inspired Clean Hero */}
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#dbeafe_0%,#eff6ff_55%,var(--bg)_100%)] dark:bg-[linear-gradient(180deg,#0c1527_0%,#080c14_100%)] pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <section className="relative overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-28" style={{background: "linear-gradient(180deg, var(--hero-top, #dbeafe) 0%, var(--hero-mid, #eff6ff) 55%, var(--bg) 100%)"}}>
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/90 px-4 py-1.5 text-xs font-semibold text-slate-900 shadow-sm dark:border-white/15 dark:bg-white/10 dark:text-white">
             Minecraft plans from {formatPrice(99)}/month

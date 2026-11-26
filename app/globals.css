@@ -11,6 +11,8 @@
   --lime: #b8f147;
   --lime-hover: #a7e434;
   --lime-ink: #0a0f04;
+  --hero-top: #dbeafe;
+  --hero-mid: #eff6ff;
 }
 
 html.dark {
@@ -20,10 +22,19 @@ html.dark {
   --ink: #f8fafc;
   --muted: #94a3b8;
   --border: rgba(255, 255, 255, 0.08);
+  --hero-top: #0c1527;
+  --hero-mid: #080c14;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Suppress transitions during initial theme application to eliminate FOUC */
+html[style*="--no-transition"] *,
+html[style*="--no-transition"] *::before,
+html[style*="--no-transition"] *::after {
+  transition: none !important;
 }
 
 body {
@@ -31,7 +42,7 @@ body {
   color: var(--ink);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .serif-it {
