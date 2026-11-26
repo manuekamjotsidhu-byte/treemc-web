@@ -92,7 +92,7 @@ export default function MacPanelShowcase() {
                   <div>
                     <div className="text-xs text-blue-100">Survival SMP · India (Noida)</div>
                     <div className="text-sm font-bold">
-                      {status === "online" ? "Server online" : "Restarting node…"}
+                      {status === "online" ? "Server online" : "Restarting server…"}
                     </div>
                   </div>
                 </div>
