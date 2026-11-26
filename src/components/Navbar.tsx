@@ -30,20 +30,12 @@ export default function Navbar() {
   const [mobServices, setMobServices] = useState(true);
   const [mobPolicies, setMobPolicies] = useState(false);
   const [activeDd, setActiveDd] = useState<"services" | "policies" | null>(null);
-  const [dark, setDark] = useState(() => {
-    // Read synchronously on client to avoid icon flicker
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("treemc_theme");
-      if (stored) return stored === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
+  const [dark, setDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    // Sync classList with current state (the pre-paint script already set it, this is a safety net)
-    document.documentElement.classList.toggle("dark", dark);
+    const isDark = document.documentElement.classList.contains("dark") || localStorage.getItem("treemc_theme") === "dark";
+    setDark(isDark);
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -185,7 +177,8 @@ export default function Navbar() {
             onClick={toggleTheme}
             className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg)] transition hover:bg-slate-500/10"
           >
-            {dark ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
+            <Sun className="hidden h-3.5 w-3.5 dark:block" />
+            <Moon className="block h-3.5 w-3.5 dark:hidden" />
           </button>
 
           <a
