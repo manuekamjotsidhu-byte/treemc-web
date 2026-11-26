@@ -216,8 +216,8 @@ if (blogSearch) {
 
 /* TreeMC Currency Selector (Live FX + Full Page) */
 (function(){
-  const SYMS = { INR: "₹", USD: "$", EUR: "€", GBP: "£", AED: "د.إ ", SGD: "S$", CAD: "C$", AUD: "A$" };
-  let RATES = { INR: 1, USD: 0.0118, EUR: 0.0112, GBP: 0.0094, AED: 0.0435, SGD: 0.0159, CAD: 0.0166, AUD: 0.0182 };
+  const SYMS = { INR: "₹", USD: "$", EUR: "€", GBP: "£", PKR: "Rs ", AED: "د.إ ", SGD: "S$", CAD: "C$", AUD: "A$" };
+  let RATES = { INR: 1, USD: 0.0118, EUR: 0.0112, GBP: 0.0094, PKR: 3.30, AED: 0.0435, SGD: 0.0159, CAD: 0.0166, AUD: 0.0182 };
   const origText = new WeakMap();
 
   function loadCachedRates() {
