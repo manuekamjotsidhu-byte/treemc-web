@@ -5,6 +5,7 @@ import { Check, Cpu, HardDrive, ShieldCheck } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
 import { CtaBanner, FaqSection, InfrastructureGrid } from "../../src/components/ServiceDetails";
+import ServiceHeroBanner from "../../src/components/ServiceHeroBanner";
 
 const MC_FAQ = [
   { q: "Does TreeMC support both Java Edition and Bedrock / GeyserMC?", a: "Yes! You can run Paper, Purpur, Spigot, Fabric, Forge, Velocity, Bedrock Dedicated Server, or Java + Bedrock crossplay via GeyserMC & Floodgate." },
@@ -21,32 +22,14 @@ export default function MinecraftPage() {
   const cpuLabel = cpuFamily === "xeon" ? "Intel® Xeon® (DDR4 ECC)" : "AMD EPYC™ (DDR5)";
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-      <div className="rv mb-10 text-center">
-        <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1 text-xs font-semibold text-[var(--muted)]">
-          Java &amp; Bedrock · Instant Pterodactyl Panel
-        </span>
-        <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-5xl">
-          <span className="font-pixel tracking-normal">Minecraft</span> hosting <span className="serif-it font-normal">worldwide</span>
-        </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
-          Low-latency Java &amp; Bedrock servers in India and Dubai on Intel® Xeon® and AMD EPYC™ processors with NVMe SSDs and DDoS protection.
-        </p>
-        <div className="rv card-clean mx-auto mt-8 grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl p-5 text-left sm:grid-cols-12">
-          <div className="sm:col-span-5">
-            <img src="/images/games.jpg" alt="TreeMC Minecraft Hosting" className="h-44 w-full rounded-2xl object-cover" />
-          </div>
-          <div className="space-y-2.5 sm:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-400">
-              ● 99.99% Uptime · Steady 20 TPS
-            </div>
-            <h2 className="text-xl font-extrabold">Java, Bedrock &amp; GeyserMC Crossplay Ready</h2>
-            <p className="text-xs leading-relaxed text-[var(--muted)]">
-              One-click Paper, Purpur, Fabric, Forge, and Velocity installs with automated backups and full SFTP access.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div>
+      <ServiceHeroBanner
+        badge="Java & Bedrock · Instant Pterodactyl Panel"
+        title={<><span className="font-pixel tracking-normal">Minecraft</span> hosting <span className="serif-it font-normal">worldwide</span></>}
+        subtitle="Low-latency Java & Bedrock servers in India and Dubai on Intel® Xeon® and AMD EPYC™ processors with NVMe SSDs and DDoS protection."
+        image="/images/games.jpg"
+      />
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
 
       <div className="rv mb-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <div className="card-clean inline-flex rounded-2xl p-1">
@@ -120,6 +103,7 @@ export default function MinecraftPage() {
       <InfrastructureGrid variant="minecraft" />
       <FaqSection items={MC_FAQ} title="Minecraft Hosting FAQ" />
       <CtaBanner />
+    </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { Check, Cpu, HardDrive, Network } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
 import { ComparisonMatrix, CtaBanner, InfrastructureGrid } from "../../src/components/ServiceDetails";
+import ServiceHeroBanner from "../../src/components/ServiceHeroBanner";
 
 const VDS_CPUS = {
   "xeon-vds": [
@@ -25,18 +26,14 @@ export default function VdsHostingPage() {
   const filtered = catalog.vdsPlans.filter((p: any) => p.family === family);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-      <div className="rv mb-10 text-center">
-        <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1 text-xs font-semibold text-[var(--muted)]">
-          100% Dedicated CPU Slices · India
-        </span>
-        <h1 className="mt-4 text-3xl font-extrabold sm:text-5xl">
-          India <span className="serif-it font-normal">Virtual Dedicated</span> Servers
-        </h1>
-        <p className="mx-auto mt-3 max-w-xl text-sm text-[var(--muted)]">
-          Dedicated Intel® Xeon® &amp; AMD EPYC™ CPU cores with DDR4 ECC RAM and Enterprise NVMe in Noida &amp; Delhi.
-        </p>
-      </div>
+    <div>
+      <ServiceHeroBanner
+        badge="100% Dedicated CPU Slices · India"
+        title={<>India <span className="serif-it font-normal">Virtual Dedicated</span> Servers</>}
+        subtitle="Dedicated Intel® Xeon® & AMD EPYC™ CPU cores with DDR4 ECC RAM and Enterprise NVMe in Noida & Delhi."
+        image="/images/vps.png"
+      />
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
 
       <div className="rv mb-8 flex justify-center">
         <div className="card-clean inline-flex rounded-2xl p-1">
@@ -106,6 +103,7 @@ export default function VdsHostingPage() {
       <InfrastructureGrid variant="vds" />
       <ComparisonMatrix />
       <CtaBanner />
+    </div>
     </div>
   );
 }

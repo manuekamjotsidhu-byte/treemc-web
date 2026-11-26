@@ -10,6 +10,7 @@ type Tab = "vps" | "minecraft" | "rdp" | "bot" | "web" | "vds";
 export default function PricingPage() {
   const { formatPrice } = useCurrency();
   const [tab, setTab] = useState<Tab>("vps");
+  const [vdsFamily, setVdsFamily] = useState<"xeon-vds" | "epyc-vds">("xeon-vds");
 
   const tabs: { id: Tab; label: string }[] = [
     { id: "vps", label: "Cloud VPS" },
@@ -111,18 +112,47 @@ export default function PricingPage() {
       )}
 
       {tab === "vds" && (
-        <div className="grid gap-5 sm:grid-cols-3">
-          {catalog.vdsPlans.map((p) => (
-            <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
-              <div>
-                <h3 className="text-lg font-bold">{p.name}</h3>
-                <p className="text-xs text-[var(--muted)]">{p.location}</p>
-                <div className="mt-3 text-3xl font-extrabold">{formatPrice(p.price)}<span className="text-xs font-normal text-[var(--muted)]">/mo</span></div>
-                <p className="mt-3 text-xs text-[var(--muted)]">{p.vCores} · {p.ram} · {p.storage}</p>
-              </div>
-              <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-5 block rounded-xl py-2.5 text-center text-xs font-bold">Order on Discord ↗</a>
+        <div className="space-y-8">
+          <div className="flex justify-center">
+            <div className="card-clean inline-flex rounded-2xl p-1">
+              <button
+                type="button"
+                onClick={() => setVdsFamily("xeon-vds")}
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition ${
+                  vdsFamily === "xeon-vds" ? "btn-lime" : "text-[var(--muted)]"
+                }`}
+              >
+                <img src="/cpu/intel.png" alt="Intel Xeon" className="h-4 w-4 rounded-sm object-contain" />
+                Intel® Xeon® VDS
+              </button>
+              <button
+                type="button"
+                onClick={() => setVdsFamily("epyc-vds")}
+                className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition ${
+                  vdsFamily === "epyc-vds" ? "btn-lime" : "text-[var(--muted)]"
+                }`}
+              >
+                <img src="/cpu/epyc.png" alt="AMD EPYC" className="h-4 w-4 rounded-sm object-contain" />
+                AMD EPYC™ VDS
+              </button>
             </div>
-          ))}
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {catalog.vdsPlans
+              .filter((p: any) => p.family === vdsFamily)
+              .map((p: any) => (
+                <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
+                  <div>
+                    <h3 className="text-lg font-bold">{p.name}</h3>
+                    <p className="text-xs text-[var(--muted)]">{p.location}</p>
+                    <div className="mt-3 text-3xl font-extrabold">{formatPrice(p.price)}<span className="text-xs font-normal text-[var(--muted)]">/mo</span></div>
+                    <p className="mt-3 text-xs text-[var(--muted)]">{p.vCores} · {p.ram} · {p.storage}</p>
+                  </div>
+                  <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-5 block rounded-xl py-2.5 text-center text-xs font-bold">Order on Discord ↗</a>
+                </div>
+              ))}
+          </div>
         </div>
       )}
     </div>
