@@ -96,17 +96,19 @@ export default function VpsExplorer() {
         <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
           {availableFamilies.map((fam) => {
             const active = fam === activeFamily;
+            const cpuImg = fam.includes("Ryzen") ? "/cpu/ryzen9.png" : fam.includes("EPYC") ? "/cpu/epyc.png" : "/cpu/intel.png";
             return (
               <button
                 key={fam}
                 type="button"
                 onClick={() => setSelectedFamily(fam)}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
                   active
                     ? "bg-slate-900 text-white shadow-sm dark:bg-white dark:text-slate-950"
                     : "border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--ink)]"
                 }`}
               >
+                <img src={cpuImg} alt="" className="h-4 w-4 rounded-sm object-contain" />
                 {fam}
               </button>
             );

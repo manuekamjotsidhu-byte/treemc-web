@@ -27,12 +27,12 @@ export default function HomePage() {
   const { formatPrice } = useCurrency();
 
   const SERVICES = [
-    { title: "Minecraft Hosting", desc: "Java & Bedrock servers in India & Dubai from Sprout (2 GB) to Titan.", price: 99, href: "/minecraft-hosting", icon: Gamepad2, tag: "Minecraft" },
-    { title: "Cloud VPS", desc: "Root KVM VPS across India, Germany, Singapore, USA, and Canada.", price: 359, href: "/vps", icon: Cloud, tag: "Cloud VPS" },
-    { title: "Windows RDP", desc: "Enterprise Windows Server remote desktop in India with NVMe SSD.", price: 685, href: "/rdp-hosting", icon: Monitor, tag: "Windows RDP" },
-    { title: "Bot Hosting", desc: "Always-on 24/7 runtimes for Node.js, Python, Java & Lavalink.", price: 49, href: "/bot-hosting", icon: Bot, tag: "Bot Hosting" },
-    { title: "Web Hosting", desc: "Fast NVMe cPanel hosting with free AutoSSL & Softaculous.", price: 59, href: "/webhosting", icon: Globe, tag: "Web Hosting" },
-    { title: "India VDS", desc: "Dedicated CPU slices with DDR4 ECC memory in Noida & Delhi.", price: 1699, href: "/vds-hosting", icon: Cpu, tag: "India VDS" },
+    { title: "Minecraft Hosting", desc: "Java & Bedrock servers in India & Dubai from Sprout (2 GB) to Titan.", price: 99, href: "/minecraft-hosting", icon: Gamepad2, tag: "Minecraft", img: "/images/games.jpg" },
+    { title: "Cloud VPS", desc: "Root KVM VPS across India, Germany, Singapore, USA, and Canada.", price: 359, href: "/vps", icon: Cloud, tag: "Cloud VPS", img: "/images/vps.png" },
+    { title: "Windows RDP", desc: "Enterprise Windows Server remote desktop in India with NVMe SSD.", price: 685, href: "/rdp-hosting", icon: Monitor, tag: "Windows RDP", img: "/images/features-6.png" },
+    { title: "Bot Hosting", desc: "Always-on 24/7 runtimes for Node.js, Python, Java & Lavalink.", price: 49, href: "/bot-hosting", icon: Bot, tag: "Bot Hosting", img: "/cpu/ryzen7.png" },
+    { title: "Web Hosting", desc: "Fast NVMe cPanel hosting with free AutoSSL & Softaculous.", price: 59, href: "/webhosting", icon: Globe, tag: "Web Hosting", img: "/cpu/epyc.png" },
+    { title: "India VDS", desc: "Dedicated CPU slices with DDR4 ECC memory in Noida & Delhi.", price: 1699, href: "/vds-hosting", icon: Cpu, tag: "India VDS", img: "/cpu/intel.png" },
   ];
 
   return (
@@ -100,8 +100,11 @@ export default function HomePage() {
           {SERVICES.map((s) => {
             const Icon = s.icon;
             return (
-              <div key={s.href} className="card-clean flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
+              <div key={s.href} className="card-clean flex flex-col justify-between overflow-hidden rounded-3xl p-5 transition hover:-translate-y-0.5">
                 <div>
+                  <div className="mb-4 h-36 w-full overflow-hidden rounded-2xl bg-[var(--bg)]">
+                    <img src={s.img} alt={s.title} className="h-full w-full object-cover" />
+                  </div>
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-bold">{s.title}</h3>
                     <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--muted)]">
