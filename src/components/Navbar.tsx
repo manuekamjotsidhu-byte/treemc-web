@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bot, ChevronDown, Cloud, Cpu, FileText, Gamepad2, Globe, Menu, Monitor, Moon, Shield, Sun, X } from "lucide-react";
+import { Bot, ChevronDown, Cloud, Cpu, Gamepad2, Globe, Menu, Monitor, Moon, Shield, Sun, X } from "lucide-react";
 import { CurrencyCode, useCurrency } from "../context/CurrencyContext";
 
 const SERVICE_ITEMS = [
@@ -27,6 +27,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const { currency, setCurrency, currencies, symbols } = useCurrency();
   const [open, setOpen] = useState(false);
+  const [mobServices, setMobServices] = useState(true);
+  const [mobPolicies, setMobPolicies] = useState(false);
   const [activeDd, setActiveDd] = useState<"services" | "policies" | null>(null);
   const [dark, setDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -49,15 +51,15 @@ export default function Navbar() {
   };
 
   const navLinkCls = (href: string) =>
-    `rounded-full px-3 py-1.5 text-sm font-medium transition ${
+    `rounded-full px-3 py-1.5 text-sm font-medium transition whitespace-nowrap ${
       pathname === href || (href !== "/" && pathname.startsWith(href))
         ? "bg-slate-900/10 text-[var(--ink)] font-semibold dark:bg-white/15"
         : "text-[var(--muted)] hover:text-[var(--ink)]"
     }`;
 
   return (
-    <div className={`sticky z-50 px-3 sm:px-6 transition-all duration-200 ${scrolled ? "top-2" : "top-4"}`}>
-      <header className={`mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/95 px-4 py-2 backdrop-blur-xl transition-shadow duration-200 ${scrolled ? "shadow-xl shadow-slate-900/10" : "shadow-md shadow-slate-900/5"}`}>
+    <div className={`sticky z-50 px-2.5 sm:px-6 transition-all duration-200 ${scrolled ? "top-2" : "top-3"}`}>
+      <header className={`mx-auto flex max-w-6xl items-center justify-between gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)]/95 px-3 py-2 sm:px-4 backdrop-blur-xl transition-shadow duration-200 ${scrolled ? "shadow-xl shadow-slate-900/10" : "shadow-md shadow-slate-900/5"}`}>
         <Link href="/" className="flex items-center gap-2 shrink-0 pl-1">
           <img src="/treemc-icon.png" alt="TreeMC" className="h-7 w-7 rounded-lg object-contain" />
           <span className="text-base font-extrabold tracking-tight">
@@ -152,13 +154,13 @@ export default function Navbar() {
           </div>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <select
             id="treemc-currency"
             aria-label="Select currency"
             value={currency}
             onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
-            className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-1.5 text-xs font-semibold outline-none cursor-pointer"
+            className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2 py-1.5 text-[11px] sm:text-xs font-semibold outline-none cursor-pointer"
           >
             {currencies.map((c) => (
               <option key={c} value={c}>
@@ -206,23 +208,76 @@ export default function Navbar() {
       </header>
 
       {open && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-xl lg:hidden animate-[fadeDown_0.16s_ease-out]">
-          <div className="grid grid-cols-2 gap-2">
-            {SERVICE_ITEMS.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">
-                {l.label}
-              </Link>
-            ))}
-            <Link href="/pricing" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">All Pricing</Link>
-            <Link href="/blog" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">Blog</Link>
-            <Link href="/guides" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">Guides</Link>
-            <Link href="/terms" onClick={() => setOpen(false)} className="inline-flex items-center gap-1 rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">
-              <FileText className="h-3 w-3" /> Policies
-            </Link>
-          </div>
-          <div className="mt-3 flex gap-2">
-            <a href="https://panel.treemchost.pro" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-full border border-[var(--border)] py-2 text-center text-xs font-semibold">Log in</a>
-            <a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener noreferrer" className="btn-lime flex-1 rounded-full py-2 text-center text-xs font-bold">Join Discord</a>
+        <div className="mx-auto mt-2 max-h-[80vh] max-w-6xl overflow-y-auto rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-2xl lg:hidden animate-[fadeDown_0.16s_ease-out]">
+          <div className="space-y-2">
+            {/* Collapsible Services */}
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-2">
+              <button
+                type="button"
+                onClick={() => setMobServices((v) => !v)}
+                className="flex w-full items-center justify-between px-2 py-1.5 text-xs font-bold uppercase tracking-wider text-[var(--muted)]"
+              >
+                <span>Services</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobServices ? "rotate-180" : ""}`} />
+              </button>
+              {mobServices && (
+                <div className="mt-1.5 grid grid-cols-1 gap-1 sm:grid-cols-2">
+                  {SERVICE_ITEMS.map((l) => {
+                    const Icon = l.icon;
+                    return (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-2.5 rounded-xl px-2.5 py-2 text-xs font-semibold hover:bg-slate-500/10"
+                      >
+                        <Icon className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+                        <span>{l.label}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Direct links */}
+            <div className="grid grid-cols-3 gap-1.5">
+              <Link href="/pricing" onClick={() => setOpen(false)} className="rounded-xl border border-[var(--border)] bg-[var(--bg)] py-2 text-center text-xs font-semibold">Pricing</Link>
+              <Link href="/blog" onClick={() => setOpen(false)} className="rounded-xl border border-[var(--border)] bg-[var(--bg)] py-2 text-center text-xs font-semibold">Blog</Link>
+              <Link href="/guides" onClick={() => setOpen(false)} className="rounded-xl border border-[var(--border)] bg-[var(--bg)] py-2 text-center text-xs font-semibold">Guides</Link>
+            </div>
+
+            {/* Collapsible Policies */}
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-2">
+              <button
+                type="button"
+                onClick={() => setMobPolicies((v) => !v)}
+                className="flex w-full items-center justify-between px-2 py-1.5 text-xs font-bold uppercase tracking-wider text-[var(--muted)]"
+              >
+                <span>Policies</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${mobPolicies ? "rotate-180" : ""}`} />
+              </button>
+              {mobPolicies && (
+                <div className="mt-1.5 grid grid-cols-1 gap-1 sm:grid-cols-2">
+                  {POLICY_ITEMS.map((p) => (
+                    <Link
+                      key={p.href}
+                      href={p.href}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-2.5 rounded-xl px-2.5 py-2 text-xs font-semibold hover:bg-slate-500/10"
+                    >
+                      <Shield className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+                      <span>{p.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="flex gap-2 pt-1">
+              <a href="https://panel.treemchost.pro" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-full border border-[var(--border)] py-2.5 text-center text-xs font-semibold">Log in</a>
+              <a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener noreferrer" className="btn-lime flex-1 rounded-full py-2.5 text-center text-xs font-bold">Join Discord</a>
+            </div>
           </div>
         </div>
       )}
