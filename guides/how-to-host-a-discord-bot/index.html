@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Host a Discord Bot 24/7 (Node.js or Python) | TreeMC Guides</title>
+<meta name="description" content="Host a Discord bot that stays online 24/7: Python vs Node.js, keep your token safe with environment variables, auto restart and logs, and run it on a VPS with pm2 or systemd.">
+<link rel="canonical" href="index.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article"><meta property="og:site_name" content="TreeMC"><meta property="og:title" content="How to Host a Discord Bot 24/7 (Node.js or Python) | TreeMC Guides"><meta property="og:description" content="Host a Discord bot that stays online 24/7: Python vs Node.js, keep your token safe with environment variables, auto restart and logs, and run it on a VPS with pm2 or systemd."><meta property="og:url" content="https://treemchost.pro/guides/how-to-host-a-discord-bot/"><meta property="og:image" content="https://treemchost.pro/img/hero-sky.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"TechArticle","headline":"How to host a Discord bot 24/7","description":"Host a Discord bot that stays online 24/7: Python vs Node.js, keep your token safe with environment variables, auto restart and logs, and run it on a VPS with pm2 or systemd.","url":"https://treemchost.pro/guides/how-to-host-a-discord-bot","dateModified":"2026-11-17","author":{"@type":"Organization","name":"TreeMC"},"publisher":{"@type":"Organization","name":"TreeMC","logo":{"@type":"ImageObject","url":"https://treemchost.pro/img/treemc-icon.png"}}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://treemchost.pro/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://treemchost.pro/guides"},{"@type":"ListItem","position":3,"name":"How to host a Discord bot 24/7","item":"https://treemchost.pro/guides/how-to-host-a-discord-bot"}]}]</script>
+<meta name="theme-color" content="#46c90e">
+<script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.dataset.theme=t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+<link rel="icon" href="../../img/treemc-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../img/treemc-icon.png">
+<link href="../../fonts/inter-instrument-serif.css" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<script type="application/ld+json" id="treemc-seo">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://treemchost.pro/guides/how-to-host-a-discord-bot/#webpage","url":"https://treemchost.pro/guides/how-to-host-a-discord-bot/","name":"How to Host a Discord Bot 24/7 (Node.js or Python) | TreeMC Guides","description":"Host a Discord bot that stays online 24/7: Python vs Node.js, keep your token safe with environment variables, auto restart and logs, and run it on a VPS with pm2 or systemd.","isPartOf":{"@id":"https://treemchost.pro/#website"},"publisher":{"@id":"https://treemchost.pro/#organization"},"inLanguage":"en-IN"},{"@type":"BreadcrumbList","@id":"https://treemchost.pro/guides/how-to-host-a-discord-bot/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://treemchost.pro/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://treemchost.pro/guides/"},{"@type":"ListItem","position":3,"name":"How to Host a Discord Bot 24/7 (Node.js or Python)","item":"https://treemchost.pro/guides/how-to-host-a-discord-bot/"}]}]}</script>
+</head>
+<body>
+<div class="nav-shell"><div class="wrap"><nav class="nav" aria-label="Main">
+  <a class="logo" href="../../\"><span class="logo-mark" aria-hidden="true"></span><span class="wm"><b>Tree</b><b>MC</b></span></a>
+  <ul class="nav-links">
+    <li><a href="../../\">Home</a></li>
+    <li class="has-dd"><a href="../../#services\">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a><div class="dd"><a href="../../minecraft-hosting/"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></span><span><b>Minecraft Hosting</b><span>Java servers from ₹99/month. Bedrock available by request.</span></span></a><a href="../../game-server-hosting-india/\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="6"/><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/></svg></span><span><b>Game Hosting</b><span>Minecraft, Rust &amp; CS2 across India &amp; Dubai.</span></span></a><a href="../../bot-hosting/\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="3"/><path d="M12 8V4M8 4h8M9 14h.01M15 14h.01"/></svg></span><span><b>Bot Hosting</b><span>Premium and high-performance Discord bot plans.</span></span></a><a href="../../bot-hosting/#bot-lavalink\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><span><b>Lavalink &amp; Audio</b><span>Java &amp; Lavalink audio runtime support for Discord bots.</span></span></a><a href="../../cheap-vps-hosting-india/\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg></span><span><b>VPS Hosting</b><span>High-frequency KVM VPS across India, DE, SG, US &amp; CA.</span></span></a><a href="../../rdp-hosting/\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><span><b>Windows VPS (RDP)</b><span>Windows Remote Desktop with administrator access.</span></span></a><a href="../../vds-hosting-india/\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></span><span><b>VDS Hosting</b><span>Dedicated CPU cores, yours alone, for steady speed.</span></span></a><a href="../../webhosting/\"><span class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><span><b>Web Hosting</b><span>Fast cPanel &amp; Pterodactyl web hosting with free SSL.</span></span></a></div></li>
+    <li><a href="../../minecraft-hosting/">Minecraft</a></li>
+    <li><a href="../../cheap-vps-hosting-india/\">VPS</a></li>
+    <li><a href="../../hosting-facts/">Pricing</a></li>
+    <li></li>
+    <li><a href="../../blog/\">Blog</a></li>
+    <li><a href="../../guides/\" aria-current="page">Guides</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" type="button" aria-label="Switch dark or light theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <a class="login" href="https://panel.treemchost.pro/" target="_blank" rel="noopener">Panel</a>
+    <a class="btn btn-dark btn-plain" href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener">Join Discord</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</nav></div></div>
+<header class="sky article-hero">
+  <div class="phero wrap">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../../\">Home</a><span>/</span><a href="../">Guides</a><span>/</span><span>Bots</span></nav>
+    <h1>How to host a Discord bot 24/7</h1>
+    <p class="lede">By TreeMC · Updated 17 November 2026</p>
+  </div>
+</header>
+<main>
+<section class="section-tight"><div class="wrap"><article class="prose"><p>A bot on your own PC goes offline when the PC sleeps. On a server it runs day and night. This guide covers our bot hosting panel and running a bot on a VPS.</p>
+<h2 id="setup">1. Get your bot ready</h2>
+<ol>
+<li>In the <a href="https://discord.com/developers/applications" rel="noopener" target="_blank">Discord Developer Portal</a>, create an application, open <b>Bot</b> and copy the token. Treat it like a password.</li>
+<li>Turn on the <b>Privileged Gateway Intents</b> your bot uses, such as Message Content if it reads messages.</li>
+<li>Invite the bot from <b>OAuth2 → URL Generator</b> with the <code>bot</code> and <code>applications.commands</code> scopes.</li>
+</ol>
+<h2 id="python-vs-node">Python or Node.js?</h2>
+<ul>
+<li><b>Node.js with discord.js</b> has the largest community, many examples and fast updates for new Discord features.</li>
+<li><b>Python with discord.py</b> is easier to read if you are learning, and good for bots that do data work or AI.</li>
+</ul>
+<p>Both are free, run well on 500 MB of RAM, and are supported on our <a href="../../bot-hosting/\">bot hosting</a>. Pick the language you know.</p>
+<h2 id="panel">2. Host it on the bot panel</h2>
+<ol>
+<li>Upload your code in the Files tab (or link a Git repository if your plan supports it). Do not upload <code>node_modules</code> or a virtual environment.</li>
+<li>In the Startup tab, set the main file, for example <code>index.js</code> or <code>bot.py</code>. Dependencies from <code>package.json</code> or <code>requirements.txt</code> are installed on start.</li>
+<li>Add your token as a variable (see below), then press Start and watch the Console for your "logged in" message.</li>
+</ol>
+<h2 id="env-and-tokens">3. Keep your token safe</h2>
+<ul>
+<li>Never write the token in your code. Put it in a <code>.env</code> file (<code>DISCORD_TOKEN=...</code>) or a panel variable, and read it with <code>process.env.DISCORD_TOKEN</code> (Node, with dotenv) or <code>os.getenv("DISCORD_TOKEN")</code> (Python, with python-dotenv).</li>
+<li>Add <code>.env</code> to <code>.gitignore</code> so it never reaches GitHub. Bots scan GitHub for tokens within minutes.</li>
+<li>If a token leaks, press <b>Reset Token</b> in the Developer Portal right away. The old one stops working.</li>
+<li>The same rules apply to Telegram bot tokens from BotFather and any API keys.</li>
+</ul>
+<h2 id="auto-restart">4. Auto restart and logs</h2>
+<ul>
+<li>On the panel, crashed bots restart on their own. Read the Console to see why it stopped.</li>
+<li>Catch errors in your event handlers so one bad command does not kill the whole bot.</li>
+<li>Log to the console with times, for example <code>console.log(new Date().toISOString(), "...")</code> or Python's <code>logging</code> module, so you can trace problems later.</li>
+</ul>
+<h2 id="vps">5. Run a bot on a VPS (pm2 or systemd)</h2>
+<p>For many bots, a dashboard or a database, a <a href="../../cheap-vps-hosting-india/\">VPS</a> gives you full control.</p>
+<p><b>Node.js with pm2:</b></p>
+<pre><code>npm install -g pm2
+pm2 start index.js --name mybot
+pm2 save
+pm2 startup   # run the command it prints, so bots start after a reboot
+pm2 logs mybot</code></pre>
+<p><b>Python with systemd:</b> create <code>/etc/systemd/system/mybot.service</code>:</p>
+<pre><code>[Unit]
+Description=My Discord bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/bot/mybot
+ExecStart=/home/bot/mybot/venv/bin/python bot.py
+EnvironmentFile=/home/bot/mybot/.env
+Restart=always
+User=bot
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+<p>Then run <code>sudo systemctl enable --now mybot</code>, and read logs with <code>journalctl -u mybot -f</code>. Run bots as a normal user, not root.</p>
+</article></div></section>
+<section class="section-tight"><div class="wrap"><h2 class="h2" style="margin-bottom:22px">More <span class="it">guides</span></h2><div class="post-grid"><a class="post-card rv" href="../how-to-make-a-minecraft-server/\"><small>Minecraft</small><b>How to make a Minecraft server</b><span>Make a Minecraft server step by step: pick a plan, choose Paper or Vanilla, join it, give yourself OP, edit server.properties, upload a world and when you need port forwarding.</span><em>Read the guide<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></em></a><a class="post-card rv" href="../how-to-install-minecraft-plugins/\"><small>Minecraft</small><b>How to install Minecraft plugins and mods</b><span>Install Minecraft plugins on Paper and mods on Forge or Fabric: where to download them safely, which folder they go in, how to configure them and how to fix a plugin that does not load.</span><em>Read the guide<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></em></a><a class="post-card rv" href="../geyser-floodgate-minecraft-crossplay/\"><small>Minecraft</small><b>Geyser and Floodgate: Java and Bedrock crossplay</b><span>Set up Geyser and Floodgate on a Paper server so phone, console and Windows Bedrock players can join your Java Minecraft server. Ports, config and common problems.</span><em>Read the guide<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></em></a></div><p class="see-more"><a href="../">All guides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></p></div></section>
+<section class="section-tight"><div class="wrap"><div class="cta-band rv">
+  <h2 class="h2">Ready to start your <span class="it">server?</span></h2><p>Choose a plan to order through TreeMC billing.</p>
+  <div class="cta"><a class="btn btn-lime" href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener">Join our Discord<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><a class="btn btn-white" href="https://panel.treemchost.pro/" target="_blank" rel="noopener">Client panel<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class="logo" href="../../\"><span class="logo-mark" aria-hidden="true"></span><span class="wm"><b>Tree</b><b>MC</b></span></a>
+      <p>Minecraft, game, bot and website hosting, VPS and Windows VPS across India, Singapore, Germany, the United States, Canada . Backed by real support on Discord.</p>
+      <div class="footer-contact">
+        <a class="btn btn-lime" href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener">Order on Discord<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <a class="footer-mail" href="mailto:support@treemchost.pro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email support</a>
+      </div>
+      <div class="socials"><a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a><a href="mailto:support@treemchost.pro" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a></div>
+    </div>
+    <nav class="footer-cols" aria-label="Footer">
+      <div class="footer-col"><h4>Hosting</h4><ul><li><a href="../../minecraft-hosting/">Minecraft Hosting</a></li><li><a href="../../game-server-hosting-india/\">Game Hosting</a></li><li></li><li></li><li></li><li><a href="../../bot-hosting/\">Bot Hosting</a></li><li><a href="../../bot-hosting/#bot-lavalink\">Dedicated Lavalink</a></li><li><a href="../../webhosting/\">Web Hosting</a></li><li><a href="../../ipv4-lease/\">IPv4 Leasing</a></li></ul></div>
+      <div class="footer-col"><h4>Servers</h4><ul><li><a href="../../cheap-vps-hosting-india/\">VPS in India</a></li><li><a href="../../vps-hosting-singapore/\">VPS in Singapore</a></li><li><a href="../../rdp-hosting/\">Windows VPS (RDP)</a></li><li><a href="../../vds-hosting-india/\">VDS Hosting</a></li><li><a href="../../vps-vs-vds/\">VPS vs VDS</a></li><li><a href="../../hosting-facts/">Pricing</a></li><li></li></ul></div>
+      <div class="footer-col"><h4>Guides</h4><ul><li><a href="../../guides/how-to-make-a-minecraft-server/\">Make a Minecraft server</a></li><li><a href="../../guides/geyser-floodgate-minecraft-crossplay/\">Bedrock crossplay (Geyser)</a></li><li><a href="../../guides/how-to-host-a-discord-bot/\">Host a Discord bot 24/7</a></li><li><a href="../../guides/how-to-set-up-a-palworld-server/\">Set up a Palworld server</a></li><li><a href="../../guides/how-to-run-mt5-24-7-on-a-windows-vps/\">Run MT5 on a Windows VPS</a></li><li><a href="../../guides/\">All guides</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../../about/\">About us</a></li><li><a href="../../blog/\">Blog</a></li><li><a href="https://panel.treemchost.pro/" target="_blank" rel="noopener">Control panel<span class="ext-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li><li></li><li></li><li><a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener">Discord community<span class="ext-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wordmark" aria-hidden="true">TREEMC</div>
+  <div class="footer-bottom"><span>© 2026 TreeMC Host. Founded by Abdullah &amp; Ekamjot Singh. Prices in Indian rupees.</span><nav aria-label="Legal"><a href="../../terms-of-service/\">Terms of service</a><a href="../../privacy-policy/\">Privacy policy</a><a href="../../acceptable-use-policy/\">Acceptable use</a><a href="../../service-level-agreement/\">Service level agreement</a><a href="../../refund-policy/\">Refund policy</a></nav></div>
+</div></footer>
+<script src="../../main.js" defer></script>
+</body></html>
