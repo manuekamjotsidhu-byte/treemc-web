@@ -44,14 +44,14 @@ export default function MinecraftPlanFinder({ region = "India" }: { region?: "In
     {
       tier: "Intel® Xeon®",
       img: "/cpu/intel.png",
-      subtitle: `${selectedRegion} · DDR4 ECC`,
+      subtitle: `${selectedRegion} · Java & Bedrock`,
       plan: xeonMatch,
       recommended: workload !== "mods",
     },
     {
       tier: "AMD EPYC™",
       img: "/cpu/epyc.png",
-      subtitle: `${selectedRegion} · DDR5 High-Clock`,
+      subtitle: `${selectedRegion} · High-Clock`,
       plan: epycMatch,
       recommended: workload === "mods",
     },

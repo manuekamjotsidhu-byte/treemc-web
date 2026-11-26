@@ -42,7 +42,7 @@ export const ARTICLES: Article[] = [
     readTime: "4 min read",
     sections: [
       { heading: "Vanilla & Light SMP (2 GB – 4 GB)", body: "A 2 GB Sprout or 4 GB Sapling plan handles 5–15 friends on PaperMC or Purpur cleanly with pre-generated chunks." },
-      { heading: "Modded & Large Networks (8 GB – 32 GB)", body: "Heavy modpacks and 40+ concurrent players benefit from AMD EPYC DDR5 Performance tiers (Surge, Storm, Blaze, Titan) for faster garbage collection and chunk streaming." },
+      { heading: "Modded & Large Networks (8 GB – 32 GB)", body: "Heavy modpacks and 40+ concurrent players benefit from AMD EPYC Performance tiers (Surge, Storm, Blaze, Titan) for faster garbage collection and chunk streaming." },
     ],
   },
   {

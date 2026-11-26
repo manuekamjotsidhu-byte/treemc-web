@@ -30,7 +30,7 @@ export default function VdsHostingPage() {
       <ServiceHeroBanner
         badge="100% Dedicated CPU Slices · India"
         title={<>India <span className="serif-it font-normal">Virtual Dedicated</span> Servers</>}
-        subtitle="Dedicated Intel® Xeon® & AMD EPYC™ CPU cores with DDR4 ECC RAM and Enterprise NVMe in Noida & Delhi."
+        subtitle="Dedicated Intel® Xeon® & AMD EPYC™ CPU cores with ECC RAM and Enterprise NVMe in Noida & Delhi."
         image="/images/vps.png"
       />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

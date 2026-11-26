@@ -14,7 +14,7 @@ export default function RdpPage() {
       <ServiceHeroBanner
         badge="Windows Server · Full Admin Access"
         title={<>Windows <span className="serif-it font-normal">RDP Hosting</span></>}
-        subtitle="24/7 Windows Remote Desktop servers in India with DDR4 ECC memory, NVMe SSD storage, and 1 Gbps unmetered bandwidth."
+        subtitle="24/7 Windows Remote Desktop servers in India with ECC memory, NVMe SSD storage, and 1 Gbps unmetered bandwidth."
         image="/images/rdp-service.jpg"
       />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

@@ -10,7 +10,7 @@ import MinecraftPlanFinder from "../../src/components/MinecraftPlanFinder";
 
 const MC_FAQ = [
   { q: "Does TreeMC support both Java Edition and Bedrock / GeyserMC?", a: "Yes! You can run Paper, Purpur, Spigot, Fabric, Forge, Velocity, Bedrock Dedicated Server, or Java + Bedrock crossplay via GeyserMC & Floodgate." },
-  { q: "What is the difference between Intel® Xeon® and AMD EPYC™ plans?", a: "Intel® Xeon® plans (Sprout–Titan Oak) pair Xeon CPUs with DDR4 ECC RAM for smooth survival SMPs, while AMD EPYC™ plans (Ember–Titan) pair EPYC processors with high-speed DDR5 RAM for heavy modpacks and large player counts." },
+  { q: "What is the difference between Intel® Xeon® and AMD EPYC™ plans?", a: "Intel® Xeon® plans (Sprout–Titan Oak) deliver reliable multi-core performance for smooth survival SMPs, while AMD EPYC™ plans (Ember–Titan) provide high-clock performance for heavy modpacks and large player counts." },
   { q: "Are automated backups and SFTP included?", a: "Yes, every plan includes automated backups, full SFTP access, sub-user permissions, and one-click modpack/plugin installation in our Pterodactyl panel." },
 ];
 
@@ -20,7 +20,7 @@ export default function MinecraftPage() {
   const [cpuFamily, setCpuFamily] = useState<"xeon" | "epyc">("xeon");
 
   const plans = cpuFamily === "xeon" ? catalog.mcBudget : catalog.mcPerf;
-  const cpuLabel = cpuFamily === "xeon" ? "Intel® Xeon® (DDR4 ECC)" : "AMD EPYC™ (DDR5)";
+  const cpuLabel = cpuFamily === "xeon" ? "Intel® Xeon®" : "AMD EPYC™";
 
   return (
     <div>

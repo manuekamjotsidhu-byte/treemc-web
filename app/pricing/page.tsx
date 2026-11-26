@@ -149,7 +149,7 @@ const COMMON_PLANS: {
     pageHref: "/vps",
     specs: [
       { icon: "cpu", text: "2 vCores" },
-      { icon: "ram", text: "4 GB DDR4 ECC" },
+      { icon: "ram", text: "4 GB ECC RAM" },
       { icon: "storage", text: "40 GB NVMe SSD" },
       { icon: "network", text: "1000 GB Bandwidth" },
       { icon: "shield", text: "DDoS Protection" },
@@ -164,7 +164,7 @@ const COMMON_PLANS: {
     pageHref: "/rdp-hosting",
     specs: [
       { icon: "cpu", text: "4 vCores (Intel® Xeon®)" },
-      { icon: "ram", text: "8 GB DDR4 ECC" },
+      { icon: "ram", text: "8 GB ECC RAM" },
       { icon: "storage", text: "60 GB NVMe SSD" },
       { icon: "network", text: "Unmetered 1 Gbps" },
       { icon: "shield", text: "Full Admin + DDoS Protection" },
@@ -209,7 +209,7 @@ const COMMON_PLANS: {
     pageHref: "/vds-hosting",
     specs: [
       { icon: "cpu", text: "6 Dedicated vCores" },
-      { icon: "ram", text: "16 GB DDR4 ECC" },
+      { icon: "ram", text: "16 GB ECC RAM" },
       { icon: "storage", text: "150 GB NVMe SSD" },
       { icon: "network", text: "1 Gbps Premium" },
       { icon: "shield", text: "DDoS Protection" },
@@ -439,7 +439,7 @@ export default function PricingPage() {
                   price={p.price}
                   specs={[
                     { icon: "cpu", text: p.vCores },
-                    { icon: "ram", text: `${p.ram} DDR4 ECC` },
+                    { icon: "ram", text: `${p.ram} ECC RAM` },
                     { icon: "storage", text: `${p.storage} NVMe SSD` },
                     { icon: "network", text: p.bandwidth },
                     { icon: "shield", text: "DDoS Protection" },

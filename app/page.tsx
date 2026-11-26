@@ -36,7 +36,7 @@ export default function HomePage() {
     { title: "Windows RDP", desc: "Enterprise Windows Server remote desktop in India with NVMe SSD.", price: 685, href: "/rdp-hosting", icon: Monitor, tag: "Windows RDP", kind: "rdp" },
     { title: "Bot Hosting", desc: "Always-on 24/7 runtimes for Node.js, Python, Java & Lavalink.", price: 49, href: "/bot-hosting", icon: Bot, tag: "Bot Hosting", kind: "bot" },
     { title: "Web Hosting", desc: "Fast NVMe cPanel hosting with free AutoSSL & Softaculous.", price: 59, href: "/webhosting", icon: Globe, tag: "Web Hosting", kind: "web" },
-    { title: "India VDS", desc: "Dedicated CPU slices with DDR4 ECC memory in Noida & Delhi.", price: 1699, href: "/vds-hosting", icon: Cpu, tag: "India VDS", kind: "vds" },
+    { title: "India VDS", desc: "Dedicated CPU slices with ECC memory in Noida & Delhi.", price: 1699, href: "/vds-hosting", icon: Cpu, tag: "India VDS", kind: "vds" },
   ];
 
   return (

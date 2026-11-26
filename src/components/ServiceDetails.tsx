@@ -29,7 +29,7 @@ const GRID_DATA: Record<ServiceVariant, { icon: any; title: string; desc: string
     { icon: Zap, title: "Instant Vertical Scaling", desc: "Upgrade RAM, vCores, and storage seamlessly as your production traffic grows." },
   ],
   minecraft: [
-    { icon: Cpu, title: "High Single-Thread Tick", desc: "Intel Xeon & AMD EPYC DDR5 nodes keep Paper, Purpur, Fabric, and Forge servers at a steady 20 TPS." },
+    { icon: Cpu, title: "High Single-Thread Tick", desc: "Intel Xeon & AMD EPYC nodes keep Paper, Purpur, Fabric, and Forge servers at a steady 20 TPS." },
     { icon: HardDrive, title: "Fast NVMe Chunk Loading", desc: "Rapid world saves, region pre-generation, and modpack startups on pure NVMe SSDs." },
     { icon: ShieldCheck, title: "Game DDoS Protection", desc: "Protocol-aware mitigation filters UDP/TCP floods without interrupting active players." },
     { icon: Terminal, title: "Pterodactyl + SFTP", desc: "1-click plugin & modpack installer, live console, sub-user roles, and full SFTP access." },
@@ -38,7 +38,7 @@ const GRID_DATA: Record<ServiceVariant, { icon: any; title: string; desc: string
   ],
   rdp: [
     { icon: Monitor, title: "Full Windows Administrator", desc: "Connect via Microsoft Remote Desktop with full Administrator privileges to install any Windows software." },
-    { icon: Cpu, title: "Multi-Core Intel Xeon", desc: "Dedicated vCores and DDR4 ECC memory tuned for 24/7 MetaTrader (MT4/MT5), browsers, and automation." },
+    { icon: Cpu, title: "Multi-Core Intel Xeon", desc: "Dedicated vCores and ECC memory tuned for 24/7 MetaTrader (MT4/MT5), browsers, and automation." },
     { icon: HardDrive, title: "Enterprise NVMe Storage", desc: "Fast Windows boot times, snappy desktop responsiveness, and smooth multi-app multitasking." },
     { icon: Network, title: "1 Gbps Unmetered India Link", desc: "Low-latency Noida connectivity with generous bandwidth for continuous trading and remote work." },
     { icon: ShieldCheck, title: "Always-On Network Shield", desc: "Protected IPv4 connectivity keeps your remote desktop session stable around the clock." },
@@ -62,7 +62,7 @@ const GRID_DATA: Record<ServiceVariant, { icon: any; title: string; desc: string
   ],
   vds: [
     { icon: Cpu, title: "100% Dedicated CPU Cores", desc: "Zero CPU contention — every core assigned to your India VDS belongs exclusively to your workload." },
-    { icon: HardDrive, title: "DDR4 ECC + NVMe", desc: "Error-correcting memory paired with enterprise NVMe for mission-critical databases and game nodes." },
+    { icon: HardDrive, title: "ECC RAM + NVMe", desc: "Error-correcting memory paired with enterprise NVMe for mission-critical databases and game nodes." },
     { icon: Network, title: "Noida / Delhi Peering", desc: "Low-latency Indian routing built for high-concurrency regional applications." },
     { icon: ShieldCheck, title: "Always-On DDoS Defense", desc: "Multi-layer L3/L4/L7 mitigation protects public services without manual intervention." },
     { icon: Terminal, title: "Full KVM Root Access", desc: "Install any Linux distribution, Docker, Kubernetes, or custom firewall rules." },
@@ -153,7 +153,7 @@ export function ComparisonMatrix() {
   const rows = [
     ["Virtualization", "KVM (Full Root)", "KVM (Dedicated Cores)", "Windows Server RDP", "Pterodactyl Container"],
     ["CPU Allocation", "High-Speed vCores", "100% Dedicated Cores", "Multi-Core Xeon", "Burstable / Dedicated %"],
-    ["Memory", "DDR4 ECC / DDR5", "DDR4 ECC", "DDR4 ECC", "DDR4 ECC / DDR5"],
+    ["Memory", "ECC RAM", "ECC RAM", "ECC RAM", "ECC RAM"],
     ["Storage", "Enterprise NVMe", "Enterprise NVMe", "Enterprise NVMe", "NVMe SSD"],
     ["Access", "Root SSH + VNC", "Root SSH + VNC", "Full Admin RDP", "Web Panel + SFTP"],
     ["Best For", "Apps, APIs, Proxies, Bots", "Heavy Databases & Game Nodes", "24/7 Windows, MT5, Botting", "Minecraft Java & Bedrock"],
