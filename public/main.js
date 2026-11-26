@@ -368,9 +368,7 @@ document.addEventListener("change", function(e) {
   const flagImg = wrap && wrap.querySelector("[data-vps-top-flag]");
   const opt = sel.options[sel.selectedIndex];
   if (flagImg && opt && opt.dataset.flag) flagImg.src = opt.dataset.flag;
-  const container = document.getElementById("vps-all-countries");
-  if (!container) return;
-  container.querySelectorAll("[data-vps-country]").forEach(el => {
+  document.querySelectorAll("[data-vps-country]").forEach(el => {
     if (el.getAttribute("data-vps-country") === country) {
       el.removeAttribute("hidden");
       el.querySelectorAll(".rv").forEach(rv => { rv.classList.add("in"); rv.style.opacity = "1"; rv.style.transform = "none"; });
