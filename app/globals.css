@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #070b0f;
+  --surface: #0d131a;
+  --card: #121a24;
+  --border: rgba(255, 255, 255, 0.08);
+  --emerald: #22c55e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #f1f5f9;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}

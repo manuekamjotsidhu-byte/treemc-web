@@ -1,0 +1,1788 @@
+{
+  "discordUrl": "https://discord.gg/wbH8ZVAsYg",
+  "panelUrl": "https://panel.treemchost.pro",
+  "email": "support@treemchost.pro",
+  "vpsPlans": [
+    {
+      "id": "in-xeon-xs",
+      "name": "Xeon Standard XS",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 2,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 285.87,
+      "expectedSellingPrice": 359
+    },
+    {
+      "id": "in-xeon-s",
+      "name": "Xeon Standard S",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 2,
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "80 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 381.16,
+      "expectedSellingPrice": 479
+    },
+    {
+      "id": "in-xeon-m",
+      "name": "Xeon Standard M",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 4,
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 571.74,
+      "expectedSellingPrice": 719
+    },
+    {
+      "id": "in-xeon-l",
+      "name": "Xeon Standard L",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 6,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "150 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 762.32,
+      "expectedSellingPrice": 959
+    },
+    {
+      "id": "in-xeon-xl",
+      "name": "Xeon Standard XL",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 6,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1143.48,
+      "expectedSellingPrice": 1429,
+      "badge": "Recommended"
+    },
+    {
+      "id": "in-xeon-xxl",
+      "name": "Xeon Standard XXL",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 8,
+      "ram": "32 GB",
+      "ramGB": 32,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1524.64,
+      "expectedSellingPrice": 1909
+    },
+    {
+      "id": "in-xeon-2xl",
+      "name": "Xeon Standard 2XL",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 10,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "350 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 2286.96,
+      "expectedSellingPrice": 2699
+    },
+    {
+      "id": "in-xeon-3xl",
+      "name": "Xeon Standard 3XL",
+      "category": "xeon-standard",
+      "location": "India",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Standard",
+      "cpuModels": [
+        {
+          "id": "e5-2673",
+          "name": "Intel\u00ae Xeon\u00ae E5-2673 v4 (2.30 GHz)"
+        },
+        {
+          "id": "e5-2682",
+          "name": "Intel\u00ae Xeon\u00ae E5-2682 v4 (2.50 GHz)"
+        },
+        {
+          "id": "plat-8168",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8168 (2.70 GHz)"
+        },
+        {
+          "id": "plat-8269cy",
+          "name": "Intel\u00ae Xeon\u00ae Platinum 8269CY (2.50 GHz)"
+        }
+      ],
+      "vCores": 12,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "400 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 3049.28,
+      "expectedSellingPrice": 3509
+    },
+    {
+      "id": "in-epyc-xs",
+      "name": "EPYC Premium XS",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 2,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 381.16,
+      "expectedSellingPrice": 479
+    },
+    {
+      "id": "in-epyc-s",
+      "name": "EPYC Premium S",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 2,
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "80 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 571.74,
+      "expectedSellingPrice": 719
+    },
+    {
+      "id": "in-epyc-m",
+      "name": "EPYC Premium M",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 4,
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 952.9,
+      "expectedSellingPrice": 1199
+    },
+    {
+      "id": "in-epyc-l",
+      "name": "EPYC Premium L",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 6,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "150 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1143.48,
+      "expectedSellingPrice": 1429
+    },
+    {
+      "id": "in-epyc-xl",
+      "name": "EPYC Premium XL",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 6,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1524.64,
+      "expectedSellingPrice": 1909,
+      "badge": "Recommended"
+    },
+    {
+      "id": "in-epyc-xxl",
+      "name": "EPYC Premium XXL",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 8,
+      "ram": "32 GB",
+      "ramGB": 32,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1905.8,
+      "expectedSellingPrice": 2389
+    },
+    {
+      "id": "in-epyc-2xl",
+      "name": "EPYC Premium 2XL",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 10,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "350 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 2858.7,
+      "expectedSellingPrice": 3379
+    },
+    {
+      "id": "in-epyc-3xl",
+      "name": "EPYC Premium 3XL",
+      "category": "epyc-premium",
+      "location": "India",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-7f72",
+          "name": "EPYC 7F72 (3.20 GHz)"
+        },
+        {
+          "id": "epyc-7k62",
+          "name": "EPYC 7K62 (2.60 GHz)"
+        }
+      ],
+      "vCores": 12,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "400 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 3811.6,
+      "expectedSellingPrice": 4389
+    },
+    {
+      "id": "in-ryzen-xs",
+      "name": "AMD Ryzen XS",
+      "category": "ryzen-premium",
+      "location": "India",
+      "processorFamily": "AMD Ryzen\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "ryzen-9950x",
+          "name": "Ryzen 9 9950X",
+          "ddos": "up to 100 Gbps DDoS"
+        },
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X",
+          "ddos": "OVH VAC up to 17 Tbps"
+        }
+      ],
+      "vCores": 1,
+      "ram": "4 GB",
+      "ramGB": 4,
+      "storage": "50 GB",
+      "storageType": "Gen4 NVMe SSD",
+      "memoryType": "DDR5 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "up to 100 Gbps / OVH VAC up to 17 Tbps",
+      "costPrice": 621.01,
+      "expectedSellingPrice": 779
+    },
+    {
+      "id": "in-ryzen-s",
+      "name": "AMD Ryzen S",
+      "category": "ryzen-premium",
+      "location": "India",
+      "processorFamily": "AMD Ryzen\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "ryzen-9950x",
+          "name": "Ryzen 9 9950X",
+          "ddos": "up to 100 Gbps DDoS"
+        },
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X",
+          "ddos": "OVH VAC up to 17 Tbps"
+        }
+      ],
+      "vCores": 2,
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "80 GB",
+      "storageType": "Gen4 NVMe SSD",
+      "memoryType": "DDR5 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "up to 100 Gbps / OVH VAC up to 17 Tbps",
+      "costPrice": 1064.04,
+      "expectedSellingPrice": 1339
+    },
+    {
+      "id": "in-ryzen-l",
+      "name": "AMD Ryzen L",
+      "category": "ryzen-premium",
+      "location": "India",
+      "processorFamily": "AMD Ryzen\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "ryzen-9950x",
+          "name": "Ryzen 9 9950X",
+          "ddos": "up to 100 Gbps DDoS"
+        },
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X",
+          "ddos": "OVH VAC up to 17 Tbps"
+        }
+      ],
+      "vCores": 4,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "150 GB",
+      "storageType": "Gen4 NVMe SSD",
+      "memoryType": "DDR5 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "up to 100 Gbps / OVH VAC up to 17 Tbps",
+      "costPrice": 1837.88,
+      "expectedSellingPrice": 2299
+    },
+    {
+      "id": "in-ryzen-xl",
+      "name": "AMD Ryzen XL",
+      "category": "ryzen-premium",
+      "location": "India",
+      "processorFamily": "AMD Ryzen\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "ryzen-9950x",
+          "name": "Ryzen 9 9950X",
+          "ddos": "up to 100 Gbps DDoS"
+        },
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X",
+          "ddos": "OVH VAC up to 17 Tbps"
+        }
+      ],
+      "vCores": 5,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "180 GB",
+      "storageType": "Gen4 NVMe SSD",
+      "memoryType": "DDR5 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "up to 100 Gbps / OVH VAC up to 17 Tbps",
+      "costPrice": 2515,
+      "expectedSellingPrice": 3149,
+      "badge": "Recommended"
+    },
+    {
+      "id": "in-ryzen-xxl",
+      "name": "AMD Ryzen XXL",
+      "category": "ryzen-premium",
+      "location": "India",
+      "processorFamily": "AMD Ryzen\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "ryzen-9950x",
+          "name": "Ryzen 9 9950X",
+          "ddos": "up to 100 Gbps DDoS"
+        },
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X",
+          "ddos": "OVH VAC up to 17 Tbps"
+        }
+      ],
+      "vCores": 6,
+      "ram": "32 GB",
+      "ramGB": 32,
+      "storage": "200 GB",
+      "storageType": "Gen4 NVMe SSD",
+      "memoryType": "DDR5 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "up to 100 Gbps / OVH VAC up to 17 Tbps",
+      "costPrice": 3675.77,
+      "expectedSellingPrice": 4599
+    },
+    {
+      "id": "in-ryzen-3xl",
+      "name": "AMD Ryzen 3XL",
+      "category": "ryzen-premium",
+      "location": "India",
+      "processorFamily": "AMD Ryzen\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "ryzen-9950x",
+          "name": "Ryzen 9 9950X",
+          "ddos": "up to 100 Gbps DDoS"
+        },
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X",
+          "ddos": "OVH VAC up to 17 Tbps"
+        }
+      ],
+      "vCores": 8,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "250 GB",
+      "storageType": "Gen4 NVMe SSD",
+      "memoryType": "DDR5 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "up to 100 Gbps / OVH VAC up to 17 Tbps",
+      "costPrice": 4836.54,
+      "expectedSellingPrice": 5709
+    },
+    {
+      "id": "de-gold-xs",
+      "name": "Intel Gold XS",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 1,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "40 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 381.16,
+      "expectedSellingPrice": 479
+    },
+    {
+      "id": "de-gold-s",
+      "name": "Intel Gold S",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 2,
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 571.74,
+      "expectedSellingPrice": 719
+    },
+    {
+      "id": "de-gold-m",
+      "name": "Intel Gold M",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 4,
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 762.32,
+      "expectedSellingPrice": 959
+    },
+    {
+      "id": "de-gold-l",
+      "name": "Intel Gold L",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 4,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "150 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 952.9,
+      "expectedSellingPrice": 1199
+    },
+    {
+      "id": "de-gold-xl",
+      "name": "Intel Gold XL",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 6,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 1429.35,
+      "expectedSellingPrice": 1789,
+      "badge": "Recommended"
+    },
+    {
+      "id": "de-gold-xxl",
+      "name": "Intel Gold XXL",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 6,
+      "ram": "36 GB",
+      "ramGB": 36,
+      "storage": "250 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 1905.8,
+      "expectedSellingPrice": 2389
+    },
+    {
+      "id": "de-gold-2xl",
+      "name": "Intel Gold 2XL",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 8,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 2668.12,
+      "expectedSellingPrice": 3149
+    },
+    {
+      "id": "de-gold-3xl",
+      "name": "Intel Gold 3XL",
+      "category": "xeon-gold",
+      "location": "Germany",
+      "processorFamily": "Intel\u00ae Xeon\u00ae Gold",
+      "cpuModels": [
+        {
+          "id": "gold-6150",
+          "name": "Xeon Gold 6150"
+        }
+      ],
+      "vCores": 8,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "350 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Fortified",
+      "costPrice": 3621.02,
+      "expectedSellingPrice": 4169
+    },
+    {
+      "id": "de-ryzen-xs",
+      "name": "Ryzen XS",
+      "category": "ryzen-5900x",
+      "location": "Germany",
+      "processorFamily": "AMD Ryzen\u2122 9 5900X",
+      "cpuModels": [
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X (17+ Tbit/s OVH VAC)"
+        }
+      ],
+      "vCores": 2,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "50 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "17+ Tbit/s OVH VAC",
+      "costPrice": 762.32,
+      "expectedSellingPrice": 959
+    },
+    {
+      "id": "de-ryzen-s",
+      "name": "Ryzen S",
+      "category": "ryzen-5900x",
+      "location": "Germany",
+      "processorFamily": "AMD Ryzen\u2122 9 5900X",
+      "cpuModels": [
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X (17+ Tbit/s OVH VAC)"
+        }
+      ],
+      "vCores": 2,
+      "ram": "8 GB",
+      "ramGB": 8,
+      "storage": "50 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "17+ Tbit/s OVH VAC",
+      "costPrice": 952.9,
+      "expectedSellingPrice": 1199
+    },
+    {
+      "id": "de-ryzen-m",
+      "name": "Ryzen M",
+      "category": "ryzen-5900x",
+      "location": "Germany",
+      "processorFamily": "AMD Ryzen\u2122 9 5900X",
+      "cpuModels": [
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X (17+ Tbit/s OVH VAC)"
+        }
+      ],
+      "vCores": 3,
+      "ram": "12 GB",
+      "ramGB": 12,
+      "storage": "75 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "17+ Tbit/s OVH VAC",
+      "costPrice": 1429.35,
+      "expectedSellingPrice": 1789
+    },
+    {
+      "id": "de-ryzen-l",
+      "name": "Ryzen L",
+      "category": "ryzen-5900x",
+      "location": "Germany",
+      "processorFamily": "AMD Ryzen\u2122 9 5900X",
+      "cpuModels": [
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X (17+ Tbit/s OVH VAC)"
+        }
+      ],
+      "vCores": 4,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "120 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "17+ Tbit/s OVH VAC",
+      "costPrice": 1905.8,
+      "expectedSellingPrice": 2389,
+      "badge": "Recommended"
+    },
+    {
+      "id": "de-ryzen-xl",
+      "name": "Ryzen XL",
+      "category": "ryzen-5900x",
+      "location": "Germany",
+      "processorFamily": "AMD Ryzen\u2122 9 5900X",
+      "cpuModels": [
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X (17+ Tbit/s OVH VAC)"
+        }
+      ],
+      "vCores": 6,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "160 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "17+ Tbit/s OVH VAC",
+      "costPrice": 2572.83,
+      "expectedSellingPrice": 3219
+    },
+    {
+      "id": "de-ryzen-xxl",
+      "name": "Ryzen XXL",
+      "category": "ryzen-5900x",
+      "location": "Germany",
+      "processorFamily": "AMD Ryzen\u2122 9 5900X",
+      "cpuModels": [
+        {
+          "id": "ryzen-5900x",
+          "name": "Ryzen 9 5900X (17+ Tbit/s OVH VAC)"
+        }
+      ],
+      "vCores": 6,
+      "ram": "32 GB",
+      "ramGB": 32,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "17+ Tbit/s OVH VAC",
+      "costPrice": 3049.28,
+      "expectedSellingPrice": 3819
+    },
+    {
+      "id": "de-milan-s",
+      "name": "EPYC Milan S",
+      "category": "epyc-milan",
+      "location": "Germany",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 4,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 667.03,
+      "expectedSellingPrice": 839
+    },
+    {
+      "id": "de-milan-m",
+      "name": "EPYC Milan M",
+      "category": "epyc-milan",
+      "location": "Germany",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 6,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1238.77,
+      "expectedSellingPrice": 1549
+    },
+    {
+      "id": "de-milan-l",
+      "name": "EPYC Milan L",
+      "category": "epyc-milan",
+      "location": "Germany",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 8,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1905.8,
+      "expectedSellingPrice": 2389,
+      "badge": "Recommended"
+    },
+    {
+      "id": "de-milan-xl",
+      "name": "EPYC Milan XL",
+      "category": "epyc-milan",
+      "location": "Germany",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 12,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "400 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 3335.15,
+      "expectedSellingPrice": 3939
+    },
+    {
+      "id": "de-milan-xxl",
+      "name": "EPYC Milan XXL",
+      "category": "epyc-milan",
+      "location": "Germany",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 16,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "500 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 4097.47,
+      "expectedSellingPrice": 4719
+    },
+    {
+      "id": "sg-epyc-s",
+      "name": "EPYC Standard S",
+      "category": "epyc-milan",
+      "location": "Singapore",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 4,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 952.9,
+      "expectedSellingPrice": 1199
+    },
+    {
+      "id": "sg-epyc-m",
+      "name": "EPYC Standard M",
+      "category": "epyc-milan",
+      "location": "Singapore",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 6,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1715.22,
+      "expectedSellingPrice": 2149
+    },
+    {
+      "id": "sg-epyc-l",
+      "name": "EPYC Standard L",
+      "category": "epyc-milan",
+      "location": "Singapore",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 8,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 2858.7,
+      "expectedSellingPrice": 3579,
+      "badge": "Recommended"
+    },
+    {
+      "id": "sg-epyc-xl",
+      "name": "EPYC Standard XL",
+      "category": "epyc-milan",
+      "location": "Singapore",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 12,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "400 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 4764.5,
+      "expectedSellingPrice": 5629
+    },
+    {
+      "id": "sg-epyc-xxl",
+      "name": "EPYC Standard XXL",
+      "category": "epyc-milan",
+      "location": "Singapore",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 16,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "500 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 7146.75,
+      "expectedSellingPrice": 8219
+    },
+    {
+      "id": "us-epyc-s",
+      "name": "AMD EPYC S",
+      "category": "epyc-milan",
+      "location": "USA",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 4,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 857.61,
+      "expectedSellingPrice": 1079
+    },
+    {
+      "id": "us-epyc-m",
+      "name": "AMD EPYC M",
+      "category": "epyc-milan",
+      "location": "USA",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 6,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1429.35,
+      "expectedSellingPrice": 1789
+    },
+    {
+      "id": "us-epyc-l",
+      "name": "AMD EPYC L",
+      "category": "epyc-milan",
+      "location": "USA",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 8,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 2286.96,
+      "expectedSellingPrice": 2859,
+      "badge": "Recommended"
+    },
+    {
+      "id": "us-epyc-xl",
+      "name": "AMD EPYC XL",
+      "category": "epyc-milan",
+      "location": "USA",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 12,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "400 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 3811.6,
+      "expectedSellingPrice": 4499
+    },
+    {
+      "id": "us-epyc-xxl",
+      "name": "AMD EPYC XXL",
+      "category": "epyc-milan",
+      "location": "USA",
+      "processorFamily": "AMD EPYC\u2122 Milan",
+      "cpuModels": [
+        {
+          "id": "epyc-milan",
+          "name": "AMD EPYC\u2122 Milan"
+        }
+      ],
+      "vCores": 16,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "500 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 5717.4,
+      "expectedSellingPrice": 6579
+    },
+    {
+      "id": "ca-epyc-s",
+      "name": "AMD EPYC S",
+      "category": "epyc-premium",
+      "location": "Canada",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-premium",
+          "name": "AMD EPYC\u2122 Premium"
+        }
+      ],
+      "vCores": 4,
+      "ram": "6 GB",
+      "ramGB": 6,
+      "storage": "100 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 773.76,
+      "expectedSellingPrice": 969
+    },
+    {
+      "id": "ca-epyc-m",
+      "name": "AMD EPYC M",
+      "category": "epyc-premium",
+      "location": "Canada",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-premium",
+          "name": "AMD EPYC\u2122 Premium"
+        }
+      ],
+      "vCores": 6,
+      "ram": "16 GB",
+      "ramGB": 16,
+      "storage": "200 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 1451.6,
+      "expectedSellingPrice": 1819
+    },
+    {
+      "id": "ca-epyc-l",
+      "name": "AMD EPYC L",
+      "category": "epyc-premium",
+      "location": "Canada",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-premium",
+          "name": "AMD EPYC\u2122 Premium"
+        }
+      ],
+      "vCores": 8,
+      "ram": "24 GB",
+      "ramGB": 24,
+      "storage": "300 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 2127.83,
+      "expectedSellingPrice": 2659,
+      "badge": "Recommended"
+    },
+    {
+      "id": "ca-epyc-xl",
+      "name": "AMD EPYC XL",
+      "category": "epyc-premium",
+      "location": "Canada",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-premium",
+          "name": "AMD EPYC\u2122 Premium"
+        }
+      ],
+      "vCores": 12,
+      "ram": "48 GB",
+      "ramGB": 48,
+      "storage": "400 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 3481.9,
+      "expectedSellingPrice": 4109
+    },
+    {
+      "id": "ca-epyc-xxl",
+      "name": "AMD EPYC XXL",
+      "category": "epyc-premium",
+      "location": "Canada",
+      "processorFamily": "AMD EPYC\u2122 Premium",
+      "cpuModels": [
+        {
+          "id": "epyc-premium",
+          "name": "AMD EPYC\u2122 Premium"
+        }
+      ],
+      "vCores": 16,
+      "ram": "64 GB",
+      "ramGB": 64,
+      "storage": "500 GB",
+      "storageType": "Enterprise NVMe SSD",
+      "memoryType": "DDR4 ECC",
+      "bandwidth": "10 Gbps Port",
+      "protection": "DDoS Always-On",
+      "costPrice": 4835.97,
+      "expectedSellingPrice": 6049
+    }
+  ],
+  "mcBudget": [
+    {
+      "id": "mc-sprout",
+      "name": "Sprout",
+      "price": 99,
+      "ram": "2 GB",
+      "cpu": "100% vCPU",
+      "nvme": "10 GB NVMe",
+      "backups": 1
+    },
+    {
+      "id": "mc-acorn",
+      "name": "Acorn",
+      "price": 149,
+      "ram": "3 GB",
+      "cpu": "100% vCPU",
+      "nvme": "15 GB NVMe",
+      "backups": 1
+    },
+    {
+      "id": "mc-sapling",
+      "name": "Sapling",
+      "price": 249,
+      "ram": "4 GB",
+      "cpu": "150% vCPU",
+      "nvme": "20 GB NVMe",
+      "backups": 1
+    },
+    {
+      "id": "mc-shrub",
+      "name": "Shrub",
+      "price": 299,
+      "ram": "5 GB",
+      "cpu": "150% vCPU",
+      "nvme": "25 GB NVMe",
+      "backups": 2
+    },
+    {
+      "id": "mc-birch",
+      "name": "Birch",
+      "price": 349,
+      "ram": "6 GB",
+      "cpu": "200% vCPU",
+      "nvme": "30 GB NVMe",
+      "backups": 2
+    },
+    {
+      "id": "mc-grove",
+      "name": "Grove",
+      "price": 449,
+      "ram": "8 GB",
+      "cpu": "250% vCPU",
+      "nvme": "40 GB NVMe",
+      "backups": 2,
+      "popular": true
+    },
+    {
+      "id": "mc-forest",
+      "name": "Forest",
+      "price": 649,
+      "ram": "12 GB",
+      "cpu": "350% vCPU",
+      "nvme": "60 GB NVMe",
+      "backups": 3
+    },
+    {
+      "id": "mc-canopy",
+      "name": "Canopy",
+      "price": 849,
+      "ram": "16 GB",
+      "cpu": "400% vCPU",
+      "nvme": "75 GB NVMe",
+      "backups": 4
+    },
+    {
+      "id": "mc-redwood",
+      "name": "Redwood",
+      "price": 1249,
+      "ram": "24 GB",
+      "cpu": "600% vCPU",
+      "nvme": "115 GB NVMe",
+      "backups": 5
+    },
+    {
+      "id": "mc-titan-oak",
+      "name": "Titan Oak",
+      "price": 1649,
+      "ram": "32 GB",
+      "cpu": "800% vCPU",
+      "nvme": "140 GB NVMe",
+      "backups": 6
+    }
+  ],
+  "mcPerf": [
+    {
+      "id": "mc-ember",
+      "name": "Ember",
+      "price": 139,
+      "ram": "2 GB DDR5",
+      "cpu": "100% vCPU",
+      "nvme": "15 GB NVMe",
+      "backups": 2
+    },
+    {
+      "id": "mc-flare",
+      "name": "Flare",
+      "price": 199,
+      "ram": "3 GB DDR5",
+      "cpu": "100% vCPU",
+      "nvme": "20 GB NVMe",
+      "backups": 2
+    },
+    {
+      "id": "mc-spark",
+      "name": "Spark",
+      "price": 299,
+      "ram": "4 GB DDR5",
+      "cpu": "150% vCPU",
+      "nvme": "25 GB NVMe",
+      "backups": 2
+    },
+    {
+      "id": "mc-pulse",
+      "name": "Pulse",
+      "price": 429,
+      "ram": "6 GB DDR5",
+      "cpu": "200% vCPU",
+      "nvme": "35 GB NVMe",
+      "backups": 3
+    },
+    {
+      "id": "mc-surge",
+      "name": "Surge",
+      "price": 579,
+      "ram": "8 GB DDR5",
+      "cpu": "250% vCPU",
+      "nvme": "45 GB NVMe",
+      "backups": 3,
+      "popular": true
+    },
+    {
+      "id": "mc-storm",
+      "name": "Storm",
+      "price": 869,
+      "ram": "12 GB DDR5",
+      "cpu": "350% vCPU",
+      "nvme": "65 GB NVMe",
+      "backups": 4
+    },
+    {
+      "id": "mc-blaze",
+      "name": "Blaze",
+      "price": 1149,
+      "ram": "16 GB DDR5",
+      "cpu": "400% vCPU",
+      "nvme": "85 GB NVMe",
+      "backups": 5
+    },
+    {
+      "id": "mc-supernova",
+      "name": "Supernova",
+      "price": 1699,
+      "ram": "24 GB DDR5",
+      "cpu": "600% vCPU",
+      "nvme": "125 GB NVMe",
+      "backups": 6
+    },
+    {
+      "id": "mc-titan",
+      "name": "Titan",
+      "price": 2299,
+      "ram": "32 GB DDR5",
+      "cpu": "800% vCPU",
+      "nvme": "160 GB NVMe",
+      "backups": 8
+    }
+  ],
+  "rdpPlans": [
+    {
+      "id": "rdp-xs",
+      "name": "India - RDP XS",
+      "price": 685,
+      "vCores": 4,
+      "ram": "8 GB DDR4 ECC",
+      "storage": "60 GB NVMe",
+      "bandwidth": "Unmetered 1 Gbps",
+      "location": "India (Noida)"
+    },
+    {
+      "id": "rdp-s",
+      "name": "India - RDP S",
+      "price": 959,
+      "vCores": 6,
+      "ram": "12 GB DDR4 ECC",
+      "storage": "100 GB NVMe",
+      "bandwidth": "Unmetered 1 Gbps",
+      "location": "India (Noida)"
+    },
+    {
+      "id": "rdp-m",
+      "name": "India - RDP M",
+      "price": 1370,
+      "vCores": 8,
+      "ram": "16 GB DDR4 ECC",
+      "storage": "150 GB NVMe",
+      "bandwidth": "Unmetered 1 Gbps",
+      "location": "India (Noida)"
+    },
+    {
+      "id": "rdp-l",
+      "name": "India - RDP L",
+      "price": 1918,
+      "vCores": 10,
+      "ram": "24 GB DDR4 ECC",
+      "storage": "220 GB NVMe",
+      "bandwidth": "Unmetered 1 Gbps",
+      "location": "India (Noida)"
+    },
+    {
+      "id": "rdp-xl",
+      "name": "India - RDP XL",
+      "price": 2467,
+      "vCores": 12,
+      "ram": "32 GB DDR4 ECC",
+      "storage": "300 GB NVMe",
+      "bandwidth": "Unmetered 1 Gbps",
+      "location": "India (Noida)"
+    },
+    {
+      "id": "rdp-xxl",
+      "name": "India - RDP XXL",
+      "price": 3014,
+      "vCores": 16,
+      "ram": "48 GB DDR4 ECC",
+      "storage": "400 GB NVMe",
+      "bandwidth": "Unmetered 1 Gbps",
+      "location": "India (Noida)"
+    }
+  ],
+  "botPlans": [
+    {
+      "id": "bot-1",
+      "name": "BOT 1",
+      "price": 49,
+      "cpu": "50% vCPU",
+      "ram": "1 GB RAM",
+      "storage": "5 GB NVMe",
+      "runtime": "Node.js / Python / Go"
+    },
+    {
+      "id": "bot-2",
+      "name": "BOT 2",
+      "price": 79,
+      "cpu": "100% vCPU",
+      "ram": "2 GB RAM",
+      "storage": "15 GB NVMe",
+      "runtime": "Node.js / Python / Java / Lavalink",
+      "popular": true
+    },
+    {
+      "id": "bot-3",
+      "name": "BOT 3",
+      "price": 149,
+      "cpu": "200% vCPU",
+      "ram": "4 GB RAM",
+      "storage": "30 GB NVMe",
+      "runtime": "Multi-Shard / Lavalink"
+    }
+  ],
+  "webPlans": [
+    {
+      "id": "web-starter",
+      "name": "Starter Web",
+      "price": 59,
+      "storage": "10 GB NVMe",
+      "domains": "1 Website",
+      "ssl": "Free AutoSSL",
+      "panel": "cPanel + Softaculous"
+    },
+    {
+      "id": "web-pro",
+      "name": "Pro Web",
+      "price": 119,
+      "storage": "35 GB NVMe",
+      "domains": "Unlimited Websites",
+      "ssl": "Free AutoSSL",
+      "panel": "cPanel + Softaculous",
+      "popular": true
+    }
+  ],
+  "vdsPlans": [
+    {
+      "id": "vds-l",
+      "name": "Intel Xeon VDS \u2014 L",
+      "price": 1699,
+      "vCores": "4 Dedicated Cores",
+      "ram": "16 GB DDR4 ECC",
+      "storage": "120 GB NVMe",
+      "location": "India (Noida / Delhi)"
+    },
+    {
+      "id": "vds-xl",
+      "name": "Intel Xeon VDS \u2014 XL",
+      "price": 2799,
+      "vCores": "6 Dedicated Cores",
+      "ram": "32 GB DDR4 ECC",
+      "storage": "240 GB NVMe",
+      "location": "India (Noida / Delhi)",
+      "popular": true
+    },
+    {
+      "id": "vds-2xl",
+      "name": "Intel Xeon VDS \u2014 2XL",
+      "price": 4499,
+      "vCores": "8 Dedicated Cores",
+      "ram": "64 GB DDR4 ECC",
+      "storage": "400 GB NVMe",
+      "location": "India (Noida / Delhi)"
+    }
+  ]
+}
