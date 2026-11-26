@@ -8,6 +8,7 @@ import catalog from "../src/data/catalog.json";
 import { ComparisonMatrix, CtaBanner, FaqSection, InfrastructureGrid, OsAndPanelShowcase } from "../src/components/ServiceDetails";
 import { ServicePreview } from "../src/components/ServicePreview";
 import Reveal from "../src/components/Reveal";
+import LocationsMapSection from "../src/components/LocationsMapSection";
 
 const HOME_FAQ = [
   { q: "Where are TreeMC servers located?", a: "We operate Cloud VPS in India, Germany, Singapore, USA, and Canada; Minecraft & Game servers in India (Noida / Delhi) and Dubai (UAE); and Windows RDP / VDS in India." },
@@ -134,30 +135,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Global Regions */}
-      <section className="border-t border-[var(--border)] bg-[var(--surface)] py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="mb-10 text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Global Network</span>
-            <h2 className="mt-1 text-3xl font-extrabold sm:text-4xl">
-              6 Locations <span className="serif-it font-normal">worldwide</span>
-            </h2>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {REGIONS.map((r) => (
-              <div key={r.name} className="card-clean flex items-center gap-4 rounded-2xl p-4">
-                <img src={r.flag} alt={r.name} className="h-7 w-10 rounded-md object-cover shrink-0" />
-                <div>
-                  <h3 className="text-base font-bold">{r.name}</h3>
-                  <p className="text-xs text-[var(--muted)]">{r.sub}</p>
-                  <p className="mt-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400">{r.services}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LocationsMapSection />
 
       <InfrastructureGrid />
       <OsAndPanelShowcase />
