@@ -27,7 +27,7 @@ export default function MinecraftPage() {
           Java &amp; Bedrock · Instant Pterodactyl Panel
         </span>
         <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-5xl">
-          Minecraft hosting <span className="serif-it font-normal">worldwide</span>
+          <span className="font-pixel tracking-normal">Minecraft</span> hosting <span className="serif-it font-normal">worldwide</span>
         </h1>
         <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
           Low-latency Java &amp; Bedrock servers in India and Dubai on Intel® Xeon® and AMD EPYC™ processors with NVMe SSDs and DDoS protection.

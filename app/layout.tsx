@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter, Instrument_Serif, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import { CurrencyProvider } from "../src/context/CurrencyContext";
 import Navbar from "../src/components/Navbar";
@@ -8,6 +8,7 @@ import AnimationController from "../src/components/AnimationController";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif" });
+const pixel = Pixelify_Sans({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-pixel" });
 
 export const metadata: Metadata = {
   title: "TreeMC — Global Cloud VPS, Minecraft & Server Hosting",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="en" className={`${sans.variable} ${serif.variable} ${pixel.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <CurrencyProvider>
           <AnimationController />

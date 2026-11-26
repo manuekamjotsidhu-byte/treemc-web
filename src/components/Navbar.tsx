@@ -3,23 +3,31 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bot, ChevronDown, Cloud, Cpu, Gamepad2, Globe, Menu, Monitor, Moon, Sun, X } from "lucide-react";
+import { Bot, ChevronDown, Cloud, Cpu, FileText, Gamepad2, Globe, Menu, Monitor, Moon, Shield, Sun, X } from "lucide-react";
 import { CurrencyCode, useCurrency } from "../context/CurrencyContext";
 
 const SERVICE_ITEMS = [
-  { href: "/vps", label: "Cloud VPS", desc: "Root KVM across 5 countries", icon: Cloud },
-  { href: "/minecraft-hosting", label: "Minecraft Hosting", desc: "Java & Bedrock · India & Dubai", icon: Gamepad2 },
-  { href: "/rdp-hosting", label: "Windows RDP", desc: "Full Admin Remote Desktop", icon: Monitor },
-  { href: "/bot-hosting", label: "Bot Hosting", desc: "24/7 Node, Python & Lavalink", icon: Bot },
-  { href: "/webhosting", label: "Web Hosting", desc: "NVMe cPanel + AutoSSL", icon: Globe },
-  { href: "/vds-hosting", label: "India VDS", desc: "100% Dedicated CPU Slices", icon: Cpu },
+  { href: "/minecraft-hosting", label: "Minecraft Hosting", desc: "Java & Bedrock servers in India & Dubai.", icon: Gamepad2 },
+  { href: "/vps", label: "VPS Hosting", desc: "Intel Xeon, AMD EPYC & Ryzen across 5 countries.", icon: Cloud },
+  { href: "/rdp-hosting", label: "Windows VPS (RDP)", desc: "Windows Remote Desktop with administrator access.", icon: Monitor },
+  { href: "/bot-hosting", label: "Bot Hosting", desc: "24/7 Discord bot runtimes & Lavalink.", icon: Bot },
+  { href: "/webhosting", label: "Web Hosting", desc: "Fast NVMe cPanel hosting with AutoSSL.", icon: Globe },
+  { href: "/vds-hosting", label: "VDS Hosting", desc: "Dedicated CPU cores in Noida & Delhi.", icon: Cpu },
+];
+
+const POLICY_ITEMS = [
+  { href: "/terms", label: "Terms of Service", desc: "Service agreement & billing rules" },
+  { href: "/privacy", label: "Privacy Policy", desc: "How we handle & secure your data" },
+  { href: "/refund-policy", label: "Refund Policy", desc: "Eligibility & refund conditions" },
+  { href: "/sla", label: "Uptime SLA", desc: "99.9% uptime target & credits" },
+  { href: "/aup", label: "Acceptable Use", desc: "Permitted workloads & rules" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const { currency, setCurrency, currencies, symbols } = useCurrency();
   const [open, setOpen] = useState(false);
-  const [ddOpen, setDdOpen] = useState(false);
+  const [activeDd, setActiveDd] = useState<"services" | "policies" | null>(null);
   const [dark, setDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,9 +49,10 @@ export default function Navbar() {
   };
 
   const navLinkCls = (href: string) =>
-    `rounded-full px-3.5 py-1.5 text-sm font-medium transition ${pathname === href
-      ? "bg-slate-900/5 text-[var(--ink)] font-semibold dark:bg-white/10"
-      : "text-[var(--muted)] hover:text-[var(--ink)]"
+    `rounded-full px-3 py-1.5 text-sm font-medium transition ${
+      pathname === href || (href !== "/" && pathname.startsWith(href))
+        ? "bg-slate-900/10 text-[var(--ink)] font-semibold dark:bg-white/15"
+        : "text-[var(--muted)] hover:text-[var(--ink)]"
     }`;
 
   return (
@@ -56,40 +65,40 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           <Link href="/" className={navLinkCls("/")}>Home</Link>
 
           <div
             className="relative"
-            onMouseEnter={() => setDdOpen(true)}
-            onMouseLeave={() => setDdOpen(false)}
+            onMouseEnter={() => setActiveDd("services")}
+            onMouseLeave={() => setActiveDd(null)}
           >
             <button
               type="button"
-              onClick={() => setDdOpen((v) => !v)}
-              className="inline-flex items-center gap-1 rounded-full px-3.5 py-1.5 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--ink)]"
+              onClick={() => setActiveDd((v) => (v === "services" ? null : "services"))}
+              className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--ink)]"
             >
-              Services <ChevronDown className="h-3.5 w-3.5" />
+              Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDd === "services" ? "rotate-180" : ""}`} />
             </button>
 
-            {ddOpen && (
-              <div className="absolute left-0 top-full pt-2 w-[440px] animate-[fadeDown_0.16s_ease-out]">
-                <div className="card-clean grid grid-cols-2 gap-1 rounded-2xl p-2 shadow-xl">
+            {activeDd === "services" && (
+              <div className="absolute left-0 top-full pt-2.5 w-[540px] animate-[fadeDown_0.16s_ease-out]">
+                <div className="card-clean grid grid-cols-2 gap-1.5 rounded-3xl p-3 shadow-2xl">
                   {SERVICE_ITEMS.map((item) => {
                     const Icon = item.icon;
                     return (
                       <Link
                         key={item.href}
                         href={item.href}
-                        onClick={() => setDdOpen(false)}
-                        className="flex items-start gap-2.5 rounded-xl px-3 py-2.5 transition hover:bg-slate-500/10"
+                        onClick={() => setActiveDd(null)}
+                        className="group flex items-start gap-3 rounded-2xl p-3 transition hover:bg-slate-900/5 dark:hover:bg-white/5"
                       >
-                        <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 dark:bg-white/10">
+                        <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-900/5 text-blue-600 transition group-hover:bg-[var(--lime)] group-hover:text-[var(--lime-ink)] dark:bg-white/10 dark:text-blue-400">
                           <Icon className="h-4 w-4" />
                         </div>
                         <div>
                           <div className="text-xs font-bold text-[var(--ink)]">{item.label}</div>
-                          <div className="text-[11px] leading-snug text-[var(--muted)]">{item.desc}</div>
+                          <div className="mt-0.5 text-[11px] leading-snug text-[var(--muted)]">{item.desc}</div>
                         </div>
                       </Link>
                     );
@@ -104,6 +113,43 @@ export default function Navbar() {
           <Link href="/pricing" className={navLinkCls("/pricing")}>Pricing</Link>
           <Link href="/blog" className={navLinkCls("/blog")}>Blog</Link>
           <Link href="/guides" className={navLinkCls("/guides")}>Guides</Link>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDd("policies")}
+            onMouseLeave={() => setActiveDd(null)}
+          >
+            <button
+              type="button"
+              onClick={() => setActiveDd((v) => (v === "policies" ? null : "policies"))}
+              className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--ink)]"
+            >
+              Policies <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDd === "policies" ? "rotate-180" : ""}`} />
+            </button>
+
+            {activeDd === "policies" && (
+              <div className="absolute right-0 top-full pt-2.5 w-72 animate-[fadeDown_0.16s_ease-out]">
+                <div className="card-clean space-y-1 rounded-3xl p-2.5 shadow-2xl">
+                  {POLICY_ITEMS.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setActiveDd(null)}
+                      className="group flex items-start gap-3 rounded-2xl p-2.5 transition hover:bg-slate-900/5 dark:hover:bg-white/5"
+                    >
+                      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-slate-900/5 text-blue-600 transition group-hover:bg-[var(--lime)] group-hover:text-[var(--lime-ink)] dark:bg-white/10 dark:text-blue-400">
+                        <Shield className="h-3.5 w-3.5" />
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-[var(--ink)]">{item.label}</div>
+                        <div className="text-[11px] text-[var(--muted)]">{item.desc}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -152,7 +198,7 @@ export default function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex md:hidden h-8 w-8 items-center justify-center rounded-full border border-[var(--border)]"
+            className="inline-flex lg:hidden h-8 w-8 items-center justify-center rounded-full border border-[var(--border)]"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
@@ -160,29 +206,23 @@ export default function Navbar() {
       </header>
 
       {open && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-xl md:hidden">
+        <div className="mx-auto mt-2 max-w-6xl rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-xl lg:hidden animate-[fadeDown_0.16s_ease-out]">
           <div className="grid grid-cols-2 gap-2">
             {SERVICE_ITEMS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl bg-[var(--bg)] px-3 py-2 text-sm font-medium"
-              >
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">
                 {l.label}
               </Link>
             ))}
-            <Link href="/pricing" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-sm font-medium">
-              All Pricing
+            <Link href="/pricing" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">All Pricing</Link>
+            <Link href="/blog" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">Blog</Link>
+            <Link href="/guides" onClick={() => setOpen(false)} className="rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">Guides</Link>
+            <Link href="/terms" onClick={() => setOpen(false)} className="inline-flex items-center gap-1 rounded-xl bg-[var(--bg)] px-3 py-2 text-xs font-semibold">
+              <FileText className="h-3 w-3" /> Policies
             </Link>
           </div>
           <div className="mt-3 flex gap-2">
-            <a href="https://panel.treemchost.pro" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-full border border-[var(--border)] py-2 text-center text-xs font-semibold">
-              Log in
-            </a>
-            <a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener noreferrer" className="btn-lime flex-1 rounded-full py-2 text-center text-xs font-bold">
-              Join Discord
-            </a>
+            <a href="https://panel.treemchost.pro" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-full border border-[var(--border)] py-2 text-center text-xs font-semibold">Log in</a>
+            <a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener noreferrer" className="btn-lime flex-1 rounded-full py-2 text-center text-xs font-bold">Join Discord</a>
           </div>
         </div>
       )}

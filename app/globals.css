@@ -39,6 +39,10 @@ body {
   font-weight: 400;
 }
 
+.font-pixel {
+  font-family: var(--font-pixel), monospace;
+}
+
 .card-clean {
   background: var(--card);
   border: 1px solid var(--border);
