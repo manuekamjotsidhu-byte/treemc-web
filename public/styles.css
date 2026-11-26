@@ -1722,4 +1722,4 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 .loc-dd-wrap { margin-bottom: 24px !important; position: relative; z-index: 2; }
 #vps-all-countries { margin-top: 8px; clear: both; }
-#vps-all-countries .toggle-wrap { margin-top: 0 !important; }
+[data-vps-country] .toggle-wrap { margin-top: 0 !important; }
