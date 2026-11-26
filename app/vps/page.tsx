@@ -9,7 +9,7 @@ export const metadata = {
 
 const VPS_FAQ = [
   { q: "What virtualization does TreeMC Cloud VPS use?", a: "All Cloud VPS plans run on true KVM hardware virtualization with dedicated RAM, isolated kernel access, and full root SSH + VNC console." },
-  { q: "Which CPU models are available?", a: "Depending on region, we offer Intel Xeon Standard (E5/Platinum), Intel Xeon Gold, AMD EPYC Milan, and high-frequency AMD Ryzen 9 (5900X / 7950X up to 5.7 GHz)." },
+  { q: "Which CPU models are available?", a: "Depending on region, we offer Intel Xeon Standard (E5/Platinum), Intel Xeon Gold, AMD EPYC Milan, and high-frequency AMD Ryzen 9 (5900X / 9950X)." },
   { q: "Which operating systems can I install?", a: "Ubuntu 24.04/22.04 LTS, Debian 12, AlmaLinux 9, Rocky Linux 9, and custom ISO images upon request." },
   { q: "Is DDoS protection included on all 5 countries?", a: "Yes. Always-on L4/L7 DDoS mitigation is included on India, Germany, Singapore, USA, and Canada VPS nodes." },
 ];

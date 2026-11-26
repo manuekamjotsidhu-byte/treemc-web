@@ -18,7 +18,7 @@ export const ARTICLES: Article[] = [
     readTime: "4 min read",
     sections: [
       { heading: "Pick the region closest to your users", body: "For Indian and South Asian audiences, Noida/Delhi and Singapore deliver sub-35ms latency. For European users, Frankfurt (Germany) offers direct Tier-1 peering, while USA and Canada cover North America." },
-      { heading: "Match CPU architecture to your workload", body: "Intel Xeon Standard & Gold excel at steady multi-service workloads and web backends. AMD EPYC Milan gives strong multi-core density for Docker and databases, while AMD Ryzen 9 5900X/7950X delivers peak single-thread clock speeds." },
+      { heading: "Match CPU architecture to your workload", body: "Intel Xeon Standard & Gold excel at steady multi-service workloads and web backends. AMD EPYC Milan gives strong multi-core density for Docker and databases, while AMD Ryzen 9 5900X/9950X delivers peak single-thread clock speeds." },
     ],
   },
   {

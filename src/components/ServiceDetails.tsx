@@ -21,7 +21,7 @@ const GRID_DATA: Record<ServiceVariant, { icon: any; title: string; desc: string
     { icon: Zap, title: "99.9% Uptime Architecture", desc: "Redundant power feeds, dual-port NICs, and proactive monitoring keep workloads online 24/7." },
   ],
   vps: [
-    { icon: Cpu, title: "Xeon, EPYC & Ryzen 9", desc: "Choose Intel Xeon Standard/Gold, AMD EPYC Milan, or Ryzen 9 5900X/7950X depending on your region." },
+    { icon: Cpu, title: "Xeon, EPYC & Ryzen 9", desc: "Choose Intel Xeon Standard/Gold, AMD EPYC Milan, or Ryzen 9 5900X/9950X depending on your region." },
     { icon: HardDrive, title: "Pure Gen4 NVMe SSD", desc: "High-IOPS enterprise NVMe storage built for Docker containers, databases, and CI/CD runners." },
     { icon: Network, title: "10 Gbps Ports", desc: "Fast network ports across India, Germany, Singapore, USA, and Canada with IPv4 included." },
     { icon: ShieldCheck, title: "Always-On DDoS Mitigation", desc: "Automatic L4/L7 traffic scrubbing keeps APIs, proxies, and backend nodes reachable." },
