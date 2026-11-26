@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Bot, Cloud, Cpu, Gamepad2, Globe, Monitor, ShieldCheck, Zap } from "lucide-react";
+import { ArrowUpRight, Bot, Check, Cloud, Cpu, Gamepad2, Globe, Monitor } from "lucide-react";
 import { useCurrency } from "../src/context/CurrencyContext";
 import catalog from "../src/data/catalog.json";
 
@@ -19,178 +19,127 @@ export default function HomePage() {
   const { formatPrice } = useCurrency();
 
   const SERVICES = [
-    {
-      title: "Cloud VPS",
-      desc: "Root KVM VPS on Intel Xeon, AMD EPYC, and Ryzen 9 across 5 global countries.",
-      price: 359,
-      href: "/vps",
-      icon: Cloud,
-      badge: "5 Countries",
-    },
-    {
-      title: "Minecraft Hosting",
-      desc: "Java & Bedrock servers with Sprout (DDR4) and Ember (DDR5) tiers in India & Dubai.",
-      price: 99,
-      href: "/minecraft-hosting",
-      icon: Gamepad2,
-      badge: "Java & Bedrock",
-    },
-    {
-      title: "Windows RDP",
-      desc: "Full Windows Server remote desktop in India with NVMe storage & 1 Gbps uplink.",
-      price: 685,
-      href: "/rdp-hosting",
-      icon: Monitor,
-      badge: "Windows",
-    },
-    {
-      title: "Discord Bot Hosting",
-      desc: "24/7 always-on Node.js, Python, Java, Go & Lavalink bot runtimes.",
-      price: 49,
-      href: "/bot-hosting",
-      icon: Bot,
-      badge: "24/7 Uptime",
-    },
-    {
-      title: "Web Hosting",
-      desc: "Fast NVMe cPanel hosting with free AutoSSL and Softaculous installer.",
-      price: 59,
-      href: "/webhosting",
-      icon: Globe,
-      badge: "cPanel",
-    },
-    {
-      title: "India VDS",
-      desc: "Dedicated CPU slices with DDR4 ECC memory in Noida & Delhi.",
-      price: 1699,
-      href: "/vds-hosting",
-      icon: Cpu,
-      badge: "Dedicated Cores",
-    },
+    { title: "Minecraft Hosting", desc: "Java & Bedrock servers in India & Dubai from Sprout (2 GB) to Titan.", price: 99, href: "/minecraft-hosting", icon: Gamepad2, tag: "Minecraft" },
+    { title: "Cloud VPS", desc: "Root KVM VPS across India, Germany, Singapore, USA, and Canada.", price: 359, href: "/vps", icon: Cloud, tag: "Cloud VPS" },
+    { title: "Windows RDP", desc: "Enterprise Windows Server remote desktop in India with NVMe SSD.", price: 685, href: "/rdp-hosting", icon: Monitor, tag: "Windows RDP" },
+    { title: "Bot Hosting", desc: "Always-on 24/7 runtimes for Node.js, Python, Java & Lavalink.", price: 49, href: "/bot-hosting", icon: Bot, tag: "Bot Hosting" },
+    { title: "Web Hosting", desc: "Fast NVMe cPanel hosting with free AutoSSL & Softaculous.", price: 59, href: "/webhosting", icon: Globe, tag: "Web Hosting" },
+    { title: "India VDS", desc: "Dedicated CPU slices with DDR4 ECC memory in Noida & Delhi.", price: 1699, href: "/vds-hosting", icon: Cpu, tag: "India VDS" },
   ];
 
   return (
     <div>
-      {/* Hero */}
-      <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(ellipse_at_top,_rgba(34,197,94,0.16),_transparent_60%)] py-20 sm:py-28">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold text-emerald-300">
-            <Zap className="h-3.5 w-3.5" /> Multi-Region Infrastructure · Instant Setup
+      {/* Bright Sky-Inspired Clean Hero */}
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#dbeafe_0%,#eff6ff_55%,var(--bg)_100%)] dark:bg-[linear-gradient(180deg,#0f172a_0%,#0b0f17_100%)] pt-16 pb-20 sm:pt-24 sm:pb-28">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/90 px-4 py-1.5 text-xs font-semibold text-slate-900 shadow-sm">
+            Minecraft plans from {formatPrice(99)}/month
           </div>
 
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl leading-[1.08]">
             Global server hosting{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-              for games &amp; apps
-            </span>
+            <span className="serif-it font-normal">worldwide</span>
+            <br />
+            for games and apps
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base text-slate-300 sm:text-lg">
-            Deploy Cloud VPS across India, Germany, Singapore, USA, and Canada from{" "}
-            <strong className="text-white">{formatPrice(359)}/mo</strong>, Minecraft servers from{" "}
-            <strong className="text-white">{formatPrice(99)}/mo</strong>, and Windows RDP from{" "}
-            <strong className="text-white">{formatPrice(685)}/mo</strong>.
+          <p className="mx-auto mt-5 max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
+            Start a Minecraft Java &amp; Bedrock world from {formatPrice(99)}/month, run a Cloud VPS across 5 countries from{" "}
+            {formatPrice(359)}/month, or deploy Windows RDP from {formatPrice(685)}/month.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/vps"
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-emerald-400"
-            >
-              Explore Cloud VPS <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              View All Pricing
-            </Link>
             <a
               href={catalog.discordUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold text-slate-300 transition hover:bg-white/5 hover:text-white"
+              className="btn-lime inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-sm font-bold shadow-sm transition"
             >
-              Join Discord
+              Join our Discord <ArrowUpRight className="h-4 w-4" />
             </a>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 rounded-2xl border border-slate-900/10 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50"
+            >
+              View plans <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-slate-700 dark:text-slate-300">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-white/10 px-3.5 py-1.5 shadow-sm">
+              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Multi-region hosting
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-white/10 px-3.5 py-1.5 shadow-sm">
+              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 99.9% uptime target
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-white/10 px-3.5 py-1.5 shadow-sm">
+              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> DDoS protection included
+            </span>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Our Services</span>
-            <h2 className="mt-1 text-3xl font-extrabold text-white">Everything you need to host</h2>
-          </div>
-          <Link href="/pricing" className="text-sm font-semibold text-emerald-400 hover:underline">
-            Compare all plans →
-          </Link>
+      {/* Entry Plans / Services Grid */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="mb-10 text-center">
+          <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Plans &amp; Services</span>
+          <h2 className="mt-1 text-3xl font-extrabold sm:text-4xl">
+            Simple <span className="serif-it font-normal text-4xl sm:text-5xl">honest</span> pricing
+          </h2>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => {
             const Icon = s.icon;
             return (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-[#121a24] p-6 transition hover:border-emerald-400/50 hover:bg-[#15202c]"
-              >
+              <div key={s.href} className="card-clean flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
                 <div>
                   <div className="flex items-center justify-between">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <span className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-semibold text-slate-300">
-                      {s.badge}
+                    <h3 className="text-lg font-bold">{s.title}</h3>
+                    <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--muted)]">
+                      {s.tag}
                     </span>
                   </div>
-                  <h3 className="mt-5 text-xl font-bold text-white group-hover:text-emerald-400">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{s.desc}</p>
+                  <div className="mt-4 flex items-baseline gap-1">
+                    <span className="text-3xl font-extrabold tracking-tight">{formatPrice(s.price)}</span>
+                    <span className="text-xs text-[var(--muted)]">/month</span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">{s.desc}</p>
                 </div>
 
-                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
-                  <span className="text-sm text-slate-400">
-                    Starting at <strong className="text-lg font-extrabold text-white">{formatPrice(s.price)}</strong>/mo
-                  </span>
-                  <ArrowRight className="h-4 w-4 text-emerald-400 transition group-hover:translate-x-1" />
-                </div>
-              </Link>
+                <Link
+                  href={s.href}
+                  className="btn-lime mt-6 inline-flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold transition"
+                >
+                  <Icon className="h-3.5 w-3.5" /> View {s.title}
+                </Link>
+              </div>
             );
           })}
         </div>
       </section>
 
       {/* Global Regions */}
-      <section className="border-t border-white/10 bg-[#0d131a] py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section className="border-t border-[var(--border)] bg-[var(--surface)] py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mb-10 text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Global Network</span>
-            <h2 className="mt-1 text-3xl font-extrabold text-white">6 Strategic Locations Worldwide</h2>
-            <p className="mx-auto mt-2 max-w-xl text-sm text-slate-400">
-              Low-latency routing with always-on DDoS mitigation included on every server.
-            </p>
+            <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Global Network</span>
+            <h2 className="mt-1 text-3xl font-extrabold sm:text-4xl">
+              6 Locations <span className="serif-it font-normal">worldwide</span>
+            </h2>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {REGIONS.map((r) => (
-              <div key={r.name} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#121a24] p-4">
-                <img src={r.flag} alt={r.name} className="h-8 w-12 rounded-md object-cover shrink-0" />
+              <div key={r.name} className="card-clean flex items-center gap-4 rounded-2xl p-4">
+                <img src={r.flag} alt={r.name} className="h-7 w-10 rounded-md object-cover shrink-0" />
                 <div>
-                  <h3 className="text-base font-bold text-white">{r.name}</h3>
-                  <p className="text-xs text-slate-400">{r.sub}</p>
-                  <p className="mt-1 text-[11px] font-medium text-emerald-400">{r.services}</p>
+                  <h3 className="text-base font-bold">{r.name}</h3>
+                  <p className="text-xs text-[var(--muted)]">{r.sub}</p>
+                  <p className="mt-1 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400">{r.services}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-            <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-400" /> DDoS Mitigation Included</span>
-            <span className="inline-flex items-center gap-2"><Zap className="h-4 w-4 text-emerald-400" /> Enterprise Gen4 NVMe SSDs</span>
-            <span className="inline-flex items-center gap-2"><Globe className="h-4 w-4 text-emerald-400" /> 24/7 Discord Support</span>
           </div>
         </div>
       </section>

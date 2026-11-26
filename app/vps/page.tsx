@@ -3,25 +3,23 @@ import VpsExplorer from "../../src/components/VpsExplorer";
 
 export const metadata = {
   title: "Cloud VPS Hosting Worldwide — India, Germany, Singapore, USA, Canada | TreeMC",
-  description:
-    "Deploy high-performance KVM Cloud VPS with NVMe storage across India, Germany, Singapore, USA, and Canada on Intel Xeon, AMD EPYC, and AMD Ryzen.",
+  description: "Deploy high-performance KVM Cloud VPS across India, Germany, Singapore, USA, and Canada.",
 };
 
 export default function VpsPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <div className="mb-10 text-center">
-        <span className="inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-semibold text-emerald-300">
+        <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1 text-xs font-semibold text-[var(--muted)]">
           KVM Cloud VPS · 5 Countries
         </span>
-        <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
-          Cloud VPS hosting <span className="text-emerald-400">worldwide</span>
+        <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-5xl">
+          Cloud VPS hosting <span className="serif-it font-normal">worldwide</span>
         </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300 sm:text-base">
-          Select your country below to view available processor families, real-time pricing in your currency, and full root KVM access.
+        <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
+          Choose your region below to view available processor families, real-time currency pricing, and full root KVM access.
         </p>
       </div>
-
       <VpsExplorer />
     </div>
   );

@@ -38,8 +38,7 @@ export default function VpsExplorer() {
 
   const [location, setLocation] = useState("India");
   const availableFamilies = useMemo(() => {
-    const fams = Array.from(new Set(plans.filter((p) => p.location === location).map((p) => p.processorFamily)));
-    return fams;
+    return Array.from(new Set(plans.filter((p) => p.location === location).map((p) => p.processorFamily)));
   }, [plans, location]);
 
   const [selectedFamily, setSelectedFamily] = useState("Intel® Xeon® Standard");
@@ -50,7 +49,6 @@ export default function VpsExplorer() {
     [plans, location, activeFamily]
   );
 
-  // Interactive Find Your VPS Calculator state
   const [calcLoc, setCalcLoc] = useState("India");
   const [calcRam, setCalcRam] = useState(6);
   const [calcCores, setCalcCores] = useState(2);
@@ -78,18 +76,17 @@ export default function VpsExplorer() {
 
   return (
     <div className="space-y-16">
-      {/* Top Location Dropdown + Auto-filtered CPU Model Tabs */}
       <div>
-        <div className="mx-auto mb-6 flex max-w-sm items-center gap-3 rounded-xl border border-white/15 bg-[#121a24] px-3.5 py-2.5">
-          <img src={activeFlag} alt={`${location} flag`} className="h-5 w-7 rounded object-cover shrink-0" />
+        <div className="card-clean mx-auto mb-6 flex max-w-sm items-center gap-3 rounded-2xl px-4 py-2.5">
+          <img src={activeFlag} alt={`${location} flag`} className="h-4 w-6 rounded object-cover shrink-0" />
           <select
             aria-label="Select VPS location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            className="w-full bg-transparent text-sm font-semibold text-white outline-none cursor-pointer"
+            className="w-full bg-transparent text-sm font-semibold outline-none cursor-pointer"
           >
             {LOCATIONS.map((l) => (
-              <option key={l.id} value={l.id} className="bg-[#0d131a] text-white">
+              <option key={l.id} value={l.id} className="bg-[var(--surface)] text-[var(--ink)]">
                 {l.label}
               </option>
             ))}
@@ -104,10 +101,10 @@ export default function VpsExplorer() {
                 key={fam}
                 type="button"
                 onClick={() => setSelectedFamily(fam)}
-                className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
                   active
-                    ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
-                    : "border border-white/10 bg-[#121a24] text-slate-300 hover:border-white/25 hover:text-white"
+                    ? "bg-slate-900 text-white shadow-sm dark:bg-white dark:text-slate-950"
+                    : "border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--ink)]"
                 }`}
               >
                 {fam}
@@ -118,52 +115,34 @@ export default function VpsExplorer() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {visiblePlans.map((plan) => (
-            <div
-              key={plan.id}
-              className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#121a24] p-5 transition hover:border-emerald-400/40"
-            >
+            <div key={plan.id} className="card-clean flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
               <div>
                 <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-base font-bold text-white">{plan.name}</h3>
-                  <span className="rounded-md bg-emerald-500/15 px-2 py-0.5 text-[11px] font-semibold text-emerald-300">
+                  <h3 className="text-base font-bold">{plan.name}</h3>
+                  <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--muted)]">
                     {plan.location}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-slate-400">{plan.processorFamily}</p>
+                <p className="mt-1 text-xs text-[var(--muted)]">{plan.processorFamily}</p>
 
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-3xl font-extrabold text-white">
-                    {formatPrice(plan.expectedSellingPrice)}
-                  </span>
-                  <span className="text-xs text-slate-400">/month</span>
+                  <span className="text-3xl font-extrabold tracking-tight">{formatPrice(plan.expectedSellingPrice)}</span>
+                  <span className="text-xs text-[var(--muted)]">/month</span>
                 </div>
 
-                <ul className="mt-5 space-y-2 text-xs text-slate-300">
-                  <li className="flex items-center gap-2">
-                    <Cpu className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                    <span>{plan.vCores} vCores</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                    <span>{plan.ram} {plan.memoryType}</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <HardDrive className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                    <span>{plan.storage} {plan.storageType}</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Network className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                    <span>{plan.bandwidth}</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <ShieldCheck className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                    <span>{plan.protection}</span>
-                  </li>
+                <hr className="my-4 border-[var(--border)]" />
+
+                <ul className="space-y-2 text-xs text-[var(--muted)]">
+                  <li className="flex items-center gap-2"><Cpu className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.vCores} vCores</span></li>
+                  <li className="flex items-center gap-2"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.ram} {plan.memoryType}</span></li>
+                  <li className="flex items-center gap-2"><HardDrive className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.storage} {plan.storageType}</span></li>
+                  <li className="flex items-center gap-2"><Network className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.bandwidth}</span></li>
+                  <li className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.protection}</span></li>
                 </ul>
 
                 {plan.cpuModels?.length > 0 && (
-                  <p className="mt-3 border-t border-white/10 pt-2.5 text-[11px] leading-relaxed text-slate-400">
-                    CPU: {plan.cpuModels.map((m) => m.name).join(" / ")}
+                  <p className="mt-3 border-t border-[var(--border)] pt-2.5 text-[11px] leading-relaxed text-[var(--muted)]">
+                    {plan.cpuModels.map((m) => m.name).join(" / ")}
                   </p>
                 )}
               </div>
@@ -172,78 +151,62 @@ export default function VpsExplorer() {
                 href={catalog.discordUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 block w-full rounded-xl bg-emerald-500 py-2.5 text-center text-xs font-bold text-slate-950 transition hover:bg-emerald-400"
+                className="btn-lime mt-5 block w-full rounded-xl py-2.5 text-center text-xs font-bold transition"
               >
-                Order on Discord
+                Order on Discord ↗
               </a>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-slate-400">
-          Need eligibility details? Check our{" "}
-          <Link href="/refund-policy" className="text-emerald-400 underline hover:text-emerald-300">
+        <p className="mt-8 text-center text-xs text-[var(--muted)]">
+          Check the{" "}
+          <Link href="/refund-policy" className="font-semibold text-[var(--ink)] underline">
             refund policy
-          </Link>
-          .
+          </Link>{" "}
+          for eligibility.
         </p>
       </div>
 
       {/* Find Your VPS Configurator */}
-      <div className="rounded-3xl border border-white/10 bg-[#0d131a] p-6 sm:p-8">
+      <div className="card-clean rounded-3xl p-6 sm:p-8">
         <div className="mb-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Instant Recommender</span>
-          <h2 className="mt-1 text-2xl font-extrabold text-white">Find your VPS</h2>
+          <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Configurator</span>
+          <h2 className="mt-1 text-2xl font-extrabold">
+            Find your <span className="serif-it text-3xl">VPS</span>
+          </h2>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-12">
           <div className="space-y-5 lg:col-span-7">
             <div>
-              <div className="mb-1.5 flex justify-between text-sm font-medium text-slate-300">
-                <span>RAM</span>
-                <span className="font-bold text-white">{calcRam} GB</span>
+              <div className="mb-1.5 flex justify-between text-sm font-medium">
+                <span className="text-[var(--muted)]">RAM</span>
+                <span className="font-bold">{calcRam} GB</span>
               </div>
-              <input
-                type="range"
-                min={4}
-                max={64}
-                step={2}
-                value={calcRam}
-                onChange={(e) => setCalcRam(Number(e.target.value))}
-                className="w-full accent-emerald-500"
-              />
+              <input type="range" min={4} max={64} step={2} value={calcRam} onChange={(e) => setCalcRam(Number(e.target.value))} className="w-full accent-slate-900 dark:accent-lime-400" />
             </div>
 
             <div>
-              <div className="mb-1.5 flex justify-between text-sm font-medium text-slate-300">
-                <span>CPU vCores</span>
-                <span className="font-bold text-white">{calcCores}</span>
+              <div className="mb-1.5 flex justify-between text-sm font-medium">
+                <span className="text-[var(--muted)]">CPU vCores</span>
+                <span className="font-bold">{calcCores}</span>
               </div>
-              <input
-                type="range"
-                min={1}
-                max={16}
-                step={1}
-                value={calcCores}
-                onChange={(e) => setCalcCores(Number(e.target.value))}
-                className="w-full accent-emerald-500"
-              />
+              <input type="range" min={1} max={16} step={1} value={calcCores} onChange={(e) => setCalcCores(Number(e.target.value))} className="w-full accent-slate-900 dark:accent-lime-400" />
             </div>
 
             <div>
-              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">
-                Location
-              </label>
-              <div className="flex items-center gap-3 rounded-xl border border-white/15 bg-[#121a24] px-3.5 py-2.5">
-                <img src={calcFlag} alt={`${calcLoc} flag`} className="h-5 w-7 rounded object-cover shrink-0" />
+              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Location</label>
+              <div className="card-clean flex items-center gap-3 rounded-2xl px-3.5 py-2.5">
+                <img src={calcFlag} alt={`${calcLoc} flag`} className="h-4 w-6 rounded object-cover shrink-0" />
                 <select
                   aria-label="Calculator VPS location"
                   value={calcLoc}
                   onChange={(e) => setCalcLoc(e.target.value)}
-                  className="w-full bg-transparent text-sm font-semibold text-white outline-none cursor-pointer"
+                  className="w-full bg-transparent text-sm font-semibold outline-none cursor-pointer"
                 >
                   {LOCATIONS.map((l) => (
-                    <option key={l.id} value={l.id} className="bg-[#0d131a] text-white">
+                    <option key={l.id} value={l.id} className="bg-[var(--surface)] text-[var(--ink)]">
                       {l.label}
                     </option>
                   ))}
@@ -252,9 +215,7 @@ export default function VpsExplorer() {
             </div>
 
             <div>
-              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">
-                Processor
-              </label>
+              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Processor</label>
               <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
                 {calcAvailableCpus.map((c) => {
                   const active = c === activeCalcCpu;
@@ -265,8 +226,8 @@ export default function VpsExplorer() {
                       onClick={() => setCalcCpu(c)}
                       className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition ${
                         active
-                          ? "bg-emerald-500 text-slate-950"
-                          : "border border-white/10 bg-[#121a24] text-slate-300 hover:border-white/25"
+                          ? "btn-lime shadow-sm"
+                          : "border border-[var(--border)] bg-[var(--bg)] text-[var(--muted)] hover:text-[var(--ink)]"
                       }`}
                     >
                       {c}
@@ -277,38 +238,27 @@ export default function VpsExplorer() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between rounded-2xl border border-emerald-500/25 bg-[#121a24] p-6 lg:col-span-5">
+          <div className="flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-6 lg:col-span-5">
             {calcMatch ? (
               <div>
-                <p className="text-xs font-semibold text-emerald-400">
-                  {calcMatch.location} · {calcMatch.processorFamily}
-                </p>
-                <h3 className="mt-1 text-2xl font-extrabold text-white">{calcMatch.name}</h3>
-                <p className="mt-2 text-sm text-slate-300">
-                  {calcMatch.vCores} vCores · {calcMatch.ram} · {calcMatch.storage}
-                </p>
-                <div className="mt-5 text-3xl font-extrabold text-white">
+                <p className="text-xs font-semibold text-[var(--muted)]">{calcMatch.location} · {calcMatch.processorFamily}</p>
+                <h3 className="mt-1 text-2xl font-extrabold">{calcMatch.name}</h3>
+                <p className="mt-2 text-sm text-[var(--muted)]">{calcMatch.vCores} vCores · {calcMatch.ram} · {calcMatch.storage}</p>
+                <div className="mt-5 text-3xl font-extrabold">
                   {formatPrice(calcMatch.expectedSellingPrice)}
-                  <span className="text-sm font-normal text-slate-400">/month</span>
+                  <span className="text-sm font-normal text-[var(--muted)]">/month</span>
                 </div>
               </div>
             ) : (
               <div>
-                <p className="text-xs font-semibold text-emerald-400">{calcLoc}</p>
-                <h3 className="mt-1 text-2xl font-extrabold text-white">Custom Configuration</h3>
-                <p className="mt-2 text-sm text-slate-300">
-                  Contact us on Discord for custom specs above our standard tiers.
-                </p>
+                <p className="text-xs font-semibold text-[var(--muted)]">{calcLoc}</p>
+                <h3 className="mt-1 text-2xl font-extrabold">Custom Plan</h3>
+                <p className="mt-2 text-sm text-[var(--muted)]">Contact us on Discord for custom sizing.</p>
               </div>
             )}
 
-            <a
-              href={catalog.discordUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 block w-full rounded-xl bg-emerald-500 py-3 text-center text-sm font-bold text-slate-950 transition hover:bg-emerald-400"
-            >
-              Order on Discord
+            <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block w-full rounded-xl py-3 text-center text-sm font-bold">
+              Order on Discord ↗
             </a>
           </div>
         </div>
