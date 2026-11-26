@@ -15,7 +15,7 @@ interface PolicyData {
   contactEmail?: string;
   intro?: string;
   sections: SectionItem[];
-  downtimeTable?: { uptime?: string; downtime?: string; credit?: string }[];
+  downtimeTable?: { period?: string; credit?: string }[];
   qualifyingIncidents?: string[];
   notEligible?: string[];
   eligibilityRequirements?: string[];
@@ -42,16 +42,14 @@ export default function LegalDocument({ data }: { data: PolicyData }) {
             <table className="w-full text-left text-sm">
               <thead className="bg-[var(--bg)] text-xs font-bold uppercase text-[var(--muted)]">
                 <tr>
-                  <th className="px-4 py-3">Monthly Uptime</th>
-                  <th className="px-4 py-3">Downtime</th>
+                  <th className="px-4 py-3">Downtime Period</th>
                   <th className="px-4 py-3">Service Credit</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border)]">
                 {data.downtimeTable.map((row, idx) => (
                   <tr key={idx}>
-                    <td className="px-4 py-3 font-semibold">{row.uptime}</td>
-                    <td className="px-4 py-3 text-[var(--muted)]">{row.downtime}</td>
+                    <td className="px-4 py-3 font-semibold">{row.period}</td>
                     <td className="px-4 py-3 font-semibold text-emerald-600 dark:text-emerald-400">{row.credit}</td>
                   </tr>
                 ))}
