@@ -73,8 +73,8 @@ export default function Navbar() {
             </button>
 
             {ddOpen && (
-              <div className="absolute left-0 top-full pt-2 w-72 animate-[fadeDown_0.16s_ease-out]">
-                <div className="card-clean rounded-2xl p-2 shadow-xl">
+              <div className="absolute left-0 top-full pt-2 w-[440px] animate-[fadeDown_0.16s_ease-out]">
+                <div className="card-clean grid grid-cols-2 gap-1 rounded-2xl p-2 shadow-xl">
                   {SERVICE_ITEMS.map((item) => {
                     const Icon = item.icon;
                     return (
@@ -82,14 +82,14 @@ export default function Navbar() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setDdOpen(false)}
-                        className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-slate-500/10"
+                        className="flex items-start gap-2.5 rounded-xl px-3 py-2.5 transition hover:bg-slate-500/10"
                       >
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900/5 dark:bg-white/10">
+                        <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 dark:bg-white/10">
                           <Icon className="h-4 w-4" />
                         </div>
                         <div>
                           <div className="text-xs font-bold text-[var(--ink)]">{item.label}</div>
-                          <div className="text-[11px] text-[var(--muted)]">{item.desc}</div>
+                          <div className="text-[11px] leading-snug text-[var(--muted)]">{item.desc}</div>
                         </div>
                       </Link>
                     );

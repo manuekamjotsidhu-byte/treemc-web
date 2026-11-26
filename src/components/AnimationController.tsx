@@ -7,14 +7,6 @@ export default function AnimationController() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>(".rv"));
-    if (!els.length) return;
-
-    els.forEach((el, idx) => {
-      el.classList.remove("in");
-      el.style.transitionDelay = `${Math.min((idx % 6) * 55, 275)}ms`;
-    });
-
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,20 +16,30 @@ export default function AnimationController() {
           }
         });
       },
-      { threshold: 0.06, rootMargin: "0px 0px -20px 0px" }
+      { threshold: 0.04, rootMargin: "0px 0px -10px 0px" }
     );
 
-    els.forEach((el) => obs.observe(el));
-
-    const fallback = setTimeout(() => {
-      els.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 100) el.classList.add("in");
+    const scan = () => {
+      document.querySelectorAll<HTMLElement>(".rv:not(.in)").forEach((el, idx) => {
+        el.style.transitionDelay = `${Math.min((idx % 6) * 45, 225)}ms`;
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight + 80) {
+          el.classList.add("in");
+        } else {
+          obs.observe(el);
+        }
       });
-    }, 180);
+    };
+
+    scan();
+
+    const mo = new MutationObserver(() => {
+      requestAnimationFrame(scan);
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      clearTimeout(fallback);
+      mo.disconnect();
       obs.disconnect();
     };
   }, [pathname]);
