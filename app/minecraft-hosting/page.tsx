@@ -32,6 +32,20 @@ export default function MinecraftPage() {
         <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
           Low-latency Java &amp; Bedrock servers in India and Dubai on Intel® Xeon® and AMD EPYC™ processors with NVMe SSDs and DDoS protection.
         </p>
+        <div className="rv card-clean mx-auto mt-8 grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl p-5 text-left sm:grid-cols-12">
+          <div className="sm:col-span-5">
+            <img src="/images/games.jpg" alt="TreeMC Minecraft Hosting" className="h-44 w-full rounded-2xl object-cover" />
+          </div>
+          <div className="space-y-2.5 sm:col-span-7">
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-400">
+              ● 99.99% Uptime · Steady 20 TPS
+            </div>
+            <h2 className="text-xl font-extrabold">Java, Bedrock &amp; GeyserMC Crossplay Ready</h2>
+            <p className="text-xs leading-relaxed text-[var(--muted)]">
+              One-click Paper, Purpur, Fabric, Forge, and Velocity installs with automated backups and full SFTP access.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="rv mb-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">

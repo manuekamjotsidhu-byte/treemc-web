@@ -19,7 +19,7 @@ const POLICY_ITEMS = [
   { href: "/terms", label: "Terms of Service", desc: "Service agreement & billing rules" },
   { href: "/privacy", label: "Privacy Policy", desc: "How we handle & secure your data" },
   { href: "/refund-policy", label: "Refund Policy", desc: "Eligibility & refund conditions" },
-  { href: "/sla", label: "Uptime SLA", desc: "99.9% uptime target & credits" },
+  { href: "/sla", label: "Uptime SLA", desc: "99.99% uptime target & credits" },
   { href: "/aup", label: "Acceptable Use", desc: "Permitted workloads & rules" },
 ];
 

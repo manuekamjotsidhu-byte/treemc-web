@@ -18,7 +18,7 @@ const GRID_DATA: Record<ServiceVariant, { icon: any; title: string; desc: string
     { icon: Network, title: "Up to 10 Gbps Uplinks", desc: "Redundant multi-homed bandwidth across India, Germany, Singapore, USA, Canada, and Dubai." },
     { icon: ShieldCheck, title: "Always-On DDoS Shield", desc: "Inline L3/L4/L7 mitigation filters volumetric floods and amplification attacks automatically." },
     { icon: Terminal, title: "Full Root & Panel Control", desc: "Manage VPS/VDS over SSH, Windows over RDP, websites via cPanel, and game servers via Pterodactyl." },
-    { icon: Zap, title: "99.9% Uptime Architecture", desc: "Redundant power feeds, dual-port NICs, and proactive monitoring keep workloads online 24/7." },
+    { icon: Zap, title: "99.99% Uptime Architecture", desc: "Redundant power feeds, dual-port NICs, and proactive monitoring keep workloads online 24/7." },
   ],
   vps: [
     { icon: Cpu, title: "Xeon, EPYC & Ryzen 9", desc: "Choose Intel Xeon Standard/Gold, AMD EPYC Milan, or Ryzen 9 5900X/9950X depending on your region." },

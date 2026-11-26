@@ -20,6 +20,20 @@ export default function RdpPage() {
         <p className="mx-auto mt-3 max-w-xl text-sm text-[var(--muted)]">
           24/7 Windows Remote Desktop servers in India with DDR4 ECC memory, NVMe SSD storage, and 1 Gbps unmetered bandwidth.
         </p>
+        <div className="rv card-clean mx-auto mt-8 grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl p-5 text-left sm:grid-cols-12">
+          <div className="sm:col-span-5">
+            <img src="/images/rdp-service.jpg" alt="TreeMC Windows RDP" className="h-44 w-full rounded-2xl object-cover" />
+          </div>
+          <div className="space-y-2.5 sm:col-span-7">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-700 dark:text-blue-400">
+              ● 99.99% Uptime · Full Administrator Desktop
+            </div>
+            <h2 className="text-xl font-extrabold">Built for 24/7 Trading, Automation &amp; Remote Work</h2>
+            <p className="text-xs leading-relaxed text-[var(--muted)]">
+              Connect from Windows, macOS, or mobile via Microsoft Remote Desktop with dedicated Intel® Xeon® vCores and low-latency Noida connectivity.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="rv card-clean mx-auto mb-8 max-w-3xl rounded-2xl p-4 text-center">

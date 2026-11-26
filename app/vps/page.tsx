@@ -28,6 +28,20 @@ export default function VpsPage() {
           <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
             Choose your region below to view available processor families, real-time currency pricing, and full root KVM access.
           </p>
+          <div className="rv card-clean mx-auto mt-8 grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl p-5 text-left sm:grid-cols-12">
+            <div className="sm:col-span-5">
+              <img src="/images/vps.png" alt="TreeMC Cloud VPS Infrastructure" className="h-44 w-full rounded-2xl object-cover" />
+            </div>
+            <div className="space-y-3 sm:col-span-7">
+              <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-400">
+                ● 99.99% Uptime · True KVM Isolation
+              </div>
+              <h2 className="text-xl font-extrabold">Enterprise CPUs &amp; Gen4 NVMe across 5 Countries</h2>
+              <p className="text-xs leading-relaxed text-[var(--muted)]">
+                Powered by Intel® Xeon® Standard/Gold, AMD EPYC™ 7F72/7K62/Milan, and AMD Ryzen™ 9 5900X/9950X with 10 Gbps uplinks and always-on DDoS scrubbing.
+              </p>
+            </div>
+          </div>
         </div>
         <VpsExplorer />
       </div>

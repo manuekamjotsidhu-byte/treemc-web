@@ -78,14 +78,29 @@ export default function HomePage() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-slate-700 dark:text-slate-300">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-white/10 px-3.5 py-1.5 shadow-sm">
-              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Multi-region hosting
+              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 6 global regions
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-white/10 px-3.5 py-1.5 shadow-sm">
-              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 99.9% uptime target
+              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 99.99% uptime target
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-white/10 px-3.5 py-1.5 shadow-sm">
               <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> DDoS protection included
             </span>
+          </div>
+
+          {/* 99.99% Uptime & Metrics Strip */}
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
+            {[
+              { val: "99.99%", lbl: "Uptime Target" },
+              { val: "6 Regions", lbl: "Global Locations" },
+              { val: "Gen4 NVMe", lbl: "RAID-10 Storage" },
+              { val: "10 Gbps", lbl: "Redundant Uplinks" },
+            ].map((m) => (
+              <div key={m.lbl} className="card-clean rounded-2xl px-4 py-3 text-center">
+                <div className="text-lg font-extrabold text-slate-900 dark:text-white sm:text-xl">{m.val}</div>
+                <div className="text-[11px] font-medium text-[var(--muted)]">{m.lbl}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
