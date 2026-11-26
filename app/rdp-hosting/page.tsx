@@ -45,7 +45,7 @@ export default function RdpPage() {
           </div>
         ))}
       </div>
-      <InfrastructureGrid />
+      <InfrastructureGrid variant="rdp" />
       <ComparisonMatrix />
       <CtaBanner />
     </div>

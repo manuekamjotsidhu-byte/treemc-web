@@ -47,7 +47,7 @@ export default function WebHostingPage() {
           </div>
         ))}
       </div>
-      <InfrastructureGrid />
+      <InfrastructureGrid variant="web" />
       <CtaBanner />
     </div>
   );

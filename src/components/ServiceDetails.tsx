@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowUpRight, ChevronDown, Cpu, Globe, HardDrive, Lock, Network, ShieldCheck, Terminal, Zap } from "lucide-react";
+import { ArrowUpRight, Bot, ChevronDown, Cpu, Globe, HardDrive, Lock, Monitor, Network, ShieldCheck, Terminal, Zap } from "lucide-react";
 import catalog from "../data/catalog.json";
 
 export interface FaqItem {
@@ -9,26 +9,76 @@ export interface FaqItem {
   a: string;
 }
 
-export function InfrastructureGrid() {
-  const items = [
-    { icon: Cpu, title: "Enterprise Compute", desc: "Powered by Intel Xeon Gold/Platinum, AMD EPYC Milan, and AMD Ryzen 9 5900X/7950X processors for high single-thread and multi-core throughput." },
-    { icon: HardDrive, title: "Gen4 NVMe RAID-10", desc: "Enterprise NVMe SSD arrays deliver ultra-low I/O latency for databases, Minecraft chunk loading, and heavy Docker workloads." },
-    { icon: Network, title: "Up to 10 Gbps Uplinks", desc: "Redundant multi-homed Tier-1 bandwidth across India, Germany, Singapore, USA, Canada, and Dubai with low-latency peering." },
-    { icon: ShieldCheck, title: "Always-On DDoS Shield", desc: "Inline L3/L4/L7 mitigation filters volumetric floods and TCP/UDP amplification automatically with zero manual intervention." },
-    { icon: Terminal, title: "Full Root & OS Control", desc: "Deploy Ubuntu, Debian, AlmaLinux, Rocky Linux, or Windows Server with full root SSH/RDP, VNC console, and instant rebuilds." },
-    { icon: Zap, title: "99.9% Uptime Architecture", desc: "Redundant power feeds, dual-port NICs, and proactive node health monitoring keep your servers online around the clock." },
-  ];
+export type ServiceVariant = "general" | "vps" | "minecraft" | "rdp" | "bot" | "web" | "vds";
 
+const GRID_DATA: Record<ServiceVariant, { icon: any; title: string; desc: string }[]> = {
+  general: [
+    { icon: Cpu, title: "Enterprise Compute", desc: "Intel Xeon Gold/Platinum, AMD EPYC Milan, and AMD Ryzen 9 processors for steady single-thread and multi-core performance." },
+    { icon: HardDrive, title: "Gen4 NVMe RAID-10", desc: "Enterprise NVMe SSD arrays deliver ultra-low I/O latency for databases, game worlds, and web apps." },
+    { icon: Network, title: "Up to 10 Gbps Uplinks", desc: "Redundant multi-homed bandwidth across India, Germany, Singapore, USA, Canada, and Dubai." },
+    { icon: ShieldCheck, title: "Always-On DDoS Shield", desc: "Inline L3/L4/L7 mitigation filters volumetric floods and amplification attacks automatically." },
+    { icon: Terminal, title: "Full Root & Panel Control", desc: "Manage VPS/VDS over SSH, Windows over RDP, websites via cPanel, and game servers via Pterodactyl." },
+    { icon: Zap, title: "99.9% Uptime Architecture", desc: "Redundant power feeds, dual-port NICs, and proactive monitoring keep workloads online 24/7." },
+  ],
+  vps: [
+    { icon: Cpu, title: "Xeon, EPYC & Ryzen 9", desc: "Choose Intel Xeon Standard/Gold, AMD EPYC Milan, or Ryzen 9 5900X/7950X depending on your region." },
+    { icon: HardDrive, title: "Pure Gen4 NVMe SSD", desc: "High-IOPS enterprise NVMe storage built for Docker containers, databases, and CI/CD runners." },
+    { icon: Network, title: "10 Gbps Ports", desc: "Fast network ports across India, Germany, Singapore, USA, and Canada with IPv4 included." },
+    { icon: ShieldCheck, title: "Always-On DDoS Mitigation", desc: "Automatic L4/L7 traffic scrubbing keeps APIs, proxies, and backend nodes reachable." },
+    { icon: Terminal, title: "True KVM + Root SSH", desc: "Isolated KVM virtualization with dedicated RAM, VNC console, and 1-click Ubuntu/Debian/AlmaLinux." },
+    { icon: Zap, title: "Instant Vertical Scaling", desc: "Upgrade RAM, vCores, and storage seamlessly as your production traffic grows." },
+  ],
+  minecraft: [
+    { icon: Cpu, title: "High Single-Thread Tick", desc: "Intel Xeon & AMD EPYC DDR5 nodes keep Paper, Purpur, Fabric, and Forge servers at a steady 20 TPS." },
+    { icon: HardDrive, title: "Fast NVMe Chunk Loading", desc: "Rapid world saves, region pre-generation, and modpack startups on pure NVMe SSDs." },
+    { icon: ShieldCheck, title: "Game DDoS Protection", desc: "Protocol-aware mitigation filters UDP/TCP floods without interrupting active players." },
+    { icon: Terminal, title: "Pterodactyl + SFTP", desc: "1-click plugin & modpack installer, live console, sub-user roles, and full SFTP access." },
+    { icon: Globe, title: "Java & Bedrock Crossplay", desc: "Run GeyserMC + Floodgate effortlessly so PC, mobile, and console friends can play together." },
+    { icon: Zap, title: "Automated Backups", desc: "Scheduled backups and extra port allocations included on every Minecraft tier." },
+  ],
+  rdp: [
+    { icon: Monitor, title: "Full Windows Administrator", desc: "Connect via Microsoft Remote Desktop with full Administrator privileges to install any Windows software." },
+    { icon: Cpu, title: "Multi-Core Intel Xeon", desc: "Dedicated vCores and DDR4 ECC memory tuned for 24/7 MetaTrader (MT4/MT5), browsers, and automation." },
+    { icon: HardDrive, title: "Enterprise NVMe Storage", desc: "Fast Windows boot times, snappy desktop responsiveness, and smooth multi-app multitasking." },
+    { icon: Network, title: "1 Gbps Unmetered India Link", desc: "Low-latency Noida connectivity with generous bandwidth for continuous trading and remote work." },
+    { icon: ShieldCheck, title: "Always-On Network Shield", desc: "Protected IPv4 connectivity keeps your remote desktop session stable around the clock." },
+    { icon: Zap, title: "24/7 Always-Online", desc: "Keep scripts, trading terminals, and desktop workflows running even when your PC is turned off." },
+  ],
+  bot: [
+    { icon: Bot, title: "Multi-Language Runtimes", desc: "Native support for Node.js, Python, Java, Go, and Lavalink audio nodes out of the box." },
+    { icon: Zap, title: "Auto-Restart & 24/7 Uptime", desc: "Process watchdog automatically restarts your Discord bot if an unhandled exception occurs." },
+    { icon: Terminal, title: "Live Console & Git Pull", desc: "View real-time logs, edit environment variables, and upload code via SFTP or panel." },
+    { icon: HardDrive, title: "NVMe Database & Cache", desc: "Fast local storage for SQLite, JSON stores, and Lavalink audio caching." },
+    { icon: ShieldCheck, title: "DDoS Protected Endpoints", desc: "Keep bot webhooks, REST APIs, and Lavalink nodes online under heavy traffic." },
+    { icon: Cpu, title: "Upgradeable Any Time", desc: "Start at BOT 1 and scale to multi-shard BOT 3 without migrating your files." },
+  ],
+  web: [
+    { icon: Globe, title: "cPanel + Softaculous", desc: "Industry-standard cPanel with 1-click WordPress, Laravel, and 400+ web app installers." },
+    { icon: ShieldCheck, title: "Free AutoSSL Certificates", desc: "Automatic HTTPS SSL provisioning and renewal for every domain and subdomain." },
+    { icon: HardDrive, title: "NVMe SSD Web Storage", desc: "Fast PHP execution and MySQL queries for blogs, portfolios, and agency sites." },
+    { icon: Network, title: "Custom Email & DNS", desc: "Create professional domain email accounts, forwarders, and DNS records in seconds." },
+    { icon: Lock, title: "Daily Malware & Backups", desc: "Isolated CloudLinux accounts keep your websites secure and recoverable." },
+    { icon: Zap, title: "Instant Activation", desc: "Receive cPanel credentials immediately after ordering so you can publish right away." },
+  ],
+  vds: [
+    { icon: Cpu, title: "100% Dedicated CPU Cores", desc: "Zero CPU contention — every core assigned to your India VDS belongs exclusively to your workload." },
+    { icon: HardDrive, title: "DDR4 ECC + NVMe", desc: "Error-correcting memory paired with enterprise NVMe for mission-critical databases and game nodes." },
+    { icon: Network, title: "Noida / Delhi Peering", desc: "Low-latency Indian routing built for high-concurrency regional applications." },
+    { icon: ShieldCheck, title: "Always-On DDoS Defense", desc: "Multi-layer L3/L4/L7 mitigation protects public services without manual intervention." },
+    { icon: Terminal, title: "Full KVM Root Access", desc: "Install any Linux distribution, Docker, Kubernetes, or custom firewall rules." },
+    { icon: Zap, title: "Consistent Sustained Clock", desc: "Sustained CPU performance under 100% load with zero noisy-neighbor throttling." },
+  ],
+};
+
+export function InfrastructureGrid({ variant = "general" }: { variant?: ServiceVariant }) {
+  const items = GRID_DATA[variant] || GRID_DATA.general;
   return (
     <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <div className="mb-10 text-center">
-        <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Infrastructure</span>
+        <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Included Features</span>
         <h2 className="mt-1 text-3xl font-extrabold sm:text-4xl">
-          Built on <span className="serif-it font-normal">enterprise</span> hardware
+          Built for <span className="serif-it font-normal">reliable</span> performance
         </h2>
-        <p className="mx-auto mt-2 max-w-2xl text-sm text-[var(--muted)]">
-          Every TreeMC server runs on dedicated-grade nodes with zero noisy-neighbor throttling and predictable I/O.
-        </p>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,22 +100,29 @@ export function InfrastructureGrid() {
 }
 
 export function OsAndPanelShowcase() {
-  const osList = ["Ubuntu 24.04 LTS", "Ubuntu 22.04 LTS", "Debian 12", "AlmaLinux 9", "Rocky Linux 9", "Windows Server 2022", "Pterodactyl Panel", "cPanel / Softaculous"];
+  const osList = [
+    { name: "Ubuntu", img: "/images/os/ubuntu.png" },
+    { name: "Debian", img: "/images/os/debian.png" },
+    { name: "Fedora", img: "/images/os/fedora.png" },
+    { name: "Kali Linux", img: "/images/os/kali.png" },
+    { name: "Windows Server", img: "/images/os/windows.png" },
+  ];
   return (
     <section className="border-y border-[var(--border)] bg-[var(--surface)] py-14">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Control &amp; Automation</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">OS &amp; Control</span>
           <h2 className="mt-1 text-3xl font-extrabold sm:text-4xl">
-            Deploy any stack <span className="serif-it font-normal">in minutes</span>
+            Deploy any OS <span className="serif-it font-normal">in minutes</span>
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
-            Manage game servers via our clean Pterodactyl panel, websites via cPanel, and Cloud VPS / RDP instances with full root SSH or Administrator desktop access.
+            Install Linux distributions with full root SSH or Windows Server for remote desktop workloads, with instant rebuilds and VNC console access.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-6 flex flex-wrap gap-2.5">
             {osList.map((os) => (
-              <span key={os} className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-3.5 py-1.5 text-xs font-semibold">
-                {os}
+              <span key={os.name} className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg)] px-3.5 py-1.5 text-xs font-semibold">
+                <img src={os.img} alt={os.name} className="h-4 w-4 object-contain" />
+                {os.name}
               </span>
             ))}
           </div>
@@ -174,7 +231,7 @@ export function CtaBanner() {
     <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
       <div className="card-clean flex flex-col items-center justify-between gap-6 rounded-3xl p-8 text-center sm:flex-row sm:text-left">
         <div>
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
             <Lock className="h-3.5 w-3.5" /> Ready in minutes
           </span>
           <h2 className="mt-1 text-2xl font-extrabold sm:text-3xl">

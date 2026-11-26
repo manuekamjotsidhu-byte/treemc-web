@@ -48,6 +48,8 @@ export default function Footer() {
             <li><Link href="/refund-policy" className="hover:text-[var(--ink)]">Refund Policy</Link></li>
             <li><Link href="/sla" className="hover:text-[var(--ink)]">Uptime SLA</Link></li>
             <li><Link href="/aup" className="hover:text-[var(--ink)]">Acceptable Use</Link></li>
+            <li><Link href="/blog" className="hover:text-[var(--ink)]">Blog</Link></li>
+            <li><Link href="/guides" className="hover:text-[var(--ink)]">Guides</Link></li>
             <li>
               <a href="https://discord.gg/wbH8ZVAsYg" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--ink)] underline">
                 Discord Support ↗

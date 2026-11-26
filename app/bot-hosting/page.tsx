@@ -47,7 +47,7 @@ export default function BotHostingPage() {
           </div>
         ))}
       </div>
-      <InfrastructureGrid />
+      <InfrastructureGrid variant="bot" />
       <CtaBanner />
     </div>
   );

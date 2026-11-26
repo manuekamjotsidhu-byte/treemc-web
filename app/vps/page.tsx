@@ -31,7 +31,7 @@ export default function VpsPage() {
         </div>
         <VpsExplorer />
       </div>
-      <InfrastructureGrid />
+      <InfrastructureGrid variant="vps" />
       <OsAndPanelShowcase />
       <ComparisonMatrix />
       <FaqSection items={VPS_FAQ} title="Cloud VPS FAQ" />

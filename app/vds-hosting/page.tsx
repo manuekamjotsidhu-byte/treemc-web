@@ -47,7 +47,7 @@ export default function VdsHostingPage() {
           </div>
         ))}
       </div>
-      <InfrastructureGrid />
+      <InfrastructureGrid variant="vds" />
       <ComparisonMatrix />
       <CtaBanner />
     </div>

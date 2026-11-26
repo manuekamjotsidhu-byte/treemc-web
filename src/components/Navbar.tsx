@@ -98,6 +98,8 @@ export default function Navbar() {
           <Link href="/minecraft-hosting" className={navLinkCls("/minecraft-hosting")}>Minecraft</Link>
           <Link href="/vps" className={navLinkCls("/vps")}>VPS</Link>
           <Link href="/pricing" className={navLinkCls("/pricing")}>Pricing</Link>
+          <Link href="/blog" className={navLinkCls("/blog")}>Blog</Link>
+          <Link href="/guides" className={navLinkCls("/guides")}>Guides</Link>
         </nav>
 
         <div className="flex items-center gap-2">

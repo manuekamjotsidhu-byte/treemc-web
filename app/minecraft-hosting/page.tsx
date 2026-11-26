@@ -100,7 +100,7 @@ export default function MinecraftPage() {
         ))}
       </div>
 
-      <InfrastructureGrid />
+      <InfrastructureGrid variant="minecraft" />
       <FaqSection items={MC_FAQ} title="Minecraft Hosting FAQ" />
       <CtaBanner />
     </div>
