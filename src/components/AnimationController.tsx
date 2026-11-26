@@ -32,6 +32,7 @@ export default function AnimationController() {
     };
 
     scan();
+    window.addEventListener("scroll", scan, { passive: true });
 
     const mo = new MutationObserver(() => {
       requestAnimationFrame(scan);
@@ -39,6 +40,7 @@ export default function AnimationController() {
     mo.observe(document.body, { childList: true, subtree: true });
 
     return () => {
+      window.removeEventListener("scroll", scan);
       mo.disconnect();
       obs.disconnect();
     };
