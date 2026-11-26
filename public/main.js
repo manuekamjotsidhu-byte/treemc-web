@@ -273,6 +273,19 @@ if (blogSearch) {
       amtEl.textContent = formatAmt(inr, code);
     });
 
+    
+    document.querySelectorAll(".mc-price > span").forEach((el) => {
+      if (!el.dataset.inrHtml) el.dataset.inrHtml = el.innerHTML;
+      if (code === "INR") {
+        el.innerHTML = el.dataset.inrHtml;
+      } else {
+        el.innerHTML = el.dataset.inrHtml.replace(/₹\s*<b>([0-9,]+)<\/b>/g, (_, num) => {
+          const inr = parseFloat(num.replace(/,/g, ""));
+          return isNaN(inr) ? _ : `${sym}<b>${formatAmt(inr, code)}</b>`;
+        });
+      }
+    });
+
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
     let node;
     while ((node = walker.nextNode())) {
