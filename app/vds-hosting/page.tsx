@@ -22,6 +22,19 @@ export default function VdsHostingPage() {
         </p>
       </div>
 
+      <div className="rv card-clean mx-auto mb-8 max-w-3xl rounded-2xl p-4 text-center">
+        <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+          Processors powering India VDS
+        </div>
+        <div className="mt-2.5 flex flex-wrap justify-center gap-2">
+          {["Intel® Xeon® Platinum 8168", "Intel® Xeon® Platinum 8269CY", "Intel® Xeon® E5-2682 v4"].map((m) => (
+            <span key={m} className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1 text-xs font-semibold">
+              {m}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="grid gap-6 sm:grid-cols-3">
         {catalog.vdsPlans.map((p) => (
           <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">

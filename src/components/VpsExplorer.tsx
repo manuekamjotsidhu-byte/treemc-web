@@ -49,6 +49,14 @@ export default function VpsExplorer() {
     [plans, location, activeFamily]
   );
 
+  const familyCpuModels = useMemo(() => {
+    const map = new Map<string, string>();
+    visiblePlans.forEach((p) => {
+      p.cpuModels?.forEach((m) => map.set(m.id, m.name));
+    });
+    return Array.from(map.values());
+  }, [visiblePlans]);
+
   const [calcLoc, setCalcLoc] = useState("India");
   const [calcRam, setCalcRam] = useState(6);
   const [calcCores, setCalcCores] = useState(2);
@@ -115,6 +123,21 @@ export default function VpsExplorer() {
           })}
         </div>
 
+        {familyCpuModels.length > 1 && (
+          <div className="rv card-clean mx-auto mb-8 max-w-3xl rounded-2xl p-4 text-center">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+              Processors powering {location} · {activeFamily}
+            </div>
+            <div className="mt-2.5 flex flex-wrap justify-center gap-2">
+              {familyCpuModels.map((name) => (
+                <span key={name} className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1 text-xs font-semibold">
+                  {name}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {visiblePlans.map((plan) => (
             <div key={plan.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
@@ -141,12 +164,6 @@ export default function VpsExplorer() {
                   <li className="flex items-center gap-2"><Network className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.bandwidth}</span></li>
                   <li className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /><span>{plan.protection}</span></li>
                 </ul>
-
-                {plan.cpuModels?.length > 0 && (
-                  <p className="mt-3 border-t border-[var(--border)] pt-2.5 text-[11px] leading-relaxed text-[var(--muted)]">
-                    {plan.cpuModels.map((m) => m.name).join(" / ")}
-                  </p>
-                )}
               </div>
 
               <a
