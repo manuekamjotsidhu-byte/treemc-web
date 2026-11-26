@@ -103,9 +103,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          <MacPanelShowcase />
         </div>
+
+        <MacPanelShowcase />
       </section>
 
       {/* Entry Plans / Services Grid */}

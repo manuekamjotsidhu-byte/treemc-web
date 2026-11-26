@@ -12,10 +12,10 @@ export default function MacPanelShowcase() {
   };
 
   return (
-    <div className="rv mx-auto mt-14 max-w-6xl px-1 sm:px-4">
-      <div className="grid items-center gap-5 lg:grid-cols-[210px_1fr_220px]">
-        {/* Left Card: Server Health (order 2 on mobile/tablet, order 1 on desktop) */}
-        <div className="card-clean order-2 rounded-2xl p-4 text-left shadow-lg lg:order-1">
+    <div className="rv mx-auto mt-14 max-w-7xl px-3 sm:px-6">
+      <div className="grid items-center gap-6 lg:grid-cols-[205px_minmax(0,1fr)_215px]">
+        {/* Left Card: Server Health */}
+        <div className="card-clean order-2 mx-auto w-full max-w-sm rounded-2xl p-4 text-left shadow-lg lg:order-1 lg:max-w-none">
           <div className="flex items-center justify-between text-xs font-bold">
             <span>Server health</span>
             <Activity className="h-3.5 w-3.5 text-[var(--muted)]" />
@@ -51,139 +51,154 @@ export default function MacPanelShowcase() {
           </div>
         </div>
 
-        {/* Center Responsive Device Frame: iPhone (Dynamic Island) -> iPad -> macOS */}
-        <div className="order-1 w-full overflow-hidden rounded-[34px] border-[6px] border-slate-900 bg-white shadow-2xl dark:border-slate-800 md:rounded-[28px] lg:order-2 lg:rounded-3xl">
-          {/* Phone: iPhone Dynamic Island */}
-          <div className="flex items-center justify-between bg-blue-600 px-5 pt-3 pb-1 text-[10px] font-bold text-white md:hidden">
-            <span>9:41</span>
-            <div className="h-5 w-24 rounded-full bg-black shadow-inner" aria-label="Dynamic Island" />
-            <span>5G</span>
-          </div>
-
-          {/* Tablet: iPad Camera Bar */}
-          <div className="hidden md:flex lg:hidden items-center justify-center bg-slate-900 py-1.5">
-            <div className="h-2 w-12 rounded-full bg-slate-700" />
-          </div>
-
-          {/* Desktop/Laptop: macOS Window Chrome */}
-          <div className="hidden lg:flex items-center justify-between border-b border-slate-200 bg-slate-100 px-4 py-2.5 dark:border-slate-800 dark:bg-slate-900">
-            <div className="flex items-center gap-1.5">
-              <span className="h-3 w-3 rounded-full bg-rose-500" />
-              <span className="h-3 w-3 rounded-full bg-amber-400" />
-              <span className="h-3 w-3 rounded-full bg-emerald-500" />
+        {/* Center Responsive Device Frame: iPhone (Dynamic Island) -> iPad -> MacBook */}
+        <div className="order-1 mx-auto w-full max-w-[350px] md:max-w-[660px] lg:order-2 lg:max-w-none">
+          <div className="overflow-hidden rounded-[40px] border-[8px] border-slate-900 bg-white shadow-2xl dark:border-slate-800 md:rounded-[30px] lg:rounded-t-2xl lg:rounded-b-xl lg:border-[8px]">
+            {/* Phone: iPhone Dynamic Island */}
+            <div className="flex items-center justify-between bg-blue-600 px-5 pt-3 pb-1 text-[10px] font-bold text-white md:hidden">
+              <span>9:41</span>
+              <div className="h-5 w-24 rounded-full bg-black shadow-inner" aria-label="Dynamic Island" />
+              <span>5G</span>
             </div>
-            <div className="rounded-lg bg-white/90 px-3 py-1 text-[11px] font-medium text-slate-600 shadow-sm dark:bg-slate-800 dark:text-slate-300">
-              panel.treemchost.pro
-            </div>
-            <div className="w-10" />
-          </div>
 
-          {/* Panel Dashboard Body */}
-          <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-5 text-left text-white sm:p-6">
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/20 text-amber-200">
-                  <Gamepad2 className="h-5 w-5" />
+            {/* Tablet: iPad Camera Bar */}
+            <div className="hidden md:flex lg:hidden items-center justify-center bg-slate-900 py-1.5">
+              <div className="h-2 w-12 rounded-full bg-slate-700" />
+            </div>
+
+            {/* Desktop/Laptop: MacBook Lid Camera Notch + macOS Window Bar */}
+            <div className="hidden lg:block bg-slate-900">
+              <div className="mx-auto h-2.5 w-24 rounded-b-lg bg-black" />
+              <div className="flex items-center justify-between border-b border-slate-200 bg-slate-100 px-4 py-2 dark:border-slate-800 dark:bg-slate-900">
+                <div className="flex items-center gap-1.5">
+                  <span className="h-2.5 w-2.5 rounded-full bg-rose-500" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                 </div>
-                <div>
-                  <div className="text-xs text-blue-100">Survival SMP · India (Noida)</div>
-                  <div className="text-sm font-bold">
-                    {status === "online" ? "Server online" : "Restarting node…"}
+                <div className="rounded-md bg-white/90 px-3 py-0.5 text-[11px] font-medium text-slate-600 shadow-sm dark:bg-slate-800 dark:text-slate-300">
+                  panel.treemchost.pro
+                </div>
+                <div className="w-10" />
+              </div>
+            </div>
+
+            {/* Panel Dashboard Body */}
+            <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-5 text-left text-white sm:p-6">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/20 text-amber-200">
+                    <Gamepad2 className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-blue-100">Survival SMP · India (Noida)</div>
+                    <div className="text-sm font-bold">
+                      {status === "online" ? "Server online" : "Restarting node…"}
+                    </div>
                   </div>
                 </div>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold">
+                  <span className={`h-2 w-2 rounded-full ${status === "online" ? "bg-lime-300" : "bg-amber-300 animate-ping"}`} />
+                  99.99% SLA
+                </span>
               </div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold">
-                <span className={`h-2 w-2 rounded-full ${status === "online" ? "bg-lime-300" : "bg-amber-300 animate-ping"}`} />
-                99.99% SLA
-              </span>
+
+              <div className="mt-6 grid gap-5 sm:grid-cols-2 sm:items-center">
+                <div>
+                  <div className="text-xs text-blue-100">Players online</div>
+                  <div className="mt-1 flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold">18</span>
+                    <span className="text-sm text-blue-100">/50</span>
+                  </div>
+                  <div className="mt-2 inline-block rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium">
+                    ● Intel Xeon 6 GB · 200% CPU
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setStatus("online")}
+                      className="btn-lime inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold"
+                    >
+                      <Play className="h-3.5 w-3.5" /> Start
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleRestart}
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-xs font-bold text-slate-900 hover:bg-slate-100"
+                    >
+                      <RotateCw className={`h-3.5 w-3.5 ${status === "restarting" ? "animate-spin" : ""}`} /> Restart
+                    </button>
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 text-slate-900">
+                      <MoreHorizontal className="h-4 w-4" />
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-2.5 text-xs">
+                  {[
+                    { icon: Cpu, label: "CPU", val: "38%", w: "w-[38%]" },
+                    { icon: HardDrive, label: "Memory", val: "3.1 GB", w: "w-[55%]" },
+                    { icon: Activity, label: "Ping", val: "19 ms", w: "w-[90%]" },
+                  ].map((bar) => {
+                    const Icon = bar.icon;
+                    return (
+                      <div key={bar.label} className="rounded-xl bg-white/12 p-2.5">
+                        <div className="flex items-center justify-between font-semibold">
+                          <span className="inline-flex items-center gap-1.5"><Icon className="h-3.5 w-3.5" /> {bar.label}</span>
+                          <span>{bar.val}</span>
+                        </div>
+                        <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-white/20">
+                          <div className={`h-full ${bar.w} rounded-full bg-lime-300`} />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
 
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 sm:items-center">
-              <div>
-                <div className="text-xs text-blue-100">Players online</div>
-                <div className="mt-1 flex items-baseline gap-1">
-                  <span className="text-4xl font-extrabold">18</span>
-                  <span className="text-sm text-blue-100">/50</span>
-                </div>
-                <div className="mt-2 inline-block rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium">
-                  ● Intel Xeon 6 GB · 200% CPU
-                </div>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setStatus("online")}
-                    className="btn-lime inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold"
-                  >
-                    <Play className="h-3.5 w-3.5" /> Start
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleRestart}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-xs font-bold text-slate-900 hover:bg-slate-100"
-                  >
-                    <RotateCw className={`h-3.5 w-3.5 ${status === "restarting" ? "animate-spin" : ""}`} /> Restart
-                  </button>
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 text-slate-900">
-                    <MoreHorizontal className="h-4 w-4" />
-                  </span>
-                </div>
+            {/* Bottom Your Servers Row */}
+            <div className="bg-slate-50 p-4 text-left text-slate-900 dark:bg-slate-950 dark:text-white sm:p-5">
+              <div className="mb-3 flex items-center justify-between text-xs font-bold">
+                <span>Your servers</span>
+                <span className="text-[var(--muted)]">See all</span>
               </div>
-
-              <div className="space-y-2.5 text-xs">
+              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
                 {[
-                  { icon: Cpu, label: "CPU", val: "38%", w: "w-[38%]" },
-                  { icon: HardDrive, label: "Memory", val: "3.1 GB", w: "w-[55%]" },
-                  { icon: Activity, label: "Ping", val: "19 ms", w: "w-[90%]" },
-                ].map((bar) => {
-                  const Icon = bar.icon;
+                  { name: "Survival SMP", sub: "Minecraft · India", icon: Gamepad2, bg: "bg-emerald-500" },
+                  { name: "Frankfurt Node", sub: "VPS · Germany", icon: Cloud, bg: "bg-blue-600" },
+                  { name: "TreeMC Bot", sub: "Bot · Singapore", icon: Bot, bg: "bg-sky-500" },
+                  { name: "My Website", sub: "Web · cPanel", icon: Globe, bg: "bg-slate-800" },
+                ].map((srv) => {
+                  const Icon = srv.icon;
                   return (
-                    <div key={bar.label} className="rounded-xl bg-white/12 p-2.5">
-                      <div className="flex items-center justify-between font-semibold">
-                        <span className="inline-flex items-center gap-1.5"><Icon className="h-3.5 w-3.5" /> {bar.label}</span>
-                        <span>{bar.val}</span>
+                    <div key={srv.name} className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-2.5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                      <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-white ${srv.bg}`}>
+                        <Icon className="h-3.5 w-3.5" />
                       </div>
-                      <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-white/20">
-                        <div className={`h-full ${bar.w} rounded-full bg-lime-300`} />
+                      <div className="min-w-0">
+                        <div className="truncate text-[11px] font-bold">{srv.name}</div>
+                        <div className="truncate text-[10px] text-slate-500 dark:text-slate-400">{srv.sub}</div>
                       </div>
                     </div>
                   );
                 })}
               </div>
             </div>
+
+            {/* Phone Home Indicator */}
+            <div className="flex justify-center bg-slate-50 pb-2 pt-1 dark:bg-slate-950 md:hidden">
+              <div className="h-1 w-28 rounded-full bg-slate-400/50" />
+            </div>
           </div>
 
-          {/* Bottom Your Servers Row */}
-          <div className="bg-slate-50 p-4 text-left text-slate-900 dark:bg-slate-950 dark:text-white sm:p-5">
-            <div className="mb-3 flex items-center justify-between text-xs font-bold">
-              <span>Your servers</span>
-              <span className="text-[var(--muted)]">See all</span>
-            </div>
-            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-              {[
-                { name: "Survival SMP", sub: "Minecraft · India", icon: Gamepad2, bg: "bg-emerald-500" },
-                { name: "Frankfurt Node", sub: "VPS · Germany", icon: Cloud, bg: "bg-blue-600" },
-                { name: "TreeMC Bot", sub: "Bot · Singapore", icon: Bot, bg: "bg-sky-500" },
-                { name: "My Website", sub: "Web · cPanel", icon: Globe, bg: "bg-slate-800" },
-              ].map((srv) => {
-                const Icon = srv.icon;
-                return (
-                  <div key={srv.name} className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white p-2.5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white ${srv.bg}`}>
-                      <Icon className="h-4 w-4" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="truncate text-[11px] font-bold">{srv.name}</div>
-                      <div className="truncate text-[10px] text-slate-500 dark:text-slate-400">{srv.sub}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          {/* MacBook Base Hinge Lip on Desktop/Laptop */}
+          <div className="hidden lg:block mx-auto h-3 w-[104%] -ml-[2%] rounded-b-2xl bg-gradient-to-b from-slate-300 to-slate-400 dark:from-slate-700 dark:to-slate-800 shadow-lg">
+            <div className="mx-auto h-1 w-20 rounded-b-md bg-slate-500/40" />
           </div>
         </div>
 
-        {/* Right Card: Recent Activity (order 3) */}
-        <div className="card-clean order-3 rounded-2xl p-4 text-left shadow-lg">
+        {/* Right Card: Recent Activity */}
+        <div className="card-clean order-3 mx-auto w-full max-w-sm rounded-2xl p-4 text-left shadow-lg lg:max-w-none">
           <div className="flex items-center justify-between text-xs font-bold">
             <span>Recent activity</span>
             <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
