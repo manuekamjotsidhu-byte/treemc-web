@@ -1687,3 +1687,11 @@ html, body { max-width: 100%; overflow-x: hidden; }
   cursor: pointer;
   outline: none;
 }
+
+@media (max-width: 600px) {
+  .calc { padding: 14px !important; gap: 14px !important; border-radius: 18px !important; }
+  .calc-opts.hours { grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)) !important; }
+  .calc-opts button { padding: 10px 10px !important; font-size: 13px !important; }
+  .calc-r { padding: 16px !important; }
+  .calc-total { font-size: clamp(1.5rem, 6.5vw, 2.2rem) !important; word-break: break-word; }
+}

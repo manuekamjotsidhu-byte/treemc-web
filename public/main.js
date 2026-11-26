@@ -101,9 +101,9 @@ document.querySelectorAll(".calc[data-vps]").forEach((calc) => {
   const order = calc.querySelector('[data-order]');
   const orderLabel = order?.querySelector('[data-order-label]');
   const upd = () => {
-    const ram = +calc.querySelector('[data-in="ram"]').value, cores = +calc.querySelector('[data-in="cores"]').value, loc = val(calc, "loc");
+    const ram = +calc.querySelector('[data-in="ram"]').value, cores = +calc.querySelector('[data-in="cores"]').value, loc = val(calc, "loc"), cpu = val(calc, "cpu") || "All";
     out("ram", `${ram} GB`); out("cores", cores);
-    const fit = plans.filter((p) => p.g.startsWith(loc) && p.r >= ram && p.c >= cores).sort((a, b) => a.p - b.p)[0];
+    const fit = plans.filter((p) => p.g.startsWith(loc) && (cpu === "All" || p.g.toLowerCase().includes(cpu.toLowerCase())) && p.r >= ram && p.c >= cores).sort((a, b) => a.p - b.p)[0];
     if (!fit) {
       out("group", loc); out("name", "Custom"); out("spec", "Bigger than our listed plans"); out("price", "Ask for a quote");
       if (order) order.href = 'https://discord.gg/wbH8ZVAsYg';
