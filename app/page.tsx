@@ -41,9 +41,9 @@ export default function HomePage() {
   return (
     <div>
       {/* Bright Sky-Inspired Clean Hero */}
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#dbeafe_0%,#eff6ff_55%,var(--bg)_100%)] dark:bg-[linear-gradient(180deg,#0f172a_0%,#0b0f17_100%)] pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#dbeafe_0%,#eff6ff_55%,var(--bg)_100%)] dark:bg-[linear-gradient(180deg,#0c1527_0%,#080c14_100%)] pt-16 pb-20 sm:pt-24 sm:pb-28">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/90 px-4 py-1.5 text-xs font-semibold text-slate-900 shadow-sm">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/90 px-4 py-1.5 text-xs font-semibold text-slate-900 shadow-sm dark:border-white/15 dark:bg-white/10 dark:text-white">
             Minecraft plans from {formatPrice(99)}/month
           </div>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/pricing"
-              className="inline-flex items-center gap-2 rounded-2xl border border-slate-900/10 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50"
+              className="inline-flex items-center gap-2 rounded-2xl border border-slate-900/10 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 dark:border-white/15 dark:bg-white/10 dark:text-white dark:hover:bg-white/15"
             >
               View plans <ArrowUpRight className="h-4 w-4" />
             </Link>
