@@ -6,6 +6,7 @@ import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
 import { CtaBanner, FaqSection, InfrastructureGrid } from "../../src/components/ServiceDetails";
 import ServiceHeroBanner from "../../src/components/ServiceHeroBanner";
+import MinecraftPlanFinder from "../../src/components/MinecraftPlanFinder";
 
 const MC_FAQ = [
   { q: "Does TreeMC support both Java Edition and Bedrock / GeyserMC?", a: "Yes! You can run Paper, Purpur, Spigot, Fabric, Forge, Velocity, Bedrock Dedicated Server, or Java + Bedrock crossplay via GeyserMC & Floodgate." },
@@ -99,6 +100,8 @@ export default function MinecraftPage() {
           </div>
         ))}
       </div>
+
+      <MinecraftPlanFinder region={region} />
 
       <InfrastructureGrid variant="minecraft" />
       <FaqSection items={MC_FAQ} title="Minecraft Hosting FAQ" />

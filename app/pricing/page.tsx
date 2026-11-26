@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import { Check, Cpu, Globe, HardDrive, Network, ShieldCheck, Terminal } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
-import VpsExplorer from "../../src/components/VpsExplorer";
+import VpsExplorer, { VpsConfigurator } from "../../src/components/VpsExplorer";
+import MinecraftPlanFinder from "../../src/components/MinecraftPlanFinder";
 
-type Tab = "vps" | "minecraft" | "rdp" | "bot" | "web" | "vds";
+type Tab = "vps" | "minecraft" | "rdp" | "bot" | "web" | "vds" | "calculator";
 
 interface SpecItem {
   icon: "cpu" | "ram" | "storage" | "network" | "shield" | "globe" | "runtime";
@@ -99,6 +100,7 @@ export default function PricingPage() {
     { id: "bot", label: "Bot Hosting" },
     { id: "web", label: "Web Hosting" },
     { id: "vds", label: "India VDS" },
+    { id: "calculator", label: "Plan Calculator" },
   ];
 
   const minecraftPlans = [
@@ -273,6 +275,13 @@ export default function PricingPage() {
                 />
               ))}
           </div>
+        </div>
+      )}
+
+      {tab === "calculator" && (
+        <div className="space-y-10">
+          <MinecraftPlanFinder />
+          <VpsConfigurator />
         </div>
       )}
     </div>
