@@ -12,10 +12,10 @@ export default function MacPanelShowcase() {
   };
 
   return (
-    <div className="rv relative mx-auto mt-14 max-w-5xl px-2 sm:px-4">
-      <div className="relative flex flex-col items-center gap-5 lg:block">
-        {/* Floating Left Card: Server Health */}
-        <div className="card-clean z-10 w-full max-w-xs rounded-2xl p-4 text-left shadow-xl lg:absolute lg:-left-6 lg:top-1/2 lg:w-56 lg:-translate-y-1/2">
+    <div className="rv mx-auto mt-14 max-w-6xl px-1 sm:px-4">
+      <div className="grid items-center gap-5 lg:grid-cols-[210px_1fr_220px]">
+        {/* Left Card: Server Health (order 2 on mobile/tablet, order 1 on desktop) */}
+        <div className="card-clean order-2 rounded-2xl p-4 text-left shadow-lg lg:order-1">
           <div className="flex items-center justify-between text-xs font-bold">
             <span>Server health</span>
             <Activity className="h-3.5 w-3.5 text-[var(--muted)]" />
@@ -51,10 +51,22 @@ export default function MacPanelShowcase() {
           </div>
         </div>
 
-        {/* Center macOS Window Frame */}
-        <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-3xl border-[6px] border-slate-900 bg-white shadow-2xl dark:border-slate-800">
-          {/* macOS Window Chrome */}
-          <div className="flex items-center justify-between border-b border-slate-200 bg-slate-100 px-4 py-2.5 dark:border-slate-800 dark:bg-slate-900">
+        {/* Center Responsive Device Frame: iPhone (Dynamic Island) -> iPad -> macOS */}
+        <div className="order-1 w-full overflow-hidden rounded-[34px] border-[6px] border-slate-900 bg-white shadow-2xl dark:border-slate-800 md:rounded-[28px] lg:order-2 lg:rounded-3xl">
+          {/* Phone: iPhone Dynamic Island */}
+          <div className="flex items-center justify-between bg-blue-600 px-5 pt-3 pb-1 text-[10px] font-bold text-white md:hidden">
+            <span>9:41</span>
+            <div className="h-5 w-24 rounded-full bg-black shadow-inner" aria-label="Dynamic Island" />
+            <span>5G</span>
+          </div>
+
+          {/* Tablet: iPad Camera Bar */}
+          <div className="hidden md:flex lg:hidden items-center justify-center bg-slate-900 py-1.5">
+            <div className="h-2 w-12 rounded-full bg-slate-700" />
+          </div>
+
+          {/* Desktop/Laptop: macOS Window Chrome */}
+          <div className="hidden lg:flex items-center justify-between border-b border-slate-200 bg-slate-100 px-4 py-2.5 dark:border-slate-800 dark:bg-slate-900">
             <div className="flex items-center gap-1.5">
               <span className="h-3 w-3 rounded-full bg-rose-500" />
               <span className="h-3 w-3 rounded-full bg-amber-400" />
@@ -66,9 +78,9 @@ export default function MacPanelShowcase() {
             <div className="w-10" />
           </div>
 
-          {/* Blue Panel Dashboard Header */}
+          {/* Panel Dashboard Body */}
           <div className="bg-gradient-to-br from-blue-600 to-blue-500 p-5 text-left text-white sm:p-6">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400/20 text-amber-200">
                   <Gamepad2 className="h-5 w-5" />
@@ -170,8 +182,8 @@ export default function MacPanelShowcase() {
           </div>
         </div>
 
-        {/* Floating Right Card: Recent Activity */}
-        <div className="card-clean z-10 w-full max-w-xs rounded-2xl p-4 text-left shadow-xl lg:absolute lg:-right-6 lg:bottom-8 lg:w-60">
+        {/* Right Card: Recent Activity (order 3) */}
+        <div className="card-clean order-3 rounded-2xl p-4 text-left shadow-lg">
           <div className="flex items-center justify-between text-xs font-bold">
             <span>Recent activity</span>
             <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
