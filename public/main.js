@@ -358,3 +358,25 @@ document.addEventListener("click", function(e) {
   }
   panel.querySelectorAll(".rv").forEach(rv => { rv.classList.add("in"); rv.style.opacity = "1"; rv.style.transform = "none"; });
 });
+
+/* TreeMC Zero-Reload VPS Country Switcher */
+document.addEventListener("change", function(e) {
+  const sel = e.target.closest("select[data-vps-loc-select]");
+  if (!sel) return;
+  const country = sel.value;
+  const wrap = sel.closest(".loc-dd-wrap");
+  const flagImg = wrap && wrap.querySelector("[data-vps-top-flag]");
+  const opt = sel.options[sel.selectedIndex];
+  if (flagImg && opt && opt.dataset.flag) flagImg.src = opt.dataset.flag;
+  const container = document.getElementById("vps-all-countries");
+  if (!container) return;
+  container.querySelectorAll("[data-vps-country]").forEach(el => {
+    if (el.getAttribute("data-vps-country") === country) {
+      el.removeAttribute("hidden");
+      el.querySelectorAll(".rv").forEach(rv => { rv.classList.add("in"); rv.style.opacity = "1"; rv.style.transform = "none"; });
+    } else {
+      el.setAttribute("hidden", "");
+    }
+  });
+  if (window.treemcApplyCurrency) window.treemcApplyCurrency();
+});
