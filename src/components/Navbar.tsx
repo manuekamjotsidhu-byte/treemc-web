@@ -53,7 +53,10 @@ export default function Navbar() {
   const toggleTheme = () => {
     const next = !dark;
     setDark(next);
-    document.documentElement.classList.toggle("dark", next);
+    const d = document.documentElement;
+    d.classList.toggle("dark", next);
+    d.style.backgroundColor = next ? "#080c14" : "#f6f7f9";
+    d.style.colorScheme = next ? "dark" : "light";
     localStorage.setItem("treemc_theme", next ? "dark" : "light");
   };
 

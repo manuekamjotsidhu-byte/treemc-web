@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("treemc_theme");if(t==="dark"){document.documentElement.classList.add("dark");}else if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.classList.add("dark");localStorage.setItem("treemc_theme","dark");}}catch(e){}document.documentElement.style.setProperty("--no-transition","1");requestAnimationFrame(function(){requestAnimationFrame(function(){document.documentElement.style.removeProperty("--no-transition");});});})();`,
+            __html: `(function(){try{var d=document.documentElement;var t=localStorage.getItem("treemc_theme");var isDark=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(isDark){d.classList.add("dark");d.style.backgroundColor="#080c14";d.style.colorScheme="dark";if(!t)localStorage.setItem("treemc_theme","dark");}else{d.style.backgroundColor="#f6f7f9";d.style.colorScheme="light";}}catch(e){}})();`,
           }}
         />
       </head>

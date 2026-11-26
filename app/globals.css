@@ -28,13 +28,12 @@ html.dark {
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg);
+  color-scheme: light;
 }
 
-/* Suppress transitions during initial theme application to eliminate FOUC */
-html[style*="--no-transition"] *,
-html[style*="--no-transition"] *::before,
-html[style*="--no-transition"] *::after {
-  transition: none !important;
+html.dark {
+  color-scheme: dark;
 }
 
 body {
@@ -42,7 +41,6 @@ body {
   color: var(--ink);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .serif-it {
