@@ -9,6 +9,7 @@ import { ComparisonMatrix, CtaBanner, FaqSection, InfrastructureGrid, OsAndPanel
 import { ServicePreview } from "../src/components/ServicePreview";
 import Reveal from "../src/components/Reveal";
 import LocationsMapSection from "../src/components/LocationsMapSection";
+import MacPanelShowcase from "../src/components/MacPanelShowcase";
 
 const HOME_FAQ = [
   { q: "Where are TreeMC servers located?", a: "We operate Cloud VPS in India, Germany, Singapore, USA, and Canada; Minecraft & Game servers in India (Noida / Delhi) and Dubai (UAE); and Windows RDP / VDS in India." },
@@ -102,6 +103,8 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <MacPanelShowcase />
         </div>
       </section>
 
