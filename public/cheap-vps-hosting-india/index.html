@@ -401,12 +401,16 @@
         <div class="calc-l">
           <label class="calc-range"><span>RAM <b data-out="ram">6 GB</b></span><input type="range" min="4" max="64" step="2" value="6" data-in="ram" aria-label="RAM in GB"></label>
           <label class="calc-range"><span>Cores <b data-out="cores">2</b></span><input type="range" min="1" max="16" value="2" data-in="cores" aria-label="CPU cores"></label>
-          <p class="calc-h">Location</p><div class="calc-opts hours" data-calc="loc">
-            <button type="button" aria-pressed="true" data-v="India"><b>India</b></button>
-            <button type="button" aria-pressed="false" data-v="Germany"><b>Germany</b></button>
-            <button type="button" aria-pressed="false" data-v="Singapore"><b>Singapore</b></button>
-            <button type="button" aria-pressed="false" data-v="USA"><b>USA</b></button>
-            <button type="button" aria-pressed="false" data-v="Canada"><b>Canada</b></button>
+          <p class="calc-h">Location</p>
+          <div class="loc-dd-wrap">
+            <img src="../img/flags/in.png" alt="Country flag" data-loc-flag>
+            <select data-in="loc" aria-label="Select VPS location">
+              <option value="India" data-flag="../img/flags/in.png">🇮🇳 India (Noida / Delhi)</option>
+              <option value="Germany" data-flag="../img/flags/de.png">🇩🇪 Germany (Frankfurt)</option>
+              <option value="Singapore" data-flag="../img/flags/sg.png">🇸🇬 Singapore</option>
+              <option value="USA" data-flag="../img/flags/us.png">🇺🇸 USA (Hillsboro / Ashburn)</option>
+              <option value="Canada" data-flag="../img/flags/ca.png">🇨🇦 Canada (Montreal)</option>
+            </select>
           </div>
           <p class="calc-h">Processor</p><div class="calc-opts hours" data-calc="cpu">
             <button type="button" aria-pressed="true" data-v="All"><b>All CPUs</b></button>

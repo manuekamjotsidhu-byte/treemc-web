@@ -100,21 +100,51 @@ document.querySelectorAll(".calc[data-vps]").forEach((calc) => {
   const out = (k, v) => (calc.querySelector(`[data-out="${k}"]`).textContent = v);
   const order = calc.querySelector('[data-order]');
   const orderLabel = order?.querySelector('[data-order-label]');
+  const locSel = calc.querySelector('select[data-in="loc"]');
+  const flagImg = calc.querySelector('[data-loc-flag]');
+
+  const syncCpus = (loc) => {
+    const cpuWrap = calc.querySelector('[data-calc="cpu"]');
+    if (!cpuWrap) return;
+    const btns = Array.from(cpuWrap.querySelectorAll("button"));
+    let activeBtn = btns.find((b) => b.getAttribute("aria-pressed") === "true");
+    btns.forEach((b) => {
+      const v = b.dataset.v || "All";
+      const avail = v === "All" || plans.some((p) => p.g.startsWith(loc) && p.g.toLowerCase().includes(v.toLowerCase()));
+      b.style.display = avail ? "" : "none";
+      if (!avail && b === activeBtn) activeBtn = null;
+    });
+    if (!activeBtn) {
+      const allBtn = btns.find((b) => b.dataset.v === "All") || btns.find((b) => b.style.display !== "none");
+      if (allBtn) pressIn(cpuWrap, allBtn);
+    }
+  };
+
   const upd = () => {
-    const ram = +calc.querySelector('[data-in="ram"]').value, cores = +calc.querySelector('[data-in="cores"]').value, loc = val(calc, "loc"), cpu = val(calc, "cpu") || "All";
+    const ram = +calc.querySelector('[data-in="ram"]').value;
+    const cores = +calc.querySelector('[data-in="cores"]').value;
+    const loc = locSel ? locSel.value : val(calc, "loc");
+    if (locSel && flagImg) {
+      const opt = locSel.options[locSel.selectedIndex];
+      if (opt && opt.dataset.flag) flagImg.src = opt.dataset.flag;
+    }
+    syncCpus(loc);
+    const cpu = val(calc, "cpu") || "All";
     out("ram", `${ram} GB`); out("cores", cores);
     const fit = plans.filter((p) => p.g.startsWith(loc) && (cpu === "All" || p.g.toLowerCase().includes(cpu.toLowerCase())) && p.r >= ram && p.c >= cores).sort((a, b) => a.p - b.p)[0];
     if (!fit) {
       out("group", loc); out("name", "Custom"); out("spec", "Bigger than our listed plans"); out("price", "Ask for a quote");
       if (order) order.href = 'https://discord.gg/wbH8ZVAsYg';
       if (orderLabel) orderLabel.textContent = 'Order on Discord';
-      return;
+    } else {
+      out("group", fit.g); out("name", fit.n); out("spec", `${fit.c} vCore${fit.c > 1 ? "s" : ""} · ${fit.r} GB RAM`); out("price", `₹${fit.p.toLocaleString("en-IN")}/month`);
+      if (order && fit.order) order.href = fit.order.href;
+      if (orderLabel && fit.order) orderLabel.textContent = fit.order.label;
     }
-    out("group", fit.g); out("name", fit.n); out("spec", `${fit.c} vCore${fit.c > 1 ? "s" : ""} · ${fit.r} GB RAM`); out("price", `₹${fit.p.toLocaleString("en-IN")}/month`);
-    if (order && fit.order) order.href = fit.order.href;
-    if (orderLabel && fit.order) orderLabel.textContent = fit.order.label;
+    if (window.treemcApplyCurrency) window.treemcApplyCurrency();
   };
-  calc.querySelectorAll("input").forEach((i) => i.addEventListener("input", upd));
+  calc.querySelectorAll("input, select").forEach((i) => i.addEventListener("input", upd));
+  if (locSel) locSel.addEventListener("change", upd);
   calc.querySelectorAll("[data-calc] button").forEach((b) => b.addEventListener("click", () => { pressIn(b.parentElement, b); upd(); }));
   upd();
 });
