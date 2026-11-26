@@ -4,6 +4,7 @@ import "./globals.css";
 import { CurrencyProvider } from "../src/context/CurrencyContext";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
+import AnimationController from "../src/components/AnimationController";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-serif" });
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <CurrencyProvider>
+          <AnimationController />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

@@ -21,11 +21,16 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [ddOpen, setDdOpen] = useState(false);
   const [dark, setDark] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const isDark = localStorage.getItem("treemc_theme") === "dark";
     setDark(isDark);
     document.documentElement.classList.toggle("dark", isDark);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const toggleTheme = () => {
@@ -42,8 +47,8 @@ export default function Navbar() {
     }`;
 
   return (
-    <div className="sticky top-3 z-50 px-3 sm:px-6">
-      <header className="mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/95 px-4 py-2 shadow-lg shadow-slate-900/5 backdrop-blur-xl">
+    <div className={`sticky z-50 px-3 sm:px-6 transition-all duration-200 ${scrolled ? "top-2" : "top-4"}`}>
+      <header className={`mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)]/95 px-4 py-2 backdrop-blur-xl transition-shadow duration-200 ${scrolled ? "shadow-xl shadow-slate-900/10" : "shadow-md shadow-slate-900/5"}`}>
         <Link href="/" className="flex items-center gap-2 shrink-0 pl-1">
           <img src="/treemc-icon.png" alt="TreeMC" className="h-7 w-7 rounded-lg object-contain" />
           <span className="text-base font-extrabold tracking-tight">

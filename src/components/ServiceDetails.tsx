@@ -85,7 +85,7 @@ export function InfrastructureGrid({ variant = "general" }: { variant?: ServiceV
         {items.map((it) => {
           const Icon = it.icon;
           return (
-            <div key={it.title} className="card-clean rounded-3xl p-6">
+            <div key={it.title} className="rv card-clean rounded-3xl p-6">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-950">
                 <Icon className="h-5 w-5" />
               </div>
@@ -128,7 +128,7 @@ export function OsAndPanelShowcase() {
           </div>
         </div>
 
-        <div className="card-clean rounded-3xl p-6 font-mono text-xs">
+        <div className="rv card-clean rounded-3xl p-6 font-mono text-xs">
           <div className="mb-4 flex items-center gap-2 border-b border-[var(--border)] pb-3 text-[var(--muted)]">
             <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
             <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
@@ -168,7 +168,7 @@ export function ComparisonMatrix() {
         </h2>
       </div>
 
-      <div className="card-clean overflow-x-auto rounded-3xl">
+      <div className="rv card-clean overflow-x-auto rounded-3xl">
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
             <tr className="border-b border-[var(--border)] bg-[var(--bg)] text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
@@ -208,7 +208,7 @@ export function FaqSection({ items, title = "Frequently asked questions" }: { it
         {items.map((it, idx) => {
           const isOpen = openIdx === idx;
           return (
-            <div key={it.q} className="card-clean overflow-hidden rounded-2xl">
+            <div key={it.q} className="rv card-clean overflow-hidden rounded-2xl">
               <button
                 type="button"
                 onClick={() => setOpenIdx(isOpen ? null : idx)}
@@ -229,7 +229,7 @@ export function FaqSection({ items, title = "Frequently asked questions" }: { it
 export function CtaBanner() {
   return (
     <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-      <div className="card-clean flex flex-col items-center justify-between gap-6 rounded-3xl p-8 text-center sm:flex-row sm:text-left">
+      <div className="rv card-clean flex flex-col items-center justify-between gap-6 rounded-3xl p-8 text-center sm:flex-row sm:text-left">
         <div>
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
             <Lock className="h-3.5 w-3.5" /> Ready in minutes

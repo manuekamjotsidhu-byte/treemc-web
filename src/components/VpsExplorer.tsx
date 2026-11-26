@@ -77,7 +77,7 @@ export default function VpsExplorer() {
   return (
     <div className="space-y-16">
       <div>
-        <div className="card-clean mx-auto mb-6 flex max-w-sm items-center gap-3 rounded-2xl px-4 py-2.5">
+        <div className="rv card-clean mx-auto mb-6 flex max-w-sm items-center gap-3 rounded-2xl px-4 py-2.5">
           <img src={activeFlag} alt={`${location} flag`} className="h-4 w-6 rounded object-cover shrink-0" />
           <select
             aria-label="Select VPS location"
@@ -117,7 +117,7 @@ export default function VpsExplorer() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {visiblePlans.map((plan) => (
-            <div key={plan.id} className="card-clean flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
+            <div key={plan.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
               <div>
                 <div className="flex items-center justify-between gap-2">
                   <h3 className="text-base font-bold">{plan.name}</h3>
@@ -171,7 +171,7 @@ export default function VpsExplorer() {
       </div>
 
       {/* Find Your VPS Configurator */}
-      <div className="card-clean rounded-3xl p-6 sm:p-8">
+      <div className="rv card-clean rounded-3xl p-6 sm:p-8">
         <div className="mb-6">
           <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Configurator</span>
           <h2 className="mt-1 text-2xl font-extrabold">
@@ -199,7 +199,7 @@ export default function VpsExplorer() {
 
             <div>
               <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-[var(--muted)]">Location</label>
-              <div className="card-clean flex items-center gap-3 rounded-2xl px-3.5 py-2.5">
+              <div className="rv card-clean flex items-center gap-3 rounded-2xl px-3.5 py-2.5">
                 <img src={calcFlag} alt={`${calcLoc} flag`} className="h-4 w-6 rounded object-cover shrink-0" />
                 <select
                   aria-label="Calculator VPS location"

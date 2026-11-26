@@ -24,7 +24,7 @@ export default function RdpPage() {
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {catalog.rdpPlans.map((p) => (
-          <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+          <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
             <div>
               <h2 className="text-lg font-bold">{p.name}</h2>
               <p className="text-xs text-[var(--muted)]">{p.location}</p>

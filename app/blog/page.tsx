@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((p) => (
-          <Link key={p.slug} href={`/blog/${p.slug}`} className="card-clean group flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
+          <Link key={p.slug} href={`/blog/${p.slug}`} className="rv card-clean group flex flex-col justify-between rounded-3xl p-6 transition hover:-translate-y-0.5">
             <div>
               <div className="flex items-center justify-between text-xs text-[var(--muted)]">
                 <span className="rounded-full border border-[var(--border)] bg-[var(--bg)] px-2.5 py-0.5 font-semibold">{p.category}</span>

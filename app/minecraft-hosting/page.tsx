@@ -8,20 +8,21 @@ import { CtaBanner, FaqSection, InfrastructureGrid } from "../../src/components/
 
 const MC_FAQ = [
   { q: "Does TreeMC support both Java Edition and Bedrock / GeyserMC?", a: "Yes! You can run Paper, Purpur, Spigot, Fabric, Forge, Velocity, Bedrock Dedicated Server, or Java + Bedrock crossplay via GeyserMC & Floodgate." },
-  { q: "What is the difference between Budget (DDR4) and Performance (DDR5)?", a: "Budget plans (Sprout–Titan Oak) use Intel Xeon + DDR4 ECC RAM for affordable SMPs, while Performance plans (Ember–Titan) use AMD EPYC + high-speed DDR5 RAM for modded/high-player servers." },
+  { q: "What is the difference between Intel® Xeon® and AMD EPYC™ plans?", a: "Intel® Xeon® plans (Sprout–Titan Oak) pair Xeon CPUs with DDR4 ECC RAM for smooth survival SMPs, while AMD EPYC™ plans (Ember–Titan) pair EPYC processors with high-speed DDR5 RAM for heavy modpacks and large player counts." },
   { q: "Are automated backups and SFTP included?", a: "Yes, every plan includes automated backups, full SFTP access, sub-user permissions, and one-click modpack/plugin installation in our Pterodactyl panel." },
 ];
 
 export default function MinecraftPage() {
   const { formatPrice } = useCurrency();
   const [region, setRegion] = useState<"India" | "Dubai">("India");
-  const [tier, setTier] = useState<"budget" | "performance">("budget");
+  const [cpuFamily, setCpuFamily] = useState<"xeon" | "epyc">("xeon");
 
-  const plans = tier === "budget" ? catalog.mcBudget : catalog.mcPerf;
+  const plans = cpuFamily === "xeon" ? catalog.mcBudget : catalog.mcPerf;
+  const cpuLabel = cpuFamily === "xeon" ? "Intel® Xeon® (DDR4 ECC)" : "AMD EPYC™ (DDR5)";
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-      <div className="mb-10 text-center">
+      <div className="rv mb-10 text-center">
         <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1 text-xs font-semibold text-[var(--muted)]">
           Java &amp; Bedrock · Instant Pterodactyl Panel
         </span>
@@ -29,11 +30,11 @@ export default function MinecraftPage() {
           Minecraft hosting <span className="serif-it font-normal">worldwide</span>
         </h1>
         <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
-          Low-latency Java &amp; Bedrock servers in India and Dubai with automated backups, NVMe SSDs, and DDoS protection.
+          Low-latency Java &amp; Bedrock servers in India and Dubai on Intel® Xeon® and AMD EPYC™ processors with NVMe SSDs and DDoS protection.
         </p>
       </div>
 
-      <div className="mb-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+      <div className="rv mb-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <div className="card-clean inline-flex rounded-2xl p-1">
           {(["India", "Dubai"] as const).map((r) => (
             <button
@@ -53,34 +54,36 @@ export default function MinecraftPage() {
         <div className="card-clean inline-flex rounded-2xl p-1">
           <button
             type="button"
-            onClick={() => setTier("budget")}
-            className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${
-              tier === "budget" ? "btn-lime" : "text-[var(--muted)]"
+            onClick={() => setCpuFamily("xeon")}
+            className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition ${
+              cpuFamily === "xeon" ? "btn-lime" : "text-[var(--muted)]"
             }`}
           >
-            Budget (DDR4)
+            <img src="/cpu/intel.png" alt="Intel Xeon" className="h-4 w-4 rounded-sm object-contain" />
+            Intel® Xeon®
           </button>
           <button
             type="button"
-            onClick={() => setTier("performance")}
-            className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${
-              tier === "performance" ? "btn-lime" : "text-[var(--muted)]"
+            onClick={() => setCpuFamily("epyc")}
+            className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition ${
+              cpuFamily === "epyc" ? "btn-lime" : "text-[var(--muted)]"
             }`}
           >
-            Performance (DDR5)
+            <img src="/cpu/epyc.png" alt="AMD EPYC" className="h-4 w-4 rounded-sm object-contain" />
+            AMD EPYC™
           </button>
         </div>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {plans.map((p) => (
-          <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+          <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-bold">{p.name}</h3>
                 {p.popular && <span className="btn-lime rounded-full px-2.5 py-0.5 text-[11px] font-bold">Popular</span>}
               </div>
-              <p className="mt-1 text-xs text-[var(--muted)]">{region} · {tier === "budget" ? "DDR4 ECC" : "DDR5 High-Speed"}</p>
+              <p className="mt-1 text-xs text-[var(--muted)]">{region} · {cpuLabel}</p>
               <div className="mt-4 flex items-baseline gap-1">
                 <span className="text-3xl font-extrabold">{formatPrice(p.price)}</span>
                 <span className="text-xs text-[var(--muted)]">/month</span>
@@ -88,7 +91,7 @@ export default function MinecraftPage() {
               <hr className="my-4 border-[var(--border)]" />
               <ul className="space-y-2 text-xs text-[var(--muted)]">
                 <li className="flex items-center gap-2"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> {p.ram} RAM</li>
-                <li className="flex items-center gap-2"><Cpu className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> {p.cpu}</li>
+                <li className="flex items-center gap-2"><Cpu className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> {p.cpu} ({cpuFamily === "xeon" ? "Intel Xeon" : "AMD EPYC"})</li>
                 <li className="flex items-center gap-2"><HardDrive className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> {p.nvme}</li>
                 <li className="flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> {p.backups} Automated Backups</li>
               </ul>

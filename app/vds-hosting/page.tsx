@@ -24,7 +24,7 @@ export default function VdsHostingPage() {
 
       <div className="grid gap-6 sm:grid-cols-3">
         {catalog.vdsPlans.map((p) => (
-          <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+          <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
             <div>
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold">{p.name}</h2>

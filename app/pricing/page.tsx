@@ -51,7 +51,7 @@ export default function PricingPage() {
       {tab === "minecraft" && (
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {catalog.mcBudget.concat(catalog.mcPerf).map((p) => (
-            <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-5">
+            <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-5">
               <div>
                 <h3 className="text-base font-bold">{p.name}</h3>
                 <div className="mt-3 text-2xl font-extrabold">{formatPrice(p.price)}<span className="text-xs font-normal text-[var(--muted)]">/mo</span></div>
@@ -66,7 +66,7 @@ export default function PricingPage() {
       {tab === "rdp" && (
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {catalog.rdpPlans.map((p) => (
-            <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+            <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
               <div>
                 <h3 className="text-lg font-bold">{p.name}</h3>
                 <p className="text-xs text-[var(--muted)]">{p.location}</p>
@@ -82,7 +82,7 @@ export default function PricingPage() {
       {tab === "bot" && (
         <div className="grid gap-5 sm:grid-cols-3">
           {catalog.botPlans.map((p) => (
-            <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+            <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
               <div>
                 <h3 className="text-lg font-bold">{p.name}</h3>
                 <div className="mt-3 text-3xl font-extrabold">{formatPrice(p.price)}<span className="text-xs font-normal text-[var(--muted)]">/mo</span></div>
@@ -98,7 +98,7 @@ export default function PricingPage() {
       {tab === "web" && (
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
           {catalog.webPlans.map((p) => (
-            <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+            <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
               <div>
                 <h3 className="text-lg font-bold">{p.name}</h3>
                 <div className="mt-3 text-3xl font-extrabold">{formatPrice(p.price)}<span className="text-xs font-normal text-[var(--muted)]">/mo</span></div>
@@ -113,7 +113,7 @@ export default function PricingPage() {
       {tab === "vds" && (
         <div className="grid gap-5 sm:grid-cols-3">
           {catalog.vdsPlans.map((p) => (
-            <div key={p.id} className="card-clean flex flex-col justify-between rounded-3xl p-6">
+            <div key={p.id} className="rv card-clean flex flex-col justify-between rounded-3xl p-6">
               <div>
                 <h3 className="text-lg font-bold">{p.name}</h3>
                 <p className="text-xs text-[var(--muted)]">{p.location}</p>
