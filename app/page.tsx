@@ -5,6 +5,14 @@ import Link from "next/link";
 import { ArrowUpRight, Bot, Check, Cloud, Cpu, Gamepad2, Globe, Monitor } from "lucide-react";
 import { useCurrency } from "../src/context/CurrencyContext";
 import catalog from "../src/data/catalog.json";
+import { ComparisonMatrix, CtaBanner, FaqSection, InfrastructureGrid, OsAndPanelShowcase } from "../src/components/ServiceDetails";
+
+const HOME_FAQ = [
+  { q: "Where are TreeMC servers located?", a: "We operate Cloud VPS in India, Germany, Singapore, USA, and Canada; Minecraft & Game servers in India (Noida / Delhi) and Dubai (UAE); and Windows RDP / VDS in India." },
+  { q: "Are DDoS protection and NVMe SSDs included?", a: "Yes. Every plan includes always-on L3/L4/L7 DDoS mitigation and enterprise Gen4 NVMe SSD storage at no extra cost." },
+  { q: "Can I upgrade my plan or switch currencies?", a: "Yes. Use the currency selector in the header for live INR, USD, EUR, GBP, PKR, AED, SGD, CAD, and AUD pricing, and upgrade your resources anytime via Discord." },
+  { q: "How fast is provisioning?", a: "Minecraft, Bot Hosting, and Web Hosting deploy automatically via Pterodactyl or cPanel. Cloud VPS, VDS, and Windows RDP are provisioned rapidly with full root or admin access." },
+];
 
 const REGIONS = [
   { name: "India", sub: "Noida / Delhi / Mumbai", flag: "/flags/india.png", services: "VPS · VDS · RDP · Games" },
@@ -143,6 +151,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <InfrastructureGrid />
+      <OsAndPanelShowcase />
+      <ComparisonMatrix />
+      <FaqSection items={HOME_FAQ} />
+      <CtaBanner />
     </div>
   );
 }

@@ -4,6 +4,13 @@ import React, { useState } from "react";
 import { Check, Cpu, HardDrive, ShieldCheck } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
+import { CtaBanner, FaqSection, InfrastructureGrid } from "../../src/components/ServiceDetails";
+
+const MC_FAQ = [
+  { q: "Does TreeMC support both Java Edition and Bedrock / GeyserMC?", a: "Yes! You can run Paper, Purpur, Spigot, Fabric, Forge, Velocity, Bedrock Dedicated Server, or Java + Bedrock crossplay via GeyserMC & Floodgate." },
+  { q: "What is the difference between Budget (DDR4) and Performance (DDR5)?", a: "Budget plans (Sprout–Titan Oak) use Intel Xeon + DDR4 ECC RAM for affordable SMPs, while Performance plans (Ember–Titan) use AMD EPYC + high-speed DDR5 RAM for modded/high-player servers." },
+  { q: "Are automated backups and SFTP included?", a: "Yes, every plan includes automated backups, full SFTP access, sub-user permissions, and one-click modpack/plugin installation in our Pterodactyl panel." },
+];
 
 export default function MinecraftPage() {
   const { formatPrice } = useCurrency();
@@ -92,6 +99,10 @@ export default function MinecraftPage() {
           </div>
         ))}
       </div>
+
+      <InfrastructureGrid />
+      <FaqSection items={MC_FAQ} title="Minecraft Hosting FAQ" />
+      <CtaBanner />
     </div>
   );
 }

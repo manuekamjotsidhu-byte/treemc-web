@@ -4,6 +4,7 @@ import React from "react";
 import { Check, Cpu, HardDrive } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
+import { ComparisonMatrix, CtaBanner, InfrastructureGrid } from "../../src/components/ServiceDetails";
 
 export default function VdsHostingPage() {
   const { formatPrice } = useCurrency();
@@ -46,6 +47,9 @@ export default function VdsHostingPage() {
           </div>
         ))}
       </div>
+      <InfrastructureGrid />
+      <ComparisonMatrix />
+      <CtaBanner />
     </div>
   );
 }

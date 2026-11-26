@@ -1,26 +1,41 @@
 import React from "react";
 import VpsExplorer from "../../src/components/VpsExplorer";
+import { ComparisonMatrix, CtaBanner, FaqSection, InfrastructureGrid, OsAndPanelShowcase } from "../../src/components/ServiceDetails";
 
 export const metadata = {
   title: "Cloud VPS Hosting Worldwide — India, Germany, Singapore, USA, Canada | TreeMC",
-  description: "Deploy high-performance KVM Cloud VPS across India, Germany, Singapore, USA, and Canada.",
+  description: "Deploy high-performance KVM Cloud VPS with Gen4 NVMe, ECC RAM, and always-on DDoS protection across India, Germany, Singapore, USA, and Canada.",
 };
+
+const VPS_FAQ = [
+  { q: "What virtualization does TreeMC Cloud VPS use?", a: "All Cloud VPS plans run on true KVM hardware virtualization with dedicated RAM, isolated kernel access, and full root SSH + VNC console." },
+  { q: "Which CPU models are available?", a: "Depending on region, we offer Intel Xeon Standard (E5/Platinum), Intel Xeon Gold, AMD EPYC Milan, and high-frequency AMD Ryzen 9 (5900X / 7950X up to 5.7 GHz)." },
+  { q: "Which operating systems can I install?", a: "Ubuntu 24.04/22.04 LTS, Debian 12, AlmaLinux 9, Rocky Linux 9, and custom ISO images upon request." },
+  { q: "Is DDoS protection included on all 5 countries?", a: "Yes. Always-on L4/L7 DDoS mitigation is included on India, Germany, Singapore, USA, and Canada VPS nodes." },
+];
 
 export default function VpsPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-      <div className="mb-10 text-center">
-        <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1 text-xs font-semibold text-[var(--muted)]">
-          KVM Cloud VPS · 5 Countries
-        </span>
-        <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-5xl">
-          Cloud VPS hosting <span className="serif-it font-normal">worldwide</span>
-        </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
-          Choose your region below to view available processor families, real-time currency pricing, and full root KVM access.
-        </p>
+    <div>
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="mb-10 text-center">
+          <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1 text-xs font-semibold text-[var(--muted)]">
+            KVM Cloud VPS · 5 Countries · Gen4 NVMe
+          </span>
+          <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-5xl">
+            Cloud VPS hosting <span className="serif-it font-normal">worldwide</span>
+          </h1>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-[var(--muted)] sm:text-base">
+            Choose your region below to view available processor families, real-time currency pricing, and full root KVM access.
+          </p>
+        </div>
+        <VpsExplorer />
       </div>
-      <VpsExplorer />
+      <InfrastructureGrid />
+      <OsAndPanelShowcase />
+      <ComparisonMatrix />
+      <FaqSection items={VPS_FAQ} title="Cloud VPS FAQ" />
+      <CtaBanner />
     </div>
   );
 }

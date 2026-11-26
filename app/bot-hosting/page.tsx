@@ -4,6 +4,7 @@ import React from "react";
 import { Bot, Cpu, HardDrive } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
+import { CtaBanner, InfrastructureGrid } from "../../src/components/ServiceDetails";
 
 export default function BotHostingPage() {
   const { formatPrice } = useCurrency();
@@ -46,6 +47,8 @@ export default function BotHostingPage() {
           </div>
         ))}
       </div>
+      <InfrastructureGrid />
+      <CtaBanner />
     </div>
   );
 }

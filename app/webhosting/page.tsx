@@ -4,6 +4,7 @@ import React from "react";
 import { Check, Globe, HardDrive, ShieldCheck } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
+import { CtaBanner, InfrastructureGrid } from "../../src/components/ServiceDetails";
 
 export default function WebHostingPage() {
   const { formatPrice } = useCurrency();
@@ -46,6 +47,8 @@ export default function WebHostingPage() {
           </div>
         ))}
       </div>
+      <InfrastructureGrid />
+      <CtaBanner />
     </div>
   );
 }

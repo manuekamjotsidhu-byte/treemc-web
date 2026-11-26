@@ -4,6 +4,7 @@ import React from "react";
 import { Check, Cpu, HardDrive, Network } from "lucide-react";
 import catalog from "../../src/data/catalog.json";
 import { useCurrency } from "../../src/context/CurrencyContext";
+import { ComparisonMatrix, CtaBanner, InfrastructureGrid } from "../../src/components/ServiceDetails";
 
 export default function RdpPage() {
   const { formatPrice } = useCurrency();
@@ -44,6 +45,9 @@ export default function RdpPage() {
           </div>
         ))}
       </div>
+      <InfrastructureGrid />
+      <ComparisonMatrix />
+      <CtaBanner />
     </div>
   );
 }
