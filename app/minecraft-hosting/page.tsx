@@ -28,7 +28,7 @@ export default function MinecraftPage() {
         badge="Java & Bedrock · Instant Pterodactyl Panel"
         title={<><span className="font-pixel tracking-normal">Minecraft</span> hosting <span className="serif-it font-normal">worldwide</span></>}
         subtitle="Low-latency Java & Bedrock servers in India and Dubai on Intel® Xeon® and AMD EPYC™ processors with NVMe SSDs and DDoS protection."
-        image="/images/games.jpg"
+        image="/images/minecraft-banner.jpg"
       />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
 

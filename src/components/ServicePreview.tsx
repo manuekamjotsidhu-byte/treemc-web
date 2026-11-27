@@ -5,7 +5,7 @@ export function ServicePreview({ kind }: { kind: "minecraft" | "vps" | "rdp" | "
   if (kind === "minecraft") {
     return (
       <div className="relative h-36 w-full overflow-hidden rounded-2xl bg-slate-900">
-        <img src="/images/games.jpg" alt="Minecraft Hosting" className="h-full w-full object-cover opacity-90" />
+        <img src="/images/minecraft-banner.jpg" alt="Minecraft Hosting" className="h-full w-full object-cover opacity-90" />
         <span className="absolute bottom-2.5 left-2.5 rounded-full bg-black/70 px-2.5 py-1 text-[10px] font-bold text-white backdrop-blur-sm">
           Java &amp; Bedrock · 20 TPS
         </span>
