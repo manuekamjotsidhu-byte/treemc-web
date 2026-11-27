@@ -37,8 +37,8 @@ export default function BotHostingPage() {
                 </ul>
                 <p className="mt-4 text-xs font-medium">{p.runtime}</p>
               </div>
-              <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block rounded-xl py-2.5 text-center text-xs font-bold">
-                Order on Discord ↗
+              <a href={catalog.billingUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block rounded-xl py-2.5 text-center text-xs font-bold">
+                Order Now ↗
               </a>
             </div>
           ))}

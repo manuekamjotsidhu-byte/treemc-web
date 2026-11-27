@@ -37,8 +37,8 @@ export default function WebHostingPage() {
                   <li className="flex items-center gap-2"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> {p.panel}</li>
                 </ul>
               </div>
-              <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block rounded-xl py-2.5 text-center text-xs font-bold">
-                Order on Discord ↗
+              <a href={catalog.billingUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block rounded-xl py-2.5 text-center text-xs font-bold">
+                Order Now ↗
               </a>
             </div>
           ))}

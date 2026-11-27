@@ -43,7 +43,7 @@ function PricingPlanCard({
   specs,
   featured = false,
   topTag,
-  ctaLabel = "Order on Discord ↗",
+  ctaLabel = "Order Now ↗",
   href,
 }: {
   name: string;
@@ -96,7 +96,7 @@ function PricingPlanCard({
       </div>
 
       <a
-        href={href || catalog.discordUrl}
+        href={href || catalog.billingUrl}
         target="_blank"
         rel="noopener noreferrer"
         className={`mt-5 block w-full rounded-xl py-2.5 text-center text-xs font-bold transition ${

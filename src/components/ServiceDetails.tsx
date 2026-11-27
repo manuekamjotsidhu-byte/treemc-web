@@ -242,8 +242,8 @@ export function CtaBanner() {
           </p>
         </div>
         <div className="flex flex-wrap gap-3 shrink-0">
-          <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime inline-flex items-center gap-1.5 rounded-xl px-5 py-3 text-sm font-bold">
-            Order on Discord <ArrowUpRight className="h-4 w-4" />
+          <a href={catalog.billingUrl} target="_blank" rel="noopener noreferrer" className="btn-lime inline-flex items-center gap-1.5 rounded-xl px-5 py-3 text-sm font-bold">
+            Order in Billing <ArrowUpRight className="h-4 w-4" />
           </a>
           <a href={catalog.panelUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] px-5 py-3 text-sm font-semibold">
             Client Panel <Globe className="h-4 w-4" />

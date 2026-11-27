@@ -218,7 +218,7 @@ export default function MinecraftPlanFinder({ region = "India" }: { region?: "In
               </div>
 
               <a
-                href={catalog.discordUrl}
+                href={catalog.billingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-lime mt-5 block w-full rounded-xl py-2.5 text-center text-xs font-bold transition"

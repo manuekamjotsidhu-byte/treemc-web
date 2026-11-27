@@ -149,8 +149,8 @@ export function VpsConfigurator() {
             </div>
           )}
 
-          <a href={catalog.discordUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block w-full rounded-xl py-3 text-center text-sm font-bold">
-            Order on Discord ↗
+          <a href={catalog.billingUrl} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6 block w-full rounded-xl py-3 text-center text-sm font-bold">
+            Order Now ↗
           </a>
         </div>
       </div>
@@ -270,12 +270,12 @@ export default function VpsExplorer() {
               </div>
 
               <a
-                href={catalog.discordUrl}
+                href={catalog.billingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-lime mt-5 block w-full rounded-xl py-2.5 text-center text-xs font-bold transition"
               >
-                Order on Discord ↗
+                Order Now ↗
               </a>
             </div>
           ))}
